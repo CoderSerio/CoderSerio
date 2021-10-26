@@ -4,8 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="axios学习笔记, Hexo">
+    <meta name="description" content="@[TOC]
+前言axios是对ajax的高度封装，也是vue推荐的通信方式，有大量的请求方式，所以很重要
+（更完这篇我就去更新操作系统的内容了，有兴趣的同学可以点击下方链接查看）
+😘本科操作系统笔记（持续更新)：万字长文一篇搞定
+另外，">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Hexo</title>
+    <title>axios学习笔记 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -314,7 +318,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">axios学习笔记</h1>
                 </div>
             </div>
         </div>
@@ -442,7 +446,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-10-24
+                    2021-10-26
                 </div>
                 
 
@@ -463,19 +467,92 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <p>@[TOC]</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>axios是对ajax的高度封装，也是vue推荐的通信方式，有大量的请求方式，所以很重要</p>
+<p>（更完这篇我就去更新操作系统的内容了，有兴趣的同学可以点击下方链接查看）</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Serio_gugugu/article/details/120575984">😘<font color="#ff6700">本科操作系统笔记（持续更新)：万字长文一篇搞定</font></a></p>
+<p>另外，以后我的文章会优先发布到我的个人博客上，之后再挑选一部分发布C站。欢迎大家访问:</p>
+<p><a href="https://serio.gitee.io/">😘<font color="#ff3377">本科操作系统笔记（持续更新)：万字长文一篇搞定</font></a></p>
+<hr>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><strong>axios什么意思</strong></p>
+<blockquote>
+<p>axios 是 ajax i/o system的缩写，即”**异步 JavaScript 和 XML 输入输出 系统”</p>
+<p>是一个基于promise网络请求库，作用域node.js和浏览器中。</p>
+</blockquote>
+<p><strong>前置准备</strong></p>
+<p>首先得建立一个vue项目，然后安装相关依赖</p>
+<p>如果不清楚vue基础知识的话可以阅读我的博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Serio_gugugu/article/details/119416221"><font color="#faee00">Vue全家桶学习笔记_零基础入门到入坑:Vue篇</font></a></p>
+<p>这里我们采用的是vue-cli，语法是vue3.x</p>
+<p>此处建议使用vue的GUI项目管理器进行创建，顺便把axios的相关依赖安装上（当然，使用npm或者yarn安装都行)</p>
+<p>打开vue的GUI项目管理器只需要用cmd打开命令控制符然后输入下方的指令即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue ui</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>GUI的话就把<strong>依赖和插件</strong>都装上就行了</p>
+<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211023160417870.png" alt="image-20211023160417870"></p>
+<hr>
+<h2 id="原生ajax示例"><a href="#原生ajax示例" class="headerlink" title="原生ajax示例"></a>原生ajax示例</h2><p>下面段代码就是原生js写的ajax请求，请求的内容是本地的json文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">httpRequest = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">           </span><br><span class="line"><span class="keyword">if</span> (!httpRequest) &#123;  </span><br><span class="line">    alert(<span class="string">&quot;创建请求失败&quot;</span>);      </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">httpRequest.open(<span class="string">&quot;GET&quot;</span>, <span class="string">&quot;./JSONtest.json&quot;</span>);</span><br><span class="line">           </span><br><span class="line">httpRequest.send();</span><br><span class="line"></span><br><span class="line">httpRequest.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;       </span><br><span class="line">    <span class="keyword">if</span> (httpRequest.readyState === <span class="number">4</span>) &#123;         </span><br><span class="line">        <span class="keyword">if</span> (httpRequest.status === <span class="number">200</span>) &#123;  </span><br><span class="line">            <span class="keyword">var</span> data = <span class="built_in">JSON</span>.parse(httpRequest.responseText);              </span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&#x27;AJAX&#x27;</span> + data[<span class="string">&#x27;key&#x27;</span>]);</span><br><span class="line">                        <span class="comment">//别忘了和data.key的区别             </span></span><br><span class="line">        &#125;          </span><br><span class="line">        <span class="keyword">else</span> &#123;              </span><br><span class="line">            <span class="built_in">console</span>.error(<span class="string">&#x27;请求失败&#x27;</span>);            </span><br><span class="line">        &#125;          </span><br><span class="line">    &#125;          </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="使用axios"><a href="#使用axios" class="headerlink" title="使用axios"></a>使用axios</h2><p>axios封装了很多通信方式</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>request</td>
+</tr>
+<tr>
+<td><strong>get</strong></td>
+</tr>
+<tr>
+<td><strong>post</strong></td>
+</tr>
+<tr>
+<td>delete</td>
+</tr>
+<tr>
+<td>head</td>
+</tr>
+<tr>
+<td>options</td>
+</tr>
+<tr>
+<td>put</td>
+</tr>
+<tr>
+<td>patch</td>
+</tr>
+</tbody></table>
+<h3 id="get请求"><a href="#get请求" class="headerlink" title="get请求"></a>get请求</h3><p>以下两种写法都是可以的</p>
+<p>(url随便给的，赋值粘贴之后记得换成后端的接口，或者本地的文件路径之类的)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> axiosGetTest = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        axios.get(<span class="string">&#x27;http://rap2api.taobao.org/xxx&#x27;</span>).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(res.data)</span><br><span class="line">        &#125;).catch(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(error)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> axiosGetTest2 = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      axios(&#123;</span><br><span class="line">        <span class="attr">method</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&#x27;http://rap2api.taobao.org/xxx&#x27;</span>,</span><br><span class="line">      &#125;).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res.data)</span><br><span class="line">      &#125;).catch(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(error)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>get方法还可以写第二个参数，那就时配置信息</p>
+<p>可以按住ctrl+鼠标左键点击get方法看源码，再如此操作第二个参数，就可以查看能够填写哪些内容作为第二个参数</p>
+<p>这里我们加一个params，就可以实现传参了</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> axiosGetTest = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        axios.get(<span class="string">&#x27;http://rap2api.taobao.org/app/mock/292586/user/list&#x27;</span>,&#123;</span><br><span class="line">          <span class="attr">params</span>: &#123;</span><br><span class="line">            <span class="attr">username</span>: <span class="string">&#x27;千尊&#x27;</span>,</span><br><span class="line">            <span class="attr">id</span>: <span class="number">666</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(res.data)</span><br><span class="line">        &#125;).catch(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(error)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>这里似乎没有用utf-8所以中文部分乱码了</p>
+<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211023192211496.png" alt="image-20211023192211496"></p>
+<p>get请求就是以这种拼接的形式传递数据</p>
+<h3 id="post请求"><a href="#post请求" class="headerlink" title="post请求"></a>post请求</h3><p>依旧是两种，post和get相比就多了中间一个参数data</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> axiosPostTest = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      axios(&#123;</span><br><span class="line">          <span class="attr">method</span>: <span class="string">&#x27;post&#x27;</span>,</span><br><span class="line">          <span class="attr">url</span>:<span class="string">&#x27;http://rap2api.taobao.org/yyy&#x27;</span>,</span><br><span class="line">          <span class="attr">data</span>: &#123;</span><br><span class="line">            <span class="string">&quot;isOk&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="string">&quot;errMsg&quot;</span>: <span class="string">&quot;失败了诶1&quot;</span></span><br><span class="line">          &#125;</span><br><span class="line">      &#125;).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res.data)</span><br><span class="line">      &#125;).catch(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(error)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> axiosPostTest2 = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      axios.post(</span><br><span class="line">          <span class="string">&#x27;http://rap2api.taobao.org/yyy&#x27;</span>,</span><br><span class="line">          &#123;</span><br><span class="line">            <span class="string">&quot;isOk&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="string">&quot;errMsg&quot;</span>: <span class="string">&quot;失败了诶2&quot;</span></span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;&#125;).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res.data)</span><br><span class="line">      &#125;).catch(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(error)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211023194416353.png" alt="image-20211023194416353"></p>
+<p>信息是以请求头+请求体的形式发送的</p>
+<p>当然还有其他通信方式，它们的专长不一样，但是使用方式类似，这里就不再赘述了</p>
+<h2 id="并发请求"><a href="#并发请求" class="headerlink" title="并发请求"></a>并发请求</h2><p>什么是并发？</p>
+<p>如果不清楚的话可以参考我放在文章开头的<strong>操作系统笔记</strong>，系统地学习并发并行异步等专业术语</p>
+<p>如果知道什么是并发的话，那么请接着往下看</p>
+<p>并发请求要用到axios.all方法，其返回结果是一个数组，可以用axios.spread将数组的值展开</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> axiosAll =  <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  axios.all([</span><br><span class="line">      axios.get(<span class="string">&#x27;http://rap2api.taobao.org/app/mock/292586/user/list&#x27;</span>),</span><br><span class="line">      axios.post(<span class="string">&#x27;http://rap2api.taobao.org/app/mock/292586/user/login&#x27;</span>)</span><br><span class="line">  ]).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i <span class="keyword">of</span> res)&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(i.data);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;).catch(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>至于axios.spread方法，感觉很多时候没什么用，还不如for循环，所以这里就不再演示了</p>
 
                 
             </div>
@@ -502,7 +579,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://serio.gitee.io/2021/10/24/hello-world/">https://serio.gitee.io/2021/10/24/hello-world/</a>
+                    <a href="https://serio.gitee.io/2021/10/26/axios/">https://serio.gitee.io/2021/10/26/axios/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -709,9 +786,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2021/10/26/axios/">
                     <div class="card-image">
@@ -729,9 +807,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -740,6 +818,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -747,7 +826,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2021/10/24/hello-world/">
@@ -777,7 +856,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
