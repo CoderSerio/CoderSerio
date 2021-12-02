@@ -4,12 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="axios学习笔记, 碳苯">
-    <meta name="description" content="@[TOC]
-前言axios是对ajax的高度封装，也是vue推荐的通信方式，有大量的请求方式，所以很重要
-（更完这篇我就去更新操作系统的内容了，有兴趣的同学可以点击下方链接查看）
-😘本科操作系统笔记（持续更新)：万字长文一篇搞定
-另外，">
+    <meta name="keywords" content="Vuex学习笔记, 碳苯">
+    <meta name="description" content="前言看到身边的大佬一个二个的秀到飞起，我也要加把劲才是
+概览什么是Vuex？
+
+Vuex是一个专为Vue.js应用开发的状态管理模式（与Vue 3.x对应的是Vuex 4），
+采用集中式存储管理应用的所有组件的状态，并且已响应的规则来保证状">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>axios学习笔记 | 碳苯</title>
+    <title>Vuex学习笔记 | 碳苯</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">axios学习笔记</h1>
+                    <h1 class="description center-align post-title">Vuex学习笔记</h1>
                 </div>
             </div>
         </div>
@@ -459,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-26
+                    2021-11-01
                 </div>
                 
 
@@ -480,93 +480,75 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>@[TOC]</p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>axios是对ajax的高度封装，也是vue推荐的通信方式，有大量的请求方式，所以很重要</p>
-<p>（更完这篇我就去更新操作系统的内容了，有兴趣的同学可以点击下方链接查看）</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Serio_gugugu/article/details/120575984">😘<font color="#ff6700">本科操作系统笔记（持续更新)：万字长文一篇搞定</font></a></p>
-<p>另外，以后我的文章会优先发布到我的个人博客上，之后再挑选一部分发布C站。欢迎大家访问:</p>
-<p><a href="https://serio.gitee.io/">😘<font color="#ff3377">本科操作系统笔记（持续更新)：万字长文一篇搞定</font></a></p>
-<hr>
-<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><strong>axios什么意思</strong></p>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>看到身边的大佬一个二个的秀到飞起，我也要加把劲才是</p>
+<h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><p>什么是Vuex？</p>
 <blockquote>
-<p>axios 是 ajax i/o system的缩写，即”**异步 JavaScript 和 XML 输入输出 系统”</p>
-<p>是一个基于promise网络请求库，作用域node.js和浏览器中。</p>
+<p>Vuex是一个专为Vue.js应用开发的状态管理模式（与Vue 3.x对应的是Vuex 4），</p>
+<p>采用集中式存储管理应用的所有组件的状态，并且已响应的规则来保证状态以一种可以预测的方式发生变化。</p>
+<p>Vuex集成到Vue的官方调试工具devtools extension，提供了诸如零件配置的time-travel调试、状态快照导入导出等高级调试功能</p>
 </blockquote>
-<p><strong>前置准备</strong></p>
-<p>首先得建立一个vue项目，然后安装相关依赖</p>
-<p>如果不清楚vue基础知识的话可以阅读我的博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Serio_gugugu/article/details/119416221"><font color="#faee00">Vue全家桶学习笔记_零基础入门到入坑:Vue篇</font></a></p>
-<p>这里我们采用的是vue-cli，语法是vue3.x</p>
-<p>此处建议使用vue的GUI项目管理器进行创建，顺便把axios的相关依赖安装上（当然，使用npm或者yarn安装都行)</p>
-<p>打开vue的GUI项目管理器只需要用cmd打开命令控制符然后输入下方的指令即可</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue ui</span><br></pre></td></tr></table></figure>
+<p><strong>那么什么又是状态管理模式呢？</strong></p>
+<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211101174925189.png" alt="image-20211101174925189"></p>
+<p>由于vue提倡的是单向数据流，如果组件与组件层层嵌套，那么利用父子间通信的方式进行数据传递就相当麻烦</p>
+<p>（其实也可以通过 发布和订阅 来解决这种问题）</p>
+<p>vuex就相当于给所有需要数据通信的组件创建一个公共的父级，这样进行数据传递的话就快多了</p>
+<p>（但是使用Vuex的成本比较高，所以只有中大型项目才使用）</p>
+<blockquote>
+<p>“store”基本上就是一个容器，它包含着你的应用中大部分的**状态 (state)**。Vuex 和单纯的全局对象有以下两点不同：</p>
+<ol>
+<li>Vuex 的状态存储是响应式的。当 Vue 组件从 store 中读取状态的时候，若 store 中的状态发生变化，那么相应的组件也会相应地得到高效更新。</li>
+<li>你不能直接改变 store 中的状态。改变 store 中的状态的唯一途径就是显式地<strong>提交 (commit) mutation</strong>。这样使得我们可以方便地跟踪每一个状态的变化，从而让我们能够实现一些工具帮助我们更好地了解我们的应用。</li>
+</ol>
+</blockquote>
+<h2 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h2><p>先创建这么一个结构</p>
+<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211102021222629.png" alt="image-20211102021222629"></p>
+<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211102023154400.png" alt="image-20211102023154400"></p>
+<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211102024100820.png" alt="image-20211102024100820"></p>
+<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211102023317457.png" alt="image-20211102023317457"></p>
+<p>其中，如果是同步的内容，那么可以用dispatch或commit，异步只能dispatch</p>
+<h2 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h2><p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211101180019687.png" alt="image-20211101180019687"></p>
+<h3 id="State"><a href="#State" class="headerlink" title="State"></a>State</h3><h4 id="单一状态树"><a href="#单一状态树" class="headerlink" title="单一状态树"></a>单一状态树</h4><p>用一个对象就包含了全部的应用层级状态。至此它便作为一个“唯一数据源 (<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Single_source_of_truth">SSOT (opens new window)</a>)”而存在。这也意味着，每个应用将仅仅包含一个 store 实例。单一状态树让我们能够直接地定位任一特定的状态片段</p>
+<h4 id="在-Vue-组件中获得-Vuex-状态"><a href="#在-Vue-组件中获得-Vuex-状态" class="headerlink" title="在 Vue 组件中获得 Vuex 状态"></a>在 Vue 组件中获得 Vuex 状态</h4><p>那么我们如何在 Vue 组件中展示状态呢？由于 Vuex 的状态存储是响应式的，从 store 实例中读取状态最简单的方法就是在<a target="_blank" rel="noopener" href="https://cn.vuejs.org/guide/computed.html">计算属性 (opens new window)</a>中返回某个状态：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个 Counter 组件</span></span><br><span class="line"><span class="keyword">const</span> Counter = &#123;</span><br><span class="line">  <span class="attr">template</span>: <span class="string">`&lt;div&gt;&#123;&#123; count &#125;&#125;&lt;/div&gt;`</span>,</span><br><span class="line">  <span class="attr">computed</span>: &#123;</span><br><span class="line">    count () &#123;</span><br><span class="line">      <span class="keyword">return</span> store.state.count</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>GUI的话就把<strong>依赖和插件</strong>都装上就行了</p>
-<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211023160417870.png" alt="image-20211023160417870"></p>
+<p>每当 <code>store.state.count</code> 变化的时候, 都会重新求取计算属性，并且触发更新相关联的 DOM。</p>
+<p>Vuex 通过 <code>store</code> 选项，提供了一种机制将状态从根组件“注入”到每一个子组件中（需调用 <code>Vue.use(Vuex)</code>）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  <span class="comment">// 把 store 对象提供给 “store” 选项，这可以把 store 的实例注入所有的子组件</span></span><br><span class="line">  <span class="comment">//这个写法是es6的简写，相当于store:store</span></span><br><span class="line">  store,</span><br><span class="line">  <span class="attr">components</span>: &#123; Counter &#125;,</span><br><span class="line">  <span class="attr">template</span>: <span class="string">`</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;app&quot;&gt;</span></span><br><span class="line"><span class="string">      &lt;counter&gt;&lt;/counter&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">  `</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>通过在根实例中注册 <code>store</code> 选项，该 store 实例会注入到根组件下的所有子组件中，且子组件能通过 <code>this.$store</code> 访问到。让我们更新下 <code>Counter</code> 的实现：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Counter = &#123;</span><br><span class="line">  <span class="attr">template</span>: <span class="string">`&lt;div&gt;&#123;&#123; count &#125;&#125;&lt;/div&gt;`</span>,</span><br><span class="line">  <span class="attr">computed</span>: &#123;</span><br><span class="line">    count () &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">this</span>.$store.state.count</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="mapState-辅助函数"><a href="#mapState-辅助函数" class="headerlink" title="mapState 辅助函数"></a><code>mapState</code> 辅助函数</h3><p>当一个组件需要获取多个状态的时候，将这些状态都声明为计算属性会有些重复和冗余。为了解决这个问题，我们可以使用 <code>mapState</code> 辅助函数帮助我们生成计算属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在单独构建的版本中辅助函数为 Vuex.mapState</span></span><br><span class="line"><span class="keyword">import</span> &#123; mapState &#125; <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="attr">computed</span>: mapState(&#123;</span><br><span class="line">    <span class="comment">// 箭头函数可使代码更简练</span></span><br><span class="line">    <span class="attr">count</span>: <span class="function"><span class="params">state</span> =&gt;</span> state.count,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 传字符串参数 &#x27;count&#x27; 等同于 `state =&gt; state.count`</span></span><br><span class="line">    <span class="attr">countAlias</span>: <span class="string">&#x27;count&#x27;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 为了能够使用 `this` 获取局部状态，必须使用常规函数</span></span><br><span class="line">    countPlusLocalState (state) &#123;</span><br><span class="line">      <span class="keyword">return</span> state.count + <span class="built_in">this</span>.localCount</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当映射的计算属性的名称与 state 的子节点名称相同时，我们也可以给 <code>mapState</code> 传一个字符串数组。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">computed: mapState([</span><br><span class="line">  <span class="comment">// 映射 this.count 为 store.state.count</span></span><br><span class="line">  <span class="string">&#x27;count&#x27;</span></span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+
 <hr>
-<h2 id="原生ajax示例"><a href="#原生ajax示例" class="headerlink" title="原生ajax示例"></a>原生ajax示例</h2><p>下面段代码就是原生js写的ajax请求，请求的内容是本地的json文件</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">httpRequest = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">           </span><br><span class="line"><span class="keyword">if</span> (!httpRequest) &#123;  </span><br><span class="line">    alert(<span class="string">&quot;创建请求失败&quot;</span>);      </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">httpRequest.open(<span class="string">&quot;GET&quot;</span>, <span class="string">&quot;./JSONtest.json&quot;</span>);</span><br><span class="line">           </span><br><span class="line">httpRequest.send();</span><br><span class="line"></span><br><span class="line">httpRequest.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;       </span><br><span class="line">    <span class="keyword">if</span> (httpRequest.readyState === <span class="number">4</span>) &#123;         </span><br><span class="line">        <span class="keyword">if</span> (httpRequest.status === <span class="number">200</span>) &#123;  </span><br><span class="line">            <span class="keyword">var</span> data = <span class="built_in">JSON</span>.parse(httpRequest.responseText);              </span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&#x27;AJAX&#x27;</span> + data[<span class="string">&#x27;key&#x27;</span>]);</span><br><span class="line">                        <span class="comment">//别忘了和data.key的区别             </span></span><br><span class="line">        &#125;          </span><br><span class="line">        <span class="keyword">else</span> &#123;              </span><br><span class="line">            <span class="built_in">console</span>.error(<span class="string">&#x27;请求失败&#x27;</span>);            </span><br><span class="line">        &#125;          </span><br><span class="line">    &#125;          </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Getter"><a href="#Getter" class="headerlink" title="Getter"></a>Getter</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">  doneTodosCount () &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.$store.state.todos.filter(<span class="function"><span class="params">todo</span> =&gt;</span> todo.done).length</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<hr>
-<h2 id="使用axios"><a href="#使用axios" class="headerlink" title="使用axios"></a>使用axios</h2><p>axios封装了很多通信方式</p>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>request</td>
-</tr>
-<tr>
-<td><strong>get</strong></td>
-</tr>
-<tr>
-<td><strong>post</strong></td>
-</tr>
-<tr>
-<td>delete</td>
-</tr>
-<tr>
-<td>head</td>
-</tr>
-<tr>
-<td>options</td>
-</tr>
-<tr>
-<td>put</td>
-</tr>
-<tr>
-<td>patch</td>
-</tr>
-</tbody></table>
-<h3 id="get请求"><a href="#get请求" class="headerlink" title="get请求"></a>get请求</h3><p>以下两种写法都是可以的</p>
-<p>(url随便给的，赋值粘贴之后记得换成后端的接口，或者本地的文件路径之类的)</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> axiosGetTest = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        axios.get(<span class="string">&#x27;http://rap2api.taobao.org/xxx&#x27;</span>).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(res.data)</span><br><span class="line">        &#125;).catch(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(error)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> axiosGetTest2 = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      axios(&#123;</span><br><span class="line">        <span class="attr">method</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&#x27;http://rap2api.taobao.org/xxx&#x27;</span>,</span><br><span class="line">      &#125;).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res.data)</span><br><span class="line">      &#125;).catch(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(error)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>如果有多个组件需要用到此属性，我们要么复制这个函数，或者抽取到一个共享函数然后在多处导入它——无论哪种方式都不是很理想。</p>
+<p>Vuex 允许我们在 store 中定义“getter”（可以认为是 store 的计算属性）。就像计算属性一样，getter 的返回值会根据它的依赖被缓存起来，且只有当它的依赖值发生了改变才会被重新计算。</p>
+<p>Getter 接受 state 作为其第一个参数：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">  <span class="attr">state</span>: &#123;</span><br><span class="line">    <span class="attr">todos</span>: [</span><br><span class="line">      &#123; <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">text</span>: <span class="string">&#x27;...&#x27;</span>, <span class="attr">done</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">id</span>: <span class="number">2</span>, <span class="attr">text</span>: <span class="string">&#x27;...&#x27;</span>, <span class="attr">done</span>: <span class="literal">false</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">getters</span>: &#123;</span><br><span class="line">    <span class="attr">doneTodos</span>: <span class="function"><span class="params">state</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> state.todos.filter(<span class="function"><span class="params">todo</span> =&gt;</span> todo.done)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<p>get方法还可以写第二个参数，那就时配置信息</p>
-<p>可以按住ctrl+鼠标左键点击get方法看源码，再如此操作第二个参数，就可以查看能够填写哪些内容作为第二个参数</p>
-<p>这里我们加一个params，就可以实现传参了</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> axiosGetTest = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        axios.get(<span class="string">&#x27;http://rap2api.taobao.org/app/mock/292586/user/list&#x27;</span>,&#123;</span><br><span class="line">          <span class="attr">params</span>: &#123;</span><br><span class="line">            <span class="attr">username</span>: <span class="string">&#x27;千尊&#x27;</span>,</span><br><span class="line">            <span class="attr">id</span>: <span class="number">666</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(res.data)</span><br><span class="line">        &#125;).catch(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(error)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="通过属性访问"><a href="#通过属性访问" class="headerlink" title="通过属性访问"></a>通过属性访问</h4><p>Getter 会暴露为 <code>store.getters</code> 对象，你可以以属性的形式访问这些值：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">store.getters.doneTodos <span class="comment">// -&gt; [&#123; id: 1, text: &#x27;...&#x27;, done: true &#125;]</span></span><br></pre></td></tr></table></figure>
 
-<p>这里似乎没有用utf-8所以中文部分乱码了</p>
-<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211023192211496.png" alt="image-20211023192211496"></p>
-<p>get请求就是以这种拼接的形式传递数据</p>
-<h3 id="post请求"><a href="#post请求" class="headerlink" title="post请求"></a>post请求</h3><p>依旧是两种，post和get相比就多了中间一个参数data</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> axiosPostTest = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      axios(&#123;</span><br><span class="line">          <span class="attr">method</span>: <span class="string">&#x27;post&#x27;</span>,</span><br><span class="line">          <span class="attr">url</span>:<span class="string">&#x27;http://rap2api.taobao.org/yyy&#x27;</span>,</span><br><span class="line">          <span class="attr">data</span>: &#123;</span><br><span class="line">            <span class="string">&quot;isOk&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="string">&quot;errMsg&quot;</span>: <span class="string">&quot;失败了诶1&quot;</span></span><br><span class="line">          &#125;</span><br><span class="line">      &#125;).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res.data)</span><br><span class="line">      &#125;).catch(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(error)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> axiosPostTest2 = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      axios.post(</span><br><span class="line">          <span class="string">&#x27;http://rap2api.taobao.org/yyy&#x27;</span>,</span><br><span class="line">          &#123;</span><br><span class="line">            <span class="string">&quot;isOk&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="string">&quot;errMsg&quot;</span>: <span class="string">&quot;失败了诶2&quot;</span></span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;&#125;).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res.data)</span><br><span class="line">      &#125;).catch(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(error)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>Getter 也可以接受其他 getter 作为第二个参数：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">getters: &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="attr">doneTodosCount</span>: <span class="function">(<span class="params">state, getters</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> getters.doneTodos.length</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p><strong>注意，getter 在通过属性访问时是作为 Vue 的响应式系统的一部分缓存其中的。</strong></p>
+<h4 id="通过方法访问"><a href="#通过方法访问" class="headerlink" title="通过方法访问"></a>通过方法访问</h4><p>你也可以通过让 getter 返回一个函数，来实现给 getter 传参。在你对 store 里的数组进行查询时非常有用。</p>
+<p>（这个方法真的是震撼我一年）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">getters: &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="attr">getTodoById</span>: <span class="function">(<span class="params">state</span>) =&gt;</span> <span class="function">(<span class="params">id</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> state.todos.find(<span class="function"><span class="params">todo</span> =&gt;</span> todo.id === id)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">store.getters.getTodoById(<span class="number">2</span>) <span class="comment">// -&gt; &#123; id: 2, text: &#x27;...&#x27;, done: false &#125;</span></span><br></pre></td></tr></table></figure>
 
+<p><strong>注意，getter 在通过方法访问时，每次都会去进行调用，而不会缓存结果。</strong></p>
+<h4 id="mapGetters辅助函数"><a href="#mapGetters辅助函数" class="headerlink" title="mapGetters辅助函数"></a>mapGetters辅助函数</h4><p><code>mapGetters</code> 辅助函数仅仅是将 store 中的 getter 映射到局部计算属性：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; mapGetters &#125; <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="attr">computed</span>: &#123;</span><br><span class="line">  <span class="comment">// 使用对象展开运算符将 getter 混入 computed 对象中</span></span><br><span class="line">    ...mapGetters([</span><br><span class="line">      <span class="string">&#x27;doneTodosCount&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;anotherGetter&#x27;</span>,</span><br><span class="line">      <span class="comment">// ...</span></span><br><span class="line">    ])</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211023194416353.png" alt="image-20211023194416353"></p>
-<p>信息是以请求头+请求体的形式发送的</p>
-<p>当然还有其他通信方式，它们的专长不一样，但是使用方式类似，这里就不再赘述了</p>
-<h2 id="并发请求"><a href="#并发请求" class="headerlink" title="并发请求"></a>并发请求</h2><p>什么是并发？</p>
-<p>如果不清楚的话可以参考我放在文章开头的<strong>操作系统笔记</strong>，系统地学习并发并行异步等专业术语</p>
-<p>如果知道什么是并发的话，那么请接着往下看</p>
-<p>并发请求要用到axios.all方法，其返回结果是一个数组，可以用axios.spread将数组的值展开</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> axiosAll =  <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  axios.all([</span><br><span class="line">      axios.get(<span class="string">&#x27;http://rap2api.taobao.org/app/mock/292586/user/list&#x27;</span>),</span><br><span class="line">      axios.post(<span class="string">&#x27;http://rap2api.taobao.org/app/mock/292586/user/login&#x27;</span>)</span><br><span class="line">  ]).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i <span class="keyword">of</span> res)&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(i.data);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;).catch(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>至于axios.spread方法，感觉很多时候没什么用，还不如for循环，所以这里就不再演示了</p>
-
+<h3 id="Mutations"><a href="#Mutations" class="headerlink" title="Mutations"></a>Mutations</h3><p>（待续）</p>
+<h3 id="Actions"><a href="#Actions" class="headerlink" title="Actions"></a>Actions</h3><h3 id="Modules"><a href="#Modules" class="headerlink" title="Modules"></a>Modules</h3>
                 
             </div>
             <hr/>
@@ -592,7 +574,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://serio.gitee.io/2021/10/26/axios/">https://serio.gitee.io/2021/10/26/axios/</a>
+                    <a href="https://serio.gitee.io/2021/11/01/vuex/">https://serio.gitee.io/2021/11/01/vuex/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -803,9 +785,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/11/01/vuex/">
                     <div class="card-image">
@@ -823,9 +806,59 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-01
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/10/26/axios/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="axios学习笔记">
+                        
+                        <span class="card-title">axios学习笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -845,43 +878,6 @@
                         <span class="chip bg-color">前端</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/10/24/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-24
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Serio
-                            
-                        </span>
-                    </div>
                 </div>
                 
             </div>
