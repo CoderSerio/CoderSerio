@@ -28,8 +28,7 @@
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 	
-	<link rel="stylesheet" href="/live2D/js/LAppDefine.js">
-	<link rel="stylesheet" href="/live2D/js/live2d.min.js">	
+	
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
@@ -41,7 +40,7 @@
 
 
 <body>
-	<canvas  id =" mycanvas " width =" 300 " height =" 500 " > </canvas>
+
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -903,12 +902,19 @@ Run server1$ hexo
 
 </main>
 
-
+<canvas  id =" mycanvas " width =" 400 " height =" 500 " > </canvas>
+<style type="text/css">
+	#mycanvas{
+		position: fixed;
+		bottom: 0;
+		left: 10%;
+	}
+</style>
 
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+     <!-- <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css"> -->
 <style>
     .aplayer .aplayer-lrc p {
         
@@ -1248,6 +1254,8 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
+    <script type="text/javascript" src="/live2D/js/LAppDefine.js"></script>
+    <script type="text/javascript" src="/live2D/js/live2d.min.js"></script>
 
 </body>
 
