@@ -1,0 +1,227 @@
+{
+  "Version": 3,
+  "FileReferences": {
+    "Moc": "TanBen.moc3",
+    "Textures": [
+      "TanBen.8192/texture_00.png"
+    ],
+    "Physics": "TanBen.physics3.json",
+    "PhysicsV2": {
+      "File": "TanBen.physics3.json",
+      "MaxWeight": 1.199
+    },
+    "Motions": {
+      "表情": [
+        {
+          "Name": "挥双手",
+          "File": "挥双手.motion3.json"
+        },
+        {
+          "Name": "挥右手",
+          "File": "挥右手.motion3.json"
+        },
+        {
+          "Name": "挥左手",
+          "File": "挥左手.motion3.json"
+        },
+        {
+          "Name": "笑",
+          "File": "笑.motion3.json",
+          "OverrideFaceParams": true
+        },
+        {
+          "Name": "震惊",
+          "File": "震惊.motion3.json",
+          "OverrideFaceParams": true
+        },
+        {
+          "Name": "汗ON",
+          "File": "汗ON.motion3.json"
+        },
+        {
+          "Name": "汗OFF",
+          "File": "汗OFF.motion3.json"
+        },
+        {
+          "Name": "生气ON",
+          "File": "生气ON.motion3.json"
+        },
+        {
+          "Name": "生气OFF",
+          "File": "生气OFF.motion3.json"
+        },
+        {
+          "Name": "眼泪ON",
+          "File": "眼泪ON.motion3.json"
+        },
+        {
+          "Name": "眼泪OFF",
+          "File": "眼泪OFF.motion3.json"
+        },
+        {
+          "Name": "红晕ON",
+          "File": "红晕ON.motion3.json",
+          "OverrideFaceParams": true
+        },
+        {
+          "Name": "红晕OFF",
+          "File": "红晕OFF.motion3.json"
+        },
+        {
+          "Name": "脸黑ON",
+          "File": "脸黑ON.motion3.json",
+          "OverrideFaceParams": true
+        },
+        {
+          "Name": "脸黑OFF",
+          "File": "脸黑OFF.motion3.json"
+        },
+        {
+          "Name": "脸红ON",
+          "File": "脸红ON.motion3.json"
+        },
+        {
+          "Name": "脸红OFF",
+          "File": "脸红OFF.motion3.json"
+        },
+        {
+          "Name": "问号ON",
+          "File": "问号ON.motion3.json",
+          "OverrideFaceParams": true
+        },
+        {
+          "Name": "问号OFF",
+          "File": "问号OFF.motion3.json"
+        }
+      ],
+      "切换": [
+        {
+          "Name": "衣服ON",
+          "File": "衣服ON.motion3.json"
+        },
+        {
+          "Name": "衣服OFF",
+          "File": "衣服OFF.motion3.json"
+        },
+        {
+          "Name": "尾巴ON",
+          "File": "尾巴ON.motion3.json"
+        },
+        {
+          "Name": "尾巴OFF",
+          "File": "尾巴OFF.motion3.json"
+        }
+      ]
+    },
+    "Expressions": [
+      {
+        "Name": "smile",
+        "File": "笑.motion3.json"
+      }
+    ]
+  },
+  "Controllers": {
+    "ParamHit": {
+      "Enabled": true
+    },
+    "ParamLoop": {},
+    "KeyTrigger": {
+      "Items": [
+        {
+          "Input": 97,
+          "DownMtn": "表情:汗ON",
+          "UpMtn": "表情:汗OFF"
+        },
+        {
+          "Input": 98,
+          "DownMtn": "表情:生气ON",
+          "UpMtn": "表情:生气OFF"
+        },
+        {
+          "Input": 99,
+          "DownMtn": "表情:眼泪ON",
+          "UpMtn": "表情:眼泪OFF"
+        },
+        {
+          "Input": 100,
+          "DownMtn": "表情:红晕ON",
+          "UpMtn": "表情:红晕OFF"
+        },
+        {
+          "Input": 101,
+          "DownMtn": "表情:脸黑ON",
+          "UpMtn": "表情:脸黑OFF"
+        },
+        {
+          "Input": 102,
+          "DownMtn": "表情:脸红ON",
+          "UpMtn": "表情:脸红OFF"
+        },
+        {
+          "Input": 103,
+          "DownMtn": "表情:问号ON",
+          "UpMtn": "表情:问号OFF"
+        }
+      ],
+      "Enabled": true
+    },
+    "ParamTrigger": {},
+    "AreaTrigger": {},
+    "HandTrigger": {},
+    "EyeBlink": {
+      "MinInterval": 500,
+      "MaxInterval": 6000,
+      "Items": [
+        {
+          "Id": "ParamEyeLOpen",
+          "Min": 0.0,
+          "Max": 1.0,
+          "BlendMode": 2,
+          "Input": 0
+        },
+        {
+          "Id": "ParamEyeROpen",
+          "Min": 0.0,
+          "Max": 1.0,
+          "BlendMode": 2,
+          "Input": 0
+        }
+      ],
+      "Enabled": true
+    },
+    "LipSync": {
+      "Gain": 5.0,
+      "Enabled": true
+    },
+    "MouseTracking": {
+      "SmoothTime": 0.15,
+      "Enabled": true
+    },
+    "AutoBreath": {
+      "Enabled": true
+    },
+    "ExtraMotion": {
+      "Enabled": true
+    },
+    "Accelerometer": {
+      "Enabled": true
+    },
+    "Microphone": {},
+    "Transform": {},
+    "FaceTracking": {
+      "Enabled": true
+    },
+    "HandTracking": {},
+    "ParamValue": {},
+    "PartOpacity": {},
+    "ArtmeshOpacity": {},
+    "ArtmeshColor": {},
+    "ArtmeshCulling": {
+      "DefaultMode": 0
+    },
+    "IntimacySystem": {
+      "Enabled": true
+    }
+  },
+  "Options": {}
+}
