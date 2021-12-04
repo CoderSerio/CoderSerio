@@ -20,9 +20,9 @@
 	line-height:24px;
 	font-size:12px;
 	position:fixed;
-	left:50%;
-	transform:translateX(-50%);
-	bottom:5px;
+	left:50vw;
+	/* transform:translateX(-50%); */
+	bottom:0px;
 	z-index:10000;
 	cursor:pointer;
 	display:none;
@@ -35,6 +35,7 @@
     height: 280px;
     position: relative;
 	z-index:3;
+	left: 50vw;
 }
 
 .message {
