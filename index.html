@@ -27,7 +27,8 @@
     <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
-
+	<!-- <link rel="stylesheet" href="../Pio/static/pio.css"> -->
+	<!-- <link rel="stylesheet" href="./live2d/assets/waifu.min.css"> -->
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0">
@@ -1152,7 +1153,23 @@ $(function () {
         <i class="fas fa-arrow-up"></i>
     </a>
 </div>
-
+<div class="pio-container right">
+    <div class="pio-action"></div>
+    <canvas id="pio" width="300" height="300"></canvas>
+</div>
+<div class="waifu">
+        <div class="waifu-tips"></div>
+        <canvas id="live2d" class="live2d"></canvas>
+        <div class="waifu-tool">
+            <span class="fui-home"></span>
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <span class="fui-info-circle"></span>
+            <span class="fui-cross"></span>
+        </div>
+    </div>
 
     <script src="/libs/materialize/materialize.min.js"></script>
     <script src="/libs/masonry/masonry.pkgd.min.js"></script>
@@ -1270,6 +1287,44 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
+<!-- 	<script src='../Pio/static/l2d.js'></script>
+	<script src='../Pio/static/pio.js'></script>
+	<script type="text/javascript">
+		let pio = new Paul_Pio({
+    		"mode": "fixed",
+    		"hidden": true,
+    		"content": {
+        	"welcome": ["欢迎来到保罗的小宇宙！", "今天天气不错，一起来玩吧！", "博主每天都有些折腾记录，欢迎前往他的小窝阅读~"],
+        	"custom": [
+            	{"selector": ".comment-form", "text": "欢迎参与本文评论，别发小广告噢~"},
+            	{"selector": ".home-social a:last-child", "text": "在这里可以了解博主的日常噢~"},
+            	{"selector": ".post-item a", "type": "read"},
+            	{"selector": ".post-content a, .page-content a", "type": "link"}
+        	]
+    	},
+    	"night": "single.night()",
+    	"model": ["https://paugram.com/usr/plugins/Pio/models/yuan/model.json"]
+	})
+	</script> -->
+	<script src="./live2d/assets/waifu-tips.min.js?v=1.4.2"></script>
+    <script src="./live2d/assets/live2d.min.js?v=1.0.5"></script>
+    <script type="text/javascript">
+        /* 可直接修改部分参数 */
+        live2d_settings['modelId'] = 1;                  // 默认模型 ID
+        live2d_settings['modelTexturesId'] = 87;         // 默认材质 ID
+        live2d_settings['modelStorage'] = false;         // 不储存模型 ID
+        live2d_settings['canCloseLive2d'] = false;       // 隐藏 关闭看板娘 按钮
+        live2d_settings['canTurnToHomePage'] = false;    // 隐藏 返回首页 按钮
+        live2d_settings['waifuSize'] = '600x535';        // 看板娘大小
+        live2d_settings['waifuTipsSize'] = '570x150';    // 提示框大小
+        live2d_settings['waifuFontSize'] = '30px';       // 提示框字体
+        live2d_settings['waifuToolFont'] = '36px';       // 工具栏字体
+        live2d_settings['waifuToolLine'] = '50px';       // 工具栏行高
+        live2d_settings['waifuToolTop'] = '-60px';       // 工具栏顶部边距
+        live2d_settings['waifuDraggable'] = 'axis-x';    // 拖拽样式
+        /* 在 initModel 前添加 */
+        initModel("assets/waifu-tips.json?v=1.4.2")
+    </script>
 
 </body>
 
