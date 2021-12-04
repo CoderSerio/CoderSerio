@@ -183,12 +183,12 @@
 	opacity:0.9;
 }
 .live_ico_item{
-	width:15px;
-	height: 20px;
+	width:30px;
+	height: 30px;
 	cursor:pointer;
 	background-position:center center;
 	background-repeat:no-repeat;
-	background-size:15px;
+	background-size:30px;
 }
 .live_ico_item.type_talk{
 	background-image:url(../images/talk.png);
