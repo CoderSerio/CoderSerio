@@ -461,7 +461,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-12-02
+                    2021-12-06
                 </div>
                 
 
@@ -475,7 +475,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.9k
+                    5.5k
                 </div>
                 
 
@@ -836,7 +836,7 @@
 <p>官方给的翻译就是<strong>层叠样式表</strong>，用于存放大量的样式</p>
 <p>所以HTML是管理结构的，CSS才是管理样式的，更多的样式我们会放到CSS这里讲</p>
 </blockquote>
-<h3 id="CSS基本使用"><a href="#CSS基本使用" class="headerlink" title="CSS基本使用"></a>CSS基本使用</h3><h4 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h4><p>我们想一下一张表长什么样子</p>
+<h3 id="选择器的基本使用"><a href="#选择器的基本使用" class="headerlink" title="选择器的基本使用"></a>选择器的基本使用</h3><h4 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h4><p>我们想一下一张表长什么样子</p>
 <p><img src="https://img-blog.csdnimg.cn/e7cbb7419f3344e6bb2a82c7a77de45b.png" alt="在这里插入图片描述"></p>
 <p>所以CSS作为一张表也该有类似上图的样子</p>
 <p><img src="https://img-blog.csdnimg.cn/7900cf33c55c4471992e6ed133a58f29.png" alt="在这里插入图片描述"></p>
@@ -849,7 +849,7 @@
 <p>假如我们想让第一个div独有这种样式，我们就给它取个名字</p>
 <p><img src="https://img-blog.csdnimg.cn/a1c755d104ec424d81cc682eba5c1a9a.png" alt="在这里插入图片描述"></p>
 <p>注意不要漏掉前面的点</p>
-<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211203171156480.png" alt="image-20211203171156480"></p>
+<p><img src="/.io//Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211203171156480.png" alt="image-20211203171156480"></p>
 <p>注意，这里的<strong>后面覆盖前面</strong>，其前后顺序是<strong>以style标签中的内容顺序决定的而不是class名称的顺序</strong></p>
 <p>这里的class并不是面向对象编程里面的类，不要混淆，二者没有联系。</p>
 <h4 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h4><p>和class选择器类似，但是id选择器名字前面的是#，并且<strong>id选择器不可复用，具有唯一标识性</strong></p>
@@ -859,10 +859,83 @@
 
 <p>这个可以实现跳转到id为a-good-id的标签所在的位置。</p>
 <p>那么可不可以写class呢？当然不能，因为class可能“重名”，这样就不知道到底该跳转到哪里。</p>
-<h3 id="基本定位和布局"><a href="#基本定位和布局" class="headerlink" title="基本定位和布局"></a>基本定位和布局</h3><p>这个很重要，这里就直接看我的博客吧</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Serio_gugugu/article/details/121160329"><font color="fa8800">CSS:十分钟学会五种position定位🍓</font></a></p>
-<h3 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h3><p>好了，我去复习操作系统了</p>
-<p>待续…</p>
+<h4 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h4><p>根据标签所具有的属性来进行选择</p>
+<p>看个例子</p>
+<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-attr">[type=<span class="string">"text"</span>]</span></span><br><span class="line">{</span><br><span class="line">	<span class="attribute">background-color</span>:<span class="number">#ff0000</span>;</span><br><span class="line">}</span><br><span class="line"><span class="selector-attr">[type]</span></span><br><span class="line">{</span><br><span class="line">	<span class="attribute">border</span>:<span class="number">5px</span> solid blue;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>上述两个样式都能作用于</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>意思就是用属性来选择，可以只写属性名称，也可以限制属性值</p>
+<h3 id="定位和布局"><a href="#定位和布局" class="headerlink" title="定位和布局"></a>定位和布局</h3><p>这个很重要，这里就直接看我的博客吧、</p>
+<h4 id="定位基础"><a href="#定位基础" class="headerlink" title="定位基础"></a>定位基础</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Serio_gugugu/article/details/121160329"><font color="fa8800">CSS:十分钟学会五种position定位🍓</font></a></p>
+<h4 id="布局基础"><a href="#布局基础" class="headerlink" title="布局基础"></a>布局基础</h4><p>曾经提到过，块级元素和行级（内联元素）元素</p>
+<p>看一段代码</p>
+<p><img src="/.io//Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211206153622134.png" alt="image-20211206153622134"></p>
+<p>显然，width和height并没有生效，这就和行级元素的性质有关系了，</p>
+<p>不过我们可以通过修改display属性来改变元素的默认类型</p>
+<p><img src="/.io//Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211206154040438.png" alt="image-20211206154040438"></p>
+<p>很明显，这就生效了</p>
+<p>这是因为，我们将其类型<strong>改变为块级（block）</strong></p>
+<p>同样地，还有非常多的类型可以尝试，特别是</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>inline-block</td>
+<td>行级（内联）块元素。综合了二者</td>
+</tr>
+<tr>
+<td>flex</td>
+<td>弹性元素。非常好的一维布局</td>
+</tr>
+<tr>
+<td>grid</td>
+<td>网格元素。比较好的二维布局</td>
+</tr>
+<tr>
+<td>none</td>
+<td>不显示，配合js做一些特效</td>
+</tr>
+</tbody></table>
+<p>通过上述知识可以至少可以完成多种形式的两栏或者说n栏布局。</p>
+<p>当然，也不是所有布局都是要靠display完成的，比如流式布局等等。</p>
+<p>这里就不再赘述，有兴趣自己研究</p>
+<h3 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h3><p>这里讲的是 <strong>标准盒模型</strong>，主要是了解margin padding border content 四个概念</p>
+<p>这里我们准备两个标签：</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"test"</span>&gt;</span>一号<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"test"</span>&gt;</span>二号<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>至于各种配色，我们这里是为了醒目，别说美感云云~~</p>
+<h4 id="内容content"><a href="#内容content" class="headerlink" title="内容content"></a>内容content</h4><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test</span>{</span><br><span class="line">			<span class="attribute">background-color</span>:<span class="number">#ff3700</span>;</span><br><span class="line">			<span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">			<span class="attribute">height</span>:<span class="number">100px</span></span><br><span class="line">	}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>用width和height来设置content大小</p>
+<p><img src="/.io//css_box_modle_content.png" alt="橙色部分是content"></p>
+<h4 id="边界border"><a href="#边界border" class="headerlink" title="边界border"></a>边界border</h4><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test</span>{</span><br><span class="line">			<span class="attribute">background-color</span>:<span class="number">#ff3700</span>;</span><br><span class="line">			<span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">			<span class="attribute">height</span>:<span class="number">100px</span>;</span><br><span class="line">			</span><br><span class="line">			<span class="attribute">border</span>: <span class="number">10px</span> solid blue;</span><br><span class="line">		}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>10px是边界宽度，</p>
+<p>solid是边界样式，实心线，还有dashed等其他样式，</p>
+<p>blue是边界颜色</p>
+<p><img src="/.io//Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211206152935613.png" alt="image-20211206152935613"></p>
+<h4 id="内边距padding"><a href="#内边距padding" class="headerlink" title="内边距padding"></a>内边距padding</h4><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test</span>{</span><br><span class="line">			<span class="attribute">background-color</span>:<span class="number">#ff3700</span>;</span><br><span class="line">			<span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">			<span class="attribute">height</span>:<span class="number">100px</span>;</span><br><span class="line"></span><br><span class="line">			<span class="attribute">border</span>: <span class="number">10px</span> solid blue;</span><br><span class="line"></span><br><span class="line">			<span class="attribute">padding</span>: <span class="number">30px</span>;</span><br><span class="line">		}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p>看图就知道了</p>
+<p><img src="/.io//Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211206153132936.png" alt="image-20211206153132936"></p>
+<p>顾名思义，内容距离边界30px</p>
+<h4 id="外边距margin"><a href="#外边距margin" class="headerlink" title="外边距margin"></a>外边距margin</h4><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test</span>{</span><br><span class="line">			<span class="attribute">background-color</span>:<span class="number">#ff3700</span>;</span><br><span class="line">			<span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">			<span class="attribute">height</span>:<span class="number">100px</span>;</span><br><span class="line"></span><br><span class="line">			<span class="attribute">border</span>: <span class="number">10px</span> solid blue;</span><br><span class="line"></span><br><span class="line">			<span class="attribute">padding</span>: <span class="number">30px</span>;</span><br><span class="line"></span><br><span class="line">			<span class="attribute">margin</span>: <span class="number">30px</span>;</span><br><span class="line">		}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p><img src="/.io//Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211206153231941.png" alt="image-20211206153231941"></p>
+<p>顾名思义，和周围隔开30px</p>
+<p>另外，我们可以打开浏览器，按下f12，点击右上角的这个图标，再用鼠标悬停在想要查看的图形上，就能查看包括盒子模型在内的相关信息</p>
+<p><img src="/.io//Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211206153828635.png" alt="image-20211206153828635"></p>
+<p>以上就标准盒模型的大概内容，如果有兴趣可以自行了解<strong>怪异盒模型</strong></p>
 
                 
             </div>
@@ -889,7 +962,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://serio.gitee.io/2021/12/02/web-intro/">https://serio.gitee.io/2021/12/02/web-intro/</a>
+                    <a href="https://serio.gitee.io/2021/12/06/webintro/">https://serio.gitee.io/2021/12/06/webintro/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1126,77 +1199,28 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/12/03/os/">
+                <a href="/2021/12/06/webintro/">
                     <div class="card-image">
                         
+                        <img src="/medias/postimages/0.jpg" class="responsive-img" alt="浅谈web">
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="操作系统">
-                        
-                        <span class="card-title">操作系统</span>
+                        <span class="card-title">浅谈web</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            知道吗，栅格化线程是很辛苦的
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-03
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
-                                    操作系统
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
-                        <span class="chip bg-color">操作系统</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/11/01/vuex/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Vuex学习笔记">
-                        
-                        <span class="card-title">Vuex学习笔记</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            啊，我们原来在同一棵树上呀？
+                            究竟什么是前端，什么是后端？
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-06
                             </span>
                         <span class="publish-author">
                             
@@ -1210,11 +1234,64 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/%E5%89%8D%E7%AB%AF/">
                         <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%90%8E%E7%AB%AF/">
+                        <span class="chip bg-color">后端</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/12/06/mysql/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/postimages/7.jpg" class="responsive-img" alt="MySQL">
+                        
+                        <span class="card-title">MySQL</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            前端也得懂一点数据库才是
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                        <span class="chip bg-color">数据库</span>
                     </a>
                     
                 </div>
