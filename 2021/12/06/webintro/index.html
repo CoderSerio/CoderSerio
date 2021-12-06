@@ -849,7 +849,7 @@
 <p>假如我们想让第一个div独有这种样式，我们就给它取个名字</p>
 <p><img src="https://img-blog.csdnimg.cn/a1c755d104ec424d81cc682eba5c1a9a.png" alt="在这里插入图片描述"></p>
 <p>注意不要漏掉前面的点</p>
-<p><img src="/.io//Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211203171156480.png" alt="image-20211203171156480"></p>
+<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211203171156480.png" alt="image-20211203171156480"></p>
 <p>注意，这里的<strong>后面覆盖前面</strong>，其前后顺序是<strong>以style标签中的内容顺序决定的而不是class名称的顺序</strong></p>
 <p>这里的class并不是面向对象编程里面的类，不要混淆，二者没有联系。</p>
 <h4 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h4><p>和class选择器类似，但是id选择器名字前面的是#，并且<strong>id选择器不可复用，具有唯一标识性</strong></p>
@@ -871,12 +871,12 @@
 <h4 id="定位基础"><a href="#定位基础" class="headerlink" title="定位基础"></a>定位基础</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Serio_gugugu/article/details/121160329"><font color="fa8800">CSS:十分钟学会五种position定位🍓</font></a></p>
 <h4 id="布局基础"><a href="#布局基础" class="headerlink" title="布局基础"></a>布局基础</h4><p>曾经提到过，块级元素和行级（内联元素）元素</p>
 <p>看一段代码</p>
-<p><img src="/.io//12/06/webintro/display_inline.png" alt="image-20211206153622134"></p>
+<p><img src="https://img-blog.csdnimg.cn/9af8ceb51f7448e69aa5017e0e170cb9.png" alt="行级元素不能直接改宽高"></p>
 <p>显然，width和height并没有生效，这就和行级元素的性质有关系了，</p>
 <p>不过我们可以通过修改display属性来改变元素的默认类型</p>
-<p><img src="/.io//display_block" alt="image-20211206154040438"></p>
 <p>很明显，这就生效了</p>
 <p>这是因为，我们将其类型<strong>改变为块级（block）</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/0c12a49af1b5425ba64453cc4a4d0e66.png" alt="修改为块级元素"></p>
 <p>同样地，还有非常多的类型可以尝试，特别是</p>
 <table>
 <thead>
@@ -913,28 +913,28 @@
 <h4 id="内容content"><a href="#内容content" class="headerlink" title="内容content"></a>内容content</h4><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test</span>{</span><br><span class="line">			<span class="attribute">background-color</span>:<span class="number">#ff3700</span>;</span><br><span class="line">			<span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">			<span class="attribute">height</span>:<span class="number">100px</span></span><br><span class="line">	}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>用width和height来设置content大小</p>
-<p><img src="/.io//12/06/webintro/css_box_modle_content.png" alt="橙色部分是content"></p>
+<p><img src="https://img-blog.csdnimg.cn/cecb09a44c8d478db2fc77d16b41acd6.png" alt="橙色部分是content"></p>
 <h4 id="边界border"><a href="#边界border" class="headerlink" title="边界border"></a>边界border</h4><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test</span>{</span><br><span class="line">			<span class="attribute">background-color</span>:<span class="number">#ff3700</span>;</span><br><span class="line">			<span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">			<span class="attribute">height</span>:<span class="number">100px</span>;</span><br><span class="line">			</span><br><span class="line">			<span class="attribute">border</span>: <span class="number">10px</span> solid blue;</span><br><span class="line">		}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>10px是边界宽度，</p>
 <p>solid是边界样式，实心线，还有dashed等其他样式，</p>
 <p>blue是边界颜色</p>
-<p><img src="/.io//12/06/webintro/content.png" alt="image-20211206152935613"></p>
+<p><img src="https://img-blog.csdnimg.cn/a8e348d6082d47428975c79a33cb78e8.png" alt="蓝色是边界border"></p>
 <h4 id="内边距padding"><a href="#内边距padding" class="headerlink" title="内边距padding"></a>内边距padding</h4><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test</span>{</span><br><span class="line">			<span class="attribute">background-color</span>:<span class="number">#ff3700</span>;</span><br><span class="line">			<span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">			<span class="attribute">height</span>:<span class="number">100px</span>;</span><br><span class="line"></span><br><span class="line">			<span class="attribute">border</span>: <span class="number">10px</span> solid blue;</span><br><span class="line"></span><br><span class="line">			<span class="attribute">padding</span>: <span class="number">30px</span>;</span><br><span class="line">		}</span><br></pre></td></tr></tbody></table></figure>
 
 
 
 <p>看图就知道了</p>
-<p><img src="/.io//12/06/webintro/padding.png" alt="image-20211206153132936"></p>
+<p><img src="https://img-blog.csdnimg.cn/8079715748fb40859d55e5387b9a162d.png" alt="内容距离边界的距离就是内边距"></p>
 <p>顾名思义，内容距离边界30px</p>
 <h4 id="外边距margin"><a href="#外边距margin" class="headerlink" title="外边距margin"></a>外边距margin</h4><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test</span>{</span><br><span class="line">			<span class="attribute">background-color</span>:<span class="number">#ff3700</span>;</span><br><span class="line">			<span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">			<span class="attribute">height</span>:<span class="number">100px</span>;</span><br><span class="line"></span><br><span class="line">			<span class="attribute">border</span>: <span class="number">10px</span> solid blue;</span><br><span class="line"></span><br><span class="line">			<span class="attribute">padding</span>: <span class="number">30px</span>;</span><br><span class="line"></span><br><span class="line">			<span class="attribute">margin</span>: <span class="number">30px</span>;</span><br><span class="line">		}</span><br></pre></td></tr></tbody></table></figure>
 
 
 
-<p><img src="/.io//12/06/webintro/margin.png" alt="image-20211206153231941"></p>
+<p><img src="https://img-blog.csdnimg.cn/1554e0df41a943fcae12e0ed9e38621b.png" alt="外边距就是和其他元的距离啦"></p>
 <p>顾名思义，和周围隔开30px</p>
 <p>另外，我们可以打开浏览器，按下f12，点击右上角的这个图标，再用鼠标悬停在想要查看的图形上，就能查看包括盒子模型在内的相关信息</p>
-<p><img src="/.io//12/06/webintro/f12.png" alt="image-20211206153828635"></p>
+<p><img src="https://img-blog.csdnimg.cn/039f7a232e1f460a98d36c8e1d37e338.png" alt="如图所示"></p>
 <p>以上就标准盒模型的大概内容，如果有兴趣可以自行了解<strong>怪异盒模型</strong></p>
 
                 
