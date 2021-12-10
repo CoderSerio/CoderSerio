@@ -29,13 +29,25 @@
     
     
     <entry>
-      <title></title>
+      <title>TypeScript</title>
       <link href="/2021/12/09/typescript/"/>
       <url>/2021/12/09/typescript/</url>
       
-        <content type="html"><![CDATA[<p>title：TypeScript</p><p>summary：</p><hr><h2 id="前置概念"><a href="#前置概念" class="headerlink" title="前置概念"></a>前置概念</h2><h3 id="强弱类型"><a href="#强弱类型" class="headerlink" title="强弱类型"></a>强弱类型</h3><p>这是从<strong>类型安全</strong>的角度区分的</p><p>强、弱类型缺乏官方的界定标准，但是较为认可的一种说法是：</p><blockquote><p>强类型语言中不允许任意的隐式类型转换；</p><p>弱类型语言则允许。</p></blockquote><h3 id="静动态类型"><a href="#静动态类型" class="headerlink" title="静动态类型"></a>静动态类型</h3><p>这是从<strong>类型检查</strong>的角度区分的</p><p>有较为官方统一的解释：</p><blockquote><p>静态类型即，变量声明后就不允许再修改了；</p><p>动态类型则允许，并且在运行的时候才能明确一个变量的类型</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h2 id="前置概念"><a href="#前置概念" class="headerlink" title="前置概念"></a>前置概念</h2><h3 id="强弱类型"><a href="#强弱类型" class="headerlink" title="强弱类型"></a>强弱类型</h3><p>这是从<strong>类型安全</strong>的角度区分的</p><p>强、弱类型缺乏官方的界定标准，但是较为认可的一种说法是：</p><blockquote><p>强类型语言中不允许任意的隐式类型转换；</p><p>弱类型语言则允许。</p></blockquote><h3 id="静动态类型"><a href="#静动态类型" class="headerlink" title="静动态类型"></a>静动态类型</h3><p>这是从<strong>类型检查</strong>的角度区分的</p><p>有较为官方统一的解释：</p><blockquote><p>静态类型即，变量声明后就不允许再修改了；</p><p>动态类型则允许，并且在运行的时候才能明确一个变量的类型</p></blockquote>]]></content>
       
       
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+        </tags>
       
     </entry>
     
