@@ -464,14 +464,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-10
+                    2021-12-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    144
+                    1.5k
                 </div>
                 
 
@@ -505,6 +505,75 @@
 <p>静态类型即，变量声明后就不允许再修改了；</p>
 <p>动态类型则允许，并且在运行的时候才能明确一个变量的类型</p>
 </blockquote>
+<p>注意，<strong>并非</strong>弱类型就是静态类型，强类型就是动态类型<br><img src="https://img-blog.csdnimg.cn/a648a19d22f94d7a89d7a1e01f9df535.png" alt="在这里插入图片描述"></p>
+<h2 id="JavaScript的系统特性"><a href="#JavaScript的系统特性" class="headerlink" title="JavaScript的系统特性"></a>JavaScript的系统特性</h2><p>弱类型 且 动态类型<br>灵活多变导致的极其不可靠</p>
+<blockquote>
+<p>这是因为早期开发JS的时候根本没想过JS会发展到今天这一步，所以设计得相对简单，不适合大规模的应用<br>随着时代更迭，这种“灵活”的优势，也就演变成了“混乱、不稳定”的劣势</p>
+</blockquote>
+<p>比如，</p>
+<blockquote>
+<p>语法上允许调用对象本不存在的方法（执行时才会报错）<br>函数/方法参数类型不做限制地进行运算（函数功能可能发生改变）<br><strong>对象属性名会自动转化为字符串</strong>（稀奇古怪的操作）</p>
+</blockquote>
+<p><strong>解决方式</strong></p>
+<blockquote>
+<p>一、简单的方式是通过约定，即开发者一起遵守一套规则 但是很明显，这样并没有保障，随时都可能出现不遵守规则的人</p>
+</blockquote>
+<blockquote>
+<p>二、通过额外的工作去保障，如图：<br><img src="https://img-blog.csdnimg.cn/1e98aec695de4e199c9b4acc2b3f8533.png" alt="ab如果不为数字，那么抛出异常"><br>当然，也可以是借助其他工具。<br></p>
+</blockquote>
+<blockquote>
+<p>三、则是想办法改变JavaScript的系统特性吗，这才是从根本上解决问题</p>
+</blockquote>
+<h2 id="Flow"><a href="#Flow" class="headerlink" title="Flow"></a>Flow</h2><p>我们先考虑一下借助其他工具，比如Flow——一款JavaScript静态资源检查器</p>
+<blockquote>
+<p>Flow是2014年由facebook推出的一款工具，可以弥补JS的系统特性的弊端，工作原理是通过添加类型注解的方式来解决变量类型不明确的问题，是一个成熟的技术</p>
+</blockquote>
+<h3 id="类型注解"><a href="#类型注解" class="headerlink" title="类型注解"></a>类型注解</h3><p><img src="https://img-blog.csdnimg.cn/c97dcb9f8a3f485e83d49d06dcc1f6bb.png" alt="在这里插入图片描述"><br>参数后加冒号再加数据类型，以此形式来限定参数类型，即<strong>类型注解</strong></p>
+<p><strong>需要安装相关依赖</strong>，有兴趣就学</p>
+<h2 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote>
+<p>TypeScript是JavaScript的超集，<br><img src="https://img-blog.csdnimg.cn/9d7dcebb1bf441648a9e75ee7e9af094.png" alt="TypeScript"><br><strong>缺点一</strong>：增加了如接口，泛型，枚举等的“新概念”（？迷惑，却不说）<br>但是好消息是，TypeScript是<strong>渐进式</strong>的<br>也就意味着，就算我们什么新概念都不知道，凭借JS基础我们依旧能够直接开始使用它<br><strong>缺点二</strong>：项目初期，TypeScript会增加开发成本<br>大概是需要自定义各种数据类型等等工作加大了开始的成本，不过这便于后期的维护</p>
+</blockquote>
+<h3 id="隐式类型推断"><a href="#隐式类型推断" class="headerlink" title="隐式类型推断"></a>隐式类型推断</h3><p>即在不明确变量类型的时候，系统根据其使用情况来判断它是什么类型</p>
+<h3 id="类型注解-1"><a href="#类型注解-1" class="headerlink" title="类型注解"></a>类型注解</h3><figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a : <span class="built_in">number</span>, b : <span class="built_in">number</span></span>) </span>{</span><br><span class="line">	<span class="keyword">return</span> a + b</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>和flow的语法一样</p>
+<h3 id="类型断言"><a href="#类型断言" class="headerlink" title="类型断言"></a>类型断言</h3><p>用法：</p>
+<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> num1 = res <span class="keyword">as</span> <span class="built_in">number</span></span><br></pre></td></tr></tbody></table></figure>
+<p>这样写就是说，res是一个数字</p>
+<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> num2 == &lt;<span class="built_in">number</span>&gt;res</span><br></pre></td></tr></tbody></table></figure>
+<p>虽然上述写法也可以实现一样的效果，但是这和JSX的语法会发生冲突，<br>所以还是建议使用第一种写法</p>
+<h3 id="更多类型"><a href="#更多类型" class="headerlink" title="更多类型"></a>更多类型</h3><h4 id="元组类型"><a href="#元组类型" class="headerlink" title="元组类型"></a>元组类型</h4><h4 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h4><h4 id="任意类型"><a href="#任意类型" class="headerlink" title="任意类型"></a>任意类型</h4><h3 id="declare类型声明"><a href="#declare类型声明" class="headerlink" title="declare类型声明"></a>declare类型声明</h3><p>一开始我看到类型声明的时候还愣了一下<br>为了避免误解我还是在其前面加上一个declare吧</p>
+<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { camelCase } <span class="keyword">from</span> <span class="string">'loadsh'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 模块中提供的这个函数并没有定义参数和返回值类型</span></span><br><span class="line"><span class="comment">// 我们用以下形式给它补上这些信息</span></span><br><span class="line"><span class="keyword">declare</span> <span class="function"><span class="keyword">function</span> <span class="title">camelCase</span> (<span class="params">input: <span class="built_in">string</span></span>): <span class="title">string</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">const</span> <span class="title">res</span> = <span class="title">camelCase</span>(<span class="params"><span class="string">'hellotankyoutankyouverymuch,iamok'</span></span>)</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+<h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><h4 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h4><p>其实吧，我寻思啊，这js怎么还整接口啊…</p>
+<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这是接口</span></span><br><span class="line"><span class="keyword">interface</span> Post {</span><br><span class="line">	<span class="attr">title</span>: <span class="built_in">string</span></span><br><span class="line">	<span class="attr">content</span>: <span class="built_in">string</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// 写个函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">print</span>(<span class="params">p: Post</span>)</span>{</span><br><span class="line">	<span class="built_in">console</span>.log(p.title, p.content)</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用函数</span></span><br><span class="line">print({</span><br><span class="line">	<span class="attr">title</span>: <span class="string">'Hello, Interface'</span></span><br><span class="line">	<span class="attr">content</span>: <span class="string">'TypeScript is so cool'</span></span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="成员修饰"><a href="#成员修饰" class="headerlink" title="成员修饰"></a>成员修饰</h4><p><strong>可选成员</strong><br>即可有可无的成员</p>
+<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// subtitle后面加上了一个? 表示这个成员可有可无</span></span><br><span class="line"><span class="comment">// 原理是标记subtitle类型是string 或者 undefined</span></span><br><span class="line"><span class="keyword">interface</span> Post {</span><br><span class="line">	<span class="attr">title</span>: <span class="built_in">string</span></span><br><span class="line">	subtitle?: <span class="built_in">string</span></span><br><span class="line">	<span class="attr">content</span>: <span class="built_in">string</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p><strong>只读成员</strong><br>不可手动设置和修改</p>
+<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> Post {</span><br><span class="line"><span class="comment">// readonly关键字约束成员即可设置只读</span></span><br><span class="line">	<span class="attr">title</span>: <span class="built_in">string</span></span><br><span class="line">	subtitle?: <span class="built_in">string</span></span><br><span class="line">	<span class="attr">content</span>: <span class="built_in">string</span></span><br><span class="line">	<span class="keyword">readonly</span> summary: <span class="built_in">string</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p><strong>动态成员</strong><br>有些时候一个接口该有哪些成员是不确定的</p>
+<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// [prop: string]设置成员名称为string</span></span><br><span class="line"><span class="comment">// 其后的string指定值为string</span></span><br><span class="line"><span class="keyword">interface</span> Cache {</span><br><span class="line">	[prop: <span class="built_in">string</span>]: <span class="built_in">string</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">//使用</span></span><br><span class="line"><span class="keyword">const</span> cache: Cache = {}</span><br><span class="line"></span><br><span class="line">cache.foo = <span class="string">'value1'</span></span><br><span class="line">cache.bar = <span class="string">'value2'</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><p>对ES6引入的类进行了扩展</p>
+<h4 id="基本使用-1"><a href="#基本使用-1" class="headerlink" title="基本使用"></a>基本使用</h4><figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>{</span><br><span class="line">	<span class="attr">name</span>: <span class="built_in">string</span> <span class="comment">// = '赵宇'</span></span><br><span class="line">	<span class="keyword">private</span> age: <span class="built_in">number</span></span><br><span class="line">	<span class="title">constructor</span> (<span class="params">name: <span class="built_in">string</span>, age: <span class="built_in">number</span></span>) {</span><br><span class="line">		<span class="built_in">this</span>.name = name</span><br><span class="line">		<span class="built_in">this</span>.age = age</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Y1M = <span class="keyword">new</span> Person(<span class="string">'杨二鸣'</span>, <span class="number">20</span>)</span><br></pre></td></tr></tbody></table></figure>
+<p>注意，在TS标准中，类的成员变量要么初始化，要么用构造函数设置值<br>另外，如果不加修饰，那么<strong>默认为public，不是default</strong><br>当然还有，protected，和private区别大概是</p>
+<blockquote>
+<p>protected可以继承，只能在子类中访问（子类的实例对象不可访问） </p>
+</blockquote>
+<blockquote>
+<p>private不可继承，只能在当前类中访问</p>
+</blockquote>
+<p>同样，<strong>继承extends</strong>，<strong>静态static</strong>，<strong>只读readonly</strong>， <strong>抽象abstract</strong>这些东西也被加入到了这个体系，<br>总之就是Java玩剩下的东西都被拉到了TS的体系中</p>
+<blockquote>
+<p>这里单独说一下readonly，<br>放到public等修饰的后面，<br>被其修饰的成员先得在声明时或构造函数中初始化，此后不能再被修改</p>
+</blockquote>
+<h4 id="类和接口"><a href="#类和接口" class="headerlink" title="类和接口"></a>类和接口</h4><p>Java的类和类之间是单继承的，类和接口之间是多继承的，<br>所以TS这里类和接口的关系还是多继承的（蜜汁逻辑）</p>
+<blockquote>
+<p>用法和Java一样，依旧是用implements实现<br>书写的规范是，一个接口约束一个有关功能即可</p>
+</blockquote>
+<h3 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h3><p>果然，我就知道泛型也跑不掉</p>
+<h4 id="基本使用-2"><a href="#基本使用-2" class="headerlink" title="基本使用"></a>基本使用</h4><figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createArray</span>&lt;<span class="title">T</span>&gt; (<span class="params">length: <span class="built_in">number</span>, value : T</span>): <span class="title">T</span>[] </span>{</span><br><span class="line">	<span class="keyword">const</span> arr = <span class="built_in">Array</span>&lt;T&gt;(length).fill(T)</span><br><span class="line">	<span class="keyword">return</span> arr</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> res = createArray&lt;<span class="built_in">string</span>&gt;(<span class="number">3</span>, <span class="string">'foo'</span>)</span><br></pre></td></tr></tbody></table></figure>
 
                 
             </div>
