@@ -29,33 +29,6 @@
     
     
     <entry>
-      <title>Java Socket</title>
-      <link href="/2021/12/19/javasocket/"/>
-      <url>/2021/12/19/javasocket/</url>
-      
-        <content type="html"><![CDATA[<h3 id="Socket"><a href="#Socket" class="headerlink" title="Socket"></a>Socket</h3><p><strong>概念</strong></p><blockquote><p>Socket是对TCP和UDP的封装，是IP地址和端口的结合描述协议，即RFC 793</p><p>TCP/IP协议的相关API的总称；是网络API的集合实现</p></blockquote><p><strong>作用</strong></p><blockquote><p>在网络传输中用于标识两个端点（IP+端口）间的链接</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> web </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 后端 </tag>
-            
-            <tag> 网络 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Node.JS</title>
       <link href="/2021/12/15/node.js/"/>
       <url>/2021/12/15/node.js/</url>
