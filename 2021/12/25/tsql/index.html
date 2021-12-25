@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据库理论知识, 前端">
-    <meta name="description" content="速通数据库理论概念">
+    <meta name="keywords" content="Transact-SQL, 前端">
+    <meta name="description" content="感受与众不同的SQL">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据库理论知识 | 碳苯</title>
+    <title>Transact-SQL | 碳苯</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据库理论知识</h1>
+                    <h1 class="description center-align post-title">Transact-SQL</h1>
                 </div>
             </div>
         </div>
@@ -430,13 +430,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                                <span class="chip bg-color">数据库</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -457,7 +453,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-12-24
+                    2021-12-25
                 </div>
                 
 
@@ -471,7 +467,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.9k
+                    1.8k
                 </div>
                 
 
@@ -494,329 +490,110 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>本篇只讲述数据库相关的各种概念理论，具体代码实践不在本篇讨论范围之内，此后会另起一篇写代码和例题</p>
+<p>由于考试在即，本文只写一些与MySQL不太一样的内容，（也可能是一样的但是某佑根本不会的内容）</p>
+<p>并且只是很粗略地过一遍，很多细致的地方还得进一步研究！</p>
 </blockquote>
 <blockquote>
-<p>由于是还有几天就要考试了，所以本篇内容尽量<strong>精简</strong>，采用的语言也<strong>并不官方，尽可能通俗易懂</strong>。</p>
+<p>其他未提到的语法可参考本站的<strong>MySQL学习笔记</strong>。</p>
 </blockquote>
-<h2 id="数据库发展史"><a href="#数据库发展史" class="headerlink" title="数据库发展史"></a>数据库发展史</h2><p>什么，竟然要考这个？</p>
-<p> 数据库发展经过了四个阶段：</p>
-<table>
-<thead>
-<tr>
-<th>时间</th>
-<th>内容</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>人工管理阶段</td>
-<td>20世纪40年代中–50年代中</td>
-</tr>
-<tr>
-<td>文件系统阶段</td>
-<td>20世纪50年代末–60年代中</td>
-</tr>
-<tr>
-<td>数据库系统阶段</td>
-<td>20世纪60年代末–现在</td>
-</tr>
-<tr>
-<td>新一代数据库管理系统</td>
-<td>20世纪90年代–未来</td>
-</tr>
-</tbody></table>
-<p>（看到最后这里的年代我迷惑了一下，但是咱也不敢问啊）</p>
-<h3 id="人工管理阶段"><a href="#人工管理阶段" class="headerlink" title="人工管理阶段"></a>人工管理阶段</h3><p><strong>背景</strong></p>
+<h2 id="数据库操作"><a href="#数据库操作" class="headerlink" title="数据库操作"></a>数据库操作</h2><p>接下来涉及到的操作中，数据库名尽可能采用SelectCourse，DB等</p>
+<h3 id="数据库创建"><a href="#数据库创建" class="headerlink" title="数据库创建"></a>数据库创建</h3><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> DATABASE SelectCourse <span class="comment">-- 创建数据库</span></span><br><span class="line"><span class="keyword">ON</span> <span class="keyword">PRIMARY</span> </span><br><span class="line">(</span><br><span class="line">NAME <span class="operator">=</span> <span class="string">'data'</span>,               <span class="comment">-- 主数据文件的逻辑名</span></span><br><span class="line">FILENAME <span class="operator">=</span> <span class="string">'E：\data'</span>,	    <span class="comment">-- 主数据文件的物理名</span></span><br><span class="line">SIZE <span class="operator">=</span> <span class="number">10</span>MB,                  <span class="comment">-- 初始大小</span></span><br><span class="line">FILEGROWTH <span class="operator">=</span> <span class="number">10</span><span class="operator">%</span>             <span class="comment">-- 增长率</span></span><br><span class="line">)</span><br><span class="line">LOG <span class="keyword">ON</span> </span><br><span class="line">(</span><br><span class="line">	NAME <span class="operator">=</span> <span class="string">'log'</span>,             <span class="comment">-- 日志文件逻辑名</span></span><br><span class="line">    FILENAME <span class="operator">=</span> <span class="string">'E:\log'</span>,		 <span class="comment">-- 日志文件物理名</span></span><br><span class="line">    SZIE <span class="operator">=</span> <span class="number">1</span>MB,                </span><br><span class="line">    MAXSIZE <span class="operator">=</span> <span class="number">20</span>MB,</span><br><span class="line">    FILEGROWTH <span class="operator">=</span> <span class="number">10</span><span class="operator">%</span> </span><br><span class="line">)</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="数据库备份"><a href="#数据库备份" class="headerlink" title="数据库备份"></a>数据库备份</h3><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">BACKUP DATABASE SelectCourse</span><br><span class="line"><span class="keyword">TO</span> <span class="string">'E:\bk_SelectCourse'</span> </span><br><span class="line"><span class="keyword">WITH</span> DIFFERENTIAL, <span class="type">INT</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>其中<strong>DIFFERENTIAL</strong>关键字是可以去掉的，其意义是保留设备上已有的内容，去掉的话则是覆盖</p>
+<p>好吧，其实整个WITH都是可以省略的，INT参数意义不详（暂时也没找到参考资料）</p>
+<h3 id="数据库恢复"><a href="#数据库恢复" class="headerlink" title="数据库恢复"></a>数据库恢复</h3><p>既然有备份，那自然有恢复啊</p>
+<p>（诶，这个备份模式好像在哪里学过来着，究竟是哪里啊）</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RESTORE DATABASE SelectCourse</span><br><span class="line"><span class="keyword">FROM</span> <span class="string">'E:\bk_SelectCourse'</span></span><br><span class="line"><span class="keyword">WITH</span> FILE <span class="operator">=</span> <span class="number">1</span>, REPLACE</span><br></pre></td></tr></tbody></table></figure>
+
+<p>只知道REPLACE大概是强制替换，FILE参数意义不详</p>
+<p>同样，WITH整个都可以省略</p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>当发现有变量这种东西的时候，我还是小为震惊了一下——这可太不得了了！</p>
+<p>有了变量之后，意味着很多逻辑处理能够在数据库内部完成了！</p>
+<p>这种其妙发现带来的兴奋毫不次于发现CSS中可以使用变量时的惊喜！</p>
+<p>这种设定对于我来说还算比较新颖，所以这一章稍微详细一点，咱先来看看T-SQL的发展背景。</p>
 <blockquote>
-<p>硬件上没有直接存取的设备，软件上没有操作系统，处理方式为批处理</p>
+<p>Transact-SQL，即事务SQL，简称为T-SQL，是微软大爹开发的，是<strong>SQL的超集</strong>。</p>
 </blockquote>
-<p><strong>应用程序和数据的对应关系</strong></p>
+<p>好了，我们已经详细地了解了T-SQL的背景（MS的黑科技，知道牛逼就行了）</p>
+<h3 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h3><p>这里的变量也有<strong>局部和全局</strong>之分。</p>
+<p>一开始我还挺迷惑的，SQL语句不是选中之后再执行的吗，那这个局部和全局是按我选中的区域来动态划分作用域的吗？</p>
+<p>试了一下结果并不是我想的这样。</p>
 <blockquote>
-<p>应用程序和数据集一一对应</p>
+<p>由<strong>用户自定义的变量</strong>，可以存储数值，字符串等类型，作用范围仅在某个程序内部。</p>
+<p>语法如下：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span> <span class="variable">@name</span> <span class="type">varchar</span>(<span class="number">10</span>) <span class="comment">-- 声明局部变量name，类型是变长数组，长度上限是10</span></span><br><span class="line"><span class="keyword">set</span> <span class="variable">@name</span> <span class="operator">=</span> <span class="string">'沈某人'</span>       <span class="comment">-- 赋值</span></span><br><span class="line">print <span class="variable">@name</span> 			 <span class="comment">-- 打印</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>也就是局部变量名称前面需要带有@字符</p>
 </blockquote>
-<p><strong>特点</strong></p>
-<blockquote>
-<p>数据仅面向某一个应用程序，<strong>不保存不共享</strong>，内容冗余度高，且<strong>不独立无结构</strong>，完全被程序控制</p>
+<h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><blockquote>
+<p>由系统提供的，用于存储一些系统信息，不能由用户定义。</p>
+<p>全局变量的作用域并不局限于某个程序，而是任何程序随时可以调用。</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@<span class="variable">@ERROR</span>  <span class="comment">-- 最后一个T-SQL错误的错误号</span></span><br><span class="line">@<span class="variable">@IDENTITY</span> <span class="comment">-- 最后一次插入的标记值</span></span><br><span class="line">@<span class="variable">@LANGUAGE</span> <span class="comment">-- 当前使用语言的名称</span></span><br><span class="line">@<span class="variable">@MAX</span>_CONNECTIONS <span class="comment">-- 可以创建同时连接的最大数目</span></span><br><span class="line">@<span class="variable">@ROWCOUNT</span> <span class="comment">-- 受上一个SQL语言影响的行数</span></span><br><span class="line">@<span class="variable">@SERVERNAME</span> <span class="comment">-- 本地服务器的名称</span></span><br><span class="line">@<span class="variable">@TRANSCOUT</span> <span class="comment">-- 当前连接打开的事务数目</span></span><br><span class="line">@<span class="variable">@VERSION</span> <span class="comment">-- SQL SERVER的版本信息</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>没错，全局变量的标志是前置两个@字符</p>
 </blockquote>
-<h3 id="文件管理阶段"><a href="#文件管理阶段" class="headerlink" title="文件管理阶段"></a>文件管理阶段</h3><p><strong>背景</strong></p>
-<blockquote>
-<p>硬件上有了磁盘和磁鼓（？什么鬼），软件上有了操作系统，处理方式上有了联机实时处理</p>
+<p>tip:局部变量名称支持中文</p>
+<h2 id="选择分支"><a href="#选择分支" class="headerlink" title="选择分支"></a>选择分支</h2><p>几乎所有语言的分支都长一个样</p>
+<p>但是这里竟然不太一样！！！</p>
+<h3 id="IF语句"><a href="#IF语句" class="headerlink" title="IF语句"></a>IF语句</h3><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">IF @院系 <span class="operator">=</span> <span class="string">'计科院'</span></span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">	PRINT <span class="string">'壮哉我计科院！'</span></span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>其中BEGIN和END就是起到类似于{}花括号划定作用域的效果</p>
+<p>当然，在其中只有一条语句时，依旧存在语法糖</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">IF @院系 <span class="operator">=</span> <span class="string">'计科院'</span></span><br><span class="line">	PRINT <span class="string">'壮哉我计科院'</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p>同样地，也有ELSE和ELSE IF语句，此处不再赘述</p>
+<p>（应该有ELSE IF吧？没试过，不过我想应该是有的。有空试一试）</p>
+<h3 id="CASE语句"><a href="#CASE语句" class="headerlink" title="CASE语句"></a>CASE语句</h3><p>什么，竟然不是switch，爷青结！</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname, location <span class="operator">=</span></span><br><span class="line"><span class="keyword">CASE</span> Sdept </span><br><span class="line">	<span class="keyword">WHEN</span> <span class="string">'计科院'</span> <span class="keyword">THEN</span> <span class="string">'明理楼'</span>，</span><br><span class="line">	<span class="keyword">WHEN</span> <span class="string">'机电院'</span> <span class="keyword">THEN</span> <span class="string">'明志楼'</span>,</span><br><span class="line">	<span class="keyword">WHEN</span> <span class="string">'化工院'</span> <span class="keyword">THEN</span> <span class="string">'明德楼'</span>,</span><br><span class="line">	<span class="keyword">WHEN</span> <span class="string">'石工院'</span> <span class="keyword">THEN</span> <span class="string">'明德楼'</span>,</span><br><span class="line">	<span class="keyword">ELSE</span> <span class="string">'思学楼'</span></span><br><span class="line"><span class="keyword">END</span></span><br><span class="line"><span class="keyword">FROM</span> Student</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p>所有语言的循环都差不多</p>
+<p>啊，什么？没有FOR循环？爷二度青结！</p>
+<h3 id="WHILE语句"><a href="#WHILE语句" class="headerlink" title="WHILE语句"></a>WHILE语句</h3><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">WHILE (SELCT <span class="built_in">AVG</span>(Ccredit) <span class="keyword">FROM</span> Course ) <span class="operator">&lt;</span> <span class="number">5</span> <span class="comment">-- 注意这个括号不是WHILE语句的，只是为了改变SELECT语句和小于比较的运算优先级</span></span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">	UPDATE Course <span class="keyword">SET</span> Ccredit <span class="operator">=</span> Credit <span class="operator">+</span> <span class="number">1</span> <span class="comment">-- 没有 ++ 这样的一目运算符</span></span><br><span class="line">    IF (<span class="keyword">SELECT</span> <span class="built_in">MAX</span>(Ccredit) <span class="keyword">FROM</span> Course) <span class="operator">&gt;</span> <span class="number">10</span> <span class="comment">-- 同样地， 这个括号也只是为了改变运算优先级</span></span><br><span class="line">    	BREAK   <span class="comment">-- 是经典的BREAK语句</span></span><br><span class="line">    <span class="keyword">ELSE</span></span><br><span class="line">    	CONTINUE <span class="comment">-- 应该不写也一样 </span></span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>上述WHILE中SELECT语句的执行过程并不是一步到位的，而是一个元组一个元组地查询，每次查询都会用AVG函数计算平均值，一旦这个平均值不再满足&lt;5这个条件，WHILE循环结束</p>
+<h2 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h2><p>一开始我还以为是什么理论性的东西（望文生义</p>
+<p>结果这东西还挺实在的哈</p>
+<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote>
+<p>存储过程（Strored Procedure）是<strong>一组</strong>为了完成特定功能的<strong>SQL语句集合</strong></p>
+<p>用户通过制定存储过程的名字，并且给出参数（如果需要参数的话）即可执行它。</p>
 </blockquote>
-<p><strong>应用程序和数据的对应关系</strong></p>
-<blockquote>
-<p>允许一个应用程序对应一个数据文件，<br>也可以多个应用程序对应一个文件管理系统，再对应多个文件</p>
-</blockquote>
-<p><strong>特点</strong></p>
-<blockquote>
-<p>数据依旧面向某一程序，可以长期保存，<strong>共享性较差且冗余度大</strong>，<strong>记录有结构整体无结构</strong>，独立性差，依旧是应用程序控制数据</p>
-</blockquote>
-<h3 id="数据库系统阶段"><a href="#数据库系统阶段" class="headerlink" title="数据库系统阶段"></a>数据库系统阶段</h3><p>这里更多的是指传统的<strong>文件系数据库</strong><br><strong>背景</strong></p>
-<blockquote>
-<p>出现了大规模管理的需求，硬件上有了更大容量的磁盘和磁盘阵列，软件上有了数据库管理系统，处理方式有了分布式处理</p>
-</blockquote>
-<p><strong>应用程序和数据的对应关系</strong></p>
-<blockquote>
-<p>（此处主要指的是<strong>文件系数据库阶段</strong>）多个应用程序对应一个数据库操作系统，这个数据库操作系统对应一个数据库</p>
-</blockquote>
-<h3 id="新一代数据库管理系统"><a href="#新一代数据库管理系统" class="headerlink" title="新一代数据库管理系统"></a>新一代数据库管理系统</h3><blockquote>
-<p>比如<br>分布式数据库: 数据分布在网络上，但是逻辑上属于一个系统，<br>空间数据库：主要描述、存储和处理空间数据及其属性，<br>NoSQL数据库…，<br>面向对象数据库…，<br>….</p>
-</blockquote>
-<h2 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h2><blockquote>
-<p><strong>概念</strong><br>数据模型是对现实世界的模拟和抽象，用来描述数据如何组织、操作和存储的。</p>
-<p><strong>分类</strong></p>
-<p>分为三类：<strong>概念模型、逻辑模型、物理模型</strong><br>分别对应现实世界，信息世界（第一层抽象），机器世界（第二层抽象）</p>
-<p><strong>组成</strong><br>分为三部分：  <strong>数据结构、数据操作、数据完整性约束条件</strong></p>
-</blockquote>
-<h3 id="概念模型"><a href="#概念模型" class="headerlink" title="概念模型"></a>概念模型</h3><blockquote>
-<p>现实世界到机器世界的一个中间层次<br>主要描述有哪些<strong>实体和关系</strong><br>简单说就是描述<strong>是什么</strong>，</p>
-<p><strong>简单理解为E-R图</strong></p>
-</blockquote>
-<p>涉及一些前置的概念：</p>
-<blockquote>
-<p><strong>实体Entity</strong><br>客观存在并且相互区别的事物称为实体，包括事物和概念<br>比如张三、汽车、运动、喜好这些名词都是实体<br><strong>属性Attribute</strong><br>实体所具有的某一特性<br><strong>码Key</strong><br>唯一标识实体的属性<br><strong>域Domain</strong><br>属性的取值范围称<br><strong>实体集Entity Set</strong><br>同一类型实体的集合称为实体集<br><strong>实体型Entity Type</strong><br>用实体名及其属性名集合来抽象和刻画同类实体</p>
-</blockquote>
-<p>比如学生(学号，姓名，性别，院系，专业)，表示学生实体，<br>全体学生则是实体集<br><strong>实体集之间的联系</strong></p>
-<blockquote>
-<p><strong>联系</strong><br>实体内部的联系通常是指的组成实体的各属性之间的联系<br>实体之间的联系通常是指的不同实体集之间的联系<br>联系分为一对一，一对多，多对多</p>
-</blockquote>
-<p><strong>E-R图</strong></p>
-<blockquote>
-<p><strong>矩形</strong><br>表示实体<br><strong>椭圆</strong><br>表示属性<br><strong>菱形</strong><br>表示联系</p>
-</blockquote>
-<p>比如这样<br><img src="https://img-blog.csdnimg.cn/00ae9e1eccaf4c0da2061d942de2f2d4.png" alt="在这里插入图片描述"><br>有时候，联系本身也是一种实体，可以有属性<br><img src="https://img-blog.csdnimg.cn/7da1868fbc3342c09174e142fc63ce42.png" alt="在这里插入图片描述"><br>存在多个实体间多对多联系的时候<br><img src="https://img-blog.csdnimg.cn/61b67c604fd143eea140a82d150489b1.png" alt="在这里插入图片描述"><br>单个实体型内的联系<br><img src="https://img-blog.csdnimg.cn/d2e1d26882864aaa95074f6627efe2ab.png" alt="在这里插入图片描述"></p>
-<h3 id="逻辑模型"><a href="#逻辑模型" class="headerlink" title="逻辑模型"></a>逻辑模型</h3><blockquote>
-<p>从数据的组织方式来描述数据，即用什么样的数据结构来组织<br>简单说就是<strong>在概念模型基础上</strong>，进一步考虑实体的属性<br>也就是定义<strong>做什么</strong></p>
-<p>简单看做<strong>表</strong></p>
-</blockquote>
-<p>逻辑模型可以分为三类：<br><strong>非关系模型（早期数据库）</strong></p>
-<blockquote>
-<p>主要是指层次模型和网状模型</p>
-</blockquote>
-<p><strong>关系模型（当下流行数据库）</strong></p>
-<blockquote>
-<p>以严格的数学理论为基础：谓词逻辑、集合论<br>（什么？竟然是离散数学）</p>
-</blockquote>
-<p>关系型数据库则采用关系模型<br>其中，<strong>关系</strong>通常对应一张表，该表包含数个<strong>属性</strong>和数个<strong>元组</strong>，而<strong>关系模式</strong>则是对关系的一种描述，格式为</p>
-<blockquote>
-<p>关系名字（属性1，属性2，属性3…）</p>
-</blockquote>
-<p>当然，也可以用E-R图描述，此处不再赘述</p>
-<p><strong>面向对象模型</strong></p>
-<blockquote>
-<p>未来的方向，不知道是什么意思，或许是以能够存对象为基础吧</p>
-</blockquote>
-<h3 id="物理模型"><a href="#物理模型" class="headerlink" title="物理模型"></a>物理模型</h3><blockquote>
-<p>在逻辑模型的基础上，考虑存储空间等问题，即数据类型，长度大小等等<br>也就是<strong>怎么做</strong></p>
-<p>简单看做<strong>机器存储表</strong></p>
-</blockquote>
-<h3 id="三级模式"><a href="#三级模式" class="headerlink" title="三级模式"></a>三级模式</h3><blockquote>
-<p>由<strong>概念模式、外模式、内模式</strong></p>
-</blockquote>
-<p><strong>概念模式</strong><br>数据库用户看见和使用的局部数据的逻辑结构和特征的描述<br>所有用户的公共数据视图，综合所有用户的需求</p>
-<p>一个数据库只有一个模式</p>
-<p><strong>外模式</strong><br>数据库用户看见和使用的局部数据的逻辑结构和特征<br>描述一个数据库可以有多个外模式<br>外模式是保证数据库安全性的一个有力措施</p>
-<p><strong>内模式（存储模式）</strong><br>是数据结构和存储方式的描述<br>是数据在数据库内部的表示方式</p>
-<p><strong>具体示例</strong><br><img src="https://img-blog.csdnimg.cn/f55af2ccff6e42a1836b617e1e947fa2.png" alt="在这里插入图片描述"></p>
-<p><img src="https://img-blog.csdnimg.cn/d7a3ea58b13a4abebcdb2dbc6402615b.png" alt="在这里插入图片描述"></p>
-<h3 id="二级映像"><a href="#二级映像" class="headerlink" title="二级映像"></a>二级映像</h3><blockquote>
-<p>为了实现三级模式之间的转换而出现的二级映像：<br><strong>外模式/概念模式映像</strong><br>保障了数据的逻辑独立性<br>对每一个外模式，数据库都有一个外模式/概念模式映像<br><strong>概念模式/内模式映像</strong><br>保障了数据的物理独立性<br>对于每一个概念模式，数据库都有一个概念模式/内模式映像</p>
-</blockquote>
-<h2 id="函数依赖"><a href="#函数依赖" class="headerlink" title="函数依赖"></a>函数依赖</h2><p>数据依赖的主要类型有<strong>函数依赖</strong>，<strong>多值依赖</strong>, <strong>连接依赖</strong>等<br>这里主要讨论<strong>函数依赖</strong></p>
-<blockquote>
-<p>在属性（或属性组）X的值确定的情况下，必定能够确定属性Y的值<br>记为    X-&gt;Y<br>例如：学号-&gt;学生姓名，代表<strong>学生姓名函数依赖于学号</strong></p>
-<p>可以细分为<strong>部分函数依赖</strong>、<strong>完全函数依赖</strong>、<strong>传递函数依赖</strong></p>
-</blockquote>
-<h3 id="部分函数依赖"><a href="#部分函数依赖" class="headerlink" title="部分函数依赖"></a><strong>部分函数依赖</strong></h3><blockquote>
-<p>比如， 存在一个属性组{学号，年龄}，其中有学号满足学号-&gt;姓名，即可称姓名部分函数依赖于{学号， 年龄}<br>即属性组（集合）存在真子集满足一个函数依赖时，就称为部分函数依赖。<br><strong>严格地说应该记为A-P-&gt;B，P表示Part部分</strong></p>
-</blockquote>
-<h3 id="完全函数依赖"><a href="#完全函数依赖" class="headerlink" title="完全函数依赖"></a><strong>完全函数依赖</strong></h3><blockquote>
-<p>类似于部分函数依赖，但是要求是该属性组没有多余的属性，<br>也就是说，<br>比如存在一个属性组{a, b, c}, 要求a-&gt;x, b-&gt;x, c-&gt;x，{a, b}-&gt;x, {a, c}-&gt;x,{b, c}-&gt;x也就是x函数依赖于其中所有真子集<br><strong>严格地说应该记为A-F-&gt;B，Full表示Full全部</strong></p>
-</blockquote>
-<h3 id="传递函数依赖"><a href="#传递函数依赖" class="headerlink" title="传递函数依赖"></a><strong>传递函数依赖</strong></h3><blockquote>
-<p>比如， a-&gt;b, b-&gt;c, 可以间接推导出a-&gt;c，这就称为c传递函数依赖于a<br><strong>严格地说应该记为A-T-&gt;B，T表示Transition传递</strong></p>
-</blockquote>
-<h2 id="码"><a href="#码" class="headerlink" title="码"></a>码</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>当问起一张表有没有码的时候，这并不是骂它</p>
-<blockquote>
-<p><strong>码是可以确定一个元组所有信息的属性或者属性组</strong></p>
-</blockquote>
-<p>其中，<strong>元组</strong>是指一个表里面的某一行，而属性其实就是一个表里的某一列</p>
-<blockquote>
-<p>比如，存在一个属性组{学号，姓名，年龄，专业}，那么其他所有属性都可以函数依赖于学号，那么就可以把学号称为<strong>主码</strong>或者<strong>主键</strong>，不能为空<br>如果不考虑重名，那么姓名也能推出其他信息，但是由于<strong>只能有一个主码</strong>，所以姓名只能做<strong>候选码</strong>，当然主码被看做是特殊的<strong>候选码</strong><br>如果某个属性<strong>部分函数依赖</strong>于某个属性组，那么这个属性组就是<strong>超码</strong><br>注意，<strong>候选码是最小的码（最小的超码）</strong>，即<strong>候选码的真子集不能有码</strong></p>
-</blockquote>
-<h3 id="主属性和非主属性"><a href="#主属性和非主属性" class="headerlink" title="主属性和非主属性"></a>主属性和非主属性</h3><blockquote>
-<p>包含在任何一个候选码中的属性，称为<strong>主属性</strong><br>不包含在任何码中的属性称为<strong>非主属性</strong><br>如果整个属性组都是码，那么成为<strong>全码</strong></p>
-</blockquote>
-<p>举个全码的例子：</p>
-<blockquote>
-<p>关系模式R（P,W,A）,P是演奏者，W是作品，A是听众<br>一个演奏者-&gt;多个作品  一个作品-&gt;多个演奏者  多个听众-&gt;多个演奏者、多个作品<br>需要同时确定三者才能推导出整行的信息，码表示为（P,W,A），即为全码</p>
-</blockquote>
-<p>上述内容提到的<strong>关系模式</strong>可以看做是一张表，包含了PWA三个属性</p>
-<h3 id="外部码（外码）"><a href="#外部码（外码）" class="headerlink" title="外部码（外码）"></a>外部码（外码）</h3><p>举个例子</p>
-<blockquote>
-<p>两个关系模式中，<br>学生选课表(学号，课程号，成绩)，以下称为表A<br>学生信息表(学号，专业，年龄), 以下称为表B<br>表A中，需要同时确定学号和课程号才能确定一个元组，所以<strong>候选码是（学号，课程号）</strong><br>表B中，只需要确定学号就能确定一个元组，所以<strong>候选码是（学号）</strong><br>可以看到，学号不是A的码，但是是B的码，那么把学号称为A的外码</p>
-</blockquote>
-<h2 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h2><p>不仅是生活中的关系，也指离散数学中集合间的关系，更指关系型数据库中的关系</p>
-<h3 id="关系型数据库"><a href="#关系型数据库" class="headerlink" title="关系型数据库"></a>关系型数据库</h3><blockquote>
-<p><strong>关系模式</strong><br>对关系的描述即为关系模式，表示为<br><strong>关系名（属性1， 属性2 …..）</strong></p>
-</blockquote>
-<p>关系型数据库则是建立在关系模型上的数据库，在关系数据库中面实体和实体间以<strong>关系的形式</strong>进行描述</p>
-<p><strong>关系的形式</strong>具体指的是以表格的形式</p>
-<h3 id="完整性约束"><a href="#完整性约束" class="headerlink" title="完整性约束"></a>完整性约束</h3><blockquote>
-<p>完整性约束时为了保证数据库中数据的正确性和相容性，对关系模型提出的某种<strong>约束条件或规则</strong><br>其中，<strong>完整性</strong>包括了四个部分：<br>1.<strong>域完整性</strong><br>2.<strong>实体完整性</strong><br>3.<strong>参照完整性</strong><br>4.用户定义完整性<br>其中，<strong>123是关系模型必须满足的完整性约束条件</strong></p>
-</blockquote>
-<p><strong>1.域完整性</strong></p>
-<blockquote>
-<p>指约束数据类型、格式、取值范围、是否允许空值等。</p>
-</blockquote>
-<p><strong>2.实体完整性</strong></p>
-<blockquote>
-<p>指关系型数据库中所有表都必须有主码，且不允许存在与其他记录的主码相同的记录（主码是唯一的标识）</p>
-</blockquote>
-<p><strong>3.参照完整性</strong></p>
-<blockquote>
-<p>指的是外码的值必须参考主码的值，关系中不能引用不存在的记录<br>比如存在两个关系（也就是表），A和B，A中的a属性参照B中的b属性（参照，大概就是类似于平时说的左外/右外连接那样）<br>则对于a的值，必须为<strong>空</strong>或者<strong>B中某个元组中属性b的取值</strong></p>
-</blockquote>
-<p><strong>4.用户自定义完整性</strong></p>
-<blockquote>
-<p>指的是针对某一具体关系数据库的约束条件，反映某一具体应用所涉及的数据必须满足的语义要求<br>可以看做是一种随机应变的规范，比如银行卡取款金额不能超过余额</p>
-</blockquote>
-<h3 id="关系代数"><a href="#关系代数" class="headerlink" title="关系代数"></a>关系代数</h3><p><strong>符号</strong></p>
-<table>
-<thead>
-<tr>
-<th>运算</th>
-<th>符号</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>并 交 差 笛卡尔积</td>
-<td>∪   ∩   -   ×</td>
-</tr>
-<tr>
-<td>选择 投影 连接 自然连接 除</td>
-<td>σ   ∏   ∞   *   ÷</td>
-</tr>
-<tr>
-<td>算是比较（大于小于等于）</td>
-<td>（略）</td>
-</tr>
-<tr>
-<td>或 且（与） 非</td>
-<td>∨  ∧  ¬</td>
-</tr>
-</tbody></table>
-<p><strong>运算分类</strong></p>
-<blockquote>
-<p><strong>集合运算符（4）</strong><br>交   并  差  笛卡尔积<br><strong>专门关系运算符（5）</strong><br>选择 投影 连接 自然连接  除<br><strong>算术比较符（6）</strong><br>大于 大于等于 小于 小于等于 等于 不等于<br><strong>逻辑运算符（3）</strong><br>或  且(与)  非<br><strong>其他运算符（2）</strong><br>更名运算符 赋值运算符</p>
-</blockquote>
-<p>tip:有时也把自然连接视为特殊的连接</p>
-<p>其中这些又构成</p>
-<blockquote>
-<p><strong>基本运算符(5)</strong><br>并 差 笛卡尔积 投影 选择</p>
-<p><strong>组合操作(4)</strong> </p>
-<p>交 连接 自然连接 除</p>
-</blockquote>
-<p>关系代数操作的是一个序列形成的关系代数表达式，运算对象是关系，运算结果也是一个关系</p>
-<p>下文节选部分关系代数运算提供示例</p>
-<p><strong>集合运算：并</strong><br>具有<strong>相容性</strong></p>
-<blockquote>
-<p>并运算的关系必须有相同的属性个数，并且每个相对应的属性都有相同的域<br>对应的属性名称不一定一致，在不一致的时候会取参与运算前者的属性名。</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/265a28152c514b8cb6ed4bffe8ab2582.png" alt="在这里插入图片描述"><br><strong>集合运算：差</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/9b0c255840e8403bbf75d2b6bc133d59.png" alt="在这里插入图片描述"></p>
-<p><strong>集合运算：笛卡尔积</strong></p>
-<blockquote>
-<p>运算的结果是具有n+m个属性，r * s个元组</p>
-</blockquote>
-<p>（图没截全）<br><img src="https://img-blog.csdnimg.cn/08f395e65eb54500b84e3c94fd9ff0d3.png" alt="在这里插入图片描述"></p>
-<p><strong>专门关系运算：选择</strong><br>看做SELECT语句就好，针对的是元组<br><img src="https://img-blog.csdnimg.cn/406a74ed3b7a46238536fdcd1789ad05.png" alt="在这里插入图片描述"><br><strong>专门关系运算：投影</strong><br>和选择类似，但是针对的是列<br>具有<strong>重复消除性</strong></p>
-<blockquote>
-<p>如果投影运算的属性列表中<strong>只包含关系的非键属性</strong>，那么结果关系中就有可能出现重复的元组（如下图，是因为必须要有新的主键产生，但是又不能和主键的定义矛盾）<br>这时候，就会消除重复的元组，所以投影运算得到的关系的元组数量小于等于关系的元组个数</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/f8323a87140642318744cae14a5a6fc3.png" alt="在这里插入图片描述"><br><strong>专门关系运算：连接</strong><br><strong>连接运算</strong>根据情况分为<strong>θ连接</strong>或<strong>自然连接</strong></p>
-<blockquote>
-<p><strong>θ连接</strong><br>当连接运算的条件是形如AθB的时候，就称为<strong>θ连接</strong><br>当θ为=时，则该连接称为<strong>等值连接</strong><br>当有连接的关系存在共同的属性时，可以简化为<strong>自然连接</strong>，即以共同的属性进行自动匹配</p>
-</blockquote>
-<p><img src="https://img-blog.csdnimg.cn/badd53a9d5824dd2a4473c69572cd3ae.png" alt="在这里插入图片描述"></p>
-<blockquote>
-<p><strong>与笛卡尔积的区别</strong><br>主要区别是运算结果的元组数目不同：<br>对于笛卡尔积，两个关系所有元组的组合都会出现在笛卡尔积的结果中，而只有符合连接条件额度元组才会出现在连接结果中</p>
-</blockquote>
-<p><strong>专门关系运算：除</strong></p>
-<blockquote>
-<p>这里有两个关系R(A1…An, B1…Bm), S(B1…Bm,C1…Ck)<br>其中存在共同的属性：（B1…Bm）<br>在R中取(A1…An)取值相同的<strong>所有元组</strong>中的(B1…Bm)属性的值作为一个集合RB<br>在S这边取(B1…Bm)上所有取值作为一个集合SB<br>如果有SB是RB的子集，则R中(A1…An)的取值便构成了R÷S的一个元组</p>
-</blockquote>
-<p>上面的描述挺复杂的，记起来也很麻烦，还是看个例子吧<br><img src="https://img-blog.csdnimg.cn/3b85febe52fe400e8d0921e6eabc8fce.png" alt="在这里插入图片描述"><br>首先表R和S都有的属性是C和D<br>那么把R中A和B属性中值相等的C和D属性的值作为一个集合，得到这个集合并记为</p>
-<blockquote>
-<p>RS = { {(c, d), (e, f), (h, k)}，{(e, f), (d, l)}，{(c,d),(e,f)} }</p>
-</blockquote>
-<p>而S这边得把C和D作为一个集合，记为</p>
-<blockquote>
-<p>SS = { {(c,d),(e,f)} }</p>
-</blockquote>
-<p>很显然，SS是RS的子集，所以满足这个关系的RS的C和D属性对应的<strong>A和B属性</strong>即成为该运算结果的属性</p>
-<p><strong>其他运算：赋值</strong><br>其实就是修改关系名以便引用，当然也可以修改属性名</p>
-<p><strong>其他运算：更名</strong><br>给关系代数的运算结果命名，也可以修改运算结果的属性名<br><strong>注意，别被运算的名字误导了！</strong></p>
-<h2 id="范式"><a href="#范式" class="headerlink" title="范式"></a>范式</h2><blockquote>
-<p>定义为<br>符合某一种级别的关系模式的集合，表示一个关系内部各属性之间的联系的合理化程度。一般我们用NF代表范式。<br>（很晦涩…）</p>
-</blockquote>
-<p>数据库范式有1NF，2NF，3NF，BCNF，4NF，5NF<br>但是一般我们只需要考虑到BCNF就够了</p>
-<h3 id="第一范式1NF"><a href="#第一范式1NF" class="headerlink" title="第一范式1NF"></a>第一范式1NF</h3><blockquote>
-<p>关系中的属性不可再分，即属性不能具有属性。</p>
-</blockquote>
-<p>1NF是对所有关系型数据库的<strong>最基本要求</strong></p>
-<p>但是仅仅符合1NF的设计可能会存在数据冗余过大，插入异常，删除异常，修改异常等问题</p>
-<h3 id="第二范式2NF"><a href="#第二范式2NF" class="headerlink" title="第二范式2NF"></a>第二范式2NF</h3><blockquote>
-<p>消除了非主属性对于码的部分函数依赖<br>要求每个实例或者行必须唯一地被区分，每一行数据只能与其中一列相关，如果出现重复的数据，那么就要把它拆分开来。</p>
-</blockquote>
-<h3 id="第三范式3NF"><a href="#第三范式3NF" class="headerlink" title="第三范式3NF"></a>第三范式3NF</h3><blockquote>
-<p>3NF在2NF基础上，消除了非主属性对于码的传递函数依赖<br>即存在非主属性对于码的传递函数依赖，则不符合3NF</p>
-</blockquote>
-<blockquote>
-<p>3NF <strong>基本</strong> 解决了数据冗余过大，插入异常，删除异常的问题 </p>
-</blockquote>
-<h3 id="BCNF范式"><a href="#BCNF范式" class="headerlink" title="BCNF范式"></a>BCNF范式</h3><blockquote>
-<p>在3NF的基础上，消除主属性对于码的部分函数依赖和传递函数依赖</p>
-</blockquote>
-<p><strong>例题</strong><br><img src="https://img-blog.csdnimg.cn/fe635fa51b3a4475b06e52084c33b3f0.png" alt="在这里插入图片描述"></p>
-<h3 id="其他范式"><a href="#其他范式" class="headerlink" title="其他范式"></a>其他范式</h3><p>4NF，5NF暂不讨论</p>
-<p>总结一下大概就是这样<br><img src="https://img-blog.csdnimg.cn/9991dda3f2504261a7b271ea93deba9a.png" alt="在这里插入图片描述"></p>
-<h2 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h2><blockquote>
-<p>按照功能可以分为三部分</p>
-<p><strong>数据定义语言DDL</strong></p>
-<p><strong>数据操纵语言DML</strong></p>
-<p><strong>数据控制语言DCL</strong></p>
-<p>有的还可以分出第四类</p>
-<p><strong>数据查询语言DQL</strong></p>
-</blockquote>
-<h2 id="数据库新技术"><a href="#数据库新技术" class="headerlink" title="数据库新技术"></a>数据库新技术</h2><h3 id="NoSQL"><a href="#NoSQL" class="headerlink" title="NoSQL"></a>NoSQL</h3><blockquote>
-<p>全称其实是Not Only SQL</p>
-<p>是一类范围非常广泛的数据持久化解决方案，不遵循关系数据库模型，也不使用SQL作为查询语言</p>
-<p>传统关系型数据库的主要缺点：<strong>扩展性差</strong></p>
-<p>目前的主要解决思路有两个，</p>
-<p><strong>1.水平分区（数据分片 sharing）</strong></p>
-<p>举个例子，比如一个服务器十年的用户数据本来放到一张表里面，现在我们按年来分别建立十张表</p>
-<p><strong>2.垂直分区（功能业务分区）</strong></p>
-<p>没看懂，啥子主从方式，复制阿巴阿巴….</p>
-</blockquote>
-<p>NoSQL的分类可以分为四类</p>
-<blockquote>
-<p>1.键值存储库 （MongoDB）</p>
-<p>2.文档库（CouchDB）</p>
-<p>3.图形数据库（Neo4j）</p>
-<p>4.列存储库（Hadoop）</p>
-</blockquote>
-<p>但是普遍地具有这些结构：</p>
-<blockquote>
-<p><strong>1.数据持久层</strong> </p>
-<p><strong>2.数据分布层</strong></p>
-<p><strong>3.数据逻辑模型层</strong></p>
-<p><strong>4.接口层</strong></p>
-</blockquote>
-<p>这学了个寂寞….</p>
-<p>其他的数据库类型暂时不学了，因为NoSQL应该比较重要，但是依旧被学校的课程一笔带过，所以我想其他的新型数据库应该不是考试的重点，为了节约时间我们也先不复习这块了！</p>
+<p>看完上述概念想到什么啊？</p>
+<p>这不就和C语言中的函数这一概念类似吗？</p>
+<p>那么我们暂时吧存储过程看做函数吧（当然也注意区别，因为T-SQL中也有函数这一概念，这个我们后面再提）</p>
+<p>那为什么要有这样一个设定呢？当然是为了懒啊！</p>
+<h3 id="存储过程的简单操作"><a href="#存储过程的简单操作" class="headerlink" title="存储过程的简单操作"></a>存储过程的简单操作</h3><p><strong>创建存储过程</strong></p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">PROCEDURE</span> proc_name</span><br><span class="line"><span class="keyword">AS</span></span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"> <span class="comment">-- 里面写SELECT语句等各种T-SQL语句，此处不再赘述</span></span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>使用存储过程</strong></p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXECUTE</span> proc_name <span class="comment">-- 熟悉的语句，有了Minecraft的感觉了</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>修改存储过程</strong></p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">PROCEDURE</span> proc_name</span><br><span class="line"><span class="keyword">AS</span></span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"> <span class="comment">-- 新的内容</span></span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>删除存储过程</strong></p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">PROCEDURE</span> proc_name</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+
+
+<h3 id="触发器"><a href="#触发器" class="headerlink" title="触发器"></a>触发器</h3><p>我还以为触发器是单独的一章，结果和我说是<strong>一种特殊的存储过程</strong></p>
+<p>也叫 <strong>自执行存储过程</strong>，在满足特定条件的时候执行，而不用EXECUTE执行</p>
+<p>简单使用过程如下：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TRIGGER</span> tri_name</span><br><span class="line"><span class="keyword">ON</span> Student <span class="comment">-- 这是针对的表</span></span><br><span class="line">AFTER UPDATE <span class="comment">-- 这是触发事件，可以有多个触发事件.此处为在更新之后.</span></span><br><span class="line"><span class="keyword">AS</span>  </span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"> <span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Student</span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>其中<strong>AFTER可以替换为FOR或者INSTEAD OF</strong>，作用也就是顾名思义</p>
+<p>另外<strong>UPDATE也可以替换为INSERT或者DELETE</strong>，作用依旧是顾名思义</p>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><blockquote>
-<p>今天计算机类2020级13班吃了散伙饭，大家分流到各自的专业去了，希望班导和各位同学们都能够学业有成啊！</p>
-<p>数据库理论的学习就告一段落了，接下来我会再写一篇T-SQL具体代码的文档。</p>
+<p>总的来说T-SQL是相当的厉害啊，对于只有半吊子MySQL学习经验的我来说可谓是<strong>惊艳</strong>，</p>
+<p>但是可惜我几门考试接踵而至也腾不出多余的时间来系统地学习这门技术了，不过我想总有一天我还会再学习更多数据库相关知识的。</p>
+<p>当然了，如果我发现本篇疏漏的较大的知识点，我也会找个时间添加上的。</p>
 </blockquote>
 
                 
@@ -844,7 +621,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://serio.gitee.io/2021/12/24/databasetheory/">https://serio.gitee.io/2021/12/24/databasetheory/</a>
+                    <a href="https://serio.gitee.io/2021/12/25/tsql/">https://serio.gitee.io/2021/12/25/tsql/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -881,11 +658,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                                    <span class="chip bg-color">数据库</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -1077,9 +850,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/12/25/tsql/">
                     <div class="card-image">
@@ -1096,9 +870,50 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-25
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/12/24/databasetheory/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/postimages/15.jpg" class="responsive-img" alt="数据库理论知识">
+                        
+                        <span class="card-title">数据库理论知识</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            速通数据库理论概念
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1112,54 +927,10 @@
                     </div>
                 </div>
                 
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/12/15/node.js/">
-                    <div class="card-image">
-                        
-                        <img src="/medias/postimages/13.jpg" class="responsive-img" alt="Node.JS">
-                        
-                        <span class="card-title">Node.JS</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            突破枷锁！发展，永无止境！
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-15
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/web/" class="post-category">
-                                    web
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                        <span class="chip bg-color">前端</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%90%8E%E7%AB%AF/">
-                        <span class="chip bg-color">后端</span>
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                        <span class="chip bg-color">数据库</span>
                     </a>
                     
                 </div>
