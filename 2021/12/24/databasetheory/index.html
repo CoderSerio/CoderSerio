@@ -464,14 +464,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-26
+                    2021-12-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.9k
+                    7.6k
                 </div>
                 
 
@@ -493,36 +493,65 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>写在开篇</strong></p>
+<blockquote>
 <p>本篇只讲述数据库相关的各种概念理论，具体代码实践不在本篇讨论范围之内，此后会另起一篇写代码和例题</p>
 </blockquote>
 <blockquote>
 <p>由于是还有几天就要考试了，所以本篇内容尽量<strong>精简</strong>，采用的语言也<strong>并不官方，尽可能通俗易懂</strong>。</p>
 </blockquote>
+<p><strong>更新日志</strong></p>
+<blockquote>
+<p><strong>2021/12/28</strong></p>
+<p>看了下佳豪兄的笔记，简直是自愧不如，于是乎借鉴其笔记补充一些必要的内容</p>
+</blockquote>
 <h2 id="数据库发展史"><a href="#数据库发展史" class="headerlink" title="数据库发展史"></a>数据库发展史</h2><p>什么，竟然要考这个？</p>
+<h3 id="数据和数据库"><a href="#数据和数据库" class="headerlink" title="数据和数据库"></a>数据和数据库</h3><p><strong>数据</strong></p>
+<blockquote>
+<p>数据是信息的载体，信息是数据的内涵。统一信息可以有不同的数据表现形式，而统一数据也可能有不同的解释。</p>
+</blockquote>
+<p><strong>数据库</strong></p>
+<blockquote>
+<p>存放数据的仓库，是长期存储在计算机内有组织额度、可共享的大量数据集合。其中的数据按照一定的数据模型组织、描述和存储。</p>
+<p>具有<strong>永久存储、有组织、可共享</strong>三个特点</p>
+</blockquote>
+<p><strong>数据库系统</strong></p>
+<blockquote>
+<p>包括<strong>数据库、数据库管理系统、应用系统、数据库管理员</strong>四个部分</p>
+</blockquote>
+<p><strong>数据库管理系统</strong></p>
+<blockquote>
+<p>是一种位于用户和操作系统之间的数据管理软件，用于管理、控制和维护数据库</p>
+</blockquote>
+<p>注意，数据库系统，即DBS，包括了数据库操作系统DBMS和数据库DB，在不引起混淆的情况下，口语上可以混用DBS和DB</p>
 <p> 数据库发展经过了四个阶段：</p>
 <table>
 <thead>
 <tr>
 <th>时间</th>
 <th>内容</th>
+<th>特点</th>
 </tr>
 </thead>
 <tbody><tr>
 <td>人工管理阶段</td>
 <td>20世纪40年代中–50年代中</td>
+<td>1.不保存数据<br>2.不共享数据<br>3.应用程序管理数据<br>4.程序与数据不具有独立性</td>
 </tr>
 <tr>
 <td>文件系统阶段</td>
 <td>20世纪50年代末–60年代中</td>
+<td>1.数据共享性差，冗余度大<br>2.数据独立性差</td>
 </tr>
 <tr>
 <td>数据库系统阶段</td>
 <td>20世纪60年代末–现在</td>
+<td>1.具有统一管理数据的专门的软件系统，即数据库管理系统</td>
 </tr>
 <tr>
-<td>新一代数据库管理系统</td>
+<td>新一代数据库（此处以NoSQL非结构化数据库为例）</td>
 <td>20世纪90年代–未来</td>
+<td></td>
 </tr>
 </tbody></table>
 <p>（看到最后这里的年代我迷惑了一下，但是咱也不敢问啊）</p>
@@ -562,13 +591,14 @@
 <p>比如<br>分布式数据库: 数据分布在网络上，但是逻辑上属于一个系统，<br>空间数据库：主要描述、存储和处理空间数据及其属性，<br>NoSQL数据库…，<br>面向对象数据库…，<br>….</p>
 </blockquote>
 <h2 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h2><blockquote>
-<p><strong>概念</strong><br>数据模型是对现实世界的模拟和抽象，用来描述数据如何组织、操作和存储的。</p>
+<p><strong>简介</strong><br>数据模型是对现实世界的模拟和抽象，用来描述数据如何组织、操作和存储的。</p>
 <p><strong>分类</strong></p>
-<p>分为三类：<strong>概念模型、逻辑模型、物理模型</strong><br>分别对应现实世界，信息世界（第一层抽象），机器世界（第二层抽象）</p>
+<p>分为三类：<strong>概念模型、逻辑模型、物理模型</strong><br>分别对应</p>
+<p><strong>现实世界，信息世界（第一层抽象），机器世界（第二层抽象）</strong></p>
 <p><strong>组成</strong><br>分为三部分：  <strong>数据结构、数据操作、数据完整性约束条件</strong></p>
 </blockquote>
 <h3 id="概念模型"><a href="#概念模型" class="headerlink" title="概念模型"></a>概念模型</h3><blockquote>
-<p>现实世界到机器世界的一个中间层次<br>主要描述有哪些<strong>实体和关系</strong><br>简单说就是描述<strong>是什么</strong>，</p>
+<p>现实世界到机器世界的一个中间层次（<strong>信息世界，第一层抽象</strong>）<br>主要描述有哪些<strong>实体和关系</strong><br>简单说就是描述<strong>是什么</strong>，</p>
 <p><strong>简单理解为E-R图</strong></p>
 </blockquote>
 <p>涉及一些前置的概念：</p>
@@ -588,21 +618,30 @@
 <p>从数据的组织方式来描述数据，即用什么样的数据结构来组织<br>简单说就是<strong>在概念模型基础上</strong>，进一步考虑实体的属性<br>也就是定义<strong>做什么</strong></p>
 <p>简单看做<strong>表</strong></p>
 </blockquote>
-<p>逻辑模型可以分为三类：<br><strong>非关系模型（早期数据库）</strong></p>
+<p><strong>常见的逻辑数据模型</strong></p>
 <blockquote>
+<p><strong>1.层次模型</strong></p>
+<p>优点：实现简单，结构清晰，数据表现完整</p>
+<p>缺点：不能表示两种以上实体的联系和多对多联系、插入删除复杂、查询孩子节点必须经过双亲节点</p>
+<p><strong>2.网状模型</strong></p>
+<p>优点：直观表示现实世界中的复杂关系，有良好的性能和存储效率</p>
+<p>缺点：结构复杂，数据独立性差</p>
+<p><strong>3.关系模型</strong></p>
+<p>也就是常常提到的表结构</p>
+<p>优点：数据理论根据强，结构清晰简单，数据有更高的独立性和安全性（关系之间的存取关系对用户不可见）</p>
+<p>缺点：（由于存取关系不可见）数据查询效率低，且关系必须规范化（比如<strong>属性是不能再分的数据项，不允许表中有表</strong>等等）</p>
+</blockquote>
+<p>如果要对逻辑数据模型做一个分类，那么</p>
+<p>逻辑模型可以分为三类：</p>
+<blockquote>
+<p><strong>1.非关系模型</strong></p>
 <p>主要是指层次模型和网状模型</p>
-</blockquote>
-<p><strong>关系模型（当下流行数据库）</strong></p>
-<blockquote>
+<p><strong>2.关系模型</strong></p>
 <p>以严格的数学理论为基础：谓词逻辑、集合论<br>（什么？竟然是离散数学）</p>
-</blockquote>
 <p>关系型数据库则采用关系模型<br>其中，<strong>关系</strong>通常对应一张表，该表包含数个<strong>属性</strong>和数个<strong>元组</strong>，而<strong>关系模式</strong>则是对关系的一种描述，格式为</p>
-<blockquote>
-<p>关系名字（属性1，属性2，属性3…）</p>
-</blockquote>
+<p><strong>关系名字（属性1，属性2，属性3…）</strong></p>
 <p>当然，也可以用E-R图描述，此处不再赘述</p>
-<p><strong>面向对象模型</strong></p>
-<blockquote>
+<p><strong>3.面向对象模型</strong></p>
 <p>未来的方向，不知道是什么意思，或许是以能够存对象为基础吧</p>
 </blockquote>
 <h3 id="物理模型"><a href="#物理模型" class="headerlink" title="物理模型"></a>物理模型</h3><blockquote>
@@ -612,14 +651,24 @@
 <h3 id="三级模式"><a href="#三级模式" class="headerlink" title="三级模式"></a>三级模式</h3><blockquote>
 <p>由<strong>概念模式、外模式、内模式</strong></p>
 </blockquote>
-<p><strong>概念模式</strong><br>数据库用户看见和使用的局部数据的逻辑结构和特征的描述<br>所有用户的公共数据视图，综合所有用户的需求</p>
+<blockquote>
+<p><strong>1.外模式</strong></p>
+<p>也称<strong>子模式</strong>或者<strong>用户模式</strong></p>
+<p>数据库用户看见和使用的局部数据的逻辑结构和特征，是用户能看到的一部分数据的逻辑结构和特征描述</p>
+<p>描述一个数据库<strong>可以有多个外模式</strong><br>外模式是保证数据库安全性的一个有力措施</p>
+<p><strong>2.概念模式</strong></p>
+<p>介于外模式和内模式之间</p>
+<p>数据库用户看见和使用的局部数据的逻辑结构和特征的描述<br>所有用户的公共数据视图，综合所有用户的需求</p>
 <p>一个数据库只有一个模式</p>
-<p><strong>外模式</strong><br>数据库用户看见和使用的局部数据的逻辑结构和特征<br>描述一个数据库可以有多个外模式<br>外模式是保证数据库安全性的一个有力措施</p>
-<p><strong>内模式（存储模式）</strong><br>是数据结构和存储方式的描述<br>是数据在数据库内部的表示方式</p>
+<p><strong>3.内模式</strong></p>
+<p>也称<strong>存储模式</strong></p>
+<p>是数据结构和存储方式的描述<br>是数据在数据库内部的表示方式</p>
+</blockquote>
 <p><strong>具体示例</strong><br><img src="https://img-blog.csdnimg.cn/f55af2ccff6e42a1836b617e1e947fa2.png" alt="在这里插入图片描述"></p>
 <p><img src="https://img-blog.csdnimg.cn/d7a3ea58b13a4abebcdb2dbc6402615b.png" alt="在这里插入图片描述"></p>
 <h3 id="二级映像"><a href="#二级映像" class="headerlink" title="二级映像"></a>二级映像</h3><blockquote>
-<p>为了实现三级模式之间的转换而出现的二级映像：<br><strong>外模式/概念模式映像</strong><br>保障了数据的逻辑独立性<br>对每一个外模式，数据库都有一个外模式/概念模式映像<br><strong>概念模式/内模式映像</strong><br>保障了数据的物理独立性<br>对于每一个概念模式，数据库都有一个概念模式/内模式映像</p>
+<p>二级映像的目的是<strong>为了实现三级模式之间的转换和联系</strong></p>
+<p><strong>外模式/概念模式映像</strong><br>保障了数据的逻辑独立性<br>对每一个外模式，数据库都有一个外模式/概念模式映像<br><strong>概念模式/内模式映像</strong><br>保障了数据的物理独立性<br>对于每一个概念模式，数据库都有一个概念模式/内模式映像</p>
 </blockquote>
 <h2 id="函数依赖"><a href="#函数依赖" class="headerlink" title="函数依赖"></a>函数依赖</h2><p>数据依赖的主要类型有<strong>函数依赖</strong>，<strong>多值依赖</strong>, <strong>连接依赖</strong>等<br>这里主要讨论<strong>函数依赖</strong></p>
 <blockquote>
@@ -656,8 +705,9 @@
 <p>两个关系模式中，<br>学生选课表(学号，课程号，成绩)，以下称为表A<br>学生信息表(学号，专业，年龄), 以下称为表B<br>表A中，需要同时确定学号和课程号才能确定一个元组，所以<strong>候选码是（学号，课程号）</strong><br>表B中，只需要确定学号就能确定一个元组，所以<strong>候选码是（学号）</strong><br>可以看到，学号不是A的码，但是是B的码，那么把学号称为A的外码</p>
 </blockquote>
 <h2 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h2><p>不仅是生活中的关系，也指离散数学中集合间的关系，更指关系型数据库中的关系</p>
-<h3 id="关系型数据库"><a href="#关系型数据库" class="headerlink" title="关系型数据库"></a>关系型数据库</h3><blockquote>
-<p><strong>关系模式</strong><br>对关系的描述即为关系模式，表示为<br><strong>关系名（属性1， 属性2 …..）</strong></p>
+<h3 id="关系型数据库"><a href="#关系型数据库" class="headerlink" title="关系型数据库"></a>关系型数据库</h3><p><strong>关系模式</strong></p>
+<blockquote>
+<p>对关系的描述即为关系模式，表示为<br><strong>关系名（属性1， 属性2 …..）</strong></p>
 </blockquote>
 <p>关系型数据库则是建立在关系模型上的数据库，在关系数据库中面实体和实体间以<strong>关系的形式</strong>进行描述</p>
 <p><strong>关系的形式</strong>具体指的是以表格的形式</p>
@@ -761,15 +811,18 @@
 </blockquote>
 <p>数据库范式有1NF，2NF，3NF，BCNF，4NF，5NF<br>但是一般我们只需要考虑到BCNF就够了</p>
 <h3 id="第一范式1NF"><a href="#第一范式1NF" class="headerlink" title="第一范式1NF"></a>第一范式1NF</h3><blockquote>
-<p>关系中的属性不可再分，即属性不能具有属性。</p>
+<p>关系中的属性不可再分</p>
+<p><strong>即属性不能具有属性</strong></p>
 </blockquote>
 <p>1NF是对所有关系型数据库的<strong>最基本要求</strong></p>
 <p>但是仅仅符合1NF的设计可能会存在数据冗余过大，插入异常，删除异常，修改异常等问题</p>
 <h3 id="第二范式2NF"><a href="#第二范式2NF" class="headerlink" title="第二范式2NF"></a>第二范式2NF</h3><blockquote>
-<p>消除了非主属性对于码的部分函数依赖<br>要求每个实例或者行必须唯一地被区分，每一行数据只能与其中一列相关，如果出现重复的数据，那么就要把它拆分开来。</p>
+<p>消除了非主属性对于码的部分函数依赖<br>要求每个实例或者行必须唯一地被区分，每一行数据只能与其中一列相关，如果出现重复的数据，那么就要把它拆分开来</p>
+<p><strong>每个非主属性（主码，主键）都完全依赖于主属性，即主属性可以推出所有属性</strong></p>
 </blockquote>
 <h3 id="第三范式3NF"><a href="#第三范式3NF" class="headerlink" title="第三范式3NF"></a>第三范式3NF</h3><blockquote>
-<p>3NF在2NF基础上，消除了非主属性对于码的传递函数依赖<br>即存在非主属性对于码的传递函数依赖，则不符合3NF</p>
+<p>3NF在2NF基础上，消除了主属性对于码的传递函数依赖</p>
+<p><strong>属性不依赖于非主属性</strong></p>
 </blockquote>
 <blockquote>
 <p>3NF <strong>基本</strong> 解决了数据冗余过大，插入异常，删除异常的问题 </p>
@@ -780,6 +833,79 @@
 <p><strong>例题</strong><br><img src="https://img-blog.csdnimg.cn/fe635fa51b3a4475b06e52084c33b3f0.png" alt="在这里插入图片描述"></p>
 <h3 id="其他范式"><a href="#其他范式" class="headerlink" title="其他范式"></a>其他范式</h3><p>4NF，5NF暂不讨论</p>
 <p>总结一下大概就是这样<br><img src="https://img-blog.csdnimg.cn/9991dda3f2504261a7b271ea93deba9a.png" alt="在这里插入图片描述"></p>
+<h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><h3 id="备份的分类"><a href="#备份的分类" class="headerlink" title="备份的分类"></a>备份的分类</h3><ol>
+<li>完整备份：将所有数据库信息都进行备份，备份下来的时一个完整的数据库。数据库的备份需要时间，在备份中用户同样可以进行操作，且备份会将备份过程中执行的操作记录下来。</li>
+<li>差异备份：是对最近一次<strong>完整备份</strong>以来发生的数据变化进行备份，它的特点是速度快体积小，通过增加差异备份的次数，可以有效减少数据丢失的风险。</li>
+<li>事务日志备份：仅对事务日志进行备份，事务日志中包含了从上一次<strong>完整备份</strong>以来所有已经完成的事务。事务日志备份由于只备份事务日志，所以速度更快、占据磁盘空间更小。</li>
+<li>需要注意的是，差异备份和事务日志备份尽管都只备份一部分数据加快了备份速度，但是差异备份只保留最近一次修改，事务日志保留了从上一次备份以来的所有事务。</li>
+</ol>
+<p><strong>备份内容</strong>：</p>
+<ol>
+<li>系统数据库：记录了重要的系统信息，必须<strong>完整备份</strong>。一旦进行修改，最好立刻备份。</li>
+<li>用户数据库：记录了重要的用户数据，必须<strong>完整备份</strong>。可以进行周期性的备份。</li>
+<li>事务日志：事务日志体积小，备份时间短，但是<strong>恢复需要的时间长</strong>。</li>
+</ol>
+<h3 id="备份策略"><a href="#备份策略" class="headerlink" title="备份策略"></a>备份策略</h3><p><strong>策略一：完整备份</strong></p>
+<p>适合于数据量不大，或者不平凡修改的数据库。</p>
+<p><strong>策略二：完整备份+日志备份</strong></p>
+<p>适用于用户不允许丢失太多数据，但又不想经常完整备份的情况。</p>
+<p><strong>策略三：完整备份+差异备份+日志备份</strong></p>
+<p>适用于用户不允许丢失太多数据，但又不想经常完整备份的情况，而且恢复速度比较块的情况。</p>
+<p><strong>恢复顺序</strong>：</p>
+<ol>
+<li>恢复最近的完整数据库备份。</li>
+<li>恢复完整备份之后的最近的差异数据库备份。</li>
+<li>按事务日志的备份的先后顺序回资完整备份的所有日志备份。</li>
+</ol>
+<h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>事务是用户定义的一个数据操作序列，这些操作要么全部执行，要么全部不执行，是一个不可分割的工作单元。</p>
+<p><strong>操作</strong></p>
+<p>事务可以由用户开启，也可以让DBMS自动决定事务是否开启。事务相关的操作：</p>
+<ol>
+<li>BEGIN TRANSACTION：开启事务。</li>
+<li>COMMIT：提交事务。</li>
+<li>ROLLBACK：回滚事务。</li>
+</ol>
+<p><strong>特征（ACID特性）</strong>：</p>
+<ol>
+<li>原子性（Atomicity）：指事务的操作要么全部做要么都不做，<strong>不可分割</strong>。</li>
+<li>一致性（Consistency）：是指数据库必须从一个一致性转为另一个一致性，不允许部分改变。一致性和原子性紧密相关。</li>
+<li>隔离性（Isolation）：指事务不能受到其他事务的干扰，事务之间必须是相互隔离互不干扰的。</li>
+<li>持久性（Durability）：也称永久性，事务一旦提交，对数据库的修改就是永久性的。</li>
+</ol>
+<h3 id="并发控制"><a href="#并发控制" class="headerlink" title="并发控制"></a>并发控制</h3><p>让事务串行执行虽然可以有效保持数据库的一致性，但是效率颇低，于是<strong>为了提高数据库的并行度，避免数据库资源的闲置浪费</strong>，可以让多个事务同时执行，即并发执行。</p>
+<p>而在这个过程中，可能存在多个事务同时对一段数据进行读取或改写，出现各种各样的错误，破坏数据库的一致性，因此<strong>保护数据库一致性的这个过程就是并发控制</strong>。</p>
+<p><strong>并发操作引起的问题</strong>：</p>
+<ol>
+<li>丢失更新问题：两个事务<strong>同时读取并修改同一段数据</strong>，事务2的提交<strong>覆盖</strong>了事务1的提交，导致事务1的更新丢失。</li>
+<li>读“脏”数据问题：事务1对一段数据进行修改后，事务2读取了该段数据，但是由于某种原因，事务1<strong>撤销</strong>了自己的修改操作，导致事务2<strong>之前读取到的数据与现在数据库中的数据不同</strong>，称之为读脏数据。读到脏数据的原因就是读取了未提交事务的数据（或称未提交数据）。</li>
+<li>不可重复读问题：事务1读取一段数据后，事务2<strong>修改</strong>了该段数据，此时事务1再读取该段数据却<strong>得到了不同的数据</strong>，读取数据被称为检索，所有又称检索不一致。</li>
+</ol>
+<h3 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h3><p><strong>并发控制的手段——封锁技术（或简称锁）</strong>：</p>
+<ol>
+<li>封锁（Locking）：就是事务T在操作某一个数据对象之前，向DBMS发送一段请求对操作对象上锁，被上锁的数据对象不能被除事务T以外的事务修改，确保了数据库的一致性。</li>
+<li>锁的分类：<ol>
+<li>排他锁（简称X锁）：又称写锁，事务T对数据对象上了X锁之后，<strong>只有事务T能够读取和更新该数据对象，其他事务就不能再对该对象上任何锁，也不能读取和更新该数据对象</strong>，直到事务T释放X锁。</li>
+<li>共享锁（简称S锁）：又称读锁，事务T对数据对象上了S锁之后，事务T只能读取该数据对象而不能更新，其他事务<strong>只能对该数据对象上S锁而不能加X锁</strong>，直到事务T释放S锁。注意<strong>上了S锁之后，所有事务都只能读而不能修改</strong>。</li>
+</ol>
+</li>
+<li>封锁协议：<ol>
+<li>封锁协议规定了何时上锁，何时释放锁和封锁的时间等，不同等级的封锁协议在一定程度上保证了数据库的一致性避免并发操作引起问题。</li>
+<li>一级封锁协议：在需要<strong>修改数据之前</strong>，必须对数据上<strong>X锁</strong>，<strong>直到事务完成</strong>（事务完成包括commit提交和roolback回滚）。一级协议保证了<strong>不会出现丢失更新的问题</strong>，但是读事务不考虑数据是否上锁，因此还是可能出现脏数据和不可重复读问题。</li>
+<li>二级封锁协议：在一级封锁协议的基础上，事务在<strong>读取数据之前</strong>，必须对数据上<strong>S锁</strong>，<strong>直到数据读取完成就释放S锁</strong>。二级协议除了保证了不会出现丢失更新问题，还保证<strong>避免了读脏数据的问题</strong>。但是由于数据在读取完成后就释放S锁，这时其他事务就可以修改数据了，所以还是会存在不可重复读的问题。</li>
+<li>三级封锁协议：在一级封锁协议的基础上，事务在<strong>读取数据之前</strong>，必须对数据上<strong>S锁</strong>，<strong>直到事务完成后才释放S锁</strong>。这样就可以保证在事务完成之前，无论读多少次数据都能得到相同的结果，因此<strong>避免了不可重复读的问题</strong>。</li>
+<li>死锁：同操作系统的死锁，两个事务都在等待对方释放上锁的数据，导致两个事务都不能完成。</li>
+</ol>
+</li>
+</ol>
+<p><strong>串行调度</strong>：</p>
+<p>即每个事务都顺序执行，这种情况下虽然串行的顺序不一定相同，但<strong>执行结果总是正确的</strong>；</p>
+<p><strong>并发调度</strong>：</p>
+<p>区别于串行调度，时刻可以同时执行，这时并行的顺序就可能影响执行结果的正确性。</p>
+<p><strong>并发调度的可串行性</strong>：</p>
+<p>指找到并行执行的某个顺序下的结果，与某一串行执行的结果相同，就可以说这个并行执行是正确的。</p>
+<p><strong>二段锁协议</strong>：</p>
+<p>是DBMS确保并发调度可串行性的手段，其含义是：将事务分为两个阶段，第一阶段只允许申请封锁，第二阶段只允许释放封锁。</p>
+<p>实现了二段锁协议的事务只是具备了可串行化的充分条件而不是必要条件，意思是可串行化的事务同样可以不遵守二段锁协议。</p>
 <h2 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h2><blockquote>
 <p>按照功能可以分为三部分</p>
 <p><strong>数据定义语言DDL</strong></p>
@@ -1362,7 +1488,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2021</span>
+                <span id="year">2019-2022</span>
             
             <a href="/about" target="_blank">Serio</a>
             |&nbsp;Powered by&nbsp;<a href="#" target="_blank">Hexo</a>

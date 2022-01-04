@@ -464,14 +464,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-26
+                    2021-12-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    2k
                 </div>
                 
 
@@ -594,6 +594,29 @@
 
 <p>其中<strong>AFTER可以替换为FOR或者INSTEAD OF</strong>，作用也就是顾名思义</p>
 <p>另外<strong>UPDATE也可以替换为INSERT或者DELETE</strong>，作用依旧是顾名思义</p>
+<h2 id="登录、用户、角色管理"><a href="#登录、用户、角色管理" class="headerlink" title="登录、用户、角色管理"></a>登录、用户、角色管理</h2><p><strong>登录名、用户、角色的区分</strong>：</p>
+<ol>
+<li>登录名：数据库访问者需要登录到数据库服务器中，因此需要有一个登录号来通过安全控制的SQL Server验证的过程。</li>
+<li>用户：是指对某个数据库具有访问和操作权限的访问者，这个用户身份需要被授予给登录名。</li>
+<li>角色：特指具有一系列权限的身份，这个角色身份可以赋予给用户，此时这个用户就具有了该角色所有的权限。</li>
+</ol>
+<p><strong>登录名管理</strong>：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> LOGIN login_name <span class="keyword">WITH</span> PASSWORD <span class="operator">=</span> <span class="string">'...'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">DROP</span> LOGIN login_name`</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p><strong>用户管理</strong>：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> user_name <span class="keyword">FOR</span> LOGIN login_name`</span><br><span class="line"></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">USER</span> user_name`</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p><strong>角色管理</strong>：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> ROLE role_name</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> ROLE role_name <span class="keyword">AUTHORIZATION</span> owner_name</span><br><span class="line"></span><br><span class="line"><span class="keyword">EXEC</span> sp_addrolemember <span class="string">'role_name'</span>, <span class="string">'user_name'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">EXEC</span> sp_droprolemember <span class="string">'role_name'</span>, <span class="string">'user_name'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">DROP</span> ROLE role_name</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+
+
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><blockquote>
 <p>总的来说T-SQL是相当的厉害啊，对于只有半吊子MySQL学习经验的我来说可谓是<strong>惊艳</strong>，</p>
 <p>但是可惜我几门考试接踵而至也腾不出多余的时间来系统地学习这门技术了，不过我想总有一天我还会再学习更多数据库相关知识的。</p>
@@ -858,44 +881,46 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/12/25/tsql/">
+                <a href="/2021/12/30/node.js-be/">
                     <div class="card-image">
                         
-                        <img src="/medias/postimages/16.jpg" class="responsive-img" alt="Transact-SQL">
+                        <img src="/medias/postimages/20.webp" class="responsive-img" alt="Node.JS后端开发">
                         
-                        <span class="card-title">Transact-SQL</span>
+                        <span class="card-title">Node.JS后端开发</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            感受与众不同的SQL
+                            JavaScript后端！！
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-25
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-30
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                    数据库
+                            <a href="/categories/web/" class="post-category">
+                                    web
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%90%8E%E7%AB%AF/">
+                        <span class="chip bg-color">后端</span>
+                    </a>
                     
                     <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
                         <span class="chip bg-color">数据库</span>
@@ -1141,7 +1166,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2021</span>
+                <span id="year">2019-2022</span>
             
             <a href="/about" target="_blank">Serio</a>
             |&nbsp;Powered by&nbsp;<a href="#" target="_blank">Hexo</a>

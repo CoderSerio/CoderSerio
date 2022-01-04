@@ -1,0 +1,1501 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Node.JS后端开发, 前端">
+    <meta name="description" content="JavaScript后端！！">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Node.JS后端开发 | 碳苯</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">碳苯</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">碳苯</div>
+        <div class="logo-desc">
+            
+            碳苯是一只毛茸茸的程序员
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/CoderSerio" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/CoderSerio" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/20.webp')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Node.JS后端开发</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%90%8E%E7%AB%AF/">
+                                <span class="chip bg-color">后端</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                <span class="chip bg-color">数据库</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/web/" class="post-category">
+                                web
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-12-30
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-01-04
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.7k
+                </div>
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="写在开篇"><a href="#写在开篇" class="headerlink" title="写在开篇"></a>写在开篇</h3><blockquote>
+<p>2021-12-30，23:23，很冷，有点困，但是据刚回到寝室的一位室友所说，寝室竟然只有他一人——太卷了，太卷了，我真的好爱他们啊！</p>
+<p><font color="#ff3700">哦对了，本篇博文还有一篇前置博文哦（Node.JS基础），零基础的朋友可以先通过简单阅读那篇文章快速上手哦</font></p>
+</blockquote>
+<h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><blockquote>
+<p><strong>2021/12/30</strong><br>开始写吧，希望接下来的学习能够顺利！<br><strong>2021/12/31</strong><br>说好一起通宵写代码，结果好家伙拉着我打金铲铲之战打到凌晨五点就为了进一次前四..<br><strong>2021/1/1</strong><br>争取今天能够写完吧<br><strong>2021/1/2</strong><br>本来还想写实际开发过程中遇到的一些问题，不过3号的下午六点作业提交就要截止了，接口那些都还没开始动，可能就没时间写这部分了，以后有机会再补上</p>
+</blockquote>
+<h3 id="浅谈Node-JS"><a href="#浅谈Node-JS" class="headerlink" title="浅谈Node.JS"></a>浅谈Node.JS</h3><p>众所周知，计算机执行代码之前，会先把高级语言/汇编语言编译成机器代码，<br>但是JS啊，能被我们浏览器的引擎（说的就是你，ChromeV8）编译，但是却不能直接被计算机编译，</p>
+<blockquote>
+<p>这个脚本，就是逊啦！</p>
+</blockquote>
+<p>但是现在好啦，Node出现了，它是一个V8的容器，只需要装上Node，我们就能利用这个V8引擎脱离浏览器运行我们的脚本语言——哦不，此时已经飞升成面向对象语言的JS！</p>
+<blockquote>
+<p>Node究竟是何方神圣能够把JS带出浏览器的小圈子呢？<br>因为它底层是C++写的，本身就能在浏览器外跑…</p>
+</blockquote>
+<h2 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h2><p>要学计网了，这块也得学着走了</p>
+<blockquote>
+<p>什么？你问我为什么这学期计网都结课了还说这话？<br>我能咋整嘛，太菜了跟不上，还不是只能自己下来补呜呜呜~</p>
+</blockquote>
+<h3 id="HTTP请求的过程"><a href="#HTTP请求的过程" class="headerlink" title="HTTP请求的过程"></a>HTTP请求的过程</h3><p>也没啥好说的，这小节不重要（但是还是写下来了，问就是强迫症）</p>
+<p>主要分为三步：</p>
+<p><strong>1.发送请求</strong></p>
+<blockquote>
+<p>DNS解析，建立TCP连接，发起HTTP请求<br>（TCP啊，以后学计网再写一篇细说这些）</p>
+</blockquote>
+<p><strong>2.处理请求</strong></p>
+<blockquote>
+<p>服务端接收HTTP请求，进行处理</p>
+</blockquote>
+<p><strong>3.响应数据</strong></p>
+<blockquote>
+<p>服务端发送数据给客户端，客户端接收数据</p>
+</blockquote>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</span><br><span class="line"><span class="comment">// 创建服务器对象，处理 请求 和 响应</span></span><br><span class="line"><span class="keyword">const</span> server = http.createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> {</span><br><span class="line">    <span class="comment">// 响应</span></span><br><span class="line">    res.end(<span class="string">'Hello Server'</span>)</span><br><span class="line">})</span><br><span class="line"><span class="comment">// 监听2333端口，成功监听则执行回调函数</span></span><br><span class="line">server.listen(<span class="number">2333</span>,<span class="function">() =&gt;</span> {</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'服务器已在2333端口开启！'</span>)</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/0ffc8f3a6dd94fb7b93296c5e3ac5924.png" alt="开启成功"></p>
+<h3 id="GET请求"><a href="#GET请求" class="headerlink" title="GET请求"></a>GET请求</h3><blockquote>
+<p>其实至今我都背不下GET和POST的区别，这次再学下</p>
+</blockquote>
+<p>其实上一节中的代码就处理了一个GET请求<br><img src="https://img-blog.csdnimg.cn/2d9afcd5708748e1ab21958608ec8cc9.png" alt="GET来的html文件"><br>我们现在来试着处理一下GET请求<br>先看一下URL，大概长这样</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://localhost:2333/?name=syy&amp;&amp;password=123456/">http://localhost:2333/?name=syy&amp;&amp;password=123456/</a></p>
+</blockquote>
+<p>我们可以如下书写代码，来基本地处理请求</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</span><br><span class="line"><span class="keyword">const</span> qs = <span class="built_in">require</span>(<span class="string">'querystring'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 服务端，处理 请求 和 响应</span></span><br><span class="line"><span class="keyword">const</span> server = http.createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> {</span><br><span class="line">    <span class="comment">// 处理GET</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'这是method'</span>, req.method)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'这是url'</span>, req.url)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'这是首个参数'</span>, qs.parse(req.url.split(<span class="string">'/?'</span>)[<span class="number">0</span>]))</span><br><span class="line">    </span><br><span class="line">    res.end(<span class="string">'Hello Server'</span>)</span><br><span class="line">})</span><br><span class="line">server.listen(<span class="number">2333</span>,<span class="function">() =&gt;</span> {</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'服务器已在2333端口开启！'</span>)</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+
+<p>哦，需要注意，这里的<strong>querystrig包已经被弃用</strong>了，但是问题不大，<br>我们只需要ctrl + 鼠标左键点击方法名称，就可以观察其源码</p>
+<p>可以看到这里有个注解<br><img src="https://img-blog.csdnimg.cn/b3cf4d88fb63444eaa845e835d36ed22.png" alt="querystring方法的源码"><br>这里我们只需要<strong>删掉这一行就可以继续用</strong>了<br>（当然，也可以自己在通过cv大法把这段代码封装，避免以后真的被删除了没方法可以用了）</p>
+<p>进行URL带参数的GET请求，可以在终端看到如下结果</p>
+<p><img src="https://img-blog.csdnimg.cn/075c19f0bf3049b29a6b542912ee8620.png" alt="两个GET请求"><br>至于第二个GET请求，也就是这个favicon.ico，它是网页标题前的一个小图标，比如下面这样</p>
+<p><img src="https://img-blog.csdnimg.cn/daab103539ca43adabe7425f9446babd.png" alt="favicon.ico"></p>
+<h3 id="POST请求"><a href="#POST请求" class="headerlink" title="POST请求"></a>POST请求</h3><p>再说POST请求之间，先写一个index.html作为前端页面，然后手写一个简单的AJAX请求</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"AJAX(1)"</span>&gt;</span>发送POST请求<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"AJAX(2)"</span>&gt;</span>发送GET请求<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">AJAX</span>(<span class="params">model</span>)</span>{</span></span><br><span class="line"><span class="javascript">        </span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">        xhr.withCredentials=<span class="literal">true</span></span></span><br><span class="line"><span class="javascript">    </span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span>(!xhr){</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">'XMLHttpRequest对象创建失败'</span>)</span></span><br><span class="line"><span class="javascript">            <span class="keyword">return</span></span></span><br><span class="line"><span class="javascript">        }</span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span>(model == <span class="number">1</span>)</span></span><br><span class="line"><span class="javascript">            xhr.open(<span class="string">'POST'</span>,<span class="string">'http://localhost:2333/index.html'</span>)</span></span><br><span class="line"><span class="javascript">        <span class="keyword">else</span> <span class="keyword">if</span>(model == <span class="number">2</span>)</span></span><br><span class="line"><span class="javascript">            xhr.open(<span class="string">'GET'</span>, <span class="string">'http://localhost:2333/index.html'</span>)</span></span><br><span class="line"><span class="javascript">            xhr.send()</span></span><br><span class="line"><span class="javascript">        xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span></span><br><span class="line"><span class="javascript">            <span class="keyword">if</span>(xhr.readyState == <span class="number">4</span>){</span></span><br><span class="line"><span class="javascript">                <span class="keyword">if</span>(xhr.status == <span class="number">200</span>){</span></span><br><span class="line"><span class="javascript">                    <span class="keyword">let</span> data = <span class="built_in">JSON</span>.parse(xhr.responseText)</span></span><br><span class="line"><span class="javascript">                    <span class="built_in">console</span>.log(<span class="string">'这是响应的数据'</span>, data)</span></span><br><span class="line"><span class="javascript">                } <span class="keyword">else</span> {</span></span><br><span class="line"><span class="javascript">                    <span class="built_in">console</span>.warn(<span class="string">'没有正确地响应！'</span>)</span></span><br><span class="line"><span class="javascript">                }</span></span><br><span class="line"><span class="javascript">            }</span></span><br><span class="line"><span class="javascript">        }</span></span><br><span class="line"><span class="javascript">        </span></span><br><span class="line"><span class="javascript">    }</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p><strong>原生Node解决跨域</strong><br>之后，我们还需要注意，这里由于端口号不同，所以会有跨域问题出现</p>
+<blockquote>
+<p>这里就要给广大的前端学习者们说明一下，跨域就该由后端来解决，所以很多时候，当后端甩锅给前端让前端配置反向代理什么之类的都是后端懒！</p>
+</blockquote>
+<p>后端大概写成这样</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 服务端，处理 请求 和 响应</span></span><br><span class="line"><span class="keyword">const</span> server = http.createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> {</span><br><span class="line">    </span><br><span class="line">    res.setHeader(<span class="string">'Access-Control-Allow-Origin'</span>, <span class="string">'http://localhost:5500'</span>)</span><br><span class="line">    res.setHeader(<span class="string">"Access-Control-Allow-Methods"</span>, <span class="string">"PUT,POST,DELETE"</span>)</span><br><span class="line">    res.setHeader(<span class="string">"Access-Control-Allow-Headers"</span>, <span class="string">"Content-Type,token"</span>)</span><br><span class="line">    res.setHeader(<span class="string">'Access-Control-Allow-Credentials'</span>, <span class="string">'true'</span>);</span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/json;charset=utf-8;'</span>);</span><br><span class="line"></span><br><span class="line">    res.end(<span class="built_in">JSON</span>.stringfy({</span><br><span class="line">        <span class="attr">msg</span>:<span class="string">'成功辣兄弟们！！！'</span></span><br><span class="line">    }))</span><br><span class="line">})</span><br><span class="line">server.listen(<span class="number">2333</span>,<span class="function">() =&gt;</span> {</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'服务器已在2333端口开启！'</span>)</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+<p>这里我们采用的是CORS解决跨域<br><img src="https://img-blog.csdnimg.cn/eaa1b22dd0554c84ab38a65f65948c6f.png" alt="请求成功"><br><img src="https://img-blog.csdnimg.cn/69cd371bc8f2453db5b9d0815e4372e2.png" alt="请求头"></p>
+<p>对了，还要很多简单的小框架可以使用，这样用起来更方便<br>安装express模块：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express --save</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>别和我说你看到这里的时候还不会用npm</p>
+</blockquote>
+<h3 id="混合请求方式实战"><a href="#混合请求方式实战" class="headerlink" title="混合请求方式实战"></a>混合请求方式实战</h3><p>之前简单了解了两种请求，现在来写一写：<br>首先我们先小小地调整一下AJAX</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">AJAX</span>(<span class="params">model</span>)</span>{</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line"></span><br><span class="line">    xhr.withCredentials=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(!xhr){</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'XMLHttpRequest对象创建失败'</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(model == <span class="number">1</span>) {</span><br><span class="line">        xhr.open(<span class="string">'POST'</span>,<span class="string">'http://localhost:2333/index.html?user=碳苯&amp;age=19'</span>)</span><br><span class="line">        xhr.send({<span class="attr">time</span>: <span class="keyword">new</span> <span class="built_in">Date</span>()})</span><br><span class="line">    }</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(model == <span class="number">2</span>){</span><br><span class="line">        xhr.open(<span class="string">'GET'</span>, <span class="string">'http://localhost:2333/index.html'</span>)</span><br><span class="line">        xhr.send()</span><br><span class="line">    }</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">    xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</span><br><span class="line">        <span class="keyword">if</span>(xhr.readyState == <span class="number">4</span>){</span><br><span class="line">            <span class="keyword">if</span>(xhr.status == <span class="number">200</span>){</span><br><span class="line">                <span class="keyword">let</span> data = <span class="built_in">JSON</span>.parse(xhr.responseText)</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">'这是响应的数据'</span>, data)</span><br><span class="line">            } <span class="keyword">else</span> {</span><br><span class="line">                <span class="built_in">console</span>.warn(<span class="string">'没有正确地响应！'</span>)</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>服务端也相应地来一点小小的改动</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> server = http.createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> {</span><br><span class="line">    res.setHeader(<span class="string">'Access-Control-Allow-Origin'</span>, <span class="string">'http://localhost:5500'</span>)</span><br><span class="line">    res.setHeader(<span class="string">"Access-Control-Allow-Methods"</span>, <span class="string">"PUT,POST,DELETE"</span>)</span><br><span class="line">    res.setHeader(<span class="string">"Access-Control-Allow-Headers"</span>, <span class="string">"Content-Type,token"</span>)</span><br><span class="line">    res.setHeader(<span class="string">'Access-Control-Allow-Credentials'</span>, <span class="string">'true'</span>);</span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/json;charset=utf-8;'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> method = req.method</span><br><span class="line">    <span class="keyword">const</span> url = req.url</span><br><span class="line">    <span class="keyword">const</span> path = url.split(<span class="string">'?'</span>)[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">const</span> query = qs.parse(url.split(<span class="string">'?'</span>)[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> resData = {</span><br><span class="line">        method,</span><br><span class="line">        url,</span><br><span class="line">        path,</span><br><span class="line">        query</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(req.method == <span class="string">'GET'</span>) {</span><br><span class="line">        res.end(<span class="built_in">JSON</span>.stringify({</span><br><span class="line">            <span class="attr">msg</span>:<span class="string">'GET成功辣兄弟们！！！'</span></span><br><span class="line">        }))</span><br><span class="line">    } <span class="keyword">else</span> <span class="keyword">if</span>(req.method == <span class="string">'POST'</span>) {</span><br><span class="line">        <span class="keyword">let</span> postData = <span class="string">''</span></span><br><span class="line">        req.on(<span class="string">'data'</span>, <span class="function"><span class="params">chunk</span> =&gt;</span> {</span><br><span class="line">            postData += chunk.toString()</span><br><span class="line">        })</span><br><span class="line">        req.on(<span class="string">'end'</span>, <span class="function">() =&gt;</span> {</span><br><span class="line">            resData.postData = postData</span><br><span class="line">            res.end(</span><br><span class="line">                <span class="built_in">JSON</span>.stringify(resData)</span><br><span class="line">            )</span><br><span class="line">        })</span><br><span class="line">        </span><br><span class="line">    }</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+<p>通过阅读以上代码，我们可以看到，我们通过数据流的形式来处理POST请求<br><img src="https://img-blog.csdnimg.cn/a8c4101f8f52467db0ae6fcbf7e4b6ec.png" alt="响应的数据"></p>
+<blockquote>
+<p>虽然有一点中文乱码，不过问题不大，应该设置一下请求头就好了<br>另外postData没有展开，这个问题不大，实在不行利用深拷贝重新写一个对象传回去</p>
+</blockquote>
+<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><p>在学会请求之后，咱们也得准备正式开发了<br>为了熟悉每一个文件和相关配置的具体作用，我们就不新建项目了直接在这几个文件的基础上进行改动吧</p>
+<blockquote>
+<p>其实就是懒</p>
+</blockquote>
+<h3 id="基本文件"><a href="#基本文件" class="headerlink" title="基本文件"></a>基本文件</h3><blockquote>
+<p>这里大概是遵循了什么三层架构什么的，但是由于我没有过相关知识的学习经历，所以对这一块的内容还是感到生疏，做的笔记也只能说是照猫画虎有样学样，还不能系统地总结。</p>
+</blockquote>
+<p><strong>1.创建<a target="_blank" rel="noopener" href="http://www.js/">www.js</a></strong><br>我们建一个文件叫做<a target="_blank" rel="noopener" href="http://www.js,先写个板子/">www.js，先写个板子</a></p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> {</span><br><span class="line"></span><br><span class="line">	res.end(<span class="string">'WWW.JS'</span>)</span><br><span class="line">})</span><br><span class="line"></span><br><span class="line">server.listen(<span class="number">6666</span>, <span class="function">() =&gt;</span> {</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'server running at port 6666'</span>)</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+<p>为了方便维护，我们把createServer里面的回调提出来单独写一个文件叫做app.js<br><strong>2.创建app.js</strong><br>先写个基础的板子</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> serverHandler = <span class="function">(<span class="params">req, res</span>) =&gt;</span> {</span><br><span class="line">    res.setHeader(<span class="string">'Access-Control-Allow-Origin'</span>, <span class="string">'http://127.0.0.1:5500'</span>)</span><br><span class="line">    res.setHeader(<span class="string">"Access-Control-Allow-Methods"</span>, <span class="string">"PUT,POST,DELETE"</span>)</span><br><span class="line">    res.setHeader(<span class="string">"Access-Control-Allow-Headers"</span>, <span class="string">"Content-Type,token"</span>)</span><br><span class="line">    res.setHeader(<span class="string">'Access-Control-Allow-Credentials'</span>, <span class="string">'true'</span>);</span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/json;charset=utf-8;'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> resData = {</span><br><span class="line">        <span class="attr">name</span>: <span class="string">'SYY'</span>,</span><br><span class="line">        <span class="attr">nickName</span>: <span class="string">'碳苯Carbon'</span>,</span><br><span class="line">        <span class="attr">id</span>: <span class="number">1024</span></span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    res.end(</span><br><span class="line">        <span class="built_in">JSON</span>.stringify(resData)</span><br><span class="line">    )</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = serverHandler</span><br></pre></td></tr></tbody></table></figure>
+<p>记得exports导出之后，还要回到<a target="_blank" rel="noopener" href="http://www.js里面require引入一下/">www.js里面require引入一下</a></p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> app = <span class="built_in">require</span>(<span class="string">'./app.js'</span>)</span><br></pre></td></tr></tbody></table></figure>
+<p><strong>3.设置入口文件</strong><br>在package.json中修改一下这一行<br><strong>修改成<a target="_blank" rel="noopener" href="http://www.js/">www.js</a></strong><br><img src="https://img-blog.csdnimg.cn/bcf40e36a52141cdb6720766d4424e58.png" alt="package.json文件"></p>
+<h3 id="开发依赖"><a href="#开发依赖" class="headerlink" title="开发依赖"></a>开发依赖</h3><p>开发依赖和依赖的区别就是顾名思义<br>开发依赖在普通用户使用的时候实际上是不需要的，但是在开发的过程中可能会有比较重要的作用，比如辅助调试之类的</p>
+<p>这里要安装的nodemon就是一个做<strong>热重载</strong>的开发依赖nodemon</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 注意这里要一定写大写D</span></span><br><span class="line">npm i nodemon -D</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后我们到package.json中康康<br><img src="https://img-blog.csdnimg.cn/91e959961a7d4d3d9331a5bcdd6eda29.png" alt="package.json"><br>之后我们顺便在package.json添加一个命令dev<br><img src="https://img-blog.csdnimg.cn/a3be08cd81ab4ebca53bc0ff4a5f64ad.png" alt="添加一个命令"></p>
+<p>之后我们就可以用npm run dev来执行nodemon ./<a target="_blank" rel="noopener" href="http://www.js了,/">www.js了，</a><br>这样就可以有一个具有热重载的后端了</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></tbody></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/7f4356b1e3e44b3e839700e7145bf515.png" alt="nodemon启动"></p>
+<p>淦，这里我的6666端口被占用了，网页打不开，所以只好换了个端口4567<br>（记得把所有该端口响应地修改一下）</p>
+<blockquote>
+<p>修改的时候就体现出全局变量的好处了啊</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/f103be5587974cd7a5f96e1b50f8d081.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/9c06ede65e5242fb9de6a9f7a5a96e0c.png" alt="在这里插入图片描述"><br>利用刚才的index.html（记得修改AJAX中的URL）<br><img src="https://img-blog.csdnimg.cn/6a12f5324eb74532af628f43848dd571.png" alt="AJAX请求成功"></p>
+<p>就很棒</p>
+<h3 id="路由配置"><a href="#路由配置" class="headerlink" title="路由配置"></a>路由配置</h3><p>由于是原生，所以定义接口的方式很原始，真的很原始啊</p>
+<p><strong>1.创建一个文件夹放各个路由</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/cde2c93417b44b77b6bedc14b98d816f.png" alt="路由测试"><br><strong>2.创建一个路由</strong><br>先来随便写一个试试手</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> handelTestRoute = <span class="function">(<span class="params">req, res</span>) =&gt;</span> {</span><br><span class="line">    <span class="keyword">const</span> method = req.method</span><br><span class="line">    <span class="keyword">const</span> url = req.url</span><br><span class="line">    <span class="keyword">const</span> path = url.split(<span class="string">'?'</span>)[<span class="number">0</span>]</span><br><span class="line">    <span class="built_in">console</span>.log(path)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(method == <span class="string">'GET'</span> &amp;&amp; path == <span class="string">'/test_route'</span>) {</span><br><span class="line">        <span class="keyword">return</span> {</span><br><span class="line">            <span class="attr">msg</span>: <span class="string">'这是测试用的接口'</span></span><br><span class="line">        }</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">        <span class="keyword">return</span> {</span><br><span class="line">            <span class="attr">msg</span>: <span class="string">'阿巴阿巴'</span></span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>这里我们有返回值，所以还需要在某个地方接收这个返回值，而这个地方正是我们的app.js<br><img src="https://img-blog.csdnimg.cn/53184e3db87349a4a6db819716f8adaa.png" alt="红框中是新增的内容"><br>输入URL测试一下<br><img src="https://img-blog.csdnimg.cn/acfa5a515f244e929739afe716a11e5f.png" alt="非常巧妙啊"><br><strong>3.加大难度</strong><br>首先改一下app.js</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">}</span><br><span class="line"><span class="keyword">const</span> testRouteData = handleTestRoute(req, res)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(testRouteData) {</span><br><span class="line">    res.end(</span><br><span class="line">        <span class="built_in">JSON</span>.stringify(testRouteData)</span><br><span class="line">    )</span><br><span class="line">} <span class="keyword">else</span> {</span><br><span class="line">    res.writeHead(<span class="number">404</span>,{<span class="string">'Content-Type'</span>:<span class="string">'text/plain'</span>})</span><br><span class="line">    res.write(<span class="string">'404 Not Found!!!!'</span>)</span><br><span class="line">    res.end()</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>然后是路由本身再改改</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> handleTestRoute = <span class="function">(<span class="params">req, res</span>) =&gt;</span> {</span><br><span class="line">    <span class="keyword">const</span> method = req.method</span><br><span class="line">    <span class="keyword">const</span> url = req.url</span><br><span class="line">    <span class="keyword">const</span> path = url.split(<span class="string">'?'</span>)[<span class="number">0</span>]</span><br><span class="line">    <span class="built_in">console</span>.log(path)</span><br><span class="line">    <span class="keyword">if</span>(method == <span class="string">'GET'</span> &amp;&amp; path == <span class="string">'/test_route'</span>) {</span><br><span class="line">        <span class="keyword">return</span> {</span><br><span class="line">            <span class="attr">msg</span>: <span class="string">'这是测试用的接口'</span></span><br><span class="line">        }</span><br><span class="line">    } </span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = handleTestRoute</span><br></pre></td></tr></tbody></table></figure>
+<p>还有ajax的url<br>（略）</p>
+<p>好了测试一下<br><img src="https://img-blog.csdnimg.cn/75544a78b1f940f3bac2db00aa1ebbd7.png" alt="成功"><br><img src="https://img-blog.csdnimg.cn/bfe25ab374174f91b9f27cc98702896d.png" alt="失败"></p>
+<blockquote>
+<p>404——这就对了！</p>
+</blockquote>
+<h3 id="规范化类"><a href="#规范化类" class="headerlink" title="规范化类"></a>规范化类</h3><blockquote>
+<p>终于，自从ES6有了class之后，现在才是第一次用</p>
+</blockquote>
+<p><strong>1.新建文件夹和文件</strong><br><img src="https://img-blog.csdnimg.cn/378ed98755604b94b08db342dc71764c.png" alt="新建model文件夹，放resModel"><br>新建这个文件主要是为了统一各种数据的格式，以达到一种规范化的效果</p>
+<p><strong>2.书写如下代码</strong></p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  基类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BaseModel</span> </span>{</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">data, msg</span>)</span> {</span><br><span class="line">        <span class="comment">// 理想的参数类型是对象，但是如果传进来的是字符串也需要处理一下</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">typeof</span> data == <span class="string">'string'</span>) {</span><br><span class="line">            <span class="built_in">this</span>.msg = data</span><br><span class="line">            <span class="comment">// null，接下来就可以视为对象</span></span><br><span class="line">            data = <span class="literal">null</span></span><br><span class="line">            <span class="comment">// 同上</span></span><br><span class="line">            msg = <span class="literal">null</span></span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">if</span>(data) {</span><br><span class="line">            <span class="built_in">this</span>.data = data</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">if</span>(msg) {</span><br><span class="line">            <span class="built_in">this</span>.msg = msg</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"><span class="comment">// 成功模型</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SuccessModel</span> <span class="keyword">extends</span> <span class="title">BaseModel</span> </span>{</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">data, msg</span>)</span> {</span><br><span class="line">        <span class="built_in">super</span>(data, msg)</span><br><span class="line">        <span class="built_in">this</span>.err = <span class="number">0</span></span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// 失败模型</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ErrorModel</span> <span class="keyword">extends</span> <span class="title">BaseModel</span> </span>{</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">data, msg</span>)</span> {</span><br><span class="line">        <span class="built_in">super</span>(data, msg)</span><br><span class="line">        <span class="built_in">this</span>.err = -<span class="number">1</span></span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = {</span><br><span class="line">    SuccessModel,</span><br><span class="line">    ErrorModel</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p>注意，其中基类的代码，<br>因为理想的参数是对象，但是如果强行传进一个字符串作为参数，那么就需要特殊处理一下方便后续流程的进行</p>
+<blockquote>
+<p>这里所谓的后续流程，看似只有后面两个if，感觉改为else就足够了，但考虑到后续的维护，我们还是有必要做这种处理<br>这种处理在开发中很常见</p>
+</blockquote>
+<p>把字符串信息保存进this.msg，然后把msg和data置为null，这样就能够看做一个为空的对象了</p>
+<p><strong>相关方法</strong></p>
+<p><strong>1.创建Controller文件夹和文件</strong><br><img src="https://img-blog.csdnimg.cn/b7a1df3586f6466d80048239bfda20ea.png" alt="在这里插入图片描述"><br>因为书写过程中会使用到一些自定义的方法，为了方便维护我们把它们放到一起</p>
+<p>即这里创建的controllers文件夹</p>
+<p><strong>2.书写如下代码</strong></p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> getData = <span class="function">() =&gt;</span> {</span><br><span class="line">    <span class="keyword">return</span> [</span><br><span class="line">        {</span><br><span class="line">            <span class="attr">id</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="attr">name</span>: <span class="string">'香甜的甲基橙'</span>,</span><br><span class="line">            <span class="attr">appearance</span>: <span class="string">'(owo)'</span>,</span><br><span class="line">            <span class="attr">motto</span>: <span class="string">'爱自己，更要爱别人'</span></span><br><span class="line">        },</span><br><span class="line">        {   </span><br><span class="line">            <span class="attr">id</span>: <span class="number">2</span>,</span><br><span class="line">            <span class="attr">name</span>: <span class="string">'碳苯'</span>,</span><br><span class="line">            <span class="attr">appearance</span>: <span class="string">'(nvn)'</span>,</span><br><span class="line">            <span class="attr">motto</span>: <span class="string">'胸怀明月，目蕴骄阳'</span></span><br><span class="line">        }</span><br><span class="line">    ]</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = {</span><br><span class="line">    getData</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>由于改动太大了，比如上面改个端口都要到各个文件里面相应地改一下，或者说写完方法之后在某个文件中添加调用的语句…这样的一些改动我就不演示了，不然篇幅实在是太过于冗余，还望海涵</p>
+</blockquote>
+<h3 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h3><blockquote>
+<p>本来是想用MySQL,结果期末作业要求SQLServer我人麻了，试着连SQLServer整了一晚上还是没有成功</p>
+<p>所以我放弃了，还是用MySQL</p>
+<p>（MySQL对应的包是mysql，SQLserver对应的包是mssql）</p>
+</blockquote>
+<p>还是先新建文件啦<br><img src="https://img-blog.csdnimg.cn/205b70e95ae845db8aab9fd8f0f333ae.png" alt="在这里插入图片描述"></p>
+<p>这里用的是mysql，代码如下</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// const { connect } = require('mssql')</span></span><br><span class="line"><span class="comment">// 垃圾mssql给爷爬，还得是我mysql啊</span></span><br><span class="line"><span class="keyword">const</span> mysql = <span class="built_in">require</span>(<span class="string">'mysql'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 连接</span></span><br><span class="line"><span class="keyword">const</span> connection = mysql.createConnection({</span><br><span class="line">    <span class="attr">host</span>: <span class="string">'localhost'</span>,</span><br><span class="line">    <span class="attr">user</span>: <span class="string">'root'</span>,</span><br><span class="line">    <span class="attr">password</span>: <span class="string">'root'</span>,</span><br><span class="line">    <span class="attr">port</span>: <span class="number">3306</span>,</span><br><span class="line">    <span class="attr">database</span>: <span class="string">'syyselectcourse'</span></span><br><span class="line">})</span><br><span class="line"></span><br><span class="line">connection.connect()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 执行sql</span></span><br><span class="line"><span class="keyword">const</span> sql = <span class="string">`select * from syystudent`</span></span><br><span class="line">connection.query(sql, <span class="function">(<span class="params">err, result</span>) =&gt;</span> {</span><br><span class="line">    <span class="keyword">if</span>(err) {</span><br><span class="line">        <span class="built_in">console</span>.log(err)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'result'</span>, result)</span><br><span class="line">})</span><br><span class="line"><span class="comment">// 关闭连接</span></span><br><span class="line">connection.end()</span><br></pre></td></tr></tbody></table></figure>
+
+
+<p>运行结果<br><img src="https://img-blog.csdnimg.cn/e6c5ac1484944c25aa017cb42eda2389.png" alt="数据库连上啦！！！"><br>这里为了演示，就把执行sql和关闭连接写到一个文件里面了，后面记得要拆出来单独写</p>
+<p>这里先改成这样：</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// const { connect } = require('mssql')</span></span><br><span class="line"><span class="keyword">const</span> mysql = <span class="built_in">require</span>(<span class="string">'mysql'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 连接</span></span><br><span class="line"><span class="keyword">const</span> connection = mysql.createConnection({</span><br><span class="line">    <span class="attr">host</span>: <span class="string">'localhost'</span>,</span><br><span class="line">    <span class="attr">user</span>: <span class="string">'root'</span>,</span><br><span class="line">    <span class="attr">password</span>: <span class="string">'root'</span>,</span><br><span class="line">    <span class="attr">port</span>: <span class="number">3306</span>,</span><br><span class="line">    <span class="attr">database</span>: <span class="string">'syyselectcourse'</span></span><br><span class="line">})</span><br><span class="line"></span><br><span class="line">connection.connect()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 执行sql</span></span><br><span class="line"><span class="comment">// const sql = `select * from syystudent`</span></span><br><span class="line"><span class="comment">// connection.query(sql, (err, result) =&gt; {</span></span><br><span class="line"><span class="comment">//     if(err) {</span></span><br><span class="line"><span class="comment">//         console.log(err)</span></span><br><span class="line"><span class="comment">//         return</span></span><br><span class="line"><span class="comment">//     }</span></span><br><span class="line"><span class="comment">//     console.log('result', result)</span></span><br><span class="line"><span class="comment">// })</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// function executeSQL(sql, callback) {</span></span><br><span class="line"><span class="comment">//     connection(query, callback)</span></span><br><span class="line"><span class="comment">// }</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 还可以进一步优化，用promise来做这个</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">executeSQL</span>(<span class="params">sql</span>) </span>{</span><br><span class="line">    <span class="keyword">const</span> promise = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> {</span><br><span class="line">        connection.query(sql, <span class="function">(<span class="params">err, res</span>) =&gt;</span> {</span><br><span class="line">            <span class="keyword">if</span>(err) {</span><br><span class="line">                reject(err)</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line">            }</span><br><span class="line">            resolve(res)</span><br><span class="line">        })</span><br><span class="line">    })</span><br><span class="line">    <span class="keyword">return</span> promise</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// 关闭连接</span></span><br><span class="line"><span class="comment">// connection.end()</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = {</span><br><span class="line">    executeSQL</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>之后如果要执行SQL语句，我们放到路由这里做<br>比如这样</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (path === <span class="string">'/student'</span>) {</span><br><span class="line">    <span class="keyword">const</span> sql = <span class="string">`SELECT * FROM syystudent`</span></span><br><span class="line">    executeSQL(sql).then(<span class="function"><span class="params">res</span> =&gt;</span> {</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'~~~~~SQL执行成功~~~~~'</span>)</span><br><span class="line">        <span class="built_in">console</span>.log(res)</span><br><span class="line">    })</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>发一下ajax请求，果然如我所料，稳得一批<br>那么</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>大概，就这样了？</p>
+<blockquote>
+<p>当然不是，时间是有限的，但是知识可是无限的！<br>Node.JS的学习只是告一段落了，但是我并不会停下学习的脚步，在完成作业项目的开发之后，我会把相关内容上传到我的Gitee仓库，并且把更多更详细的内容放到我的个人博客。<br><font color="aa3322">我的仓库</font><br><a target="_blank" rel="noopener" href="https://gitee.com/Serio">Serio的Gitee仓库希望能得到更多星星哦！</a><br><font color="aa3322">我的博客</font><br><a href="https://serio.gitee.io/">Serio的个人博客！访问获得更多学习资料！</a></p>
+</blockquote>
+<p>之后，咱先去复习计网了，再过几天又是要考试考试考试了哈哈哈~~<br>2022新的一年，大家继续加油啊！</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Serio</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://serio.gitee.io/2021/12/30/node.js-be/">https://serio.gitee.io/2021/12/30/node.js-be/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Serio</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%90%8E%E7%AB%AF/">
+                                    <span class="chip bg-color">后端</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                    <span class="chip bg-color">数据库</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" class="card-content" data-id="city" data-uid="MTAyMC81NDg1OC8zMTMyNw==">
+        <script type="text/javascript">
+            (function (d, s) {
+                let j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/12/30/node.js-be/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/postimages/20.webp" class="responsive-img" alt="Node.JS后端开发">
+                        
+                        <span class="card-title">Node.JS后端开发</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            JavaScript后端！！
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/web/" class="post-category">
+                                    web
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%90%8E%E7%AB%AF/">
+                        <span class="chip bg-color">后端</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                        <span class="chip bg-color">数据库</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/12/25/tsql/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/postimages/16.jpg" class="responsive-img" alt="Transact-SQL">
+                        
+                        <span class="card-title">Transact-SQL</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            感受与众不同的SQL
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                        <span class="chip bg-color">数据库</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('1'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="song"
+                   id="1322877419"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <a href="/about" target="_blank">Serio</a>
+            |&nbsp;Powered by&nbsp;<a href="#" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="#" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/CoderSerio" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2779066456@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+    <a href="https://twitter.com/Eg4HTb5i41JUERI" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/Eg4HTb5i41JUERI" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2779066456" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2779066456" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/"><\/script>');
+            }
+        </script>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+        <script src="//code.tidio.co/8rh2fkswsxbq8ekykk2ieakrakfltfah.js"></script>
+        <script>
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);
+                function change_Tidio() {
+                    var tidio=$("#tidio-chat iframe");
+                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
+                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                    }
+                }
+            });
+        </script>
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
