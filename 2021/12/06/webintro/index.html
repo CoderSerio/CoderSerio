@@ -852,7 +852,7 @@
 <p>注意：网页不保存在缓存中，每次访问都刷新页面。这样设定，访问者将无法脱机浏览。</p>
 <p><strong>3.Refresh（刷新）</strong></p>
 <p>自动刷新并指向新页面。</p>
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"refresh"</span><span class="attr">content</span>=<span class="string">"5; url=http://www.baidu.com/"</span>/&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--&lt;meta http-equiv="refresh"content="5; url=http://www.baidu.com/"/&gt;--&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <p>其中的5表示5秒后自动刷新并调整到URL新页面。</p>
 <p><strong>4.Set-Cookie（cookie设定）</strong></p>
 <p>说明：浏览器访问某个页面时会将它存在缓存中，下次再次访问时就可从缓存中读取，以提高速度。当你希望访问者每次都刷新你广告的图标，或每次都刷新你的计数器，就要禁用缓存了。</p>
