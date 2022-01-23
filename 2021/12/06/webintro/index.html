@@ -30,7 +30,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 </head>
 
@@ -471,7 +471,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    9.5k
+                    10.1k
                 </div>
                 
 
@@ -767,20 +767,17 @@
 </tbody></table>
 <p>总结一下稍微常用的：</p>
 <h4 id="一、name"><a href="#一、name" class="headerlink" title="一、name"></a>一、name</h4><p>name属性主要用于描述网页，对应属性是 content ，以便于搜索引擎机器人查找、分类（目前几乎所有的搜索引擎都使用网上机器人自动查找meta值来给网页分类）。</p>
-<p>语法：</p>
-<meta name="参数" content="参数值">
-
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"参数"</span> <span class="attr">content</span>=<span class="string">"参数值"</span> /&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <p><strong>1.Keywords（关键字）</strong></p>
 <p>为搜索引擎提供的关键字列表</p>
-<meta name="keywords" content="程序员">
-
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"keywords"</span> <span class="attr">content</span>=<span class="string">"程序员"</span>/&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <p><strong>2.Description（简介）</strong></p>
 <p>Description用来告诉搜索引擎你的网站主要内容。</p>
-<meta name="description" content="meta标签是HTML中的一个重要标签，它位于HTML文档头部的<HEAD>标签和<TITL>标签之间。">
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">"meta标签是HTML中的一个重要标签，它位于HTML文档头部的&lt;HEAD&gt;标签和&lt;TITL&gt;标签之间。"</span>/&gt;</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 
 <p><strong>3.robots（机器人向导）</strong></p>
 <p>robots用来告诉搜索机器人哪些页面需要索引，哪些页面不需要索引。</p>
-<meta name="robots" content="">
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"robots"</span> <span class="attr">content</span>=<span class="string">""</span>/&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>content的参数值有all,none,index,noindex,follow,nofollow，默认值是all。</p>
 <p>参数说明：</p>
@@ -792,27 +789,22 @@
 <p> 参数为 nofollow ：文件将被检索，但页面上的链接不可以被查询；</p>
 <p><strong>4.author（作者）</strong></p>
 <p>标注网页的作者</p>
-<meta name="author" content="TG,TG@qq.com">
-
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"author"</span> <span class="attr">content</span>=<span class="string">"TG,TG@qq.com"</span>/&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <p><strong>5.copyright（版权）</strong></p>
 <p>标注版权</p>
-<meta name="copyright" content="本网站版权归TG所有">
-
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"copyright"</span> <span class="attr">content</span>=<span class="string">"本网站版权归TG所有"</span>/&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <p><strong>6.generator</strong></p>
 <p>说明网站采用什么编辑器制作。</p>
-<meta name="generator" content="你所用的编辑器">
-
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"generator"</span> <span class="attr">content</span>=<span class="string">"你所用的编辑器"</span>/&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <p><strong>7.revisit-after（重访）</strong></p>
 <p>网站重访</p>
-<meta name="revisit-after" content="7days">
-
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"revisit-after"</span> <span class="attr">content</span>=<span class="string">"7days"</span>/&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <blockquote>
 <p>HTML5更新部分</p>
 </blockquote>
 <p><strong>1.viewport</strong></p>
 <p>能优化移动浏览器的显示（屏幕的缩放）</p>
-<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
-
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"</span>/&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <p>参数值：</p>
 <p>width viewport的宽度[device-width | pixel_value]width如果直接设置pixel_value数值，大部分的安卓手机不支持，但是ios支持；   </p>
 <p>height – viewport 的高度 （范围从 223 到 10,000 ）   </p>
@@ -823,117 +815,57 @@
 <p><strong>2.format-detection（忽略电话号码和邮箱）</strong></p>
 <p>忽略电话号码和邮箱</p>
 <p>//忽略页面中的数字识别为电话号码</p>
-<meta name="format-detection" content="telephone=no">
-
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"format-detection"</span> <span class="attr">content</span>=<span class="string">"telephone=no"</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>//忽略页面中的邮箱格式识别为邮箱</p>
-<meta name="format-detection" content="email=no">
-
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"format-detection"</span> <span class="attr">content</span>=<span class="string">"email=no"</span>/&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <p>也可以写成：</p>
-<meta name="format-detection" content="telphone=no, email=no">  
-
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"format-detection"</span> <span class="attr">content</span>=<span class="string">"telphone=no, email=no"</span>/&gt;</span>  </span><br></pre></td></tr></tbody></table></figure>
 <p><strong>3、浏览器内核控制</strong>：国内浏览器很多都是双内核（webkit和Trident），webkit内核高速浏览，IE内核兼容网页和旧版网站。而添加meta标签的网站可以控制浏览器选择何种内核渲染。（仅限360浏览器）</p>
-<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"webkit|ie-comp|ie-stand"</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 
-
-<p>若页面需默认用极速核，增加标签：<meta name="renderer" content="webkit"><br>若页面需默认用ie兼容内核，增加标签：<meta name="renderer" content="ie-comp"><br>若页面需默认用ie标准内核，增加标签：<meta name="renderer" content="ie-stand"></p>
+<p>若页面需默认用极速核，增加标签：</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"webkit"</span>&gt;</span></span><br><span class="line">若页面需默认用ie兼容内核，增加标签：</span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"ie-comp"</span>&gt;</span></span><br><span class="line">若页面需默认用ie标准内核，增加标签：</span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"ie-stand"</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <pre><code>各渲染内核的技术细节
 </code></pre>
 <p>内核    Webkit    IE兼容    IE标准<br>内核版本    Chrome 45    IE6/7    IE9/IE10/IE11(取决于用户的IE)<br>HTML5支持    YES    NO    YES<br>ActiveX控件支持    NO    YES    YES<br><strong>4、WebApp全屏模式</strong></p>
-<meta name="apple-mobile-web-app-capable" content="yes"> <!-- 启用 WebApp 全屏模式 -->
-
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-mobile-web-app-capable"</span> <span class="attr">content</span>=<span class="string">"yes"</span> /&gt;</span> <span class="comment">&lt;!-- 启用 WebApp 全屏模式 --&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <p><strong>5、隐藏状态栏/设置状态栏颜色</strong>：只有在开启WebApp全屏模式时才生效。content的值为default | black | black-translucent 。</p>
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-mobile-web-app-status-bar-style"</span> <span class="attr">content</span>=<span class="string">"black-translucent"</span> /&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <p><strong>6、不同浏览器</strong></p>
-<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->  
-
-<meta name="HandheldFriendly" content="true">  
-
-<!-- 微软的老式浏览器 -->  
-
-<meta name="MobileOptimized" content="320">  
-
-
-<!-- uc强制竖屏 -->  
-
-<meta name="screen-orientation" content="portrait">  
-
-
-<!-- QQ强制竖屏 -->  
-
-<meta name="x5-orientation" content="portrait">  
-
-
-<!-- UC强制全屏 -->  
-
-<meta name="full-screen" content="yes">  
-
-
-<!-- QQ强制全屏 -->  
-
-<meta name="x5-fullscreen" content="true">  
-
-
-<!-- UC应用模式 -->  
-
-<meta name="browsermode" content="application">  
-
-
-<!-- QQ应用模式 -->  
-
-<meta name="x5-page-mode" content="app">  
-
-
-<!-- windows phone 点击无高光 -->  
-
-<meta name="msapplication-tap-highlight" content="no">
-
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 --&gt;</span>  </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"HandheldFriendly"</span> <span class="attr">content</span>=<span class="string">"true"</span>&gt;</span>  </span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 微软的老式浏览器 --&gt;</span>  </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"MobileOptimized"</span> <span class="attr">content</span>=<span class="string">"320"</span>&gt;</span>  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- uc强制竖屏 --&gt;</span>  </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"screen-orientation"</span> <span class="attr">content</span>=<span class="string">"portrait"</span>&gt;</span>  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- QQ强制竖屏 --&gt;</span>  </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"x5-orientation"</span> <span class="attr">content</span>=<span class="string">"portrait"</span>&gt;</span>  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- UC强制全屏 --&gt;</span>  </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"full-screen"</span> <span class="attr">content</span>=<span class="string">"yes"</span>&gt;</span>  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- QQ强制全屏 --&gt;</span>  </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"x5-fullscreen"</span> <span class="attr">content</span>=<span class="string">"true"</span>&gt;</span>  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- UC应用模式 --&gt;</span>  </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"browsermode"</span> <span class="attr">content</span>=<span class="string">"application"</span>&gt;</span>  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- QQ应用模式 --&gt;</span>  </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"x5-page-mode"</span> <span class="attr">content</span>=<span class="string">"app"</span>&gt;</span>  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- windows phone 点击无高光 --&gt;</span>  </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"msapplication-tap-highlight"</span> <span class="attr">content</span>=<span class="string">"no"</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 
 
 
 
 
 <h4 id="二、http-equiv"><a href="#二、http-equiv" class="headerlink" title="二、http-equiv"></a>二、http-equiv</h4><p>http-equiv类似于HTTP的头部协议，它回应给浏览器一些有用的信息，以帮助正确和精确地显示网页内容。与之对应的属性值为content，content中的内容其实就是各个参数的变量值。</p>
-<p>语法：</p>
-<meta http-equiv="参数" content="参数值">
-
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"参数"</span>  <span class="attr">content</span>=<span class="string">"参数值"</span>/&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <p>参数说明：</p>
 <p><strong>1.Expires（期限）</strong></p>
-<p>说明：指定网页在缓存中的过期时间，一旦网页过期，必须到服务器上重新传输。</p>
-<p>语法：</p>
-<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT">
-
+<p>指定网页在缓存中的过期时间，一旦网页过期，必须到服务器上重新传输。</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"expires"</span> <span class="attr">content</span>=<span class="string">"Wed, 26 Feb 1997 08:21:57 GMT"</span>/&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <p>注意：必须使用GMT的时间格式，或者直接设为0（数字表示多久后过期）</p>
 <p><strong>2.Pragma（cache模式）</strong></p>
-<p>说明：禁止浏览器从本地计算机的缓存中访问页面内容。</p>
-<p>语法：</p>
-<meta http-equiv="Pragma" content="no-cache">
-
+<p>禁止浏览器从本地计算机的缓存中访问页面内容。</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Pragma"</span> <span class="attr">content</span>=<span class="string">"no-cache"</span>/&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <p>注意：网页不保存在缓存中，每次访问都刷新页面。这样设定，访问者将无法脱机浏览。</p>
 <p><strong>3.Refresh（刷新）</strong></p>
-<p>说明：自动刷新并指向新页面。</p>
-<p>语法：</p>
-<meta http-equiv="refresh" content="5; url=http://www.baidu.com/">
-
+<p>自动刷新并指向新页面。</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"refresh"</span><span class="attr">content</span>=<span class="string">"5; url=http://www.baidu.com/"</span>/&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <p>其中的5表示5秒后自动刷新并调整到URL新页面。</p>
 <p><strong>4.Set-Cookie（cookie设定）</strong></p>
 <p>说明：浏览器访问某个页面时会将它存在缓存中，下次再次访问时就可从缓存中读取，以提高速度。当你希望访问者每次都刷新你广告的图标，或每次都刷新你的计数器，就要禁用缓存了。</p>
 <p>如果网页过期，那么存盘的cookie将被删除。</p>
-<p>语法：</p>
-<meta http-equiv="Set-Cookie" content="cookievalue=xxx; expires=Wednesday, 　　　　　　 21-Oct-98 16:14:21 GMT; path=/">
-
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Set-Cookie"</span>  <span class="attr">content</span>=<span class="string">"cookievalue=xxx; expires=Wednesday, 　　　　　　 21-Oct-98 16:14:21 GMT; path=/"</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <p>注意：必须使用GMT的时间格式</p>
 <p><strong>5.Window-target（显示窗口的设定）</strong></p>
-<p>说明：强制页面在当前窗口以独立页面显示</p>
-<p>语法：</p>
-<meta http-equiv="Window-target" content="_top">
-
+<p>强制页面在当前窗口以独立页面显示</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Window-target"</span> <span class="attr">content</span>=<span class="string">"_top"</span>/&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <p>可以用来防止别人在框架里调用你的页面。</p>
-<p><strong>6.content-Type（显示字符集的设定）</strong></p>
-<p>说明：设定页面使用的字符集/编码方式</p>
-<meta http-equiv="content-Type" content="text/html;charset=utf-8">
-
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**6.content-Type（显示字符集的设定）**</span><br></pre></td></tr></tbody></table></figure>
+<p>设定页面使用的字符集/编码方式</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html;charset=utf-8"</span>/&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <p>其他参数值：</p>
 <p>GB2312，简体中文；</p>
 <p>BIG5，繁体中文； </p>
@@ -943,31 +875,21 @@
 <p>UTF-8，世界通用的语言编码；</p>
 <p>在HTML5中，我们一般都是：<meta charset="utf-8"><br><strong>7.content-Language（显示语言的设定）</strong></p>
 <p>显示语言</p>
-<meta http-equiv="Content-Language" content="zh-cn">
-
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Language"</span> <span class="attr">content</span>=<span class="string">"zh-cn"</span>/&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 <p><strong>8.http-equiv=”imagetoolbar”</strong></p>
 <p>指定是否显示图片工具栏，当为false代表不显示，当为true代表显示</p>
-<meta http-equiv="imagetoolbar" content="false">
-
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"imagetoolbar"</span> <span class="attr">content</span>=<span class="string">"false"</span>/&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 
 
 <blockquote>
 <p> HTML5更新部分</p>
 </blockquote>
 <p><strong>1、优先使用 IE 最新版本和 Chrome</strong></p>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
-
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge,chrome=1"</span> /&gt;</span>  </span><br></pre></td></tr></tbody></table></figure>
 <!-- 关于X-UA-Compatible -->  
-
-<meta http-equiv="X-UA-Compatible" content="IE=6"><!-- 使用IE6 -->  
-
-<meta http-equiv="X-UA-Compatible" content="IE=7"><!-- 用于在IE8版本浏览器中使用IE7渲染来避免出错 -->  
-
-<meta http-equiv="X-UA-Compatible" content="IE=8"><!-- 使用IE8 -->
-**2、转码申明**：用百度打开网页可能会对其进行转码（比如贴广告），避免转码可添加如下meta
-
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=6"</span> &gt;</span><span class="comment">&lt;!-- 使用IE6 --&gt;</span>  </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=7"</span> &gt;</span><span class="comment">&lt;!-- 用于在IE8版本浏览器中使用IE7渲染来避免出错 --&gt;</span>  </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=8"</span> &gt;</span><span class="comment">&lt;!-- 使用IE8 --&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p><strong>2、转码申明</strong>：用百度打开网页可能会对其进行转码（比如贴广告），避免转码可添加如下meta</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Cache-Control"</span> <span class="attr">content</span>=<span class="string">"no-siteapp"</span> /&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 
 
 <h3 id="内联框架（待补充）"><a href="#内联框架（待补充）" class="headerlink" title="内联框架（待补充）"></a>内联框架（待补充）</h3><h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><p>看完上述代码，我们知道标签内部还是可以写东西的，但是除了style属性之外，标签还有其他的属性</p>
