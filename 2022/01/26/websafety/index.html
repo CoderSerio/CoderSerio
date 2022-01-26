@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HTTP(持续更新), 前端">
-    <meta name="description" content="一起来学习HTTP吧！">
+    <meta name="keywords" content="Web安全基础攻防技术, 前端">
+    <meta name="description" content="了解常见的攻击防御技术">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>HTTP(持续更新) | 碳苯</title>
+    <title>Web安全基础攻防技术 | 碳苯</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/23.webp')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/22.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">HTTP(持续更新)</h1>
+                    <h1 class="description center-align post-title">Web安全基础攻防技术</h1>
                 </div>
             </div>
         </div>
@@ -436,6 +436,10 @@
                                 <span class="chip bg-color">计算机网络</span>
                             </a>
                         
+                            <a href="/tags/%E5%AE%89%E5%85%A8/">
+                                <span class="chip bg-color">安全</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -444,8 +448,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E4%B8%93%E4%B8%9A%E5%9F%BA%E7%A1%80/" class="post-category">
-                                专业基础
+                            <a href="/categories/web/" class="post-category">
+                                web
                             </a>
                         
                     </div>
@@ -457,7 +461,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-01-23
+                    2022-01-26
                 </div>
                 
 
@@ -471,7 +475,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.1k
+                    2.6k
                 </div>
                 
 
@@ -494,150 +498,229 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="写在开篇"><a href="#写在开篇" class="headerlink" title="写在开篇"></a>写在开篇</h3><blockquote>
-<p>电脑坏掉了，现在使用的是备用机，性能不太好，用着也有点不太习惯，但是还是得学啊！<br>毕竟字节的课程还是很难得的，能学一点是一点吧！</p>
+<p>二进制的计算机世界中黑白之中的灰色地带，一场剑与盾的战争悄然上演！<br>没有战火，没有硝烟，只有无数暗流涌动，这就是Web安全</p>
 </blockquote>
 <h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><blockquote>
-<p><strong>2022/01/22</strong><br>开始动工–HTTP其实应该补充到计算机网络一部分的，所以这里只是做一些补充和扩展</p>
-<p><strong>2022/01/23</strong><br>骑着我心爱的小电驴去把修好的尕玛吉（我的电脑）背回了家，然后第一时间把这篇博文发布到我的个人博客上！<br>博文内容上没有做太大的改动，但是后面我知道后面我还会找时间做补充的！<br>之后一段时间，我可能会继续学习小程序开发、Linux、Web安全中的一个，至于究竟会做什么，我也不知道~</p>
-<p><strong>2022/01/26</strong><br>更新了HTTPS部分</p>
+<p><strong>2022/01/25</strong><br>开始学习</p>
+<p><strong>2002/01/26</strong><br>初步记录完毕</p>
 </blockquote>
-<h2 id="HTTP发展史"><a href="#HTTP发展史" class="headerlink" title="HTTP发展史"></a>HTTP发展史</h2><blockquote>
-<p><strong>HTTP/0.9</strong><br>单行协议，请求html文件则至响应html文件<br><strong>HTTP/1.0</strong><br>构建扩展性，增加了请求头（Header）、状态码（status），支持多种文档类型<br><strong>HTTP/1.1</strong><br>标准化，增添了链接复用、缓存、内容协商等功能<br>截止至目前（2022年），是最常用的HTTP版本<br><strong>HTTP/2</strong><br>更优异的表现（更快、更稳定、更简单），支持二进制协议、压缩请求头、服务器推送等功能，数据传输使用的是帧而不是报文<br>目前国内大厂陆续开始采用该版本<br><strong>HTTP/3</strong><br>正在起草各种相关规则</p>
+<h2 id="跨站脚本攻击XSS"><a href="#跨站脚本攻击XSS" class="headerlink" title="跨站脚本攻击XSS"></a>跨站脚本攻击XSS</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><blockquote>
+<p>Cross-Site Script，本该简称CSS，但为了避免歧义，所以就叫XSS<br>(X就是Cross嘛)<br>是最常见的一种攻击手段</p>
 </blockquote>
-<h2 id="协议分析-报文"><a href="#协议分析-报文" class="headerlink" title="协议分析-报文"></a>协议分析-报文</h2><h3 id="请求方法Method"><a href="#请求方法Method" class="headerlink" title="请求方法Method"></a>请求方法Method</h3><p>众所周知请求方法有GET、PUT、FETCH、POST等等，这些方法我们可以根据其安全性对其进行分类<br>这里就涉及到以下几个概念：</p>
+<p>有如下几种常见的类型:</p>
 <blockquote>
-<p><strong>安全请求safe</strong><br>不会修改服务器数据的方法：<br>GET HEAD OPTIONS<br><strong>幂等请求idempotent</strong><br>同样的请求被执行一次与执行多次的的效果是一样的方法：<br>GET HEAD OPTIONS PUT DELETE<br>所有安全请求都是幂等请求</p>
-</blockquote>
-<h3 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h3><p>这里总结一下常见状态码</p>
-<blockquote>
-<p><strong>1xx</strong><br>指示信息，表示请求已经接收，继续处理<br><strong>2xx</strong><br>成功，表示请求已经被成功接收、理解、接受，如：<br>200 — 客户端请求成功<br><strong>3xx</strong><br>重定向，要完成请求必须进行更进一步的操作，如：<br>301 — 资源被永久转移到别处<br>302 — 临时跳转<br><strong>4xx</strong><br>客户端错误，请求有语法错误或请求无法实现， 如：<br>401 — Unauthorized 未经授权的请求<br>404 — 访问资源不存在<br><strong>5xx</strong><br>服务器错误，服务器未能实现合法请求<br>500 — 服务器内部发生了不可预期的错误<br>504 — Gateway Timeout 网关或代理等待响应超时</p>
-</blockquote>
-<h3 id="RESTful-API"><a href="#RESTful-API" class="headerlink" title="RESTful API"></a>RESTful API</h3><p>REST是Representational State Transfer，表现层状态转化<br>而RESTful API就是具有REST风格的API啦</p>
-<p>具体规则是</p>
-<blockquote>
-<p>1.每一个URL代表一种资源<br>2.客户端和服务端之间，传递这种资源的某种表现层<br>3.客户端通过HTTP method，对服务器端资源进行操作，实现“表现层状态转化”</p>
-</blockquote>
-<p>那到底是什么样的API呢？在我看来，可以粗略地理解为——响应的状态码带有语义化的关键词<br>比如 200 OK， 201 CREATED， 400 INVALID REQUEST等等</p>
-<h3 id="请求头"><a href="#请求头" class="headerlink" title="请求头"></a>请求头</h3><p>这里也例举一些常用的请求头</p>
-<blockquote>
-<p><strong>Accept</strong><br>接收类型，表示浏览器支持的MIME类型<br>（MIME: Multipurpose Internet Mail Extensions,多用途互联网邮件扩展类型，是HTTP协议中迎来定义文档性质及格式的标准）<br>（对标服务端返回的Content-Type）<br><strong>Content-Type</strong><br>客户端发送出去实体内容的类型<br><strong>Cache-Control</strong><br>指定请求和响应遵循的缓存机制，比如no-cache<br><strong>if-Modified-Since</strong><br>对应服务端的Last-Modified，用来匹配看文件是否发生变动，只能精确到1s内<br><strong>Expires</strong><br>缓存控制，在这个时间内不会请求，直接使用缓存<br><strong>Max-age</strong><br>设置缓存有效时间（有效时间内不会请求而是使用缓存）<br><strong>if-None-Match</strong><br>对应服务器的ETag，用来匹配文件内容是否变动<br><strong>Cookie</strong><br>有cookie并且同域访问会自动带上<br><strong>Referer</strong><br>该页面的来源URL（适用于所有类型的请求，会精确到详细页面地址，csrf拦截常用这个字段）<br><strong>Origin</strong><br>最初的请求是从哪里发起的（精确到端口）<br>Origin比Referer更保护隐私<br><strong>User-Agent</strong><br>用户客户端的一些必要信息，如UA头部<br>(UA:User Agent，用户代理)</p>
-</blockquote>
-<p>嗯，只有少数没印象</p>
-<h3 id="响应头"><a href="#响应头" class="headerlink" title="响应头"></a>响应头</h3><p>说了请求头，自然还得来响应头,说一说常见的几个</p>
-<blockquote>
-<p><strong>Content-Type</strong><br>服务端返回的实体内容的类型<br><strong>Cache-Control</strong><br>指定请求和响应遵循的机制，比如no-cache<br><strong>Last-Modified</strong><br>请求资源最后修改的时间<br><strong>Expires</strong><br>应该在什么时候认为资源已经过期并且不再缓存它<br><strong>Max-age</strong><br>客户端的本地资源应该缓存多少秒<br>（只有开启了Cache-Control才有效）<br><strong>ETag</strong><br>资源的特定版本的标识符，Etags类似于指纹<br><strong>Set-Cookie</strong><br>设置和页面关联的cookie，服务器通过这个头部把cookie传给客户端<br><strong>Server</strong><br>服务器的一些相关信息<br><strong>Access-Control-Allow-Origin</strong><br>服务器端允许的请求Origin头部</p>
-</blockquote>
-<p>很好，对其中三四个有印象</p>
-<p>进一步地，我们还需要重点学习其中提到的缓存</p>
-<h3 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h3><p>可以分为两类：</p>
-<blockquote>
-<p><strong>强缓存</strong><br><em>本地有缓存，则直接使用，这就是强缓存</em><br>Expires — 时间戳<br>Cache-Control —</p>
 <ol>
-<li>可缓存性：<br>   no-cache — 协商缓存验证<br>   no-store — 不使用任何缓存</li>
-<li>到期：<br>   max-age — 存储的最大周期（相对于请求时间，单位是秒）</li>
-<li>重新验证/重新加载<br>   must-revalidate — 如果资源过期，在成功向原始服务器验证之前，不能再使用</li>
+<li><strong>Stored XSS</strong><br>存储型XSS，恶意脚本存到数据库中，在访问页面并进行数据读取时发动攻击，伤害最大，对全部用户可见</li>
+<li><strong>Reflected XSS</strong><br>反射型XSS，从URL上攻击，将恶意脚本填入URL参数的值中，在执行GET请求时发动</li>
+<li><strong>DOM-Based XSS</strong><br>基于DOM的XSS，不需要服务器参与，全程在浏览器完成。注入原理同反射型XSS，但是执行条件是JS利用URL参数创建DOM</li>
+<li><strong>Mutation-based XSS</strong><br>基于变化的XSS，利用浏览器渲染DOM的特性，比如在标签的title属性中注入XSS，在渲染时进行攻击，作用于不同浏览器时可能会有差异<br>这种注入方式最为复杂，需要攻击者非常了解浏览器的渲染规则——同时也是最难防御的XSS攻击</li>
 </ol>
 </blockquote>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">alert(<span class="string">'XSS'</span>)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>这段代码放到 数据库 或者 URL参数的值中则可以造成XSS攻击</p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>用户提交的string转为DOM的过程中，可能使用到了下述代码片段</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.write()</span><br><span class="line">element.innerHTML = <span class="string">''</span></span><br><span class="line"><span class="comment">// 或者使用了 SSR类的操作</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p>而XSS攻击具有以下特点:</p>
 <blockquote>
-<p><strong>协商缓存</strong><br><em>本地有缓存，但是还需要和服务端协商判断该缓存状态（比如是否为最新版本的）才决定是否使用</em><br>Etag/If-None-Match — 资源的特有标识符，类似于指纹<br>Last-Modified/If-Modified-Since — 最后修改时间</p>
-</blockquote>
-<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842810b59a6468a4f084f4efc419c8e58a2be2c80b3fcd51176/0.png" alt="缓存机制"></p>
-<p>我们还得再进一步聊聊Cookie</p>
-<h3 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h3><p>我们通常只是给饼干一个名字和值，但是实际上还可以给它更多<br>Cookie包括以下内容<br>（响应头可以写在set-cookie字段的值）</p>
-<blockquote>
-<p><strong>Name = value</strong><br>设置名称<br><strong>Expires = Date</strong><br>设置有效期，缺省则默认为有效至浏览器关闭<br><strong>Path = Path</strong><br>指定cookie发送范围，默认为当前范围<br><strong>Domain = domain</strong><br>限制cookie生效的域名，默认为创建cookie的服务域名<br><strong>secure</strong><br>仅对HTTPS生效<br><strong>HttpOnly</strong><br>JS无法获取Cookie<br><strong>SameSite = [None|Strict|Lax]</strong><br>None:同站、跨站请求都可以发<br>Strict:仅在同站发送<br>Lax:允许与顶级导航一起发送，并将第三方网站发起的GET请求一起发送</p>
-</blockquote>
-<p>这里给出一个非常优雅的Cookie获取方式，为了方便称呼，我个人将其称为<strong>我爱Cookie算法</strong></p>
-<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842810b59a6468a4f0888cc3221cd23d25dce4e9f6b558c2de5/0.png" alt="&quot;我爱Cookie&quot;算法"></p>
-<p>另外，建议是后端来配置cookie</p>
-<h2 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h2><p>我们都知道多出来的S代表安全，<br>那么从本质上来说，<br>HTTPS究竟做了什么样的改动才变得更安全呢？<br>（总不能是把默认端口从80改到了443把）</p>
-<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><blockquote>
-<p>Hypertext Transfer Protocol Secure<br>相比HTTP来说，HTTPS多了一个TSL/SSL加密的过程<br>这个过程是在<strong>应用层和传输层之间</strong>完成的<br>这里提到了加密，那么又得学习两个概念：<br><strong>对称加密</strong><br>加密和解密用的同一个密钥<br><strong>非对称加密</strong><br>加密和解密需要使用两个不同的密钥，比如 公钥&amp;&amp;私钥</p>
-</blockquote>
-<h3 id="TLS握手"><a href="#TLS握手" class="headerlink" title="TLS握手"></a>TLS握手</h3><p>访问某个HTTPS协议的URL的验证过程：</p>
-<blockquote>
-<p>需要进行TLS握手，分为两个过程：对称加密和非对称加密</p>
-</blockquote>
-<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684262bdd1851090ac95c22e96166ecd6088105de91696f5ce32/0.png" alt="TLS握手"></p>
-<p>其中所谓的证书涉及到的概念如下</p>
-<h3 id="证书验证"><a href="#证书验证" class="headerlink" title="证书验证"></a>证书验证</h3><blockquote>
-<p>每个浏览器都会内置大量 证书机构（CA）签发的证书，这些证书是和私钥生成的，里面有证书机构的信息以及公钥，利用这些公钥即可解密，通过证书的内容判断签发者是否合法</p>
-<p>当然，如果数字签名不够健壮的话，那么也可能被伪造，进而产生<strong>MITM中间人攻击</strong>的风险</p>
-</blockquote>
-<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842810b59a6468a4f08f302aff72b4f2a23aeb79545c6d86956/0.png" alt="验证流程"></p>
-<h2 id="静态资源部署"><a href="#静态资源部署" class="headerlink" title="静态资源部署"></a>静态资源部署</h2><h3 id="常用方案"><a href="#常用方案" class="headerlink" title="常用方案"></a>常用方案</h3><blockquote>
-<p>缓存 + CDN + 文件名hash<br>CDN： Content Delivery Network<br>通过用户就近性和服务器负载的判断，CDN确保内容以一种极为高效的方式为用户提供请求</p>
-</blockquote>
-<h3 id="更新资源"><a href="#更新资源" class="headerlink" title="更新资源"></a>更新资源</h3><p>由于cookie保存时间可能设置得很长，那么旧版本的信息可能就长时间得不到替换更新，这时候，常见的一种处理操作就是更改这个信息文件的文件名，比如该版本号等等</p>
-<h2 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote>
-<p><strong>cross-origin</strong><br>是由于浏览器的Same-origin Policy同源策略导致的，只要协议（scheme）、域名（这里指的是host name，包括了domain和subdomain）、端口（port）有一个不一样，那么就形成了跨域</p>
-<p><strong>同源策略</strong><br>即上述内容中提到的Same-origin Policy，简称SoP<br>协议、域名、端口均一致则为同源</p>
-<p><strong>内容安全策略</strong><br>Content Security Policy，简称CSP<br>允许用户自定义被认为是安全的源（域名），对于安全源的脚本可以执行，否则直接抛出错误<br>此外，还可以直接拒绝eval和内联的script标签</p>
-</blockquote>
-<h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><blockquote>
-<p>大部分情况（指请求为复杂请求而非简单请求），发送预请求，获知服务端是否允许该跨域请求，这个请求的方法通常是options，如果允许则一如平常进行请求。</p>
-</blockquote>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><blockquote>
-<p><strong>1.CORS</strong><br>大概就是后端配置一下Access-Control-Allow-Origin之类的<br><strong>2.代理服务器</strong><br>同源策略是浏览器的安全策略而不是HTTP的，所以只要用服务器绕开浏览器的限制就可以解决跨域<br><strong>3.Iframe/JSONP</strong><br>发送Iframe或者scirpt</p>
-</blockquote>
-<h2 id="Cookie、Session、Token"><a href="#Cookie、Session、Token" class="headerlink" title="Cookie、Session、Token"></a>Cookie、Session、Token</h2><p>我们以用户登录为背景，分析两种常见的模式</p>
-<blockquote>
-<p><strong>1.Session + Cookie</strong><br>Browser发送用户信息到Server试图登录，Server检验数据，如果匹配成功那么生成一个Session,（Session中最主要的是一个SessionID字段）Server会存储这个Session，并且放到响应头的Set-Cookie字段里面给Browser，这样Browser就拥有了一个带有Session的Cookie<br>由于HTTP请求是会自动带上Cookie信息的，所以在下次（Cookie有效期内）Browser试图登录的时候，就会自动将这个带有Session的Cookie发送给Server，Server根据这个Session就能直接响应而不会判断用户信息是否正确（当然如果SessionID被修改，那么服务器就无法识别了，也就不会响应）<br>这样就实现了用户登录一次之后，短时间内保持登录状态的效果</p>
-</blockquote>
-<blockquote>
-<p><strong>2.JWT: JSON Web Token</strong><br>Browser发送用户信息到Server试图登录，Server检验数据，如果匹配成功那么生成JWT，其中包含一个独一无二的字符串（Token令牌），Server只保存这个Token，接着把JWT放到响应头里发送给Browser，这时候Browser通常会把这个JWT存储（查阅相关资料做了些研究后，个人推荐是放到localStorage里面）<br>在下次（有效期内）试图登录时，Browser从localStorage里拿出这个JWT放到请求头里一并发送到Server，Server会解析JWT然后提取其中的Token迅速给出响应<br>这样就实现了和第一种方法一样的效果</p>
-</blockquote>
-<p><strong>为什么需要这些技术?</strong></p>
-<blockquote>
-<p>从根本上说还是因为HTTP协议是无状态的，一个用户访问一次之后，下一次在访问，浏览器也不会发觉这是同一个人浏览的</p>
-</blockquote>
-<h3 id="优劣分析"><a href="#优劣分析" class="headerlink" title="优劣分析"></a>优劣分析</h3><blockquote>
-<p><strong>Cookie + Session的弊端</strong></p>
-</blockquote>
 <ol>
-<li>Cookie不是很安全，他人可以通过揣测Cookie名称等操作来进行Cookie欺骗</li>
-<li>Cookie容量小，一个站点在Browser最多存放3k数据</li>
-<li>Session会保存在Server，所以会占用服务器性能</li>
-<li>据说，在服务器集群或者跨域服务导向架构中，Session的数据就需要共享，意味着每个服务器都需要读取它，这可能会造成负责分享的这个服务器的超载；如果说为了让各个服务器共享而把Session放到数据库中，如果数据库崩溃了，那么又会有问题</li>
-<li>最大的问题：如果浏览器设置了禁用Cookie，那么随之而来的就是Session也无法简单地被使用了，各种问题也可想而知。</li>
+<li>通常难以从UI上感知</li>
+<li>能窃取cookie/token等信息</li>
+<li>绘制UI（如植入弹窗），欺骗用户填写、点击</li>
 </ol>
-<p>由于上述问题的存在，我们必须有一种新的技术思路，那就是以JWT<br>这个技术的核心思想就是</p>
-<blockquote>
-<p><strong>前后端分别开辟一个空间存储用户信息</strong><br>这个新的技术就是JWT，<br>其具体工作流程上面说过了，此处不再赘述</p>
 </blockquote>
+<h3 id="防御"><a href="#防御" class="headerlink" title="防御"></a>防御</h3><p><strong>核心思想</strong></p>
 <blockquote>
-<p><strong>JWT的好处</strong></p>
+<p><strong>永远不要相信用户提交的内容</strong>：<br>不要直接把用户提交内容转为DOM，尽可能转为字符串等相对安全的类型<br>小心类似于 “需要动态生成DOM” 这种客户需求</p>
 </blockquote>
+<p><strong>防御工具</strong></p>
+<blockquote>
+<p><strong>前端</strong></p>
 <ol>
-<li>无状态，可扩展<br>Browswer存储的Tokens是无状态的，且能被扩展。<br>基于这种无状态和不存储session信息，负载均衡器能将用户信息从一个服务器传到其他服务器，能够实现数据共享</li>
-<li>安全<br>请求中发送token而不再是cookie，能够防止CSRF跨站请求伪造。即使在客户端用cookie存储token，cookie也仅仅用于存储而不是认证（个人建议还是存到localStorage或者redis里面），并且token默认是有时间限制的，一段时间后用户就需要重新认证</li>
-<li>多平台跨域<br>每次都是携带绑定自己信息的Token访问Server，在服务器集群中，不是访问某一台指定的服务器，而是通过从缓存服务器中拿出数据，并根据负载均衡器来选择服务器</li>
+<li>主流框架默认防御XSS</li>
+<li>google-closure-library</li>
 </ol>
-<p>对于第2点中提到的安全，可能还需要进一步解释<br>由于JWT是存储在Browser的，但是它又是比较安全的，所以我们就需要从其结构上分析推导其原理</p>
-<h3 id="JWT组成"><a href="#JWT组成" class="headerlink" title="JWT组成"></a>JWT组成</h3><p>JWT由三部分组成</p>
+<p><strong>服务端（指Node）</strong></p>
+<ol>
+<li>DOMPurify</li>
+</ol>
+</blockquote>
+<p><strong>注意事项</strong></p>
 <blockquote>
-<p><strong>1.header</strong><br>声明了需要用什么算法来生成Token<br><strong>2.payload</strong><br>包含一些特定的数据，比如有效期等<br><strong>3.signature</strong><br>将header和payload中的内容进行Base64编码生成字符串,<br>再根据编码之后的两个字符串，以header中声明的算法进行加密，<br>最终得到Token，Token是一个格式为xxx.xxx.xxx的字符串<br>也就是signature这部分的内容</p>
+<ol>
+<li>string类型注意转义内容</li>
+<li>如果允许用户上传SVG文件等，需要先预处理</li>
+<li>小心自定义跳转连接，因为这样是可以传递JS代码的</li>
+<li>小心自定义样式，因为CSS的URL也可能包含GET请求</li>
+</ol>
 </blockquote>
-<p>这三个部分是相互关联的，只要有一个部分被修改，三个部分都会出错</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>Session是被Server创建、保存，<br>而Cookie则是一种数据载体，将Session发给Browser，<br>至于Token，是被Server创建，却被Browser保存</p>
-<h2 id="Web存储"><a href="#Web存储" class="headerlink" title="Web存储"></a>Web存储</h2><p>既然说了Cookie、Session、Token那么自然也得学学本地存储了<br>Cookie可以作为信息的载体，也可以存储内容，但是一般不把Cookie放在Web存储的范围内<br>（Cookie大概是94年提出的技术，而Web存储是H5更新的内容）<br>（我们还是会把它和Web存储作比较，所以这里还是写出来）</p>
-<h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><blockquote>
-<p>大小：4kb<br>兼容：支持H4、H5<br>访问情况：任何同源的窗口都可以访问<br>有效期：手动设置，默认为直到结束</p>
+<h2 id="跨站请求伪造CSRF"><a href="#跨站请求伪造CSRF" class="headerlink" title="跨站请求伪造CSRF"></a>跨站请求伪造CSRF</h2><h3 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h3><blockquote>
+<p>Cross-Site Request Forgery<br>（翻译是跨站请求伪造，但是口头上也常称为跨站伪造请求..总感觉一个是名词一个是动宾短语…）</p>
+<p>这里举出一些较为特殊的CSRF：</p>
+<ol>
+<li><p><strong>iframe攻击</strong><br>由于iframe中发起请求是同源请求，所以检测是否来自安全源的防御机制对此近乎无效，而且攻击者可能更加高明，会利用事件冒泡\事件捕获等JS特性在看似安全的按钮等事件对象的背后隐藏恶意的事件对象</p>
+</li>
+<li><p><strong>anti-pattern攻击</strong></p>
+<p>这是由于程序员本身因为疏忽（更大概率是因为懒），设置GET请求也可以作为POST请求使用，导致攻击者可以直接利用GET请求篡改数据</p>
+</li>
+</ol>
 </blockquote>
-<h3 id="localStorage"><a href="#localStorage" class="headerlink" title="localStorage"></a>localStorage</h3><blockquote>
-<p>永久存储数据，直到手动删除，本身并不直接参与通信<br>但是是同步的，可能会影响渲染速度<br>大小：10Mb<br>兼容：H5<br>访问情况：任何同源的窗口都可以访问<br>有效期：永久，直到手动删除</p>
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><blockquote>
+<ol>
+<li>用户访问到了恶意页面，并输入、提交了个人信息</li>
+<li>恶意页面利用这些信息设置cookie，请求另一个域名下的银行转账接口，由于cookie信息是有效的，转账的请求也被认为是有效的</li>
+<li>请求执行成功，转账完毕，用户权益受到侵害</li>
+</ol>
 </blockquote>
-<h3 id="sessionStorage"><a href="#sessionStorage" class="headerlink" title="sessionStorage"></a>sessionStorage</h3><blockquote>
-<p>会话期间存储数据，结束则删除<br>大小：5Mb<br>兼容：H5<br>访问情况：仅同一窗口可以访问（安全性高）<br>有效期：直到结束</p>
-</blockquote>
-<h3 id="indexedDB"><a href="#indexedDB" class="headerlink" title="indexedDB"></a>indexedDB</h3><blockquote>
-<p>暂时还没研究</p>
-</blockquote>
-<h2 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h2><h3 id="readyState"><a href="#readyState" class="headerlink" title="readyState"></a>readyState</h3><p>其实可以直接看红宝书的，但是还是写一遍加深印象吧</p>
+<p>这些恶意的脚本可能隐藏在a、img等标签的属性中，或者直接不隐藏而是构建一个表单。<br>它们会在被点击时触发GET请求发动攻击</p>
+<h3 id="分析-1"><a href="#分析-1" class="headerlink" title="分析"></a>分析</h3><p>跨站请求伪造有如下几个特点:</p>
 <blockquote>
-<p>0: UNSET<br>代理已经被创建，但是尚未调用open()方法<br>1: OPENED<br>open()已经被调用<br>2: HEADERS_RECEIVED<br>send()方法已经被调用，且头部和状态已经可获取<br>3: LOADING<br>下载中，responseText属性已经包含部分数据<br>4: DONE<br>下载操作已经完成</p>
+<pre><code> 1. 用户不知情为前提
+ 2. 利用用户的权限（cookie）
+ 3. 构造指定的HTTP请求，窃取/修改信息
+</code></pre>
 </blockquote>
-<h2 id="其他通信方式"><a href="#其他通信方式" class="headerlink" title="其他通信方式"></a>其他通信方式</h2><p>没错说的就是WebSocket，它相较于HTTP的优点就是它是全双工的，适合对实时性要求比较高的场景，其URL是使用ws://或者wss://开头</p>
+<h3 id="防御-1"><a href="#防御-1" class="headerlink" title="防御"></a>防御</h3><p><strong>核心思想</strong></p>
+<blockquote>
+<p><strong>（大部分情况下）尽可能判断请求的来源，如果来源异常，那么对其进行限制</strong></p>
+</blockquote>
+<p><strong>注意事项</strong></p>
+<blockquote>
+<p><strong>前端</strong></p>
+<ol>
+<li><p>同源请求中，GET、HEAD不会发送Origin字段，这种情况<br>判断来源的话就比较麻烦，所以同源请求尽量避免GET、HEAD</p>
+</li>
+<li><p>也可以结合Referer字段来进行判断</p>
+</li>
+<li><p>使用token和用户进行绑定，并设置过期时间，这样避免了token被他人利用，也避免了持续时间较长的攻击</p>
+</li>
+<li><p>对于iframe攻击，需要在服务器响应头部设置X-Frame-Options的值为DENY，意味着当前页面的值不能作为iframe进行加载；或者设置为SAMEORIGIN，意味着这个页面本身必须和当前页面同源，才能作为iframe加载</p>
+</li>
+<li><p>CSRF是因为Cookie被携带导致的，那么设置SameSite Cookie使得特定页面的Cookie只能在该页面生效，也就能从根源上解决CSRF<br>(这里要注意区分SameSite和CORS的区别，前者是和第三方域与页面域的Cookie相关；后者是和资源域与页面域间资源读写的白名单相关)</p>
+<p><strong>后端（偏指Node）</strong></p>
+<p>构建中间件（Middlewares）专门做CSRF防御</p>
+</li>
+</ol>
+</blockquote>
+<h2 id="注入攻击Injection"><a href="#注入攻击Injection" class="headerlink" title="注入攻击Injection"></a>注入攻击Injection</h2><h3 id="概述-2"><a href="#概述-2" class="headerlink" title="概述"></a>概述</h3><blockquote>
+<p>通过发送注入 SQL语句的<strong>参数</strong> 的请求，使后端获取这些恶意的参数而执行恶意的SQL操作，导致数据库信息被修改<br>常见的注入攻击有以下几类：</p>
+<ol>
+<li>SQL</li>
+<li>CLI</li>
+<li>OS command</li>
+<li>SSRF(Server-Side Request Forgery) 服务端伪造请求，严格意义上<strong>不算注入</strong>，但是原理类似</li>
+</ol>
+</blockquote>
+<h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h3><p><strong>SQL注入示例</strong></p>
+<p>假设现在后端有如下SQL语句：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> username <span class="keyword">FROM</span> users;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>SQL注入:</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">'/api'</span>,{</span><br><span class="line">    <span class="attr">method</span>: <span class="string">"POST"</span>,</span><br><span class="line">    <span class="attr">headers</span>: {</span><br><span class="line">        <span class="string">"Content-Type"</span>: <span class="string">"application/json"</span></span><br><span class="line">    },</span><br><span class="line">    <span class="attr">body</span>: <span class="built_in">JSON</span>.stringify({</span><br><span class="line">        <span class="attr">users</span>: <span class="string">'table1;DROP TABLE users;'</span></span><br><span class="line">    	<span class="comment">// SQL注入关键语句</span></span><br><span class="line">    })</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+
+<p>后端收到请求后，SQL会被解析为:</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> username <span class="keyword">FROM</span> table1;<span class="keyword">DROP</span> <span class="keyword">TABLE</span> users;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>结果就是数据库信息被删除</p>
+<p><strong>OS command注入示例</strong></p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> command = <span class="string">'convert-cli video -o &amp;&amp; rm -rf xxx'</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>SSRF示例</strong></p>
+<blockquote>
+<ol>
+<li>请求用户自定义的callback URL</li>
+<li>利用内网访问权限（前提是要有），此时访问acllback即可能暴露内网信息</li>
+</ol>
+</blockquote>
+<p>（说实话这个没看太懂，不过还是先记下来吧）</p>
+<p><strong>不知道是哪一类的注入示例</strong></p>
+<blockquote>
+<ol>
+<li>篡改nginx.conf文件中的代理服务器</li>
+<li>把该网站流量转发到第三方服务器</li>
+<li>第三方服务器流量突增，可能无法继续支撑，从而崩溃</li>
+</ol>
+</blockquote>
+<h3 id="防御-2"><a href="#防御-2" class="headerlink" title="防御"></a>防御</h3><blockquote>
+<ol>
+<li>使用prepared statement</li>
+<li>遵循<strong>最小权限原则</strong>，所有命令都不要通过sudo执行</li>
+<li>建立允许名单，并进行过滤，避免rm这种高危操作</li>
+<li>（针对SSR注入）对URL类型参数进行协议、域名、ip等限制</li>
+</ol>
+</blockquote>
+<h2 id="拒绝服务攻击DoS"><a href="#拒绝服务攻击DoS" class="headerlink" title="拒绝服务攻击DoS"></a>拒绝服务攻击DoS</h2><h3 id="概述-3"><a href="#概述-3" class="headerlink" title="概述"></a>概述</h3><blockquote>
+<p>Denial of Server </p>
+<p>通过某种方式（构造特定请求），导致服务器资源被显著消耗，来不及响应更多请求，导致请求挤压，进而雪崩，<br>大概有如下几种常见类型：</p>
+<ol>
+<li><strong>ReDoS</strong><br>正则表达式拒绝服务攻击，利用贪婪模式的正则表达式的回溯操作</li>
+<li><strong>DDoS</strong><br>分布式拒绝服务攻击，直接发送大量请求</li>
+</ol>
+</blockquote>
+<h3 id="示例-3"><a href="#示例-3" class="headerlink" title="示例"></a>示例</h3><p><strong>正则表达式拒绝服务攻击</strong></p>
+<p>类似的情况可以在正则匹配的过程中遇到</p>
+<p>在贪婪模式下，正则表达式的运作规律如下：</p>
+<blockquote>
+<p>正则表达式： /^((ab)*)+$/<br>试图匹配字符: ‘ababaa’</p>
+<p>先尝试用3个ab去匹配，发现不匹配；<br>再尝试用2个ab去匹配，发现不匹配；<br>再尝试用1个ab去匹配，发现不匹配；<br>最终判断为不匹配</p>
+<p>当这样的串长度非常大、并且数量非常多时，会使得响应时间极大地变长，吞吐量极大地下降，，那么服务器可能就有崩溃的风险</p>
+</blockquote>
+<p><strong>分布式拒绝服务攻击</strong></p>
+<p>没什么技巧，就靠数量打人海战术</p>
+<blockquote>
+<p>可以访问任意IP、任意API，不区分接口，消耗大量的带宽</p>
+<p>洪水攻击（SYN Flood）就属于DDoS的一种：<br>利用三次握手，发送大量SYN，服务器来不及确认响应进而崩溃</p>
+</blockquote>
+<h3 id="防御-3"><a href="#防御-3" class="headerlink" title="防御"></a>防御</h3><blockquote>
+<p><strong>流量治理</strong></p>
+<ol>
+<li>负载均衡 —— 过滤</li>
+<li>API网关 —— 过滤</li>
+<li>CDN —— 抗量</li>
+</ol>
+<p><strong>快速自动扩容</strong> —— 抗量</p>
+<p><strong>非核心服务降级</strong> —— 抗量</p>
+</blockquote>
+<h2 id="中间人攻击MITM"><a href="#中间人攻击MITM" class="headerlink" title="中间人攻击MITM"></a>中间人攻击MITM</h2><h3 id="概述-4"><a href="#概述-4" class="headerlink" title="概述"></a>概述</h3><blockquote>
+<p>Man-in-the-Middle Attack,简称MITM</p>
+<p>基于传输层，在浏览器和服务器之间进行伪装：</p>
+<p>浏览器&lt;–交互–&gt;中间人&lt;–交互–&gt;服务器</p>
+<p>中间人的身份可以有很多种，包括伪劣路由器、恶意网络服务提供商等，但浏览器和服务器却都没有察觉到中间人的存在</p>
+</blockquote>
+<h3 id="分析-2"><a href="#分析-2" class="headerlink" title="分析"></a>分析</h3><p>这种攻击有三个特点</p>
+<blockquote>
+<ol>
+<li>明文传输：未加密的信息可以被直接获取</li>
+<li>信息篡改不可知：浏览器和服务器没有有效地验证信息</li>
+<li>身份未验证：没有验证交互对象的身份</li>
+</ol>
+</blockquote>
+<h3 id="防御-4"><a href="#防御-4" class="headerlink" title="防御"></a>防御</h3><blockquote>
+<p><strong>HTTPS</strong></p>
+<p>（HTTP3(QUIC)内置了TLS1.3，所以非常安全，但是这里不提这个，太超前了，这里依旧介绍HTTPS）</p>
+<p>HTTPS具有如下特性：</p>
+<ol>
+<li><p>可靠性（加密）</p>
+</li>
+<li><p>完整性 （MAC验证）</p>
+</li>
+<li><p>不可抵赖性 （私钥和内容可以加密生成数字签名，公钥可以解密；证书校验也是前面这个原理）</p>
+</li>
+</ol>
+<p>  <strong>HSTS</strong><br>  HTTP Strict-Transport-Security，强制安全传输<br>  前提是一定要有一次HTTPS请求</p>
+<p>  <img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684262bdd1851090ac95c9fcb976c5e4eb93ffc912a60efe43d1/0.png" alt="HSTS示意图"></p>
+<p><strong>SRI</strong><br>Subresource Integrity，静态资源完整性</p>
+<p>能够有效针对静态资源劫持，校验原理是原始内容hash对比实际内容hash</p>
+<p><strong>Featrue Policy/Permission Policy</strong><br>能够限制一个源（页面），可以使用那些功能，比如camera、microphone、autoplay</p>
+</blockquote>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><blockquote>
+<p>web安全，不论攻防都振奋人心<br>安全没有小事可言，以上例举的内容只是九牛之一毛，web还存在太多潜在的风险，甚至使用的依赖（npm package）或者说作为中间服务器的Node，都可能成为出现问题的一环</p>
+<p>web安全的学习到此就要告一段落了，但是学习的步伐不会就此停滞</p>
+<p>前方是星辰大海</p>
+</blockquote>
 
                 
             </div>
@@ -664,7 +747,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://serio.gitee.io/2022/01/23/http/">https://serio.gitee.io/2022/01/23/http/</a>
+                    <a href="https://serio.gitee.io/2022/01/26/websafety/">https://serio.gitee.io/2022/01/26/websafety/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -704,6 +787,10 @@
                             
                                 <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
                                     <span class="chip bg-color">计算机网络</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%AE%89%E5%85%A8/">
+                                    <span class="chip bg-color">安全</span>
                                 </a>
                             
                         </div>
@@ -897,9 +984,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/01/26/websafety/">
                     <div class="card-image">
@@ -916,9 +1004,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -931,6 +1019,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -953,30 +1042,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/01/13/miniprogram/">
+                <a href="/2022/01/23/http/">
                     <div class="card-image">
                         
-                        <img src="/medias/postimages/26.jpg" class="responsive-img" alt="小程序开发(持续更新)">
+                        <img src="/medias/postimages/23.webp" class="responsive-img" alt="HTTP(持续更新)">
                         
-                        <span class="card-title">小程序开发(持续更新)</span>
+                        <span class="card-title">HTTP(持续更新)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            通过微信小程序感受魔改前端
+                            一起来学习HTTP吧！
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="post-category">
-                                    小程序
+                            <a href="/categories/%E4%B8%93%E4%B8%9A%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    专业基础
                                 </a>
                             
                             
@@ -986,8 +1075,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
-                        <span class="chip bg-color">小程序</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+                        <span class="chip bg-color">计算机网络</span>
                     </a>
                     
                 </div>
