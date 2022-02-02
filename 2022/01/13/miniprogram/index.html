@@ -464,14 +464,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-02-01
+                    2022-02-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.8k
+                    6k
                 </div>
                 
 
@@ -570,6 +570,11 @@
 
 
 <p>其中的bindtap是绑定触屏事件，也可以写做bind:tap<br>类似的还有bindinput绑定输入事件，bindchange绑定状态改变事件等等（更多的事件自己查官方文档）</p>
+<p>data-xxx=“yyy”，表示传递一个参数xxx，值为yyy，其中data-是固定写法</p>
+<p>函数中则通过调用事件对象即可拿到参数:</p>
+<blockquote>
+<p>e.currentTarget.dataSet</p>
+</blockquote>
 <h2 id="条件渲染和列表渲染"><a href="#条件渲染和列表渲染" class="headerlink" title="条件渲染和列表渲染"></a>条件渲染和列表渲染</h2><p>其实说的就是wx:if=””和wx:for=””</p>
 <p>同样地，要使用mustache语法，而且对于列表渲染来说，最好指定一个wx:key=””（没错就是因为diff算法）</p>
 <h2 id="WXSS"><a href="#WXSS" class="headerlink" title="WXSS"></a>WXSS</h2><p>几乎完全移植了CSS的选择器和常用的样式属性（意思是也有相当一部分属性没有被移植），然后也进行了一些扩展加入了很多特有的内容（比如超强的自适应单位rpx，还有@import导入CSS）</p>
@@ -684,7 +689,8 @@
 <ol>
 <li>组件的.json文件中需要声明”component” : true属性</li>
 <li>组件的.js 文件中调用的是Component()函数组件的事件</li>
-<li>处理函数需要定义到 methods节点中</li>
+<li>处理函数需要定义到 methods节点中，而页面则是直接放到page内</li>
+<li>页面的自定义函数传参可以通过event.target.dataset获取，组件则有专门的properties负责接收数据</li>
 </ol>
 </blockquote>
 <h3 id="样式隔离"><a href="#样式隔离" class="headerlink" title="样式隔离"></a>样式隔离</h3><p>组件之间的样式不会相互影响，也不会受到引用它的页面的样式的影响，包括全局样式也对组件无效</p>
@@ -695,7 +701,8 @@
 <p>或者在js文件中写如下代码也能达到同样的效果：</p>
 <figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Component({</span><br><span class="line">    <span class="attr">options</span>: {</span><br><span class="line">        <span class="attr">styleIsolation</span>: <span class="string">'isolated'</span></span><br><span class="line">    }</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
 
-<h3 id="父向子传参"><a href="#父向子传参" class="headerlink" title="父向子传参"></a>父向子传参</h3><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Component({</span><br><span class="line">    <span class="comment">// 属性定义的完整方式</span></span><br><span class="line">    <span class="attr">properties</span>: { </span><br><span class="line">        <span class="attr">type</span>: <span class="built_in">Number</span>, <span class="comment">// 指定类型</span></span><br><span class="line">        <span class="attr">value</span>: <span class="number">10</span>	  <span class="comment">// 默认值</span></span><br><span class="line">    }, </span><br><span class="line">    <span class="comment">// 属性定义的简化版</span></span><br><span class="line">    <span class="attr">name</span>: <span class="built_in">String</span>      </span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="父向子传参"><a href="#父向子传参" class="headerlink" title="父向子传参"></a>父向子传参</h3><p>是熟悉的属性绑定语法</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Component({</span><br><span class="line">    <span class="comment">// 属性定义的完整方式</span></span><br><span class="line">    <span class="attr">properties</span>: { </span><br><span class="line">        <span class="attr">type</span>: <span class="built_in">Number</span>, <span class="comment">// 指定类型</span></span><br><span class="line">        <span class="attr">value</span>: <span class="number">10</span>	  <span class="comment">// 默认值</span></span><br><span class="line">    }, </span><br><span class="line">    <span class="comment">// 属性定义的简化版</span></span><br><span class="line">    <span class="attr">name</span>: <span class="built_in">String</span>      </span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
 
 <p>传参直接如下图所示，不需要有额外的关键字，直接写就行了</p>
 <figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a-good-component</span> <span class="attr">name</span>=<span class="string">"沈俞佑"</span>&gt;</span><span class="tag">&lt;/<span class="name">a-good-component</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
@@ -733,9 +740,168 @@
 
 <figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ad</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">view</span> <span class="attr">slot</span>=<span class="string">"after"</span>&gt;</span>slot写上插槽名字就好了<span class="tag">&lt;/<span class="name">view</span>&gt;</span>	</span><br><span class="line"><span class="tag">&lt;/<span class="name">ad</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 
+<h3 id="子向父传参"><a href="#子向父传参" class="headerlink" title="子向父传参"></a>子向父传参</h3><p>是学过但是依旧不是很熟练的自定义事件</p>
+<p>（以前每次都是去现查一遍再用…并且能不用就不用，就算用了也会因为搞不清到底有几个事件而把所有事件都命名相同）</p>
+<p>使用步骤如下:</p>
+<blockquote>
+<ol>
+<li>在父组件的js 中，定义一个函数</li>
+<li>在父组件的wxml中，通过自定义事件的形式，将步骤1中定义的函数引用，传递给子组件</li>
+<li>在子组件的js中，通过调用<code>this.triggerEvent('自定义事件名称'，{ /*参数对象*/ })</code>，将数据发送到父组件</li>
+<li>在父组件的js中，通过e.detail获取到子组件传递过来的数据</li>
+</ol>
+</blockquote>
+<p>简明扼要说一下就是：</p>
+<blockquote>
+<p>父级给个函数，子级用this.triggerEvent自定义一个事件，在父级用e.detail就能接收到数据</p>
+</blockquote>
+<p>绑定事件的时候需要用到<strong>关键字bind:xxx</strong>，注意这里似乎没有缩写为:xxx这样的语法糖，但是可以直接写作bindxxx(离谱吧，没错我也觉得离谱)</p>
+<p>比如bindtap实际上也可以写作bind:tap</p>
+<blockquote>
+<p>知道真相的我大为震撼！</p>
+</blockquote>
+<h3 id="获取组件实例"><a href="#获取组件实例" class="headerlink" title="获取组件实例"></a>获取组件实例</h3><p>也可以用这种方式来进行父子间通信</p>
+<p>在父组件中调用**this.selectComponent( id选择器/class选择器 )**来获取子组件的实例对象，这样就能够使用子组件内部的所有数据了</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ad</span> <span class="attr">id</span>=<span class="string">"ad-one"</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">"https://p.qlogo.cn/hy_personal/3e28f14aa0516842d7aa5377124ce70be528a816990658073ed67ea9851b805d/0.png"</span>&gt;</span>		 	<span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ad</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">bindtap</span>=<span class="string">"getChild"</span> <span class="attr">data-name</span>=<span class="string">"{{'#ad-one'}}"</span>&gt;</span>获取#ad-one的信息<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 
 
-<h2 id="进阶操作"><a href="#进阶操作" class="headerlink" title="进阶操作"></a>进阶操作</h2><h3 id="使用NPM"><a href="#使用NPM" class="headerlink" title="使用NPM"></a>使用NPM</h3><h3 id="全局数据共享"><a href="#全局数据共享" class="headerlink" title="全局数据共享"></a>全局数据共享</h3><h3 id="分包"><a href="#分包" class="headerlink" title="分包"></a>分包</h3><h3 id="自定义tabBar实战"><a href="#自定义tabBar实战" class="headerlink" title="自定义tabBar实战"></a>自定义tabBar实战</h3><h2 id="使用组件"><a href="#使用组件" class="headerlink" title="使用组件"></a>使用组件</h2><h2 id="使用框架"><a href="#使用框架" class="headerlink" title="使用框架"></a>使用框架</h2><h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2>
+
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">getChild</span>(<span class="params">e</span>)</span> {</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>.selectComponent(e.currentTarget.dataset.name).data.msg)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="behaviors"><a href="#behaviors" class="headerlink" title="behaviors"></a>behaviors</h3><blockquote>
+<p>behaviors是小程序中，用于实现<strong>组件间代码共享</strong>的一种特性，类似Vue中的mixins（mixins是啥啊）</p>
+<p>每个behavior都可以包含一组属性、数据、生命周期函数和方法，<br>组件引用它时，属性、数据和方法等z会合并到组件中，<br>behavior也可以引用behavior</p>
+<p><strong>总结一下</strong><br>wxml有模板可以用，那么这里就大胆地把JS也搞一个模板，这个模板就是behavior</p>
+</blockquote>
+<p><strong>创建一个behavior</strong></p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684283b1d08f593bedd6879b1b14048319474c9836c37cc6cee9/0.png"></p>
+<p><strong>导入一个behavior</strong></p>
+<p>注意behavior字段的值是以数组的形式进行存储的</p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684283b1d08f593bedd6d76ca82aac58e0b583467bceac458a40/0.png"></p>
+<p><strong>使用behavior的数据</strong></p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684283b1d08f593bedd6ba5f641b5df51ca7d237aa5bd6d379b8/0.png"></p>
+<p>那么什么时候使用behavior呢？</p>
+<p>还记得曾经苦恼过的——开发vue项目的过程中，总是感慨应该把复用多次的xxx函数先封装到一个JS文件里面的——这时候我们就该想到behavior了！</p>
+<p>但是这时候又出现了新的问题，如果behavior中属性和调用组件已有的属性冲突，那么这些属性将会怎么被处理呢？这就是我们需要思考的新问题了</p>
+<p><strong>同名字段的覆盖和组合规则</strong></p>
+<blockquote>
+<p>组件和它引用的behavior中可以包含同名的字段，此时可以参考如下3种同名时的处理规则</p>
+<p><strong>1.同名数据字段（data)</strong></p>
+<ol>
+<li>如果都是对象类型，那么会发生对象合并（那么问题来了，这时候属性名有重复了咋办）</li>
+<li>其余情况则和<strong>↓↓↓第2点↓↓↓</strong>中提到的一致</li>
+</ol>
+<p><strong>2.同名属性（properties和methods）</strong></p>
+<ol>
+<li>组件自身的优先</li>
+<li>behavior内部出现重复属性则靠后的优先</li>
+<li>behavior调用behavior时，父级优先</li>
+</ol>
+<p><strong>3.同名生命周期函数</strong></p>
+<ol>
+<li>不同生命周期则会依次执行</li>
+<li>相同生命周期则和<strong>↑↑↑第2点↑↑↑</strong>中的一致</li>
+</ol>
+</blockquote>
+<h2 id="进阶开发技巧"><a href="#进阶开发技巧" class="headerlink" title="进阶开发技巧"></a>进阶开发技巧</h2><h3 id="使用npm"><a href="#使用npm" class="headerlink" title="使用npm"></a>使用npm</h3><p>可以使用npm但是在小程序中多了如下三点限制：</p>
+<blockquote>
+<ol>
+<li>不支持依赖于Node.js内置库的包</li>
+<li>不支持依赖于浏览器内置对象的包</li>
+<li>不支持依赖于C++插件的包</li>
+</ol>
+</blockquote>
+<p>当时我就知道能用的没多少了</p>
+<p>但是我们可以安装 <strong>Vant Weapp、uni-app</strong>等UI库帮助我们开发</p>
+<p>当然，小程序里面使用npm安装也没那么方便就是了，还得手动配置一些东西…</p>
+<blockquote>
+<p>npm下载之后东西会放到node_module文件夹下，</p>
+<p>但是小程序不争气啊没法直接用，还得先<strong>构建</strong>才能用</p>
+</blockquote>
+<p><strong>构建</strong></p>
+<p>根目录下有个文件夹：miniprogram_npm</p>
+<p>这之中的包可以被小程序直接使用，而要构建这个文件夹，首先需要正常npm操作一波，然后点击这里：</p>
+<p><img src="E:/blog/blog/source/_posts/MiniProgram.assets/image-20220202145951115.png"></p>
+<p>之后如果再添加新的包，那么再构建npm可能会不生效，这时候我们把miniprogram_npm文件夹删了重新构建就好了</p>
+<p>当然，不同的包在安装的时候可能有不同的要求</p>
+<p>具体安装和使用方式参考官方文档，此处不再赘述</p>
+<h3 id="API的Promise化"><a href="#API的Promise化" class="headerlink" title="API的Promise化"></a>API的Promise化</h3><blockquote>
+<p> Promise是为了解决回调地狱而出现的</p>
+</blockquote>
+<p>在小程序中要使用Promise的话需要先用npm安装一下</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save miniprogram-api-promise</span><br></pre></td></tr></tbody></table></figure>
+
+<p>此后构建一下miniprogram_npm，之后在app.js中书写如下代码进行全局promise化</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> {promisifyAll} <span class="keyword">from</span> <span class="string">'miniprogram-api-promise'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> wxp = wx.p = {}</span><br><span class="line"></span><br><span class="line">promisifyAll(wx, wxp)</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p>在这之后，wx对象中的所有API都会有一个pormise化的版本，而这些新版本会被放到wxp和wx.p对象上</p>
+<p>页面的js文件中，定义对应</p>
+<h3 id="全局数据共享"><a href="#全局数据共享" class="headerlink" title="全局数据共享"></a>全局数据共享</h3><p><strong>概念</strong></p>
+<p>没错，可以类比Vuex、Redux、Mobx等等</p>
+<blockquote>
+<p>也称为状态管理</p>
+<p>小程序的实现方式是通过<strong>mobx-miniprogram</strong>配合<strong>mobx-miniprogram-bindings</strong>实现全局数据共享</p>
+<p>其中，<br>mobx-miniprogram用来<strong>创建</strong>Store实例对象<br>mobx-miniprogram-bindings用来把Store中的共享数据或方法<strong>绑定</strong>到组件或页面中使用</p>
+</blockquote>
+<p><strong>安装</strong></p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save mobx-miniprogram mobx-miniprogram-bindings</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后又是基本的构建操作</p>
+<p><strong>创建store实例</strong></p>
+<p>在根目录下创建Store文件夹，里面再新建一个store.js，我们将用这个js文件专门来创建store实例对象</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> {observable} <span class="keyword">from</span> <span class="string">'mobx-miniprogram'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> store = observable({</span><br><span class="line">    <span class="comment">// 数据字段</span></span><br><span class="line">    <span class="attr">num1</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">num2</span>: <span class="number">2</span></span><br><span class="line">    <span class="comment">// get修饰符： 计算属性，类似于watch</span></span><br><span class="line">    <span class="keyword">get</span> <span class="title">sum</span>() {</span><br><span class="line">    	<span class="keyword">return</span> <span class="built_in">this</span>.num1 + <span class="built_in">this</span>.num2</span><br><span class="line">	},</span><br><span class="line">	<span class="comment">// actions 方法，用来修改 store 中的数据，</span></span><br><span class="line">  	<span class="comment">// 外界调用updateNum即可触发内部函数</span></span><br><span class="line">     <span class="attr">updateNum1</span>: action(<span class="function"><span class="keyword">function</span>(<span class="params">step</span>) </span>{</span><br><span class="line">         <span class="built_in">this</span>.num1 += step</span><br><span class="line">     }),</span><br><span class="line">     <span class="attr">updateNum2</span>: action(<span class="function"><span class="keyword">function</span>(<span class="params">step</span>) </span>{</span><br><span class="line">         <span class="built_in">this</span>.num2 += step</span><br><span class="line">     })</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>页面绑定store</strong></p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { createStoreBindings } <span class="keyword">from</span> <span class="string">'mobx-miniprogram-bindings'</span></span><br><span class="line"><span class="keyword">import</span> { store } <span class="keyword">from</span> <span class="string">'../../store/store'</span></span><br><span class="line"></span><br><span class="line">Page({</span><br><span class="line">    <span class="comment">// 生命周期上挂一下</span></span><br><span class="line">    <span class="attr">onLoad</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</span><br><span class="line">        <span class="built_in">this</span>.storeBindings = createStoreBindings(<span class="built_in">this</span>, {</span><br><span class="line">            store,	<span class="comment">// 数据源</span></span><br><span class="line">            <span class="attr">fields</span>: [<span class="string">'num1'</span>, <span class="string">'num2'</span>, <span class="string">'sum'</span>], <span class="comment">// 当前页面需要的数据字段</span></span><br><span class="line">            <span class="attr">actions</span>: [<span class="string">'updateNum1'</span>]	<span class="comment">// 当前页面需要的方法</span></span><br><span class="line">        })</span><br><span class="line">    },</span><br><span class="line">    <span class="attr">onUnLoad</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</span><br><span class="line">        <span class="built_in">this</span>.storeBindings.destoryStoreBindings()</span><br><span class="line">    }</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>页面使用store</strong></p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 依旧是this访问就行了</span></span><br><span class="line"><span class="function"><span class="title">xxxFun</span>(<span class="params">e</span>)</span> {</span><br><span class="line">	<span class="built_in">this</span>.updateNum1(e.target.dataset.step)   </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>组件绑定store</strong></p>
+<p>要额外给一个storeBindingsBehavior来过渡，</p>
+<p>暂时不清楚为什么要这么设计</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { storeBindingsBehavior } <span class="keyword">from</span> <span class="string">'mobx-miniprogram-bindings'</span></span><br><span class="line"><span class="keyword">import</span> { store } <span class="keyword">from</span> <span class="string">'../../store/store'</span></span><br><span class="line"></span><br><span class="line">Component({</span><br><span class="line">    <span class="attr">behaviors</span>:[storeBindingsBehavior], <span class="comment">// 通过storeBindingsBehavior自动绑定</span></span><br><span class="line">    <span class="attr">storeBindings</span>:{</span><br><span class="line">        store,</span><br><span class="line">        <span class="attr">fields</span>: {</span><br><span class="line">            <span class="attr">num1</span>: <span class="function">() =&gt;</span> store.num1,   <span class="comment">// 绑定字段的第1种方式</span></span><br><span class="line">            <span class="attr">num2</span>: <span class="function">(<span class="params">store</span>) =&gt;</span> store.num2,  <span class="comment">// 绑定字段的第2中方式</span></span><br><span class="line">            <span class="attr">sum</span>: <span class="string">'sum'</span>	<span class="comment">// 绑定字段的第3种方式，前两者也可以这么写</span></span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p>使用还是那么使用</p>
+<p>如果需要在wxml中使用，那么遵循mustache语法使用就好了</p>
+<h3 id="分包"><a href="#分包" class="headerlink" title="分包"></a>分包</h3><blockquote>
+<p>把一个完整的小程序分为不同的子包，用户使用时可以按需进行加载</p>
+</blockquote>
+<p>好处就是优化了小程序首次启动的下载时间，在多团队合作的之后有更好的解耦协作</p>
+<p><strong>分包前后对比</strong></p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842f31e86df92f8a1ffe63e0933e4c70b74929a6d3fa3f9f0c6/0.png" alt="分包前"></p>
+<p>分包之后，小程序变为由1个主包 + n个分包</p>
+<blockquote>
+<p><strong>主包</strong><br>一般只能包含项目的启动页面或TabBar页面、以及所有分包需要用到的一些公共资源</p>
+<p><strong>分包</strong><br>只包含和当前分包有关的页面和私有资源</p>
+</blockquote>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842f31e86df92f8a1ff8cb3c4c5a6819c9942a6ce04a5d3e6db/0.png" alt="分包后"></p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842f31e86df92f8a1ff9b0c5d03f26d43df33acf8e712a86652/0.png" alt="分包目录结构"></p>
+<p>可以在app.json文件中的subpackages字段里面以类似路由配置的形式进行管理</p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842f31e86df92f8a1ff6162b5c95cc52e5582f9ed675cb7188b/0.png" alt="app.json内的subpackages字段"></p>
+<p>如果编辑这一部分，那么保存后会自动创建响应的文件</p>
+<p><strong>分包的加载规则</strong></p>
+<blockquote>
+<ol>
+<li>小程序启动时，默认会下载主包并启动主包内页面</li>
+</ol>
+<p>（所以tabBar放主包里面）</p>
+<ol start="2">
+<li>用户访问某个分包页面的时候，客户端会把对应包下载下来</li>
+</ol>
+</blockquote>
+<p>我寻思，这不就是个懒加载吗，说的这么高级….</p>
+<p><strong>大小限制</strong></p>
+<blockquote>
+<p>一个包不能超过2M，所有包加起来不能超过20M</p>
+<p>(当然这个具体数值是随着技术发展不断增加的，但是一定要知道每个包大小是需要控制的)</p>
+</blockquote>
+<p>我寻思着公共资源文件夹里面塞个图片那不是直接爆炸吗…</p>
+<h2 id="使用框架"><a href="#使用框架" class="headerlink" title="使用框架"></a>使用框架</h2><h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2>
                 
             </div>
             <hr/>
