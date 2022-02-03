@@ -4,9 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="前端">
-    <meta name="description" content="前言写在开篇
-在这短短数十天的学习中，我的认知也有了长足的进步，不再把前端局限于web，因为我见识到了更为广大的前端，那是奇伟瑰丽的，也是人迹罕至的，当我见到这一幕时的心情，就像是远行者历经千辛万苦终于要翻过一个山头的时候怀揣的期待被山头那">
+    <meta name="keywords" content="Web多媒体基础, 前端">
+    <meta name="description" content="信息中的熵">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>碳苯</title>
+    <title>Web多媒体基础 | 碳苯</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -309,15 +308,28 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = 'c7e616822f366fb1b5e0756af498cc11d2c0862edcb32ca65882f622ff39de1b';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('该文章设置了密码，如需查阅请联系碳苯桑')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/29.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">Web多媒体基础</h1>
                 </div>
             </div>
         </div>
@@ -431,12 +443,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/web/" class="post-category">
+                                web
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -476,6 +501,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
@@ -490,12 +518,12 @@
 <p><strong>2022/02/03</strong><br>开始学习吧</p>
 <p><strong>2022/02/04</strong><br>搜集各种资料，学习关于“信息熵”的知识并做好记录</p>
 </blockquote>
-<h2 id="浏览器原生多媒体和扩展"><a href="#浏览器原生多媒体和扩展" class="headerlink" title="浏览器原生多媒体和扩展"></a>浏览器原生多媒体和扩展</h2><h3 id="音频和视频"><a href="#音频和视频" class="headerlink" title="音频和视频"></a>音频和视频</h3><p>这里指的是audio标签和video标签<br>它们具有如下属性:</p>
+<h1 id="浏览器原生多媒体和扩展"><a href="#浏览器原生多媒体和扩展" class="headerlink" title="浏览器原生多媒体和扩展"></a>浏览器原生多媒体和扩展</h1><h2 id="音频和视频"><a href="#音频和视频" class="headerlink" title="音频和视频"></a>音频和视频</h2><p>这里指的是audio标签和video标签<br>它们具有如下属性:</p>
 <p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842b21a24a61bfc3fab1d80a544e355be6571a20f66494aa68b/0.png" alt="两个标签的属性1"></p>
 <p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842b21a24a61bfc3fab3bc48a6faf48e3507f87bcd5bf181da8/0.png" alt="两个标签的属性2"></p>
 <p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842b21a24a61bfc3fab6540d6a86140386f8a3a29dd0517c936/0.png" alt="两个标签的属性3"></p>
 <p>由于现在的浏览器很可能会避免随机噪声的出现，所以会禁用如autoplay这种属性，从而直接配置是无效的，所以我们需要使用JS来触发它们（我还没试过，可能也没效果）</p>
-<h3 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h3><blockquote>
+<h2 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h2><blockquote>
 <ol>
 <li><p>不支持直接播放hls、flv等格式的视频</p>
 </li>
@@ -504,7 +532,7 @@
 </li>
 </ol>
 </blockquote>
-<h3 id="多媒体元素和扩展API"><a href="#多媒体元素和扩展API" class="headerlink" title="多媒体元素和扩展API"></a>多媒体元素和扩展API</h3><p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168420129fe8edd9b5365abedda178b287ad511b808c5d4115c76/0.png" alt="MSE"></p>
+<h2 id="多媒体元素和扩展API"><a href="#多媒体元素和扩展API" class="headerlink" title="多媒体元素和扩展API"></a>多媒体元素和扩展API</h2><p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168420129fe8edd9b5365abedda178b287ad511b808c5d4115c76/0.png" alt="MSE"></p>
 <blockquote>
 <p>MSE使用过程：</p>
 <ol>
@@ -527,13 +555,13 @@
 <li>音视频同步（时间戳）</li>
 </ol>
 </blockquote>
-<h3 id="流媒体协议"><a href="#流媒体协议" class="headerlink" title="流媒体协议"></a>流媒体协议</h3><p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168420129fe8edd9b536548804879f3a4982fe79604b406190403/0.png" alt="流媒体协议一览"></p>
+<h2 id="流媒体协议"><a href="#流媒体协议" class="headerlink" title="流媒体协议"></a>流媒体协议</h2><p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168420129fe8edd9b536548804879f3a4982fe79604b406190403/0.png" alt="流媒体协议一览"></p>
 <blockquote>
 <p> 其中，HLS全称是<strong>HTTP Live Streaming</strong>，用于实时音视频流的传输，目前HLS协议被广泛应用于视频点播和直播领域</p>
 </blockquote>
 <p><strong>工作流程</strong></p>
 <p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168420129fe8edd9b53655ab2070bf4ff9db2eadf702d8f6958ca/0.png" alt="工作流程"></p>
-<h2 id="Web多媒体基础知识"><a href="#Web多媒体基础知识" class="headerlink" title="Web多媒体基础知识"></a>Web多媒体基础知识</h2><h3 id="Web多媒体历史"><a href="#Web多媒体历史" class="headerlink" title="Web多媒体历史"></a>Web多媒体历史</h3><p>多媒体历史可以大致的分为三个阶段：</p>
+<h1 id="Web多媒体基础知识"><a href="#Web多媒体基础知识" class="headerlink" title="Web多媒体基础知识"></a>Web多媒体基础知识</h1><h2 id="Web多媒体历史"><a href="#Web多媒体历史" class="headerlink" title="Web多媒体历史"></a>Web多媒体历史</h2><p>多媒体历史可以大致的分为三个阶段：</p>
 <blockquote>
 <ol>
 <li><strong>Flash时代</strong><br>已经开摆了</li>
@@ -541,7 +569,7 @@
 <li><strong>Media Source Extension（MSE）时代</strong><br>媒体资源扩展，未来的发展趋势</li>
 </ol>
 </blockquote>
-<h3 id="图像的基本概念"><a href="#图像的基本概念" class="headerlink" title="图像的基本概念"></a>图像的基本概念</h3><p><strong>图像分辨率</strong></p>
+<h2 id="图像的基本概念"><a href="#图像的基本概念" class="headerlink" title="图像的基本概念"></a>图像的基本概念</h2><p><strong>图像分辨率</strong></p>
 <blockquote>
 <p>用于确定组成一副图像的像素数据<br>就是指在 水平和垂直方向上图像所具有的像素<strong>个数</strong></p>
 </blockquote>
@@ -549,7 +577,7 @@
 <blockquote>
 <p>图像深度是指存储每个像素所需要的比特数<br>图像深度决定了图像的每个像素可能的颜色数，或可能的灰度级数<br>例如:<br>彩色图像每个像素用R,G,B三个分量表示,每个分量用8位，像素深度为24位，可以表示的颜色数目为2的24次方，既16777216个<br>单色图像存储每个像素需要8bit，则图像的象素深度为8位，最大灰度数目为2的8次方，既256个。</p>
 </blockquote>
-<h3 id="视频基本概念"><a href="#视频基本概念" class="headerlink" title="视频基本概念"></a>视频基本概念</h3><p><strong>分辨率</strong></p>
+<h2 id="视频基本概念"><a href="#视频基本概念" class="headerlink" title="视频基本概念"></a>视频基本概念</h2><p><strong>分辨率</strong></p>
 <blockquote>
 <p>指的是构成视频的每一帧图像的分辨率</p>
 </blockquote>
@@ -561,7 +589,7 @@
 <blockquote>
 <p>视频单位时间内传输的数据量，一般用kbps表示——注意这里是bit不是Byte</p>
 </blockquote>
-<h3 id="编码格式"><a href="#编码格式" class="headerlink" title="编码格式"></a>编码格式</h3><p><strong>I帧</strong></p>
+<h2 id="编码格式"><a href="#编码格式" class="headerlink" title="编码格式"></a>编码格式</h2><p><strong>I帧</strong></p>
 <blockquote>
 <p>又称<strong>帧内编码帧</strong>，是一种自带全部信息的独立帧，无需参考其他图像便可独立进行解码</p>
 </blockquote>
@@ -580,11 +608,11 @@
 </blockquote>
 <p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842b21a24a61bfc3fabc8d503f7eba1ac49cc861886ac6a3d26/0.png" alt="GOP示意图"></p>
 <p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842b21a24a61bfc3fabe9b50b94a16a56ec2be41c3a3b893891/0.png" alt="常见编码格式发展一览"></p>
-<h3 id="为什么要进行编码"><a href="#为什么要进行编码" class="headerlink" title="为什么要进行编码"></a>为什么要进行编码</h3><blockquote>
+<h2 id="为什么要进行编码"><a href="#为什么要进行编码" class="headerlink" title="为什么要进行编码"></a>为什么要进行编码</h2><blockquote>
 <p>编码是将源对象内容按照一种标准转换为一种<strong>标准格式</strong>内容<br>解码是和编码对应的,它使用和编码相同的标准将编码内容还原<br><strong>最初是为了加密</strong>,经过加密的内容不知道编码标准的人很难识别<br>而<strong>现在主要是为了信息交换</strong></p>
 </blockquote>
 <p>编码可以做到压缩体积等效果，有效优化一些冗余问题</p>
-<h3 id="冗余"><a href="#冗余" class="headerlink" title="冗余"></a>冗余</h3><blockquote>
+<h2 id="冗余"><a href="#冗余" class="headerlink" title="冗余"></a>冗余</h2><blockquote>
 <p>从信息论的角度来看，描述信息源的数据是信息和数据冗余之和，即：数据=信息+数据冗余。</p>
 </blockquote>
 <p><strong>空间冗余</strong></p>
@@ -634,7 +662,7 @@
 <blockquote>
 <p>还有其他多种冗余形式，比如结构冗余、其他冗余等等..<br>此处不再一一例举</p>
 </blockquote>
-<h3 id="编码处理过程"><a href="#编码处理过程" class="headerlink" title="编码处理过程"></a>编码处理过程</h3><blockquote>
+<h2 id="编码处理过程"><a href="#编码处理过程" class="headerlink" title="编码处理过程"></a>编码处理过程</h2><blockquote>
 <p>基本顺序依次为：</p>
 <ol>
 <li><strong>预测</strong><br>减少空间冗余、时间冗余</li>
@@ -643,17 +671,17 @@
 <li><strong>熵编码</strong><br>去除编码冗余</li>
 </ol>
 </blockquote>
-<h3 id="封装格式"><a href="#封装格式" class="headerlink" title="封装格式"></a>封装格式</h3><blockquote>
+<h2 id="封装格式"><a href="#封装格式" class="headerlink" title="封装格式"></a>封装格式</h2><blockquote>
 <p>封装格式是存储音视频、图片或者字幕信息的一种容器</p>
 </blockquote>
 <p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842b21a24a61bfc3fab6b93341d2a767ea7f83854dcf8b27176/0.png" alt="常见封装格式发展一览"></p>
 <p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842b21a24a61bfc3fabea700ed355541bd0be62792b700aa7ff/0.png" alt="常见封装格式和文件映射关系表"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><blockquote>
 <p>又一次感受到数学对计算机的印象，多亏了本次学习探索，窥见图像处理这个领域的一隅。</p>
 <p>同时也勾起了对WebGPU，WebVR，WebXR，Webassembly，WebCodecs的向往</p>
 <p>期待这些技术成熟时为我们带来的惊艳！</p>
 </blockquote>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><blockquote>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><blockquote>
 <ol>
 <li><p><strong>字节跳动青训营培训资料</strong></p>
 </li>
@@ -728,7 +756,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -928,16 +960,15 @@
                 <a href="/2022/02/03/webmedia/">
                     <div class="card-image">
                         
+                        <img src="/medias/postimages/29.webp" class="responsive-img" alt="Web多媒体基础">
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
+                        <span class="card-title">Web多媒体基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            信息中的熵
                         
                     </div>
                     <div class="publish-info">
@@ -946,13 +977,25 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Serio
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/web/" class="post-category">
+                                    web
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

@@ -308,6 +308,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('该文章设置了密码，如需查阅请联系碳苯桑')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -464,7 +477,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-04
+                    2022-02-04
                 </div>
                 
 
@@ -487,6 +500,9 @@
         </div>
         <hr class="clearfix">
 
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
         
 
         
@@ -1775,7 +1791,12 @@
 <hr>
 <p><strong>带有快表的地址变换机构</strong></p>
 <p><strong>局部性原理</strong><br>先看如下代码：</p>
-<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> arr[<span class="number">100</span>];</span><br><span class="line"><span class="keyword">while</span>(i &lt; <span class="number">100</span>)</span><br><span class="line">{</span><br><span class="line">	arr[i ++] = i;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> arr<span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>i <span class="token operator">&lt;</span> <span class="token number">100</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	arr<span class="token punctuation">[</span>i <span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>时间局部性</strong><br>如果执行了程序中某条指令，那么不久后这条指令可能被再次执行；<br>如果某个数据被访问过，那么不久后该数据可能再次被访问；<br><strong>空间局部性</strong><br>如果某个存储单元被访问，那么不久之后其附近的存储单元也可能被访问。（比如很多具有连续存储这一性质的数据）<br><strong>至于为什么叫局部</strong><br>我个人的理解是，限制在某一个时间段，限制在某一个空间内，这就是局部。<br><strong>有什么意义</strong><br>其实上述内容暗示我们，一个较短的时间段内，进程只有一部分被访问了。这就说明我们每次只需要访问一部分就能运行一个进程，那么就没有必要一次性存储全部的内容。</p>

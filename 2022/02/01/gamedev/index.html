@@ -308,6 +308,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('该文章设置了密码，如需查阅请联系碳苯桑')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -491,6 +504,9 @@
         </div>
         <hr class="clearfix">
 
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
         
 
         
@@ -889,16 +905,15 @@
                 <a href="/2022/02/03/webmedia/">
                     <div class="card-image">
                         
+                        <img src="/medias/postimages/29.webp" class="responsive-img" alt="Web多媒体基础">
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
+                        <span class="card-title">Web多媒体基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            信息中的熵
                         
                     </div>
                     <div class="publish-info">
@@ -907,11 +922,23 @@
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Serio
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/web/" class="post-category">
+                                    web
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
                 </div>
                 
             </div>
