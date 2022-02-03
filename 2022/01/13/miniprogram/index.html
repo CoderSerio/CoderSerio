@@ -464,14 +464,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-02-02
+                    2022-02-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6k
+                    6.4k
                 </div>
                 
 
@@ -505,8 +505,28 @@
 <p><strong>2022/01/13</strong><br>读了些文档，看了点视频，写了点代码，先把提纲理好</p>
 <p><strong>2022/01/14</strong><br>我敲，今天下午一点才醒，我是废物啊</p>
 <p><strong>2022/01/15</strong><br>我…下午两点半醒的….不说的，今天的题晚上再做，先把技术学了尽快上线一个小程序</p>
+<p><strong>2022/02/01</strong><br>更新自定义组件部分</p>
+<p><strong>2022/02/02</strong><br>更新走近小程序、进阶开发技巧和分包</p>
 </blockquote>
-<h2 id="关于小程序那些事情"><a href="#关于小程序那些事情" class="headerlink" title="关于小程序那些事情"></a>关于小程序那些事情</h2><p><strong>文件结构</strong></p>
+<h2 id="走近小程序"><a href="#走近小程序" class="headerlink" title="走近小程序"></a>走近小程序</h2><h3 id="小程序发展史"><a href="#小程序发展史" class="headerlink" title="小程序发展史"></a>小程序发展史</h3><p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842ad1905841601332d64d6083a5c53612af48b74d47ac38b0a/0.png" alt="2017-2018"></p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842ad1905841601332d76f00e25d7460a9b56436270093eb966/0.png" alt="2018-2019"></p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842ad1905841601332d1664f87ee4a1f496095e2fafab3d893a/0.png" alt="2019-2020"></p>
+<p>当然，2020-2022也有很多发展，不过这里就不一一例举了</p>
+<h3 id="各种小程序"><a href="#各种小程序" class="headerlink" title="各种小程序"></a>各种小程序</h3><p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842ad1905841601332dc4927b9e00c1352b8cdc93a072125c03/0.png" alt="各种小程序"></p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842ad1905841601332db1de88bebcfccd85707d59441b2c3bee/0.png"></p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>众所周知，小程序开发语言的语法是参照了前端框架的，具体参照对照如下表</p>
+<table>
+<thead>
+<tr>
+<th>Vue</th>
+<th>美团（mpvue）、网易（megalo）、京东（taro）、Hbuilder（uni-app）、腾讯（?）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>React</strong></td>
+<td><strong>蚂蚁金服（remax）、京东（taro）</strong></td>
+</tr>
+</tbody></table>
 <h2 id="WXML"><a href="#WXML" class="headerlink" title="WXML"></a>WXML</h2><h3 id="常用基础标签"><a href="#常用基础标签" class="headerlink" title="常用基础标签"></a>常用基础标签</h3><p>标签太多了，这里只举出基础的、常见的标签的部分知识点，更多细致内容参考官方文档</p>
 <p><strong>view</strong></p>
 <blockquote>
@@ -868,7 +888,7 @@
 
 <p>使用还是那么使用</p>
 <p>如果需要在wxml中使用，那么遵循mustache语法使用就好了</p>
-<h3 id="分包"><a href="#分包" class="headerlink" title="分包"></a>分包</h3><blockquote>
+<h2 id="分包"><a href="#分包" class="headerlink" title="分包"></a>分包</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote>
 <p>把一个完整的小程序分为不同的子包，用户使用时可以按需进行加载</p>
 </blockquote>
 <p>好处就是优化了小程序首次启动的下载时间，在多团队合作的之后有更好的解耦协作</p>
@@ -884,7 +904,9 @@
 <p>可以在app.json文件中的subpackages字段里面以类似路由配置的形式进行管理</p>
 <p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842f31e86df92f8a1ff6162b5c95cc52e5582f9ed675cb7188b/0.png" alt="app.json内的subpackages字段"></p>
 <p>如果编辑这一部分，那么保存后会自动创建响应的文件</p>
-<p><strong>分包的加载规则</strong></p>
+<p>subpackages之内是写的分包，之外的内容则是主包</p>
+<p>注意分包之内不能相互嵌套</p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p><strong>加载规则</strong></p>
 <blockquote>
 <ol>
 <li>小程序启动时，默认会下载主包并启动主包内页面</li>
@@ -901,7 +923,21 @@
 <p>(当然这个具体数值是随着技术发展不断增加的，但是一定要知道每个包大小是需要控制的)</p>
 </blockquote>
 <p>我寻思着公共资源文件夹里面塞个图片那不是直接爆炸吗…</p>
-<h2 id="使用框架"><a href="#使用框架" class="headerlink" title="使用框架"></a>使用框架</h2><h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2>
+<h3 id="独立分包"><a href="#独立分包" class="headerlink" title="独立分包"></a>独立分包</h3><blockquote>
+<p>一种特殊的分包，可以不依赖主包独立运行</p>
+<p>独立分包与其他分包之间<strong>相互隔绝</strong>，不能相互引用资源</p>
+</blockquote>
+<p>这种设计应该应用于什么样的场景呢？</p>
+<p>有的功能不依赖主包即可运行，但是进入小程序时却需要默认下载主包——这时候就该独立分包了</p>
+<p>而设置独立分包的操作也非常容易实现，只需要在app.json对每个包的设置中加上<strong>independent</strong>字段并设置为true</p>
+<h3 id="预下载"><a href="#预下载" class="headerlink" title="预下载"></a>预下载</h3><blockquote>
+<p>在进入某个页面时，由框架自动预先下载好之后可能需要的分包，从而优化进入后续分包页面的速度</p>
+</blockquote>
+<p>在app.json中使用preloadRule字段配置预下载：</p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842729a2b71db44bd900d2fcb03d310c45999cb144a0ec6e9fc/0.png"></p>
+<p>一个分包的预下载大小限额：2M，超出的部分会下载失败</p>
+<h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><p>（这部分后面再更）</p>
+
                 
             </div>
             <hr/>
