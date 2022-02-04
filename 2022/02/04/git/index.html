@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Web多媒体基础, 前端">
-    <meta name="description" content="啊哈，信息中也有熵呀？">
+    <meta name="keywords" content="Git, 前端">
+    <meta name="description" content="不会Git都不好意思说是前端仔">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Web多媒体基础 | 碳苯</title>
+    <title>Git | 碳苯</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -311,7 +311,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('该文章设置了密码，如需查阅请联系碳苯桑')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -324,12 +324,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/29.webp')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/31.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Web多媒体基础</h1>
+                    <h1 class="description center-align post-title">Git</h1>
                 </div>
             </div>
         </div>
@@ -445,8 +445,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                                <span class="chip bg-color">前端</span>
+                            <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                <span class="chip bg-color">操作系统</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+                                <span class="chip bg-color">计算机网络</span>
                             </a>
                         
                     </div>
@@ -457,8 +461,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/web/" class="post-category">
-                                web
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
+                                计算机网络
                             </a>
                         
                     </div>
@@ -470,7 +474,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-02-03
+                    2022-02-04
                 </div>
                 
 
@@ -509,190 +513,95 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="写在开篇"><a href="#写在开篇" class="headerlink" title="写在开篇"></a>写在开篇</h2><blockquote>
-<p>在这短短数十天的学习中，我的认知也有了长足的进步，不再把前端局限于web，因为我见识到了更为广大的前端，那是奇伟瑰丽的，也是人迹罕至的，当我见到这一幕时的心情，就像是远行者历经千辛万苦终于要翻过一个山头的时候怀揣的期待被山头那边高不可攀的<strong>“真正的顶峰”</strong>打破，随即而来的震撼</p>
-<p>这次远足，没有终点</p>
-<p>对于没有终点这种概念无需产生惶恐，心怀敬仰地用有限去博弈无穷，向世界献上赞歌，这何尝不是一种浪漫呢</p>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="写在开篇"><a href="#写在开篇" class="headerlink" title="写在开篇"></a>写在开篇</h3><p>今天是2021/9/12，计划和同学一起开发微信小程序了，看了下语法大概就是html和css以及Vue的魔改，这个问题应该不大。重点是我们觉得这也是第一个正正经经的可以算得上项目的东西了，所以还是决定好好打磨它，于是乎这个时候就想到了版本管理的问题，自然而然就得开始学习Git了</p>
+<h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><blockquote>
+<p><strong>2022/02/04</strong><br>现在是1:09 AM，计划在今天下午和逸飞大佬研究git技术，忽然想起自己写过一篇git的笔记，就打算放到自己的个人博客上了</p>
 </blockquote>
-<h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><blockquote>
-<p><strong>2022/02/03</strong><br>开始学习吧</p>
-<p><strong>2022/02/04</strong><br>搜集各种资料，学习关于“信息熵”的知识并做好记录</p>
-</blockquote>
-<h1 id="浏览器原生多媒体和扩展"><a href="#浏览器原生多媒体和扩展" class="headerlink" title="浏览器原生多媒体和扩展"></a>浏览器原生多媒体和扩展</h1><h2 id="音频和视频"><a href="#音频和视频" class="headerlink" title="音频和视频"></a>音频和视频</h2><p>这里指的是audio标签和video标签<br>它们具有如下属性:</p>
-<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842b21a24a61bfc3fab1d80a544e355be6571a20f66494aa68b/0.png" alt="两个标签的属性1"></p>
-<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842b21a24a61bfc3fab3bc48a6faf48e3507f87bcd5bf181da8/0.png" alt="两个标签的属性2"></p>
-<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842b21a24a61bfc3fab6540d6a86140386f8a3a29dd0517c936/0.png" alt="两个标签的属性3"></p>
-<p>由于现在的浏览器很可能会避免随机噪声的出现，所以会禁用如autoplay这种属性，从而直接配置是无效的，所以我们需要使用JS来触发它们（我还没试过，可能也没效果）</p>
-<h2 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h2><blockquote>
-<ol>
-<li><p>不支持直接播放hls、flv等格式的视频</p>
-</li>
-<li><p>视频资源的请求和加载无法通过代码控制</p>
-<p>(无法实现分段加载、清晰度无缝切换、精准预加载等功能)</p>
-</li>
-</ol>
-</blockquote>
-<h2 id="多媒体元素和扩展API"><a href="#多媒体元素和扩展API" class="headerlink" title="多媒体元素和扩展API"></a>多媒体元素和扩展API</h2><p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168420129fe8edd9b5365abedda178b287ad511b808c5d4115c76/0.png" alt="MSE"></p>
+<h2 id="关于版本控制的一些话"><a href="#关于版本控制的一些话" class="headerlink" title="关于版本控制的一些话"></a>关于版本控制的一些话</h2><h3 id="为什么要有版本控制"><a href="#为什么要有版本控制" class="headerlink" title="为什么要有版本控制"></a>为什么要有版本控制</h3><p>比如今天觉得第一版不好，就出了第二版，但是第一版怎么办呢，总不能删了吧——万一哪天又觉得第一版好怎么办？<br>存在本地又不好大家合作开发，所以我们需要一个中间的平台来储存众多版本</p>
+<h3 id="版本控制的发展史"><a href="#版本控制的发展史" class="headerlink" title="版本控制的发展史"></a>版本控制的发展史</h3><p><strong>1.本地版本控制</strong><br>在本地记录保存每次更新，适合个人开发用</p>
+<p>很方便，但是也很明显，很low</p>
+<p><strong>2.集中版本控制——SVN</strong><br>所有版本都放到一个服务器，这样一来就方便协同开发了<br>（缺点是不联网就很难办，另外，要是服务器炸了就可以重开了）</p>
+<p><strong>3.分布式版本控制——Git</strong><br>每个人都拥有完整的代码，所有的版本信息都会同步到每一个开发者，<br>断网的时候可以本地提交，有网络时会自动同步，这样一来只要有一个还保留着代码，就能很快恢复数据<br>（缺点是，安全隐患大，容易出内鬼；另外这同一份文件多次存储，加大了空间消耗）<br>（欸，等等，这难道是区块链？？w(ﾟДﾟ)w，算了，先学会用再说</p>
+<h2 id="Git下载与安装"><a href="#Git下载与安装" class="headerlink" title="Git下载与安装"></a>Git下载与安装</h2><p>官网下载比较慢的话，<br>那么就试试镜像下载吧，相信用过npm的应该很熟悉了：<a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/git-for-windows/">git镜像下载</a><br>进去之后选一个稍微旧一点的版本下载<br><img src="https://img-blog.csdnimg.cn/ea98c417dc774e0aa0182ec04213e8b8.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>64位就找64位咯<br><img src="https://img-blog.csdnimg.cn/9780be46e52142e190331cd947851598.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/3a98d56150a848e08e21911e608c13d5.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/88dde751837f46fe8d8ad82485a5155d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>这里要注意，选择默认的文本编辑器<br><img src="https://img-blog.csdnimg.cn/0b625bbfb5714d0590bf1fe12903519b.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>我选的visual studio code（虽然喜欢idea<br><img src="https://img-blog.csdnimg.cn/5a841580fe2a48f3866f3472a7860a73.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>然后管他三七二十一地，直接莽Next就完事，最后finish，安装完毕<br>此时鼠标右键可以看到Git的相关内容，<br>这里也可以看到<br><img src="https://img-blog.csdnimg.cn/3fc1663611d546cd8f147abcfc561c18.png" alt="在这里插入图片描述"><br>它们分别是：<br>Git Bash:Unix与Linux风格的命令行<br>Git CMD:Windows风格<br>Git GUI :图形界面版本Git，但是初学者嘛还是先学会用命令行比价好，所以暂时不推荐使用</p>
+<p>为了以后更好地学习Linux，我们这里采用Git Bash</p>
+<h2 id="基本Linux命令"><a href="#基本Linux命令" class="headerlink" title="基本Linux命令"></a>基本Linux命令</h2><p><img src="https://img-blog.csdnimg.cn/2546d8c8986943e68619b6b1c97d5d47.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>点开就能看到类似这样地画面<br><img src="https://img-blog.csdnimg.cn/21b4fcd991ca462881441e0e58871e63.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>好了，这下得开始学Linux命令才能继续玩下去了<br>大概就是这样，这里看看就像<br><img src="https://img-blog.csdnimg.cn/f5b8be004d014757a92b46d336a86841.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>这里就提一句：<br><strong>(不要尝试，不要尝试，不要尝试！</strong><br><strong>这是删库，难以跑路，后果自负)</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">rm</span> -rf/
+<span class="token comment"># 要是你计算机文件全没了别怪我没提醒你别用这个指令</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>只是想说一下啊，rm是remove的简写，-r是递归，f是强制，/是根目录</p>
+<h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><h3 id="配置信息"><a href="#配置信息" class="headerlink" title="配置信息"></a>配置信息</h3><p> <strong>git config -l</strong><br>就是查看配置列表啦<br><img src="https://img-blog.csdnimg.cn/1975bd2990a6482682d7f09528ad9503.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>还可以细一点，使用</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --system --list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>查看系统配置<br><img src="https://img-blog.csdnimg.cn/07ba27c335aa43c69f9b41ee7d497037.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>同样的可以查看用户配置</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> config --global --list
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://img-blog.csdnimg.cn/4e9d54d0d6f1458d9dd0bb4b78959a99.png" alt="在这里插入图片描述"><br>现在我们来更改一下配置<br>其实如果不执行这一步配置操作的话，那么是不能提交项目的</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> config --global user.name <span class="token string">"Serio"</span>
+$ <span class="token function">git</span> config --global user.email <span class="token string">"2779066456@qq.com"</span>
+$ <span class="token comment">#第一个是配置名称，第二个是配置邮箱</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>然后再使用</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> config --global --list
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>查看一下配置是否成功<br><img src="https://img-blog.csdnimg.cn/0e227ed71eaf40e3852e6b431cc99d4e.png" alt="在这里插入图片描述">系统配置会保存在Git安装目录下的etc文件中的config文件里面<br>用户配置会保存在C盘用户文件下的gitconfig中</p>
+<p>在说下一个命令以前，先得提一下</p>
+<h3 id="Git工作原理"><a href="#Git工作原理" class="headerlink" title="Git工作原理"></a>Git工作原理</h3><p>Git有三个工作区域：</p>
 <blockquote>
-<p>MSE使用过程：</p>
-<ol>
-<li>创建mediaSource实例</li>
-<li>创建指向mediaSource的URL</li>
-<li>监听sourceopen事件</li>
-<li>创建sourceBuffer</li>
-<li>向sourceBuffer中加入数据</li>
-<li>监听updateend事件</li>
-</ol>
-<p>而用MSE播放mp4的过程如下：</p>
-<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168420129fe8edd9b5365abf43c6184acf2aa006e3774b6af85e2/0.png" alt="MSE播放mp4过程"></p>
-<p>对比一下播放器播放mp4：</p>
-<ol>
-<li>数据加载（ts flv mp4）</li>
-<li>解封装（音频裸流、视频裸流）</li>
-<li>重封装（fmp4）</li>
-<li>appendBuffer（video、audio）</li>
-<li>解码渲染（解码渲染）</li>
-<li>音视频同步（时间戳）</li>
-</ol>
+<p>1.工作目录<br>2.暂存区<br>3.资源库<br>4.远程it仓库</p>
 </blockquote>
-<h2 id="流媒体协议"><a href="#流媒体协议" class="headerlink" title="流媒体协议"></a>流媒体协议</h2><p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168420129fe8edd9b536548804879f3a4982fe79604b406190403/0.png" alt="流媒体协议一览"></p>
+<p> <img src="https://img-blog.csdnimg.cn/e9625b566e2d47a7a9ec01bb05947f44.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="git的三个工作区域"></p>
 <blockquote>
-<p> 其中，HLS全称是<strong>HTTP Live Streaming</strong>，用于实时音视频流的传输，目前HLS协议被广泛应用于视频点播和直播领域</p>
+<p>1.<strong>workspace/working directory</strong><br>工作区，就是平时存放代码的地方<br>2.<strong>index/stage</strong><br>暂存区，用于临时存储，是一个文件，存储将要提交到文件列表的信息<br>3.<strong>repository/history</strong><br>仓库区（本地仓库)，能安全存储数据的位置，存储了所有版本的数据。其中的HEAD指向最新版本<br>4.<strong>remote</strong><br>远程仓库，托管代码的服务器</p>
 </blockquote>
-<p><strong>工作流程</strong></p>
-<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168420129fe8edd9b53655ab2070bf4ff9db2eadf702d8f6958ca/0.png" alt="工作流程"></p>
-<h1 id="Web多媒体基础知识"><a href="#Web多媒体基础知识" class="headerlink" title="Web多媒体基础知识"></a>Web多媒体基础知识</h1><h2 id="Web多媒体历史"><a href="#Web多媒体历史" class="headerlink" title="Web多媒体历史"></a>Web多媒体历史</h2><p>多媒体历史可以大致的分为三个阶段：</p>
-<blockquote>
-<ol>
-<li><strong>Flash时代</strong><br>已经开摆了</li>
-<li><strong>HTML5时代</strong><br>至今还在用，但是audio等标签完全不够用，亟待扩展</li>
-<li><strong>Media Source Extension（MSE）时代</strong><br>媒体资源扩展，未来的发展趋势</li>
-</ol>
-</blockquote>
-<h2 id="图像的基本概念"><a href="#图像的基本概念" class="headerlink" title="图像的基本概念"></a>图像的基本概念</h2><p><strong>图像分辨率</strong></p>
-<blockquote>
-<p>用于确定组成一副图像的像素数据<br>就是指在 水平和垂直方向上图像所具有的像素<strong>个数</strong></p>
-</blockquote>
-<p> <strong>图像深度</strong></p>
-<blockquote>
-<p>图像深度是指存储每个像素所需要的比特数<br>图像深度决定了图像的每个像素可能的颜色数，或可能的灰度级数<br>例如:<br>彩色图像每个像素用R,G,B三个分量表示,每个分量用8位，像素深度为24位，可以表示的颜色数目为2的24次方，既16777216个<br>单色图像存储每个像素需要8bit，则图像的象素深度为8位，最大灰度数目为2的8次方，既256个。</p>
-</blockquote>
-<h2 id="视频基本概念"><a href="#视频基本概念" class="headerlink" title="视频基本概念"></a>视频基本概念</h2><p><strong>分辨率</strong></p>
-<blockquote>
-<p>指的是构成视频的每一帧图像的分辨率</p>
-</blockquote>
-<p><strong>帧率</strong></p>
-<blockquote>
-<p>视频单位时间内包含的视频帧的数量</p>
-</blockquote>
-<p><strong>码率</strong></p>
-<blockquote>
-<p>视频单位时间内传输的数据量，一般用kbps表示——注意这里是bit不是Byte</p>
-</blockquote>
-<h2 id="编码格式"><a href="#编码格式" class="headerlink" title="编码格式"></a>编码格式</h2><p><strong>I帧</strong></p>
-<blockquote>
-<p>又称<strong>帧内编码帧</strong>，是一种自带全部信息的独立帧，无需参考其他图像便可独立进行解码</p>
-</blockquote>
-<p><strong>P帧</strong></p>
-<blockquote>
-<p>又称<strong>帧间预测编码帧</strong>，需要参考前面的I帧或者P帧才能进行编码</p>
-</blockquote>
-<p><strong>B帧</strong></p>
-<blockquote>
-<p>又称<strong>双向预测编码帧</strong>，也就是B帧记录的是本帧与前后帧的差别</p>
-</blockquote>
-<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842b21a24a61bfc3fabc59002d34a0826d96fa797467f5b7d65/0.png" alt="I/P/B帧示意图"></p>
-<p><strong>GOP</strong></p>
-<blockquote>
-<p>group of picture<br>指的是两个I帧之间的间隔</p>
-</blockquote>
-<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842b21a24a61bfc3fabc8d503f7eba1ac49cc861886ac6a3d26/0.png" alt="GOP示意图"></p>
-<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842b21a24a61bfc3fabe9b50b94a16a56ec2be41c3a3b893891/0.png" alt="常见编码格式发展一览"></p>
-<h2 id="为什么要进行编码"><a href="#为什么要进行编码" class="headerlink" title="为什么要进行编码"></a>为什么要进行编码</h2><blockquote>
-<p>编码是将源对象内容按照一种标准转换为一种<strong>标准格式</strong>内容<br>解码是和编码对应的,它使用和编码相同的标准将编码内容还原<br><strong>最初是为了加密</strong>,经过加密的内容不知道编码标准的人很难识别<br>而<strong>现在主要是为了信息交换</strong></p>
-</blockquote>
-<p>编码可以做到压缩体积等效果，有效优化一些冗余问题</p>
-<h2 id="冗余"><a href="#冗余" class="headerlink" title="冗余"></a>冗余</h2><blockquote>
-<p>从信息论的角度来看，描述信息源的数据是信息和数据冗余之和，即：数据=信息+数据冗余。</p>
-</blockquote>
-<p><strong>空间冗余</strong></p>
-<blockquote>
-<p>又称<strong>几何冗余</strong></p>
-<p>同一景物表面上采样点的颜色之间通常存在着空间关联性，相邻各点的取值往往近似或者相同，这就是空间冗余</p>
-<p>例如图片中有<strong>一片连续的区域像素都是相同的颜色</strong>，那么空间冗余就产生了</p>
-<p>图像数据中经常存在的一种数据冗余，是静态图像中存在的最主要的一种数据冗余</p>
-</blockquote>
-<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842b21a24a61bfc3fab399bc15dbbe7ffba271eba1017a694a5/0.png" alt="空间冗余"></p>
-<p>图中虚线划出的区域便是</p>
-<p><strong>时间冗余</strong></p>
-<blockquote>
-<p>又称<strong>帧间冗余</strong></p>
-<p>在视频、动画图像中，相邻帧之间往往存在着时间和空间的相关性</p>
-<p>例如人们在会议室中开会，随着会议的进行，时间在改变，但是背景（房间、家具等）一直是相同的、而且没有移动，变化的只是人们的动作和位置</p>
-<p>这里的背景就反映为时间冗余。同样，由于人在说话时产生的音频也是连续和渐变的，因此声音信息中也会存在时间冗余</p>
-</blockquote>
-<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842b21a24a61bfc3fab5df4c67d50850706fb13e5edd03f90ea/0.png" alt="时间冗余"></p>
-<p><strong>视觉冗余</strong></p>
-<blockquote>
-<p>又称<strong>心理视觉冗余</strong></p>
-<p>在多媒体技术的应用领域中，人的眼睛是图像信息的接收端。视觉冗余是相对于<strong>人眼的视觉特性</strong>而言的，人类的视觉系统并不能对图像画面的任何变化都能感觉到，通常情况下具有以下特点：</p>
-<ol>
-<li>对亮度的变化敏感，对色度的变化相对不敏感</li>
-<li>对静止图像敏感，对运动图像相对不敏感</li>
-<li>对图像的水平线条和竖直线条敏感，对斜线相对不敏感</li>
-<li>对整体结构敏感，对内部细节相对不敏感</li>
-<li>对低频信号敏感，对高频信号相对不敏感（如：对边沿或者突变附近的细节不敏感）</li>
-<li>…..</li>
-</ol>
-<p>因此，包含在色度信号、运动图像、图像高频信号中的一些数据，相对于人眼而言，并不能对增加图像的清晰度作出贡献，<strong>被人眼视为多余的</strong>，这就是视觉冗余。</p>
-</blockquote>
-<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842b21a24a61bfc3fab3f9691179be372457bad67abeab8ece4/0.png" alt="视觉冗余"></p>
-<p><strong>编码冗余</strong></p>
-<blockquote>
-<p>推测可能是指的<strong>信息熵冗余</strong></p>
-<p>具体的例子可以参考哈夫曼编码解决的问题：如何用0 1两种字符代表26个字母——哈夫曼编码能在这个问题中得到最优解，解决的正是编码冗余问题（但是哈夫曼编码在特定的情况下无法得到最优解）</p>
-<p>数据压缩的理论极限是信息熵原理:</p>
-<p>信息论之父香农指出，任何信息都存在冗余，冗余大小与信息中每个符号（数字、字母或单词）的出现概率或者说不确定性有关。香农借鉴了热力学的概念，把信息中<strong>排除了冗余后的平均信息量</strong>称为“信息熵”，并给出了计算信息熵的数学表达式：</p>
-<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842b21a24a61bfc3fab7e1df10b1601636fc9eebf6bb1b61c0d/0.png" alt="信息熵计算公式"></p>
-<p>其中，pi代表随机事件i出现概率,log通常是以2为底——这里对数的底数选择是任意的，因为信息熵其实是一个相对值，但是传统是以2为底，这样一来不仅可以使得数据有通用性，而且还能用bit作为单位</p>
-<p>如果要求编码过程中不丢失信息量，即要求保存信息熵，这种信息保持编码叫<strong>熵编码</strong>，是<strong>无损压缩</strong>的</p>
-<p>常用的熵编码：<br>香农编码、 哈夫曼编码、 算术编码、 BLE行程编码、CAVLC基于上下文的自适应变长编码、CABAC基于上下文的自适应二进制算术编码</p>
-</blockquote>
-<p><strong>更多的冗余</strong></p>
-<blockquote>
-<p>还有其他多种冗余形式，比如结构冗余、其他冗余等等..<br>此处不再一一例举</p>
-</blockquote>
-<h2 id="编码处理过程"><a href="#编码处理过程" class="headerlink" title="编码处理过程"></a>编码处理过程</h2><blockquote>
-<p>基本顺序依次为：</p>
-<ol>
-<li><strong>预测</strong><br>减少空间冗余、时间冗余</li>
-<li><strong>变换</strong><br>减少空间冗余</li>
-<li><strong>量化</strong><br>减少视觉冗余</li>
-<li><strong>熵编码</strong><br>去除编码冗余</li>
-</ol>
-</blockquote>
-<h2 id="封装格式"><a href="#封装格式" class="headerlink" title="封装格式"></a>封装格式</h2><blockquote>
-<p>封装格式是存储音视频、图片或者字幕信息的一种容器</p>
-</blockquote>
-<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842b21a24a61bfc3fab6b93341d2a767ea7f83854dcf8b27176/0.png" alt="常见封装格式发展一览"></p>
-<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842b21a24a61bfc3fabea700ed355541bd0be62792b700aa7ff/0.png" alt="常见封装格式和文件映射关系表"></p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><blockquote>
-<p>又一次感受到数学对计算机的印象，多亏了本次学习探索，窥见图像处理这个领域的一隅。</p>
-<p>同时也勾起了对WebGPU，WebVR，WebXR，Webassembly，WebCodecs的向往</p>
-<p>期待这些技术成熟时为我们带来的惊艳！</p>
-</blockquote>
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><blockquote>
-<ol>
-<li><p><strong>字节跳动青训营培训资料</strong></p>
-</li>
-<li><p><strong>百度百科</strong><br><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%A9%BA%E9%97%B4%E5%86%97%E4%BD%99">https://baike.baidu.com/item/%E7%A9%BA%E9%97%B4%E5%86%97%E4%BD%99</a><br><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%86%97%E4%BD%99">https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%86%97%E4%BD%99</a><br><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%A7%86%E8%A7%89%E5%86%97%E4%BD%99">https://baike.baidu.com/item/%E8%A7%86%E8%A7%89%E5%86%97%E4%BD%99</a><br><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%86%B5%E7%BC%96%E7%A0%81">https://baike.baidu.com/item/%E7%86%B5%E7%BC%96%E7%A0%81</a></p>
-</li>
-<li><p><strong>《图像处理学习笔记》</strong><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33208851/article/details/95335809">https://blog.csdn.net/qq_33208851/article/details/95335809</a></p>
-</li>
-<li><p><strong>《走进Web多媒体技术》</strong><br><a target="_blank" rel="noopener" href="https://juejin.cn/post/7000726903787094029">https://juejin.cn/post/7000726903787094029</a></p>
-</li>
-</ol>
-</blockquote>
+<p><strong>git的工作流程是</strong><br>1.在工作目录中添加修改文件<br>2.将需要进行版本管理的文件放入暂存区域<br>3.将暂存区域的文件提交到git仓库</p>
+<h3 id="创建Git仓库"><a href="#创建Git仓库" class="headerlink" title="创建Git仓库"></a>创建Git仓库</h3><p>有两种方式：<br>1.本地新建仓库<br>2.克隆远程仓库<br>大概涉及到以下六个命令<br>（没错，图片依旧来自狂神说）<br><img src="https://img-blog.csdnimg.cn/e1d0fa7b46294284b4ae1adc70be557a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p><strong>本地搭建</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://img-blog.csdnimg.cn/0f4a1719dfb74740ba38a589744a6e6f.png" alt="初始化"><br>注意这是个隐藏文件，所以要勾选显示隐藏文件才看得见<br><img src="https://img-blog.csdnimg.cn/8b0497c92e14465ea46b83dccdc108df.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><strong>远程克隆</strong><br>首先我们先建立一个远程仓库<br>（由于hub比较卡顿，所以我们这里用ee）<br><img src="https://img-blog.csdnimg.cn/fff157437e3f4ecbbe756a81d992a253.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> clone <span class="token string">"https://gitee.com/Serio/test.git"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://img-blog.csdnimg.cn/7903edf67f654139a3e0f8a69e9220a1.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>然后同样的我们就得到了这个库</p>
+<p>这个时候可能就有人要问了，这都下载到c盘去了，要怎么下到指定路径呢？</p>
+<p>这还是先得用cd等命令<br><img src="https://img-blog.csdnimg.cn/85d61f59e42d43f98fe089ea09969d34.png" alt="在这里插入图片描述"><br>比如这样就进入了e盘，然后建立仓库之类的就会在e盘下进行</p>
+<h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><p>文件有四种状态：<br>1.<strong>Untacked</strong>：未跟踪，这个文件在项目中，但是没有传到git库里面，不参与版本库，<br>在git add命令执行后改变为<strong>Staged</strong>暂存</p>
+<hr>
+<p>2.<strong>Unmondify</strong>：文件已经传入库，未修改，即版本库中文件快照内容与文件夹中内容完全一致，<br>此后如果执行git rm命令，那么就会被移除<br>如果被修改，那么状态变为<strong>Modified</strong></p>
+<hr>
+<p>3.<strong>Modified</strong>：修改过，<br>在执行git checkout命令后撤销修改内容，返回<strong>Unmodify</strong>状态<br>也可以在执行git add后变为<strong>Staged</strong></p>
+<hr>
+<p>4.<strong>Staged</strong>：暂存，<br>执行git commit后将提交到库中，此时库中文件又和本地文件一致了，文件又变为<strong>Unmodify</strong><br>执行git reset HEAD filename那么就会取消暂存，回退到<strong>Modified</strong>状态</p>
+<p><strong>实际操作示例</strong><br>首先我们新建一个文本<br><img src="https://img-blog.csdnimg.cn/963090cbb7e849e29b3095a35274bf1e.png" alt="在这里插入图片描述"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> status <span class="token string">"LEC牛逼"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://img-blog.csdnimg.cn/93fcbb191fce4d2394e964820b6b0a73.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="查看文件状态"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> <span class="token function">add</span> <span class="token string">"LEC牛逼.txt"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://img-blog.csdnimg.cn/a539a5679a8c4b2c95f13d6bb15d0027.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="添加"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> commit -m <span class="token string">"这是第一次提交测试"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://img-blog.csdnimg.cn/828adeb39f4b43cca0d38386fbd7396d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>当然，如果我们不想让每一个文件都上传，那么可以定义一个扩展名为gitignore的文件<br><img src="https://img-blog.csdnimg.cn/6d5232c581324790ae5154754ce2811e.png" alt="在这里插入图片描述"><br>配置内容依次解释为，忽略根目录下的TODO文件，忽略所有txt文件，但是”LEC牛逼.txt”除外</p>
+<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p>我们先得有一个ssh公钥</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ ssh-keygen -t rsa<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>-t表示采用加密，rsa是加密的方式<br>一路enter就好<br><img src="https://img-blog.csdnimg.cn/3bd51771f7e04261b167c8889519f49b.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>然后去这里找找生成的公钥<br><img src="https://img-blog.csdnimg.cn/239106ea238f4cb49785249bcff2a4e4.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/8370a33362d24046bae58663e56e673d.png" alt="在这里插入图片描述"><br>然后打开其中扩展名为pub的那个文件，复制里面的内容，粘贴到<br>（这里我们用国内的远程库吧）<br><img src="https://img-blog.csdnimg.cn/115cb00b73bc4c2ba779dcc634cd236c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>添加了ssh公钥之后<br>再新建一个库<br><img src="https://img-blog.csdnimg.cn/056e99704e7e4f01beb38976e430b5cf.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>如果不太清楚开源协议的话，可以点框起来的部分<br><img src="https://img-blog.csdnimg.cn/dee06512bea842b6be3912dd4586809c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>然后一路我不在乎————下一步下一步（好吧这个根据个人需求来就行）<br><img src="https://img-blog.csdnimg.cn/3ecdb96f87cb45f886b1a68fc051dc8f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>得到远程仓库之后，我们就不同本地的了（原来那个可以删了）<br>来克隆一下</p>
+<h3 id="使用IDEA集成开发"><a href="#使用IDEA集成开发" class="headerlink" title="使用IDEA集成开发"></a>使用IDEA集成开发</h3><p>idea创建一个普通项目<br><img src="https://img-blog.csdnimg.cn/2075b0171ce44a6ead2c5c4a1dc8920c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>这里我的IDEA帮我自动配置好了这两个东西<br>打开看看<br><img src="https://img-blog.csdnimg.cn/45bc4efd55be4ef1b8cd541a5742d356.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/8d6259a29782475fbb5429bbda7065a6.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>然后我们把下载到本地的git文件的内容移动到工程文件中<br><img src="https://img-blog.csdnimg.cn/427bb7592b2e4509a63c1e4d4f06d776.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>这里红色的就是代表选中状态,绿色代表已经提交<br>右上角也多了几个按钮<br><img src="https://img-blog.csdnimg.cn/8d7fa7209a9b4965b623b05196982841.png" alt="在这里插入图片描述"><br>底部也多了终端的几个选项<br><img src="https://img-blog.csdnimg.cn/8e03f6dc80b3454ab74c55182b4661ff.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>接下来我们在终端使用</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>添加所有文件到暂存区<br><img src="https://img-blog.csdnimg.cn/cfaa008c216141bd81113beb25132096.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>当然鼠标右键找到git选项中的add，也能实现同样的效果<br>添加到暂存区之后的文件都变绿了<br><img src="https://img-blog.csdnimg.cn/2858bea0e2bb42cf9468a4228126418e.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_16,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>然后输入一下描述信息，直接提交就好了</p>
+<p><img src="https://img-blog.csdnimg.cn/8739f86691834655a2af7fe7002d8b56.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>当然，使用</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> commit -m <span class="token string">"这是第一次提交阿巴阿巴阿巴.."</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>也能达到同样的效果</p>
+<p>当看到这个的时候<br><img src="https://img-blog.csdnimg.cn/a93be1af60414ec5829a4baaca24abe0.png" alt="在这里插入图片描述"><br>就已经提交到本地仓库了<br>如果要同步到远程，可以使用</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> push<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>（终端不需要加$；push后面什么都不写）<br>或者点击IDEA的快捷按钮：推送，即可完成同步<br><img src="https://img-blog.csdnimg.cn/36dde07f366a4bc78e9aa5b00f8412cf.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>这就很棒了</p>
+<h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><p>主干叫master，一定要对应最优的稳定运行版本<br>查看本地库的分支</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> branch<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://img-blog.csdnimg.cn/b6f43ba242494267a90fc36c755a8c62.png" alt="在这里插入图片描述"><br>查看远程库的分支</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> branch -r<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://img-blog.csdnimg.cn/9820a853a2e345b2a9e71c1ef2906554.png" alt="在这里插入图片描述"><br>三个开发小组A B C<br>B会调用A的接口<br>C会调用A，B的接口<br>那么如果B在使用的过程中修改了A的代码<br>C要调用A原本的代码时，就产生了冲突</p>
+<p>所以这就需要分支，使得各个版本不冲突<br>(C调用A1.0，B修改后产生的记为A2.0这样就可以了)</p>
+<p>另外，最后ABC三组合并文件，如果发生冲突<br>那么可以修改冲突文件重新提交，选择保留其中一种可行的方案即可</p>
+<p>相关操作见下图，当然下图依旧来自网络（好吧就是狂神说）<br><img src="https://img-blog.csdnimg.cn/0403f6b7c0c345799940b56bc310969c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_15,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<h3 id="协同开发实操"><a href="#协同开发实操" class="headerlink" title="协同开发实操"></a>协同开发实操</h3><p>这个得等等队友了…<br>后面再更新<br><img src="https://img-blog.csdnimg.cn/002dee626d9041fdb3cbc2e3e6758cc8.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 
                 
             </div>
@@ -719,7 +628,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://serio.gitee.io/2022/02/03/webmedia/">https://serio.gitee.io/2022/02/03/webmedia/</a>
+                    <a href="https://serio.gitee.io/2022/02/04/git/">https://serio.gitee.io/2022/02/04/git/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -757,8 +666,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                                    <span class="chip bg-color">前端</span>
+                                <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                    <span class="chip bg-color">操作系统</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+                                    <span class="chip bg-color">计算机网络</span>
                                 </a>
                             
                         </div>
@@ -952,9 +865,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/02/04/git/">
                     <div class="card-image">
@@ -971,9 +885,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -986,6 +900,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1008,30 +923,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/02/01/gamedev/">
+                <a href="/2022/02/03/webmedia/">
                     <div class="card-image">
                         
-                        <img src="/medias/postimages/30.webp" class="responsive-img" alt="前端游戏开发理论基础">
+                        <img src="/medias/postimages/29.webp" class="responsive-img" alt="Web多媒体基础">
                         
-                        <span class="card-title">前端游戏开发理论基础</span>
+                        <span class="card-title">Web多媒体基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            百花齐放大前端
+                            啊哈，信息中也有熵呀？
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" class="post-category">
-                                    游戏开发
+                            <a href="/categories/web/" class="post-category">
+                                    web
                                 </a>
                             
                             
@@ -1043,10 +958,6 @@
                     
                     <a href="/tags/%E5%89%8D%E7%AB%AF/">
                         <span class="chip bg-color">前端</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
-                        <span class="chip bg-color">游戏开发</span>
                     </a>
                     
                 </div>
