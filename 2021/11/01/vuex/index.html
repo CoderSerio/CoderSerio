@@ -477,14 +477,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-06
+                    2022-02-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    3.4k
                 </div>
                 
 
@@ -509,18 +509,23 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>看到身边的大佬一个二个的秀到飞起，我也要加把劲才是</p>
-<h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><p>什么是Vuex？</p>
-<blockquote>
-<p>Vuex是一个专为Vue.js应用开发的状态管理模式（与Vue 3.x对应的是Vuex 4），</p>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="写在开篇"><a href="#写在开篇" class="headerlink" title="写在开篇"></a>写在开篇</h3><p>看到身边的大佬一个二个的秀到飞起，我也要加把劲才是</p>
+<h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><blockquote>
+<p><strong>2021/11/01</strong><br>写下这篇博文，因为难以解决的bug被劝退到自闭<br><strong>2022/02/13</strong><br>遇到了一个好的机会，所以又重新拾起这部分内容，更棒的是有仙人指路一下子豁然开朗起来</p>
+</blockquote>
+<h3 id="特别鸣谢"><a href="#特别鸣谢" class="headerlink" title="特别鸣谢"></a>特别鸣谢</h3><p>感谢19级软件工程<strong>朱珂江</strong>学长凌晨的技术指导，我这才得以顺利入门</p>
+<h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><h3 id="什么是Vuex"><a href="#什么是Vuex" class="headerlink" title="什么是Vuex"></a>什么是Vuex</h3><blockquote>
+<p>Vuex是一个专为Vue.js应用开发的<strong>状态管理模式 和 库</strong>（与Vue 3.x对应的是Vuex 4），</p>
 <p>采用集中式存储管理应用的所有组件的状态，并且已响应的规则来保证状态以一种可以预测的方式发生变化。</p>
 <p>Vuex集成到Vue的官方调试工具devtools extension，提供了诸如零件配置的time-travel调试、状态快照导入导出等高级调试功能</p>
 </blockquote>
-<p><strong>那么什么又是状态管理模式呢？</strong></p>
-<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211101174925189.png" alt="image-20211101174925189"></p>
-<p>由于vue提倡的是单向数据流，如果组件与组件层层嵌套，那么利用父子间通信的方式进行数据传递就相当麻烦</p>
-<p>（其实也可以通过 发布和订阅 来解决这种问题）</p>
-<p>vuex就相当于给所有需要数据通信的组件创建一个公共的父级，这样进行数据传递的话就快多了</p>
+<h3 id="单向数据流的弊端"><a href="#单向数据流的弊端" class="headerlink" title="单向数据流的弊端"></a><strong>单向数据流的弊端</strong></h3><p>由于vue提倡的是<strong>单向数据流</strong>，如果组件与组件层层嵌套，那么利用父子间通信的方式进行数据传递就相当麻烦（其实也可以通过 发布和订阅 来解决这种问题）</p>
+<p>在制定出解决这个问题的方案之前，我们先了解一下单向数据流中的几个部分：</p>
+<blockquote>
+<p><strong>状态</strong><br>驱动应用的数据源<br><strong>视图</strong><br>以声明的方式将状态映射到视图<br><strong>操作</strong><br>响应在视图上的用户输入导致的状态变化</p>
+</blockquote>
+<p>它们之间的关系像是这样<br><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684251544e25e0feaa5a3f4283f4f21787a76f439f47fc8f6e61/0.png" alt="image.png"></p>
+<h3 id="Vuex状态管理模式"><a href="#Vuex状态管理模式" class="headerlink" title="Vuex状态管理模式"></a>Vuex状态管理模式</h3><p>vuex就相当于给所有需要数据通信的组件<strong>创建一个公共的父级</strong>，这样进行数据传递的话就快多了</p>
 <p>（但是使用Vuex的成本比较高，所以只有中大型项目才使用）</p>
 <blockquote>
 <p>“store”基本上就是一个容器，它包含着你的应用中大部分的**状态 (state)**。Vuex 和单纯的全局对象有以下两点不同：</p>
@@ -529,55 +534,227 @@
 <li>你不能直接改变 store 中的状态。改变 store 中的状态的唯一途径就是显式地<strong>提交 (commit) mutation</strong>。这样使得我们可以方便地跟踪每一个状态的变化，从而让我们能够实现一些工具帮助我们更好地了解我们的应用。</li>
 </ol>
 </blockquote>
-<h2 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h2><p>先创建这么一个结构</p>
-<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211102021222629.png" alt="image-20211102021222629"></p>
-<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211102023154400.png" alt="image-20211102023154400"></p>
-<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211102024100820.png" alt="image-20211102024100820"></p>
-<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211102023317457.png" alt="image-20211102023317457"></p>
-<p>其中，如果是同步的内容，那么可以用dispatch或commit，异步只能dispatch</p>
-<h2 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h2><p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20211101180019687.png" alt="image-20211101180019687"></p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684251544e25e0feaa5ad9eb7ab105f3e74d6d3930d2e8bcf481/0.png" alt="Vuex中store原理示意图"></p>
+<h3 id="什么时候使用Vuex"><a href="#什么时候使用Vuex" class="headerlink" title="什么时候使用Vuex"></a>什么时候使用Vuex</h3><blockquote>
+<p>如果您不打算开发大型单页应用，使用 Vuex 可能是繁琐冗余的。确实是如此——如果您的应用够简单，您最好不要使用 Vuex。一个简单的 <a target="_blank" rel="noopener" href="https://v3.cn.vuejs.org/guide/state-management.html#%E4%BB%8E%E9%9B%B6%E6%89%93%E9%80%A0%E7%AE%80%E5%8D%95%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86">store 模式</a>就足够您所需了。但是，如果您需要构建一个中大型单页应用，您很可能会考虑如何更好地在组件外部管理状态，Vuex 将会成为自然而然的选择。</p>
+</blockquote>
+<p>上面的是官方文档中的介绍，下面的是某大佬的个人理解：</p>
+<blockquote>
+<p>管你小中大型应用，我就想用就用呗，一个长期构建的小型应用项目，谁能知道项目需求以后会是什么样子，毕竟在这浮躁的时代，需求就跟川剧变脸一样快，对不对？毕竟学习了 Vuex 不立马用到项目实战中，你永远不可能揭开 Vuex 的面纱。项目中使用多了，自然而然就会知道什么时候该用上状态管理，什么时候不需要。老话说的好熟能生巧，你认为呢？<br> （括弧 – 先了解好Vuex 一些基本概念，然后在<strong>自己的项目</strong>中使用过后，再用到你公司项目上，你别这么虎一上来就给用上去了～）</p>
+</blockquote>
+<h2 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h2><h3 id="安装版本问题"><a href="#安装版本问题" class="headerlink" title="安装版本问题"></a>安装版本问题</h3><p>如果你仔细阅读了本博客的更新日志，你会发现第一次更新和第二次更新之间相差了近3个月，而这是因为一个当时未得到解决的bug劝退了我，所以停止了学习的步伐</p>
+<p>但是最近由于一个项目特别适合用vuex，我便觉得这该是一个非常好的机会啊，就重新拾起了学习vuex的热情</p>
+<p>使用如下npm命令安装：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install vuex --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<p>但是在我代码没有问题的前提下，这个bug依旧出现：</p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168428dd01ac0de8120a0c0fad8fe93ef7f92702ac593b7e22a35/0.png" alt="Uncaught TypeError: Object(...) is not a function"></p>
+<p>我也因此在这里又卡顿了两三天，后来经过朱老师的点拨，才终于豁然开朗了<br><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168428dd01ac0de8120a06c45a3910e1ed165cf6ec2c29769a88e/0.png" alt="太卷了"></p>
+<p>原来这是因为Vue和VueX的版本的关系，我们这里用的是Vue2和VueX4.x，版本不匹配所以导致了报错<br>所以此时正确的操作应该是：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 直接npm install vuex而不指定版本的话就是安装最新版(4.x)，
+# 版本指定第一位即可
+npm install vue@3 --save<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>正确的版本对应关系如下：</p>
+<table>
+<thead>
+<tr>
+<th>Vue版本</th>
+<th>VueX版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Vue2.x</td>
+<td>VueX3.x</td>
+</tr>
+<tr>
+<td>Vue3.x</td>
+<td>VueX4.x</td>
+</tr>
+<tr>
+<td>Vue3.x(猜测，暂未查证)</td>
+<td>Pinia(可以看做VueX5.x)</td>
+</tr>
+</tbody></table>
+<p>这里个人习惯使用Vue2.x，所以下文如未特殊说明，皆为Vue2.x</p>
+<h3 id="基本文件结构"><a href="#基本文件结构" class="headerlink" title="基本文件结构"></a>基本文件结构</h3><blockquote>
+<p>|—— index.html<br>|—— main.js<br>|—— api<br>|        |____ …<br>|—— components<br>|        |____ App.vue<br>|        |____ …<br>|—— <strong>store</strong>            # 核心文件夹<br>         |____ index.js          # 组装导出模块<br>         |____ action.js         # 根级action<br>         |____ mutations.js    # 根级mutation<br>         |____ modules          # 各种模块<br>                   |____ ….</p>
+</blockquote>
+<p>上述文件结构是针对于大型应用的标准文件结构，这里我们只是入门，所以并不严格遵循，而是将所有js文件<strong>糅合成一个store.js</strong>，并且暂时先不做模块化</p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684251544e25e0feaa5ac0a1b96fec01aa848e8216113f4bcad3/0.png" alt="image.png"></p>
+<p>然后在store.js和main.js中分别写入:</p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684251544e25e0feaa5a302b275164e0a8fbf037e8e5765908fe/0.png" alt="store.js和main.js代码示例"></p>
+<p>Vuex 通过 <code>store</code> 选项，提供了一种机制将状态从根组件“注入”到每一个子组件中（需调用 <code>Vue.use(Vuex)</code>）</p>
+<p>通过在根实例中注册 <code>store</code> 选项，该 store 实例会注入到根组件下的所有子组件中，且子组件能通过 <code>this.$store</code> 访问到</p>
+<h3 id="基本数据使用"><a href="#基本数据使用" class="headerlink" title="基本数据使用"></a>基本数据使用</h3><p>在进行了上述操作之后，如果想要<strong>使用数据</strong>msg我们只需要使用如下语句：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>msg 
+<span class="token comment">// 这里的this在template部分中可以省略</span>
+<span class="token comment">// 但是在JS部分中是不可以省略的</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>使用数据并不困难，我们需要注意的是如何修改数据，我们虽然可以通过对上述语句赋值的形式</p>
+<p>来修改，但是我们并不推荐这样做，因为这些数据应该被视为private，但是我们又希望所有组件都可以访问并修改它们，这时候就该想到getter和setter</p>
+<p>getter我们会在后面提到</p>
+<p>这里的setter被放到mutations里面，而要访问到这些setter则需要用this.$store.commit，例如：</p>
+<h3 id="基本数据修改"><a href="#基本数据修改" class="headerlink" title="基本数据修改"></a>基本数据修改</h3><p>不建议直接使用<code>this.$store.state</code>直接修改，一是因为这样修改后没有任何提示，若出错则可能难以追溯问题来源；二是因为这样修改则形成了双向绑定结构，对于数据不安全；</p>
+<p>所以推荐像下面这样：</p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168428975fe52584230d5d22a08d765df7674eb49a9135cd94ca3/0.png" alt="image.png"></p>
+<p>这里我们可以发现，<code>mutation</code>中的函数的第一个参数是state，这个是固定的，而如果需要更多的参数则在后面依次添加，传参只需要像这样：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'change'</span><span class="token punctuation">,</span> <span class="token string">'我是参数'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>注意这里如果要追加参数，<strong>不能用逗号隔开来继续添加</strong>，而是将参数打包成一个对象传入——当然，函数声明也要遵循这一点</p>
+<p>另外，还要注意，<strong>mutation只能是同步任务</strong><br>如何异步后面会提到</p>
+<h3 id="基本数据增删"><a href="#基本数据增删" class="headerlink" title="基本数据增删"></a>基本数据增删</h3><p>并不需要使用额外的语法，只需要我们像下面这样就能完成</p>
+<p>由于新添加的属性如果要规范使用的话还得添加额外的<code>mapState</code>语句，所以我们会再包装一层：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>obj <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token operator">...</span><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span>obj<span class="token punctuation">,</span> <span class="token keyword">new</span><span class="token operator">:</span> <span class="token number">233</span> <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>或者这样写也行：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">Vue<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span> state<span class="token punctuation">.</span>obj<span class="token punctuation">,</span> <span class="token string">'new'</span><span class="token punctuation">,</span> <span class="token number">123</span> <span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168428975fe52584230d5e9447247f922a2708ca8127760791174/0.png" alt="mutation的两种添加方式"></p>
+<p>归根结底<code>commit</code>是触发<code>mutation</code>中函数的方式之一，我们还能通过<code>mapMutations</code>来触发，不过这里暂时不讨论这个</p>
+<h2 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h2><p>在学会基础使用之后，再来稍微深入一点，接下来这部分内容省略了已经提及过的部分</p>
 <h3 id="State"><a href="#State" class="headerlink" title="State"></a>State</h3><h4 id="单一状态树"><a href="#单一状态树" class="headerlink" title="单一状态树"></a>单一状态树</h4><p>用一个对象就包含了全部的应用层级状态。至此它便作为一个“唯一数据源 (<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Single_source_of_truth">SSOT (opens new window)</a>)”而存在。这也意味着，每个应用将仅仅包含一个 store 实例。单一状态树让我们能够直接地定位任一特定的状态片段</p>
-<h4 id="在-Vue-组件中获得-Vuex-状态"><a href="#在-Vue-组件中获得-Vuex-状态" class="headerlink" title="在 Vue 组件中获得 Vuex 状态"></a>在 Vue 组件中获得 Vuex 状态</h4><p>那么我们如何在 Vue 组件中展示状态呢？由于 Vuex 的状态存储是响应式的，从 store 实例中读取状态最简单的方法就是在<a target="_blank" rel="noopener" href="https://cn.vuejs.org/guide/computed.html">计算属性 (opens new window)</a>中返回某个状态：</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个 Counter 组件</span></span><br><span class="line"><span class="keyword">const</span> Counter = {</span><br><span class="line">  <span class="attr">template</span>: <span class="string">`&lt;div&gt;{{ count }}&lt;/div&gt;`</span>,</span><br><span class="line">  <span class="attr">computed</span>: {</span><br><span class="line">    count () {</span><br><span class="line">      <span class="keyword">return</span> store.state.count</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="组件中获取-Vuex-状态"><a href="#组件中获取-Vuex-状态" class="headerlink" title="组件中获取 Vuex 状态"></a>组件中获取 Vuex 状态</h4><p>那么我们如何在 Vue 组件中展示状态呢？由于 Vuex 的状态存储是响应式的，从 store 实例中读取状态最简单的方法就是在<a target="_blank" rel="noopener" href="https://cn.vuejs.org/guide/computed.html">计算属性 (opens new window)</a>中返回某个状态：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 创建一个 Counter 组件</span>
+<span class="token keyword">const</span> Counter <span class="token operator">=</span> <span class="token punctuation">{</span>
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;div&gt;{{ count }}&lt;/div&gt;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+  computed<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">count</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>count
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>每当 <code>store.state.count</code> 变化的时候, 都会重新求取计算属性，并且触发更新相关联的 DOM。</p>
-<p>Vuex 通过 <code>store</code> 选项，提供了一种机制将状态从根组件“注入”到每一个子组件中（需调用 <code>Vue.use(Vuex)</code>）：</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Vue({</span><br><span class="line">  <span class="attr">el</span>: <span class="string">'#app'</span>,</span><br><span class="line">  <span class="comment">// 把 store 对象提供给 “store” 选项，这可以把 store 的实例注入所有的子组件</span></span><br><span class="line">  <span class="comment">//这个写法是es6的简写，相当于store:store</span></span><br><span class="line">  store,</span><br><span class="line">  <span class="attr">components</span>: { Counter },</span><br><span class="line">  <span class="attr">template</span>: <span class="string">`</span></span><br><span class="line"><span class="string">    &lt;div class="app"&gt;</span></span><br><span class="line"><span class="string">      &lt;counter&gt;&lt;/counter&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">  `</span></span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+<p>每当 <code>store.state.count</code> 变化的时候, 都会重新求取计算属性，并且触发更新相关联的 DOM<br>相较于直接使用store.state.count访问，更推荐使用</p>
+<h4 id="mapState-辅助函数"><a href="#mapState-辅助函数" class="headerlink" title="mapState 辅助函数"></a>mapState 辅助函数</h4><p>当一个组件需要获取多个状态的时候，将这些状态都声明为计算属性会有些重复和冗余<br>为了解决这个问题，我们可以使用 <code>mapState</code> 辅助函数帮助我们生成计算属性</p>
+<p>当映射的<strong>计算属性的名称与 state 的子节点名称相同时</strong>，我们也可以给 <code>mapState</code> 传一个字符串数组</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> mapState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vuex'</span>
 
-<p>通过在根实例中注册 <code>store</code> 选项，该 store 实例会注入到根组件下的所有子组件中，且子组件能通过 <code>this.$store</code> 访问到。让我们更新下 <code>Counter</code> 的实现：</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Counter = {</span><br><span class="line">  <span class="attr">template</span>: <span class="string">`&lt;div&gt;{{ count }}&lt;/div&gt;`</span>,</span><br><span class="line">  <span class="attr">computed</span>: {</span><br><span class="line">    count () {</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">this</span>.$store.state.count</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+   computed<span class="token operator">:</span> <span class="token punctuation">{</span> 
+    <span class="token operator">...</span><span class="token function">mapState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'msg'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="mapState-辅助函数"><a href="#mapState-辅助函数" class="headerlink" title="mapState 辅助函数"></a><code>mapState</code> 辅助函数</h3><p>当一个组件需要获取多个状态的时候，将这些状态都声明为计算属性会有些重复和冗余。为了解决这个问题，我们可以使用 <code>mapState</code> 辅助函数帮助我们生成计算属性</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在单独构建的版本中辅助函数为 Vuex.mapState</span></span><br><span class="line"><span class="keyword">import</span> { mapState } <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> {</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="attr">computed</span>: mapState({</span><br><span class="line">    <span class="comment">// 箭头函数可使代码更简练</span></span><br><span class="line">    <span class="attr">count</span>: <span class="function"><span class="params">state</span> =&gt;</span> state.count,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 传字符串参数 'count' 等同于 `state =&gt; state.count`</span></span><br><span class="line">    <span class="attr">countAlias</span>: <span class="string">'count'</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 为了能够使用 `this` 获取局部状态，必须使用常规函数</span></span><br><span class="line">    countPlusLocalState (state) {</span><br><span class="line">      <span class="keyword">return</span> state.count + <span class="built_in">this</span>.localCount</span><br><span class="line">    }</span><br><span class="line">  })</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>在这样操作之后，你就能直接使用<code>msg</code>来访问变量，而不是<code>$store.state.msg</code><br>mapState的原理就是字符串映射，将msg映射成为一个与之相关的函数，并放入一个对象返回</p>
+<p>请看下面的例子：</p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168425eac5d9b41dfa3a4dfbc973cbfb260b26f64c2570caea6d8/0.png"></p>
+<h3 id="Mutations"><a href="#Mutations" class="headerlink" title="Mutations"></a>Mutations</h3><h4 id="同步原则"><a href="#同步原则" class="headerlink" title="同步原则"></a>同步原则</h4><p><code>mutation</code>必须是同步函数，<br>举个例子：</p>
+<blockquote>
+<p>devtool在debug过程中，需要记录mutation的前一状态和后一状态，<br>但是在mutation执行的时候，异步操作还未执行，这就使得状态无法跟踪，<br>但是这种操作在视图层渲染上却是没有问题的——可正是这样，又导致了数据发生了不同步</p>
+</blockquote>
+<p>那么异步的操作要到哪里执行呢？我们后面再提</p>
+<h4 id="mapMutations辅助函数"><a href="#mapMutations辅助函数" class="headerlink" title="mapMutations辅助函数"></a>mapMutations辅助函数</h4><p>和mapState类似，<code>mupMutation</code>作为触发<code>mutation</code>内的函数的第二种方式</p>
+<p>有两种使用方式，具体语法如下：</p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168428975fe52584230d5b567a20aef623c8587475dd95b0529c4/0.png" alt="mapMutations的两种使用方式"></p>
+<h3 id="Actions"><a href="#Actions" class="headerlink" title="Actions"></a>Actions</h3><h4 id="处理异步"><a href="#处理异步" class="headerlink" title="处理异步"></a>处理异步</h4><p>Action是专门用于处理任务的</p>
+<p>如果通过异步操作更改数据，必须通过<code>action</code>，而不能使用<code>mutation</code>，但是在<code>action</code>中还是要通过触发<code>mutation</code>的方式间接变更数据——只有<code>mutation</code>才能修改<code>state</code></p>
+<p>也就是：</p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168428f9883e692954e777e3b7f7196aceca114332ca09039c1bd/0.png" alt="image.png"></p>
+<p>其中的context可以理解为new Vuex.Store实例对象</p>
+<p>这里要注意，actions中的函数不是用commit触发了，而是用dispatch</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token string">'plusAsync'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>当映射的计算属性的名称与 state 的子节点名称相同时，我们也可以给 <code>mapState</code> 传一个字符串数组。</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">computed: mapState([</span><br><span class="line">  <span class="comment">// 映射 this.count 为 store.state.count</span></span><br><span class="line">  <span class="string">'count'</span></span><br><span class="line">])</span><br></pre></td></tr></tbody></table></figure>
+<p>如果需要传参，那么也是和<code>commit</code>一个道理</p>
+<p>如果是同步的内容，那么可以用dispatch或commit，异步只能dispatch</p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684251544e25e0feaa5a24bc949ce2f33777624f2e745776c63f/0.png" alt="Vuex模式示意"></p>
+<h4 id="mapActions辅助函数"><a href="#mapActions辅助函数" class="headerlink" title="mapActions辅助函数"></a>mapActions辅助函数</h4><p>dispatch是第一种方式，而第二种方式是mapActions</p>
+<p>方法跟之前的辅助函数如出一辙，此处不再赘述</p>
+<h3 id="Getters"><a href="#Getters" class="headerlink" title="Getters"></a>Getters</h3><p>Getter是用于对Store中的数据进行加工处理，然后形成新的数据（深拷贝）,并不修改原本的数据</p>
+<blockquote>
+<p>可以认为是 store 的计算属性，就像计算属性一样，getter 的返回值会根据它的依赖<strong>被缓存起来</strong>，且只有当它的依赖值<strong>发生了改变才会被重新计算</strong></p>
+</blockquote>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">computed<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token function">doneTodosCount</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>todos<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">todo</span> <span class="token operator">=&gt;</span> todo<span class="token punctuation">.</span>done<span class="token punctuation">)</span><span class="token punctuation">.</span>length
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<hr>
-<h3 id="Getter"><a href="#Getter" class="headerlink" title="Getter"></a>Getter</h3><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">computed: {</span><br><span class="line">  doneTodosCount () {</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.$store.state.todos.filter(<span class="function"><span class="params">todo</span> =&gt;</span> todo.done).length</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>如果有多个组件需要用到此属性，我们要么复制这个函数，或者抽取到一个共享函数然后在多处导入它——无论哪种方式都不是很理想。</p>
-<p>Vuex 允许我们在 store 中定义“getter”（可以认为是 store 的计算属性）。就像计算属性一样，getter 的返回值会根据它的依赖被缓存起来，且只有当它的依赖值发生了改变才会被重新计算。</p>
-<p>Getter 接受 state 作为其第一个参数：</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> Vuex.Store({</span><br><span class="line">  <span class="attr">state</span>: {</span><br><span class="line">    <span class="attr">todos</span>: [</span><br><span class="line">      { <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">text</span>: <span class="string">'...'</span>, <span class="attr">done</span>: <span class="literal">true</span> },</span><br><span class="line">      { <span class="attr">id</span>: <span class="number">2</span>, <span class="attr">text</span>: <span class="string">'...'</span>, <span class="attr">done</span>: <span class="literal">false</span> }</span><br><span class="line">    ]</span><br><span class="line">  },</span><br><span class="line">  <span class="attr">getters</span>: {</span><br><span class="line">    <span class="attr">doneTodos</span>: <span class="function"><span class="params">state</span> =&gt;</span> {</span><br><span class="line">      <span class="keyword">return</span> state.todos.filter(<span class="function"><span class="params">todo</span> =&gt;</span> todo.done)</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+<p>如果有多个组件需要用到此属性，我们要么复制这个函数，或者抽取到一个共享函数然后在多处导入它——无论哪种方式都不是很理想</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  state<span class="token operator">:</span> <span class="token punctuation">{</span>
+    todos<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span> id<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> text<span class="token operator">:</span> <span class="token string">'...'</span><span class="token punctuation">,</span> done<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> id<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> text<span class="token operator">:</span> <span class="token string">'...'</span><span class="token punctuation">,</span> done<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  getters<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">doneTodos</span><span class="token operator">:</span> <span class="token parameter">state</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> state<span class="token punctuation">.</span>todos<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">todo</span> <span class="token operator">=&gt;</span> todo<span class="token punctuation">.</span>done<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="通过属性访问"><a href="#通过属性访问" class="headerlink" title="通过属性访问"></a>通过属性访问</h4><p>Getter 会暴露为 <code>store.getters</code> 对象，你可以以属性的形式访问这些值：</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">store.getters.doneTodos <span class="comment">// -&gt; [{ id: 1, text: '...', done: true }]</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">store<span class="token punctuation">.</span>getters<span class="token punctuation">.</span>doneTodos <span class="token comment">// -&gt; [{ id: 1, text: '...', done: true }]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>Getter 也可以接受其他 getter 作为第二个参数：</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">getters: {</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="attr">doneTodosCount</span>: <span class="function">(<span class="params">state, getters</span>) =&gt;</span> {</span><br><span class="line">    <span class="keyword">return</span> getters.doneTodos.length</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<p><strong>注意，getter 在通过属性访问时是作为 Vue 的响应式系统的一部分缓存其中的。</strong></p>
+
+<p>注意，getter 在<strong>通过属性访问时</strong>是作为 Vue 的响应式系统的一部分<strong>缓存</strong>其中的。</p>
 <h4 id="通过方法访问"><a href="#通过方法访问" class="headerlink" title="通过方法访问"></a>通过方法访问</h4><p>你也可以通过让 getter 返回一个函数，来实现给 getter 传参。在你对 store 里的数组进行查询时非常有用。</p>
 <p>（这个方法真的是震撼我一年）</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">getters: {</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="attr">getTodoById</span>: <span class="function">(<span class="params">state</span>) =&gt;</span> <span class="function">(<span class="params">id</span>) =&gt;</span> {</span><br><span class="line">    <span class="keyword">return</span> state.todos.find(<span class="function"><span class="params">todo</span> =&gt;</span> todo.id === id)</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line">store.getters.getTodoById(<span class="number">2</span>) <span class="comment">// -&gt; { id: 2, text: '...', done: false }</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">getters<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token function-variable function">getTodoById</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> state<span class="token punctuation">.</span>todos<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token parameter">todo</span> <span class="token operator">=&gt;</span> todo<span class="token punctuation">.</span>id <span class="token operator">===</span> id<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+store<span class="token punctuation">.</span>getters<span class="token punctuation">.</span><span class="token function">getTodoById</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token comment">// -&gt; { id: 2, text: '...', done: false }</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>注意，getter 在通过方法访问时，每次都会去进行调用，而不会缓存结果。</strong></p>
-<h4 id="mapGetters辅助函数"><a href="#mapGetters辅助函数" class="headerlink" title="mapGetters辅助函数"></a>mapGetters辅助函数</h4><p><code>mapGetters</code> 辅助函数仅仅是将 store 中的 getter 映射到局部计算属性：</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { mapGetters } <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> {</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="attr">computed</span>: {</span><br><span class="line">  <span class="comment">// 使用对象展开运算符将 getter 混入 computed 对象中</span></span><br><span class="line">    ...mapGetters([</span><br><span class="line">      <span class="string">'doneTodosCount'</span>,</span><br><span class="line">      <span class="string">'anotherGetter'</span>,</span><br><span class="line">      <span class="comment">// ...</span></span><br><span class="line">    ])</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="mapGetters辅助函数"><a href="#mapGetters辅助函数" class="headerlink" title="mapGetters辅助函数"></a>mapGetters辅助函数</h4><p>依然是那么回事，只不过说<code>mapGetters</code>一般只能放到computed中</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> mapGetters <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vuex'</span>
 
-<h3 id="Mutations"><a href="#Mutations" class="headerlink" title="Mutations"></a>Mutations</h3><p>（待续）</p>
-<h3 id="Actions"><a href="#Actions" class="headerlink" title="Actions"></a>Actions</h3><h3 id="Modules"><a href="#Modules" class="headerlink" title="Modules"></a>Modules</h3>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  computed<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 使用对象展开运算符将 getter 混入 computed 对象中</span>
+    <span class="token operator">...</span><span class="token function">mapGetters</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+      <span class="token string">'doneTodosCount'</span><span class="token punctuation">,</span>
+      <span class="token string">'anotherGetter'</span><span class="token punctuation">,</span>
+      <span class="token comment">// ...</span>
+    <span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="Modules"><a href="#Modules" class="headerlink" title="Modules"></a>Modules</h3><p>由于是Vuex是单一状态树，所以当状态过多的时候，store对象就会相当臃肿，为了解决这种问题，就提出了将store分割成多个模块的思想</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> moduleA <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  mutations<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  actions<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  getters<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> moduleB <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">state</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  mutations<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  actions<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  modules<span class="token operator">:</span> <span class="token punctuation">{</span>
+    a<span class="token operator">:</span> moduleA<span class="token punctuation">,</span>
+    b<span class="token operator">:</span> moduleB
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>a <span class="token comment">// -&gt; moduleA 的状态</span>
+store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>b <span class="token comment">// -&gt; moduleB 的状态</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>基本使用就是向上面这样，更多深入的地方以后再进行学习</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote>
+<p>Junting的博文：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/c6356958ca52">https://www.jianshu.com/p/c6356958ca52</a><br>Vuex官方文档：<a target="_blank" rel="noopener" href="https://vuex.vuejs.org/zh/guide/mutations.htm">https://vuex.vuejs.org/zh/guide/mutations.htm</a><br>Vuex从入门到实战：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1h7411N7bg">https://www.bilibili.com/video/BV1h7411N7bg</a></p>
+</blockquote>
+
                 
             </div>
             <hr/>
