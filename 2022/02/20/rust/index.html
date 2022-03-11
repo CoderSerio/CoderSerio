@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="EventLoop中同步异步和微宏任务, 前端">
-    <meta name="description" content="时间轮询机制你真的了解吗？">
+    <meta name="keywords" content="Rust（待更新）, 前端">
+    <meta name="description" content="C++就是垃圾——Linus">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>EventLoop中同步异步和微宏任务 | 碳苯</title>
+    <title>Rust（待更新） | 碳苯</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -324,12 +324,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/36.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">EventLoop中同步异步和微宏任务</h1>
+                    <h1 class="description center-align post-title">Rust（待更新）</h1>
                 </div>
             </div>
         </div>
@@ -449,8 +449,8 @@
                                 <span class="chip bg-color">前端</span>
                             </a>
                         
-                            <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
-                                <span class="chip bg-color">操作系统</span>
+                            <a href="/tags/%E5%90%8E%E7%AB%AF/">
+                                <span class="chip bg-color">后端</span>
                             </a>
                         
                     </div>
@@ -474,21 +474,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-12-07
+                    2022-02-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-07
+                    2022-03-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    636
+                    2.1k
                 </div>
                 
 
@@ -513,32 +513,300 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="浏览器构成概述"><a href="#浏览器构成概述" class="headerlink" title="浏览器构成概述"></a>浏览器构成概述</h2><p>浏览器是多线程的<br>主要包括以下六个线程：</p>
-<blockquote>
-<p><strong>1.GUI渲染线程（DOM/BOM）<br>2.JS引擎线程（web worker）<br>3.浏览器事件线程 （onclick）</strong><br>4.定时器线程<br>5.Http网络请求线程<br>6.EventLoop线程</p>
+                <h2 id="序章"><a href="#序章" class="headerlink" title="序章"></a>序章</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>发生了很多我意料之外的事情，我也因此感慨万分</p>
+<p>虽然其中的道理我早有耳闻，但是切身体会后内心还是会泛起伤感</p>
+<p>在此之后我不免对<strong>开源</strong>产生了怀疑——我为什么要开源？</p>
+<p>这是我之后需要思考的问题，而现在则是认真地学习Rust</p>
 </blockquote>
-<p><strong>其中,123是常驻线程，始终存在；而456是在有需求是才会存在的线程</strong></p>
-<h2 id="JS执行"><a href="#JS执行" class="headerlink" title="JS执行"></a>JS执行</h2><p>单线程异步（不考虑web worker）。<br>从前到后一行一行顺序执行，一行报错则就此终止执行</p>
-<h2 id="Event-Loop"><a href="#Event-Loop" class="headerlink" title="Event Loop"></a>Event Loop</h2><h3 id="构成"><a href="#构成" class="headerlink" title="构成"></a>构成</h3><p>由<strong>调用栈</strong>和<strong>任务队列</strong>组成,<br>而消息队列又分为<strong>微任务队列</strong>和<strong>宏任务队列</strong></p>
-<h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><p>遇到同步任务，直接将其放入<strong>调用栈</strong>中执行<br>遇到异步任务，先托管到对应的<strong>线程</strong>，时机到了再放入<strong>任务队列</strong>，再排队进入<strong>调用栈</strong><br><img src="https://img-blog.csdnimg.cn/6e5e108e23574e65b0c6214187176af6.png" alt="事件轮询示意图"></p>
-<p>即<strong>先同后异</strong><br>另外，需要注意，<strong>定时器的时间参数不能小于4ms</strong>，这一点在开发人工智能反作弊系统的时候也体会过</p>
-<h3 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h3><p>回顾一下Promise的三种状态：pending resolved rejected<br>即初始为pending，then正常执行返回resolved，报错则rejected</p>
-<p>pending状态下是同步的，调用then方法（或者resolve、reject函数）的部分为异步</p>
-<h3 id="async和await"><a href="#async和await" class="headerlink" title="async和await"></a>async和await</h3><p>本质上是Promise的语法糖<br>async修饰的函数就是以同步函数的形式表现异步函数的操作<br>但是如果async约束的函数里面没有用到await，那么<strong>async不会产生任何影响，其修饰的函数依旧是同步</strong><br>可以转化为Promise的形式，比如</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">async1</span>(<span class="params"></span>) </span>{</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="number">1</span>)</span><br><span class="line">			<span class="keyword">await</span> async2()</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="number">2</span>)</span><br><span class="line">		}</span><br><span class="line">		<span class="function"><span class="keyword">function</span> <span class="title">async2</span>(<span class="params"></span>)</span>{</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="number">3</span>)</span><br><span class="line">		}</span><br><span class="line">		async1()</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><blockquote>
+<p><strong>2022/02/20</strong><br>这次准备对官方文档做摘要了</p>
+</blockquote>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="发展"><a href="#发展" class="headerlink" title="发展"></a>发展</h3><h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><p>Rust 语言为了高并发安全而做的设计</p>
+<h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><h3 id="变量和常量"><a href="#变量和常量" class="headerlink" title="变量和常量"></a>变量和常量</h3><p>按照做摘要的原则，我会过滤掉那些过于简单和相对熟悉的内容，但是Rust的变量实在是太特别了</p>
+<h4 id="不可变变量"><a href="#不可变变量" class="headerlink" title="不可变变量"></a>不可变变量</h4><p>Rust是强数据类型语言，但是能够做自动类型判断，变量声明语法如下：</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">async1</span>(<span class="params"></span>) </span>{</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="number">1</span>)</span><br><span class="line">			<span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> {</span><br><span class="line">				<span class="built_in">console</span>.log(<span class="number">3</span>)</span><br><span class="line">				resolve()</span><br><span class="line">			}).then(<span class="function">(<span class="params">res</span>) =&gt;</span> <span class="built_in">console</span>.log(<span class="number">2</span>))</span><br><span class="line">		}</span><br><span class="line">		async1()</span><br></pre></td></tr></tbody></table></figure>
-<p>上述两段代码等价，结果都是1 3 2</p>
-<h3 id="宏微任务"><a href="#宏微任务" class="headerlink" title="宏微任务"></a>宏微任务</h3><p>先微后宏和先微后宏只要解释得当都算是对的，<br>一般我们说是先微后宏，<br>但是如果硬要把主线程代码看成宏任务，那就是先执行宏<br><strong>微任务Micro-task</strong></p>
+<p>再执行上述语句后，下面这些代码将会<strong>报错</strong></p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust">a <span class="token operator">=</span> <span class="token string">"abc"</span><span class="token punctuation">;</span> <span class="token comment">// 类型发生了转变</span>
+a <span class="token operator">=</span> <span class="token number">4.56</span><span class="token punctuation">;</span>  <span class="token comment">// 精度发生了损失</span>
+a <span class="token operator">=</span> <span class="token number">456</span><span class="token punctuation">;</span>   <span class="token comment">// Rust的奇妙特性</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>重点解释第三种情况——要知道a是一个变量，要是不能改变那不就是常量了吗？<br> a 的值不可变。但这不意味着 a 不是”变量”（英文中的 variable），官方文档称 a 这种变量为**”不可变变量”**（就离谱）</p>
 <blockquote>
-<p>主线程代码（script中的代码）<br>setTimeOut<br>setInterval<br>setImmediate<br>requestAnimationFrame<br>I/O流<br>UI render<br>AJAX</p>
+<p>这就牵扯到了 Rust 语言为了高并发安全而做的设计：在语言层面尽量少的让变量的值可以改变</p>
 </blockquote>
-<p><strong>宏任务Macro-task</strong></p>
+<p>但是以下代码是合法的</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">456</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>这样相当于“重新绑定”了，这也是不可变量和常量的区别</p>
+<p>当然，”重新绑定”只能改变值而不能改变数据类型</p>
 <blockquote>
-<p>process.nextTick<br>Promise（严格来说是new Promise().then()）<br>Async/Await（实际上和Promise一样）<br>MutationObserver（H5新特性）（这什么鬼啊）</p>
+<p>这里的”重新绑定”严格来说是指的<strong>重影</strong>，这个概念后面再提</p>
 </blockquote>
-<p><strong>示例图</strong><br>这里把主线程代码看做宏任务，所以是先宏后微的<br>但是记住，我们一般说是先微后宏<br><img src="https://img-blog.csdnimg.cn/075ffaf73b8b47bea6a9126ae7b772e1.png" alt="宏微任务执行流程示意图"><br>当微任务和宏任务多层嵌套时，大概过程如下：<br><img src="https://img-blog.csdnimg.cn/b648123e3587452da79503fbe96abff8.png" alt="宏微任务嵌套"></p>
-<h3 id="完整的Event-Loop"><a href="#完整的Event-Loop" class="headerlink" title="完整的Event Loop"></a>完整的Event Loop</h3><p><img src="https://img-blog.csdnimg.cn/60a72ac05ece48c8aa764f44724ca2e3.png" alt="Event Loop完整流程"><br>总结就是<br>先同后异，先微后宏</p>
+<h4 id="可变变量"><a href="#可变变量" class="headerlink" title="可变变量"></a>可变变量</h4><p>当然，上面这种机制在很多情况下会比较难受，所以还是需要我们熟悉的正常变量</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token keyword">let</span> <span class="token keyword">mut</span> a <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token number">456</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h4 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h4><p>语法如下:</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span> <span class="token comment">// 有符号三十二位</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>只讨论较为特殊的</p>
+<p>虽然能自动判别数据类型，但是依旧是可以指定数据类型，语法类似TS</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token keyword">let</span> a<span class="token punctuation">:</span> <span class="token keyword">u64</span> <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>	<span class="token comment">// 无符号64位</span>
+<span class="token keyword">const</span> a<span class="token punctuation">:</span> <span class="token keyword">i32</span> <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>  <span class="token comment">// 有符号32位</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>如果不指定类型，那么对于数字声明来说默认是有符号32位</p>
+<h4 id="整数型"><a href="#整数型" class="headerlink" title="整数型"></a>整数型</h4><blockquote>
+<p>Integer，简称整形，按照比特长度和有无负号分类</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">位长度</th>
+<th align="left">有符号</th>
+<th align="left">无符号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">8-bit</td>
+<td align="left">i8</td>
+<td align="left">u8</td>
+</tr>
+<tr>
+<td align="left">16-bit</td>
+<td align="left">i16</td>
+<td align="left">u16</td>
+</tr>
+<tr>
+<td align="left">32-bit</td>
+<td align="left">i32</td>
+<td align="left">u32</td>
+</tr>
+<tr>
+<td align="left">64-bit</td>
+<td align="left">i64</td>
+<td align="left">u64</td>
+</tr>
+<tr>
+<td align="left">128-bit</td>
+<td align="left">i128</td>
+<td align="left">u128</td>
+</tr>
+<tr>
+<td align="left">arch</td>
+<td align="left">isize</td>
+<td align="left">usize</td>
+</tr>
+</tbody></table>
+<p>isize 和 usize 两种整数类型是用来衡量数据大小的，它们的位长度取决于所运行的目标平台，如果是 32 位架构的处理器将使用 32 位位长度整型。</p>
+<table>
+<thead>
+<tr>
+<th align="left">进制</th>
+<th align="left">例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">十进制</td>
+<td align="left">98_222</td>
+</tr>
+<tr>
+<td align="left">十六进制</td>
+<td align="left">0xff</td>
+</tr>
+<tr>
+<td align="left">八进制</td>
+<td align="left">0o77</td>
+</tr>
+<tr>
+<td align="left">二进制</td>
+<td align="left">0b1111_0000</td>
+</tr>
+<tr>
+<td align="left">字节(只能表示 u8 型)</td>
+<td align="left">b’A’</td>
+</tr>
+</tbody></table>
+<h4 id="浮点数型"><a href="#浮点数型" class="headerlink" title="浮点数型"></a>浮点数型</h4><blockquote>
+<p>Floating - Point，</p>
+<p>只需要记住有32位和64位，默认是64位即可</p>
+</blockquote>
+ <pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token keyword">fn</span> <span class="token function-definition function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">2.0</span><span class="token punctuation">;</span> <span class="token comment">// f64</span>
+    <span class="token keyword">let</span> y<span class="token punctuation">:</span> <span class="token keyword">f32</span> <span class="token operator">=</span> <span class="token number">3.0</span><span class="token punctuation">;</span> <span class="token comment">// f32</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="字符型"><a href="#字符型" class="headerlink" title="字符型"></a>字符型</h4><blockquote>
+<p>char，但是与C/C++不同的是，rust的char是4个字节，代表Unicode标量值，这意味着中文日文甚至是emoji表情符号在rust中都是有效的字符</p>
+<p>当然，有时候我们对字符的认识可能会和rust不一致，并且由于现行的中文编码有GBK和UTF-8两套，所以中文仍可能会出现乱码</p>
+<p>为了尽可能规避乱码，UTF-8字符尽可能使用字符串存储</p>
+</blockquote>
+<h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><p>大体上和JS类似，主要是看一段示例：</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token keyword">let</span> b <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"January"</span><span class="token punctuation">,</span> <span class="token string">"February"</span><span class="token punctuation">,</span> <span class="token string">"March"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">// b 是一个长度为 3 的字符串数组</span>
+
+<span class="token keyword">let</span> c<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token keyword">i32</span><span class="token punctuation">;</span> <span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">// c 是一个长度为 5 的 i32 数组</span>
+
+<span class="token keyword">let</span> d <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">;</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">// 等同于 let d = [3, 3, 3, 3, 3];</span>
+
+<span class="token keyword">let</span> first <span class="token operator">=</span> a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> second <span class="token operator">=</span> a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">// 数组访问</span>
+
+a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span> <span class="token comment">// 错误：数组 a 不可变</span>
+<span class="token keyword">let</span> <span class="token keyword">mut</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span> <span class="token comment">// 正确</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="复合类型"><a href="#复合类型" class="headerlink" title="复合类型"></a>复合类型</h4><p>元组用一对()包括一组数据，可以包含不同类型的数据</p>
+<p>这里和ES6中的解构赋值类似之处</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token keyword">let</span> tup<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token keyword">i32</span><span class="token punctuation">,</span> <span class="token keyword">f64</span><span class="token punctuation">,</span> <span class="token keyword">u8</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">,</span> <span class="token number">6.4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// tup.0 等于 500</span>
+<span class="token comment">// tup.1 等于 6.4</span>
+<span class="token comment">// tup.2 等于 1</span>
+<span class="token keyword">let</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> z<span class="token punctuation">)</span> <span class="token operator">=</span> tup<span class="token punctuation">;</span>
+<span class="token comment">// y 等于 6.4</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+
+
+<h3 id="重影"><a href="#重影" class="headerlink" title="重影"></a>重影</h3><p>重影的概念与其他面向对象语言里的”重写”（Override）或”重载”（Overload）是不一样的。重影就是刚才讲述的所谓”重新绑定”，之所以加引号就是为了在没有介绍这个概念的时候代替一下概念</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token keyword">fn</span> <span class="token function-definition function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> x <span class="token operator">=</span> x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> x <span class="token operator">=</span> x <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">"The value of x is: {}"</span><span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>运行结果</p>
+<blockquote>
+<p>The value of x is: 12</p>
+</blockquote>
+<p>重影是指用<strong>同一个名字重新代表另一个变量实体</strong>，其类型、可变属性和值都可以变化。但可变变量赋值<strong>仅能发生值的变化</strong>，数据类型是不允许变化的！</p>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>rust有常规的两种注释形式，还有非常特殊的第三种注释：</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token comment">/// Adds one to the number given.</span>
+<span class="token comment">///</span>
+<span class="token comment">/// # Examples</span>
+<span class="token comment">///</span>
+<span class="token comment">/// ```</span>
+<span class="token comment">/// let x = add(1, 2);</span>
+<span class="token comment">///</span>
+<span class="token comment">/// ```</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这样的注释支持markdown语法，是作为说明文档注释的开头</p>
+<p>能达到下面这样的效果，非常惊艳！</p>
+<img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842c2cd079d8cfed1816b8eb70cf598cc998dad22a79e917e7e/0.png" style="zoom:150%;">
+
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h4 id="主函数"><a href="#主函数" class="headerlink" title="主函数"></a>主函数</h4><p>和C/C++类似，rust需要一个主函数，其基本格式如下：</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token keyword">fn</span> <span class="token function-definition function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">"Hello World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>没有参数，也没有返回值！</strong></p>
+<h4 id="自定义函数"><a href="#自定义函数" class="headerlink" title="自定义函数"></a>自定义函数</h4><p><strong>基本使用</strong></p>
+<p>和JS一样，函数声明自动提升，所以不必在意调用和声明的先后顺序</p>
+<p>但是需要注意，rust中声明函数需要指定类型，语法类似TS</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token keyword">fn</span> <span class="token function-definition function">another_function</span><span class="token punctuation">(</span>x<span class="token punctuation">:</span> <span class="token keyword">i32</span><span class="token punctuation">,</span> y<span class="token punctuation">:</span> <span class="token keyword">i32</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">"x 的值为 : {}"</span><span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">"y 的值为 : {}"</span><span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p><strong>函数体表达式</strong></p>
+<p>大概是个语法糖</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token keyword">fn</span> <span class="token function-definition function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">let</span> y <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+        x <span class="token operator">+</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">"x 的值为 : {}"</span><span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">"y 的值为 : {}"</span><span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>最后输出的结果是：</p>
+<blockquote>
+<p>x 的值为 : 5<br>y 的值为 : 4</p>
+</blockquote>
+<p>没错，不仅没有输出花括号，而且y的值是4</p>
+<blockquote>
+<p>没有输出花括号是因为rust中的花括号可以理解为c中的%d%c%s等等</p>
+</blockquote>
+<p>可以将函数的形式简写成上述代码中的那样，其中<strong>最后一句必须是表达式 且 不加分号</strong>，作为返回值（最后一行加上分号则会变成一条语句）</p>
+<blockquote>
+<p> 而且如果要使用这种简写，那么<strong>一定要放到最后一行</strong>！！</p>
+</blockquote>
+<p>当然，return是随时都可以使用</p>
+<h4 id="返回值类型声明"><a href="#返回值类型声明" class="headerlink" title="返回值类型声明"></a>返回值类型声明</h4><p>如果要限定返回值的类型，那么就可以使用如下形式：</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token keyword">fn</span> <span class="token function-definition function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">:</span> <span class="token keyword">i32</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span> <span class="token keyword">i32</span><span class="token punctuation">)</span> <span class="token punctuation">-&gt;</span> <span class="token keyword">i32</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>在-&gt;后加上返回值类型即可声明</p>
+<h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><p>如果是耳熟能详的内容，那我绝不会在这里大费周章</p>
+<h4 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h4><p>和python类似，这里不再需要括号（但是依然可以写，因为括号可以看做表达式的一部分）</p>
+<p>而且条件表达式必须是bool类型</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token keyword">if</span> a <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token punctuation">{</span>
+    b <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>  
+<span class="token keyword">else</span> <span class="token keyword">if</span> a <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token punctuation">{</span>
+    b <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>  
+<span class="token keyword">else</span> <span class="token punctuation">{</span>
+    b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>由于rust是注重安全的，所以非0即true这种自动类型转换时不被允许的</p>
+<h4 id="结合函数体表达式"><a href="#结合函数体表达式" class="headerlink" title="结合函数体表达式"></a>结合函数体表达式</h4><p>这样的效果和三目运算差不多</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token keyword">let</span> number <span class="token operator">=</span> <span class="token keyword">if</span> a <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token punctuation">{</span> <span class="token number">1</span> <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>两个函数体表达式的类型必须一样！且必须有一个 else 及其后的表达式块</p>
+<p>（因为赋值操作的等号右边必须要有一个返回值）</p>
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><h4 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h4><blockquote>
+<p> while只提两点：</p>
+<ol>
+<li>不需要括号</li>
+<li>暂时没有do-while，do作为了保留字</li>
+</ol>
+</blockquote>
+<h4 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h4><p>没有像C那样的三元语句控制循环，而是用迭代器的形式遍历</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token keyword">for</span> i <span class="token keyword">in</span> a<span class="token punctuation">.</span><span class="token function">iter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">"值为 : {}"</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>当然还可以通过下标来访问:</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token keyword">fn</span> <span class="token function-definition function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token number">0</span><span class="token punctuation">..</span><span class="token number">5</span> <span class="token punctuation">{</span>
+        <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">"a[{}] = {}"</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>看上去有点粗陋就是了额</p>
+<h4 id="loop循环"><a href="#loop循环" class="headerlink" title="loop循环"></a>loop循环</h4><p>这个相当于加强版的while(true){}</p>
+<pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token keyword">let</span> s <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token char string">'R'</span><span class="token punctuation">,</span> <span class="token char string">'U'</span><span class="token punctuation">,</span> <span class="token char string">'N'</span><span class="token punctuation">,</span> <span class="token char string">'O'</span><span class="token punctuation">,</span> <span class="token char string">'O'</span><span class="token punctuation">,</span> <span class="token char string">'B'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> <span class="token keyword">mut</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> location <span class="token operator">=</span> <span class="token keyword">loop</span> <span class="token punctuation">{</span> <span class="token comment">// 没错loop循环有一个类似返回值的操作</span>
+    <span class="token keyword">let</span> ch <span class="token operator">=</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> ch <span class="token operator">==</span> <span class="token char string">'O'</span> <span class="token punctuation">{</span>
+        <span class="token keyword">break</span> i<span class="token punctuation">;</span>	<span class="token comment">// 可以通过break做到类似返回值的效果</span>
+    <span class="token punctuation">}</span>
+    i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -565,7 +833,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://serio.gitee.io/2021/12/07/eventloop/">https://serio.gitee.io/2021/12/07/eventloop/</a>
+                    <a href="https://serio.gitee.io/2022/02/20/rust/">https://serio.gitee.io/2022/02/20/rust/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -607,8 +875,8 @@
                                     <span class="chip bg-color">前端</span>
                                 </a>
                             
-                                <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
-                                    <span class="chip bg-color">操作系统</span>
+                                <a href="/tags/%E5%90%8E%E7%AB%AF/">
+                                    <span class="chip bg-color">后端</span>
                                 </a>
                             
                         </div>
@@ -806,30 +1074,30 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/12/09/typescript/">
+                <a href="/2022/02/22/algorithm-kmp/">
                     <div class="card-image">
                         
-                        <img src="/medias/postimages/12.png" class="responsive-img" alt="TypeScript">
+                        <img src="/medias/postimages/17.png" class="responsive-img" alt="KMP算法">
                         
-                        <span class="card-title">TypeScript</span>
+                        <span class="card-title">KMP算法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这将是成神的飞升
+                            Kill Most People
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-09
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-22
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web/" class="post-category">
-                                    web
+                            <a href="/categories/%E4%B8%93%E4%B8%9A%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    专业基础
                                 </a>
                             
                             
@@ -839,8 +1107,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                        <span class="chip bg-color">前端</span>
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">数据结构和算法</span>
                     </a>
                     
                 </div>
@@ -854,30 +1122,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/12/06/html-css/">
+                <a href="/2022/02/04/git/">
                     <div class="card-image">
                         
-                        <img src="/medias/postimages/0.jpg" class="responsive-img" alt="HTML&amp;CSS">
+                        <img src="/medias/postimages/31.jpg" class="responsive-img" alt="Git">
                         
-                        <span class="card-title">HTML&amp;CSS</span>
+                        <span class="card-title">Git</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            现在——踏上前端之路！
+                            不会Git都不好意思说是前端仔
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-04
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web/" class="post-category">
-                                    web
+                            <a href="/categories/%E4%B8%93%E4%B8%9A%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    专业基础
                                 </a>
                             
                             
@@ -887,8 +1155,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                        <span class="chip bg-color">前端</span>
+                    <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">操作系统</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+                        <span class="chip bg-color">计算机网络</span>
                     </a>
                     
                 </div>
