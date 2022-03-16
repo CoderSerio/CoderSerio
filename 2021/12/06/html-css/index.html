@@ -477,14 +477,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-11
+                    2022-03-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    12.7k
+                    13.3k
                 </div>
                 
 
@@ -1835,6 +1835,53 @@ div &gt; <span class="token property">span</span><span class="token punctuation"
 <h4 id="其他预处理器"><a href="#其他预处理器" class="headerlink" title="其他预处理器"></a>其他预处理器</h4><blockquote>
 <p>比如Turbine、Swithch CSS、CSS Cacheer、DT CSS等</p>
 </blockquote>
+<h2 id="移动端适配"><a href="#移动端适配" class="headerlink" title="移动端适配"></a>移动端适配</h2><h3 id="前置概念"><a href="#前置概念" class="headerlink" title="前置概念"></a>前置概念</h3><blockquote>
+<p> 众所周知，物理像素和CSS像素（px）是两码事<br><code>物理像素</code>是真实存在且大小固定的一个物理发光单位，而<code>CSS像素</code>是与<code>物理像素</code>存在某种比例关系的值</p>
+</blockquote>
+<p>一般而言，PC端的1px就是1物理像素，而在移动端上则可能不符合这一比例，具体情况如下：</p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842a14fd9b0c7299f45e7e40a711e6e730367f7450c667d072f/0.png" alt="移动端dpr表"></p>
+<p>解释一下，比如这里的dpr==2.0就意味着pc端的1px在该移动端设备上将显示为2px的效果</p>
+<p>那么，为什么移动端要做这样的设定呢？</p>
+<h3 id="Retina显示技术"><a href="#Retina显示技术" class="headerlink" title="Retina显示技术"></a>Retina显示技术</h3><p>即 <strong>视网膜屏幕显示技术</strong>，可以把更多的物理像素点压缩到一块屏幕里面，<br><strong>从而达到更高的分辨率，并提高屏幕显示的细腻程度</strong></p>
+<blockquote>
+<p>据说这个技术是摩托罗拉公司开发的，没错就是诺基亚那个公司！<br>我的妈呀，想想诺基亚那个分辨率，里面可能有这个技术简直是惊为天人！</p>
+</blockquote>
+<p>另外，为了开发者调试，浏览器会做一些处理工作<br>比如模拟dpr==2的移动设备，参数上是说750 * 1800，<br>那么浏览器模拟时会自动将视口调整为375 * 900</p>
+<h3 id="移动端开发选择"><a href="#移动端开发选择" class="headerlink" title="移动端开发选择"></a>移动端开发选择</h3><p>一般而言有两种，一种是原页面做兼容，另一种是单独写个页面</p>
+<p><strong>响应式布局兼容原页面</strong></p>
+<blockquote>
+<p>% vw vh rem em 用起来，meta视口改一下，布局flex grid——<br>没有UI大佬的话，<br>差不多能用就行了，别要求太高 </p>
+</blockquote>
+<p><strong>单独写页面</strong></p>
+<blockquote>
+<p>这是国内市场的主流形式，配合navigator对象做一下设备判断选择性跳转页面</p>
+</blockquote>
+<p>另外，这里补充一下媒体查询（虽然感觉这个东西有点过时，但是还是说一下基本语法）</p>
+<h3 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h3><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> [mediatype] <span class="token keyword">and</span> | <span class="token keyword">not</span> | <span class="token keyword">only</span> <span class="token punctuation">(</span>media feature<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+<span class="token comment">/*
+1. mediatype 是媒体类型
+2. and not only 是逻辑谓词，only是指定某个特定的媒体类型，可以省略
+3. media feature 媒体特性， 必须有小括号
+*/</span>
+<span class="token atrule"><span class="token rule">@media</span> screen <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 539px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">body</span> <span class="token punctuation">{</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span>blue<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/*
+	上面这个就表示 小于540px的屏幕
+*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>当然，如果全都挤到media里面看着挺臃肿的，所以这里再link引入css的也可以进行媒体查询</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 语法如下 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">media</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mediatype and | not | only (media feature)<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>.../style.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="移动端浏览器内核"><a href="#移动端浏览器内核" class="headerlink" title="移动端浏览器内核"></a>移动端浏览器内核</h3><p>一般来说是webkit，所以H5C3还是支持的，如果要考虑一些较新的特性的兼容性的话，<br>可以试着加上私有前缀webkit兼容</p>
+<p>另外，浏览器也有一些特殊的内容，比如touch事件这些，不过此处不再赘述</p>
 
                 
             </div>
