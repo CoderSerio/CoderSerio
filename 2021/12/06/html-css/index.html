@@ -477,14 +477,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-16
+                    2022-03-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    13.3k
+                    13.8k
                 </div>
                 
 
@@ -593,6 +593,10 @@
 <p>Gecko(1997)-&gt;Trident(1997)-&gt;KHTML(1998)-&gt;WebKit(2001)-&gt;Presto(2003)-&gt;Blink(2013)-&gt;Edge(2014)-&gt;Gonna(2016)</p>
 </blockquote>
 <p>上述六个浏览器中，除了IE的兼容性相对拉胯之外，其他都还行。<br>个人觉得入门至少要在Chrome、FireFox、Edge中三选一</p>
+<p>另外，部分属性需要加上浏览器的<strong>私有前缀</strong>以兼容老版本的浏览器，对应关系如下：</p>
+<blockquote>
+<p>-moz- firefox系列<br>-ms- ie系列<br>-webkit- safari、chrome系列<br>-o- opera系列</p>
+</blockquote>
 <h3 id="资料参考（待补充）"><a href="#资料参考（待补充）" class="headerlink" title="资料参考（待补充）"></a>资料参考（待补充）</h3><blockquote>
 <p>Zeal 自行下载</p>
 <p>W3CSchool 自行搜索</p>
@@ -1720,9 +1724,34 @@ div &gt; <span class="token property">span</span><span class="token punctuation"
 <p>太强了，这哪里是江宇老弟啊，这简直是江宇大帝啊！<br>竟然初学前端就注意到了这种问题，强至于此，实乃天人也！</p>
 </blockquote>
 <p>另外，还有一个有趣的现象就是，<strong>初始包含块的背景颜色</strong>是从html由上往下找的，如果html有颜色那么则采用html的颜色；没有则采用body的颜色——这是因为浏览器机制产生的现象</p>
-<h3 id="字体（待补充）"><a href="#字体（待补充）" class="headerlink" title="字体（待补充）"></a>字体（待补充）</h3><h4 id="字体族"><a href="#字体族" class="headerlink" title="字体族"></a>字体族</h4><h4 id="图标字体"><a href="#图标字体" class="headerlink" title="图标字体"></a>图标字体</h4><h4 id="位置"><a href="#位置" class="headerlink" title="位置"></a>位置</h4><h4 id="其他文本样式"><a href="#其他文本样式" class="headerlink" title="其他文本样式"></a>其他文本样式</h4><h3 id="CSS动画（待补充）"><a href="#CSS动画（待补充）" class="headerlink" title="CSS动画（待补充）"></a>CSS动画（待补充）</h3><blockquote>
+<h3 id="字体（待补充）"><a href="#字体（待补充）" class="headerlink" title="字体（待补充）"></a>字体（待补充）</h3><h4 id="字体族"><a href="#字体族" class="headerlink" title="字体族"></a>字体族</h4><h4 id="图标字体"><a href="#图标字体" class="headerlink" title="图标字体"></a>图标字体</h4><h4 id="位置"><a href="#位置" class="headerlink" title="位置"></a>位置</h4><h4 id="其他文本样式"><a href="#其他文本样式" class="headerlink" title="其他文本样式"></a>其他文本样式</h4><h3 id="CSS动画（待补充）"><a href="#CSS动画（待补充）" class="headerlink" title="CSS动画（待补充）"></a>CSS动画（待补充）</h3><h4 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h4><blockquote>
 <p>前端实现小动画效果一般是三种形式：<br>gif  css js </p>
 <p>（曾经也是前端三剑客之一的flash已经不在考虑范围之内）</p>
+</blockquote>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842d194cf4e14044856cc91de633456383c1ea6b920a6ef3913/0.png" alt="常用属性"></p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842d194cf4e14044856bb79fbddea37d6cf98f677e25989d972/0.png" alt="动画速度"></p>
+<p>这个所谓的步长，实际上就是补帧，比如填个10，就是说10帧完成</p>
+<p>而linear就是匀速，ease是慢速</p>
+<h4 id="3D转换"><a href="#3D转换" class="headerlink" title="3D转换"></a>3D转换</h4><p><code>转换</code>实际上就是说的transform属性<br>关于transform记住以下几点就好了:</p>
+<blockquote>
+<ol>
+<li>transform可以接多个属性值，而且一般把translate系列放前面</li>
+<li>translateZ的参数一遍以px为单位，几乎不会像XY一样用百分比（因为大部分父级不能作为z轴上的参考</li>
+<li>注意，translate没有第三个参数，应该使用translate3d来做三个方向上的偏移</li>
+<li>而rotate3d则是四个参数，前三个是矢量法自定义转轴，第四个是旋转的角度</li>
+<li>z轴的正方向是垂直向上</li>
+</ol>
+</blockquote>
+<p>至于3D，具有  <strong>渊 博 美 术 知 识</strong>  的我还是很有话说的</p>
+<blockquote>
+<p>指学过一个月的素描…</p>
+</blockquote>
+<p>而要做3D效果就不能不知道<strong>透视（perspective，也可以理解为视距）</strong>，也可以理解为<strong>3D图形在2D平面的投影</strong></p>
+<p>——这一点非常重要，不仅是满足远小近大这个特点，更是说图形虽然看上去是3D，但是实际上还是2D（可以旋转图形观察）</p>
+<p>如果要做到真正的3D，则需要将<strong>父级的</strong>默认的transform-style:flat 改为 transform-style: perspective-3d开启立体空间</p>
+<blockquote>
+<p>配合translateZ属性就能明显地看到效果，注意，<strong>perspective属性要加在目标的父级上</strong></p>
+<p>perspective和translatez可以看做——眼睛的位置和物体的位置</p>
 </blockquote>
 <h3 id="CSS预处理器（待补充）"><a href="#CSS预处理器（待补充）" class="headerlink" title="CSS预处理器（待补充）"></a>CSS预处理器（待补充）</h3><p>原生CSS也是支持变量的，语法用 “<strong>–变量名:变量值</strong>的形式声明,声明的位置可以是html标签选择器内（或者通配符内也行）,而使用变量时的语法则是<strong>var(变量名)</strong></p>
 <blockquote>
@@ -1841,6 +1870,11 @@ div &gt; <span class="token property">span</span><span class="token punctuation"
 <p>一般而言，PC端的1px就是1物理像素，而在移动端上则可能不符合这一比例，具体情况如下：</p>
 <p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842a14fd9b0c7299f45e7e40a711e6e730367f7450c667d072f/0.png" alt="移动端dpr表"></p>
 <p>解释一下，比如这里的dpr==2.0就意味着pc端的1px在该移动端设备上将显示为2px的效果</p>
+<p>我们可以通过如下代码获取当前设备的物理像素比dpr</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">window<span class="token punctuation">.</span>devicePixelRatio<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
 <p>那么，为什么移动端要做这样的设定呢？</p>
 <h3 id="Retina显示技术"><a href="#Retina显示技术" class="headerlink" title="Retina显示技术"></a>Retina显示技术</h3><p>即 <strong>视网膜屏幕显示技术</strong>，可以把更多的物理像素点压缩到一块屏幕里面，<br><strong>从而达到更高的分辨率，并提高屏幕显示的细腻程度</strong></p>
 <blockquote>
