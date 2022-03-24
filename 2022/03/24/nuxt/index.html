@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="WebSocket, 前端">
-    <meta name="description" content="你难道不渴望一段双向奔赴的通信？">
+    <meta name="keywords" content="Nuxt, 前端">
+    <meta name="description" content="未来，CSR还是SSR?">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>WebSocket | 碳苯</title>
+    <title>Nuxt | 碳苯</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -324,12 +324,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/28.webp')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/41.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">WebSocket</h1>
+                    <h1 class="description center-align post-title">Nuxt</h1>
                 </div>
             </div>
         </div>
@@ -445,6 +445,10 @@
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
+                            </a>
+                        
                             <a href="/tags/%E5%90%8E%E7%AB%AF/">
                                 <span class="chip bg-color">后端</span>
                             </a>
@@ -470,21 +474,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-02-25
+                    2022-03-24
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-11
+                    2022-03-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    664
+                    1.1k
                 </div>
                 
 
@@ -509,83 +513,127 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
-<p>为了参与第二节字节跳动青训营前端项目比赛而学习，总的来说遇到了很多问题，但是好在最后还是拿了个第七名，从1000+人里面脱颖而出，很感谢我的队友的倾力付出<br><strong>（虽然说前端80%的代码是我写的…后端100%的代码是我写的…）</strong></p>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="写在开篇"><a href="#写在开篇" class="headerlink" title="写在开篇"></a>写在开篇</h3><blockquote>
+<p>仔细一想自己真是太菜了，太多技术没学，算法没刷，我真是何德何能自称一个程序员</p>
 </blockquote>
-<h3 id="更新日志-1"><a href="#更新日志-1" class="headerlink" title="更新日志"></a>更新日志</h3><blockquote>
-<p><strong>2022/03/上旬</strong><br>忘了什么时候写的<br><strong>2022/03/11</strong><br>补充一些基本信息，比如上面那个时间。更多内容，比如net包的使用以后再补充。</p>
+<h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><blockquote>
+<p><strong>2022/03/24</strong><br>安装Nuxt，了解了基本概念</p>
 </blockquote>
-<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="什么是Socket"><a href="#什么是Socket" class="headerlink" title="什么是Socket"></a>什么是Socket</h3><p>网络上的两个程序通过一个双向的通信连接实现数据的交换，这个连接的一端称为一个socket</p>
-<h3 id="WebSocket协议"><a href="#WebSocket协议" class="headerlink" title="WebSocket协议"></a>WebSocket协议</h3><p>socket所涉及的主要协议就是WebSocket协议，它是一种基于TCP的持久的网络协议，实现了浏览器与服务器的<strong>全双工通信</strong></p>
-<h3 id="和AJAX的区别"><a href="#和AJAX的区别" class="headerlink" title="和AJAX的区别"></a>和AJAX的区别</h3><p>AJAX是基于HTTP请求的，是服务器端被动地响应浏览器的请求，数据的流向是<strong>单向的</strong>（说单向的也有点怪，但是又不知道该怎么说…算了就这样吧）</p>
-<p>而在socket中，数据流向是双向的</p>
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="CSR和SSR"><a href="#CSR和SSR" class="headerlink" title="CSR和SSR"></a>CSR和SSR</h3><p>CSR即客户端渲染，Client Side Render</p>
+<p>SSR即服务端渲染, Server Side Render</p>
+<p><strong>CSR</strong></p>
 <blockquote>
-<p>那么，在没有socket的年代，人们是如何用AJAX实现的全双工数据交互呢？</p>
-<p>靠的是AJAX轮询….</p>
+<p>一开始没有数据，是通过前端模板（如Vue React等）引擎注入到页面内部，<br>不利于SEO，爬虫来的时候还没有太多数据</p>
 </blockquote>
-<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684270499aabdb7fc12ec2b3ea77248c0e28c115bc9567b6683f/0.png"></p>
-<h2 id="简单使用Socket"><a href="#简单使用Socket" class="headerlink" title="简单使用Socket"></a>简单使用Socket</h2><p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684257db326720634990564b69b772d437737a8f1d35d18d93d9/0.png" alt="Socket通信"></p>
-<h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><p>H5更新中提供了WebSocket对象用于创建和管理WebSocket连接，以及可以通过连接发送和接收数据的API</p>
-<p>非常容易，和AJAX类似的操作</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> input <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-    <span class="token keyword">const</span> button <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-    <span class="token keyword">const</span> div <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-    <span class="token comment">// 参数是ws地址，这里用一个官方的地址</span>
-    <span class="token comment">// 1. 创建websocket实例</span>
-    <span class="token keyword">const</span> socket <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">WebSocket</span> <span class="token punctuation">(</span><span class="token string">'ws://hostname:3000'</span><span class="token punctuation">)</span>
-    <span class="token comment">// 2. 建立连接的时候触发</span>
-    socket<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'open'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-        div<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">'连接成功了'</span>
+<p><strong>SSR</strong></p>
+<blockquote>
+<p>利用后端的渲染引擎（如Next， Nuxt），把我们提供的数据注入，然后完成渲染后将完整的页面结构返回，<br>数据无需再渲染，因为数据已经渲染完毕了<br>利于SEO，但是对服务器要求较高</p>
+</blockquote>
+<p>一般开发是CSR和SSR混合使用</p>
+<h3 id="Vue的SPA结构的缺陷"><a href="#Vue的SPA结构的缺陷" class="headerlink" title="Vue的SPA结构的缺陷"></a>Vue的SPA结构的缺陷</h3><p>SPA结构优点是只需要做一次请求，缺点则是SEO不友好，除非渲染能够在服务端完成，这就是Node的真正用处——SSR服务端渲染</p>
+<h3 id="渲染机制的探索历程"><a href="#渲染机制的探索历程" class="headerlink" title="渲染机制的探索历程"></a>渲染机制的探索历程</h3><p>最早的JSP和PHP就是纯SSR，后来有了CSR，现在又到了CSR+SSR</p>
+<h2 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h2><h3 id="基本渲染"><a href="#基本渲染" class="headerlink" title="基本渲染"></a>基本渲染</h3><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> Vue <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'vue'</span><span class="token punctuation">)</span>
+<span class="token comment">// 创建一个Vue的实例</span>
+<span class="token comment">// 注意这是Vue2.x才能new</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;div&gt;HelloWorld&lt;/div&gt;</span><span class="token template-punctuation string">`</span></span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> renderer <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'vue-server-renderer'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createRenderer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 将Vue示例渲染成HTML</span>
+<span class="token comment">// 渲染好了的html会被放入回调中</span>
+renderer<span class="token punctuation">.</span><span class="token function">renderToString</span><span class="token punctuation">(</span>app<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> html</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">throw</span> err
+    <span class="token punctuation">}</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span>
+    <span class="token comment">// &lt;div data-server-rendered="true"&gt;HelloWorld&lt;/div&gt;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Promise化渲染"><a href="#Promise化渲染" class="headerlink" title="Promise化渲染"></a>Promise化渲染</h3><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// renderToString在该包的2.5+版本中还支持promise</span>
+renderer<span class="token punctuation">.</span><span class="token function">renderToString</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">html</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span> 
+    <span class="token comment">// &lt;div data-server-rendered="true"&gt;HelloWorld&lt;/div&gt;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="响应到浏览器展示"><a href="#响应到浏览器展示" class="headerlink" title="响应到浏览器展示"></a>响应到浏览器展示</h3><p>这里我们使用express框架来做这个事情</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> Vue <span class="token operator">=</span> <span class="token function">require</span> <span class="token punctuation">(</span><span class="token string">'vue'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> server <span class="token operator">=</span> <span class="token function">require</span> <span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 注意express返回的是函数</span>
+
+<span class="token comment">// 访问根目录时，创建一个Vue实例</span>
+server<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;div&gt;HelloWorld&lt;/div&gt;</span><span class="token template-punctuation string">`</span></span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>    
+
+    <span class="token keyword">const</span> renderer <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'vue-server-renderer'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createRenderer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    renderer<span class="token punctuation">.</span><span class="token function">renderToString</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">html</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// console.log(html)  </span>
+        res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token comment">// 3. 主动给websocket发送消息</span>
-    button<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-        <span class="token keyword">let</span> value <span class="token operator">=</span> input<span class="token punctuation">.</span>value
-        socket<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'你好啊!'</span><span class="token punctuation">)</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-    <span class="token comment">// 4. 接收websocket服务器的数据</span>
-    socket<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'message'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
-        div<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> res<span class="token punctuation">.</span>data
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 接下来访问localhost就好了</span>
+server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3001</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'服务器在3000端口上打开'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-    <span class="token comment">// 5.关闭</span>
-    socket<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'close'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-        div<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">'服务断开连接'</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>这里就要提一下，res常用的方法一共有四种，分别是：</p>
+<p><code>res.set()</code>, 可以设置响应头等信息</p>
+<p><code>res.json()</code>   <code>res.end()</code>    <code>res.send()</code><br>三种方法都能响应给前端，但是它们有所区别</p>
+</blockquote>
+<h2 id="Nuxt框架"><a href="#Nuxt框架" class="headerlink" title="Nuxt框架"></a>Nuxt框架</h2><p>Nuxt是一个Vue-SSR框架</p>
+<h3 id="npx安装Nuxt"><a href="#npx安装Nuxt" class="headerlink" title="npx安装Nuxt"></a>npx安装Nuxt</h3><p>npx是npm v5.2.0引入的一个新的命令，是一个npm包执行器、一个简单的Cli工具，目的是提高npm的使用体验<br>主要特点是：</p>
+<blockquote>
+<ol>
+<li>npm是永久性安装，npx是临时安装用完后自动删除</li>
+<li>命令语法有一定区别</li>
+<li>npx可以执行文件，甚至可以直接开启静态服务器</li>
+</ol>
+</blockquote>
+<p>当然，上述内容并非全部特点，但这里不准备着重介绍</p>
+<p>好了，大概知道了npx是什么，我们就直接上手安装Nuxt框架</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npx create-nuxt-app@2 .<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-
-
-
-
-<h3 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h3><p>这里有非常多的模块来实现websocket，这里我们使用第三方包nodejs-websocket来实现</p>
-<p>和http服务器非常像，所以上手也很快</p>
-<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">const ws = require('nodejs-websocket')
-
-const PORT = 3000
-
-
-// 每次有用户连接上来了，就执行一次，为这个用户创建一个conn对象
-const server = ws.createServer((conn) =&gt; {
-    console.log("NEW CONNECTION!!!")
-    conn.on("text", (data) =&gt; {
-        console.log("RECEIVED USER'S DATA: " + data)
-    	conn.sendText("HelloWebSocket!!!")
-    })
-    
-    conn.on("close", (code, reason) =&gt; {
-        console.log("CONNECTION CLOSED")
-    })
-    
-    conn.on('error', () =&gt; {
-        console.log('用户连接异常')
-    })
-})
-
-server.listen(PORT, () =&gt; {
-    console.log('WEBSOCKET SERVER HAS STARTED!!!')
-})<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<blockquote>
+<p>Vue3对应的Nuxt3，这里用的Vue2，一定要装Nuxt2</p>
+</blockquote>
+<p>接下来就是一堆配置信息，比如项目名称、项目描述、作者等等</p>
+<p>这是本次选择的内容，可以参考</p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168422241f97df5fc4b087a32734068a9b791a30ccbda2291fee3/0.png" alt="Nuxt初始化配置"></p>
+<h3 id="启动Nuxt"><a href="#启动Nuxt" class="headerlink" title="启动Nuxt"></a>启动Nuxt</h3><p>安装完后，我们直接npm run dev启动</p>
+<blockquote>
+<p>当然，也可以npm run build 然后 npm run start运行打包之后的文件</p>
+<p>下面第一张图是Nuxt3的——没错，正如我一开始说的那样，我装错了</p>
+</blockquote>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168422241f97df5fc4b085551ecc00ebeacfb53389ceeaad7e84a/0.png" alt="Nuxt3"></p>
+<blockquote>
+<p>现在装回来——嗯，非常好，甚至还有汉化</p>
+</blockquote>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168429e59f0bacc4982505824e64878188df2f828ee111ef5e7ca/0.png" alt="Nuxt2"></p>
+<h3 id="认识Nuxt生命周期"><a href="#认识Nuxt生命周期" class="headerlink" title="认识Nuxt生命周期"></a>认识Nuxt生命周期</h3><p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168422241f97df5fc4b084f51f93b2695090f142102ddc27a893a/0.png" alt="Nuxt生命周期"></p>
+<p><strong>在Render之后，才会开始Vue的生命周期</strong>，</p>
+<p>Vue的两个钩子——创建前和创建后是服务器端到浏览器端的过渡，所以它们两个是特殊的生命周期钩子</p>
+<p>另外，active这类可以重复的钩子不包括在内</p>
+<p>我们解析一下各个生命周期:</p>
+<blockquote>
+<ol>
+<li>nuxtServerInt 其中有些钩子只会执行一次，一般用于执行初始化数据</li>
+<li>可以在图中的三个位置进行配置，在某个页面、组件加载前运行</li>
+<li>实现成功则进入页面，否则404这样的功能</li>
+<li>组件初始化前调用，要注意此时的this指向                        </li>
+<li>开始渲染，此时如果请求新的页面，那就跳回第2步</li>
+</ol>
+</blockquote>
+<h3 id="触发生命周期"><a href="#触发生命周期" class="headerlink" title="触发生命周期"></a>触发生命周期</h3><h4 id="nuxtServerInit"><a href="#nuxtServerInit" class="headerlink" title="nuxtServerInit"></a>nuxtServerInit</h4><p>由上图可以看出，是在store下配置触发的</p>
 
                 
             </div>
@@ -612,7 +660,7 @@ server.listen(PORT, () =&gt; {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://serio.gitee.io/2022/02/25/websocket/">https://serio.gitee.io/2022/02/25/websocket/</a>
+                    <a href="https://serio.gitee.io/2022/03/24/nuxt/">https://serio.gitee.io/2022/03/24/nuxt/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -649,6 +697,10 @@ server.listen(PORT, () =&gt; {
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
+                                </a>
                             
                                 <a href="/tags/%E5%90%8E%E7%AB%AF/">
                                     <span class="chip bg-color">后端</span>
@@ -845,9 +897,10 @@ server.listen(PORT, () =&gt; {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/03/24/nuxt/">
                     <div class="card-image">
@@ -864,9 +917,9 @@ server.listen(PORT, () =&gt; {
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -879,6 +932,7 @@ server.listen(PORT, () =&gt; {
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -901,30 +955,30 @@ server.listen(PORT, () =&gt; {
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/02/23/algorithm-heap/">
+                <a href="/2022/02/25/websocket/">
                     <div class="card-image">
                         
-                        <img src="/medias/postimages/35.jpg" class="responsive-img" alt="堆">
+                        <img src="/medias/postimages/28.webp" class="responsive-img" alt="WebSocket">
                         
-                        <span class="card-title">堆</span>
+                        <span class="card-title">WebSocket</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            严格地说，堆并不是树
+                            你难道不渴望一段双向奔赴的通信？
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E4%B8%93%E4%B8%9A%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    专业基础
+                            <a href="/categories/web/" class="post-category">
+                                    web
                                 </a>
                             
                             
@@ -934,8 +988,8 @@ server.listen(PORT, () =&gt; {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">数据结构和算法</span>
+                    <a href="/tags/%E5%90%8E%E7%AB%AF/">
+                        <span class="chip bg-color">后端</span>
                     </a>
                     
                 </div>
