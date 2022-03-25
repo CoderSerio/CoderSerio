@@ -481,14 +481,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-24
+                    2022-03-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.7k
                 </div>
                 
 
@@ -590,7 +590,7 @@ server<span class="token punctuation">.</span><span class="token function">liste
 <p><code>res.set()</code>, 可以设置响应头等信息</p>
 <p><code>res.json()</code>   <code>res.end()</code>    <code>res.send()</code><br>三种方法都能响应给前端，但是它们有所区别</p>
 </blockquote>
-<h2 id="Nuxt框架"><a href="#Nuxt框架" class="headerlink" title="Nuxt框架"></a>Nuxt框架</h2><p>Nuxt是一个Vue-SSR框架</p>
+<h2 id="Nuxt框架基本概念"><a href="#Nuxt框架基本概念" class="headerlink" title="Nuxt框架基本概念"></a>Nuxt框架基本概念</h2><p>Nuxt是一个Vue-SSR框架</p>
 <h3 id="npx安装Nuxt"><a href="#npx安装Nuxt" class="headerlink" title="npx安装Nuxt"></a>npx安装Nuxt</h3><p>npx是npm v5.2.0引入的一个新的命令，是一个npm包执行器、一个简单的Cli工具，目的是提高npm的使用体验<br>主要特点是：</p>
 <blockquote>
 <ol>
@@ -634,6 +634,52 @@ server<span class="token punctuation">.</span><span class="token function">liste
 </ol>
 </blockquote>
 <h3 id="触发生命周期"><a href="#触发生命周期" class="headerlink" title="触发生命周期"></a>触发生命周期</h3><h4 id="nuxtServerInit"><a href="#nuxtServerInit" class="headerlink" title="nuxtServerInit"></a>nuxtServerInit</h4><p>由上图可以看出，是在store下配置触发的</p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842534c2f1eab2d6dcd29c1b42ff96b07a2a92765641a21c5e8/0.png" alt="nuxtServerInit触发"></p>
+<p>在store目录下建立index.js即可添加钩子</p>
+<h4 id="middleware"><a href="#middleware" class="headerlink" title="middleware"></a>middleware</h4><p>这个钩子可以在三个位置编辑，nuxt.config.js，layouts下的组件中，pages下面的组件中，当对相关内容进行访问时，就会触发相应的方法</p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684253bca7b99d2b38898a72ddb85cbb76ed4f864ac5bebb93b0/0.png" alt="nuxt.config.js"></p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684253bca7b99d2b38893858b7a3622dd9f2675369e1795e6f77/0.png" alt="auth.js"></p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684253bca7b99d2b38898cf44203ea612136143bc04263979b87/0.png" alt="布局级别组件中"></p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684253bca7b99d2b388932f9fd64367959455c0dc71cc2de45e8/0.png" alt="页面级组件中"></p>
+<p>当然，都可以写成middleware:xxx这种形式来引入</p>
+<h4 id="validate"><a href="#validate" class="headerlink" title="validate"></a>validate</h4><p>根据上面的流程图，validate是做参数校验的并且是放到页面级组件中的</p>
+<blockquote>
+<p>当然，上面说的validate是pages和children中，但是children是什么目前不太清楚</p>
+</blockquote>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684253bca7b99d2b388936ebf8a41a18f4cf7779fafb474eac22/0.png" alt="image.png"></p>
+<p>这个和路由守卫差不多</p>
+<h4 id="asyncData-amp-fetch"><a href="#asyncData-amp-fetch" class="headerlink" title="asyncData&amp;fetch"></a>asyncData&amp;fetch</h4><p>和validate一样，依旧是用于pages和children</p>
+<blockquote>
+<p>下面说的返回Vuex是指的返回给vuex</p>
+</blockquote>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684253bca7b99d2b388921c20b7d1265a18ecc74d537a9243618/0.png" alt="页面组件中"></p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684253bca7b99d2b3889125dc6a5e18dfd66f04535e5fb51b0a8/0.png" alt="异步获取的数据"></p>
+<p>asyncData返回的数据会合并到data</p>
+<blockquote>
+<p>上面都是SSR生命周期，这个时候都还在服务端，是没有办法访问到客户端的一些东西的，比如window对象，此时无法访问</p>
+<p>另外，服务端不要使用this访问当前的环境变量，而是用context访问当前环境中的内容</p>
+</blockquote>
+<h4 id="CSR生命周期"><a href="#CSR生命周期" class="headerlink" title="CSR生命周期"></a>CSR生命周期</h4><p>这里开始就是Vue自带的一些钩子了</p>
+<blockquote>
+<p>// 从这里开始就是CSR了</p>
+<p> beforeMount () {},</p>
+<p> mounted () {},</p>
+<p> beforeUpdate () {},</p>
+<p> updated () {},</p>
+<p> beforeDestroy () {},</p>
+<p> destroyed () {}</p>
+<p> // 注意服务端不存在 activated和deactivated，因为服务端无法缓存</p>
+</blockquote>
+<blockquote>
+<p>我们提到过beforeMount和mounted比较特殊，是灰色地带，它们虽然是CSR生命周期，但是它们也不能保证能够成功访问到window等客户端的内容</p>
+<p>它们的运行机制是，先试图在客户端运行，如果此时客户端来不及加载，那么则在服务端运行</p>
+</blockquote>
+<h2 id="Nuxt路由"><a href="#Nuxt路由" class="headerlink" title="Nuxt路由"></a>Nuxt路由</h2><h3 id="约定式-amp-amp-声明式"><a href="#约定式-amp-amp-声明式" class="headerlink" title="约定式&amp;&amp;声明式"></a>约定式&amp;&amp;声明式</h3><p><strong>声明式</strong><br>需要做文件的导入和声明等工作才能用，虽然麻烦但是灵活</p>
+<p><strong>约定式</strong><br>不需要做文件的导入等工作，只需要按照一定的规定做就可以使用，Nuxt路由可以使用约定式，只要建立在pages下的文件，就能够直接访问到</p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684253bca7b99d2b388958ca4afaa830ca3cdbbf4fabdda89fd6/0.png" alt="image.png"></p>
+<p>其中goods的二级路由里面有一点需要注意，这里命名为<code>_id.vue</code>，<code>_</code>表示这个id是一个动态的，这个二级路由是动态路由</p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684253bca7b99d2b388998d43942d9908c32cbb7bdf72048bf5a/0.png" alt="路由的声明式和约定式"></p>
+<p>注意这里二级路由还没有展示区，我们需要给一个<code>&lt;nuxt /&gt;</code>给予展示</p>
 
                 
             </div>
