@@ -1,0 +1,1702 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="JavaScript, 前端">
+    <meta name="description" content="JavaScript核心技术卷">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>JavaScript | 碳苯</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">碳苯</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">碳苯</div>
+        <div class="logo-desc">
+            
+            碳苯是一只毛茸茸的程序员
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/CoderSerio" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/CoderSerio" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('该文章设置了密码，如需查阅请联系碳苯桑')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/42.webp')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">JavaScript</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/web/" class="post-category">
+                                web
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-03-31
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-03-31
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.7k
+                </div>
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="一堆废话"><a href="#一堆废话" class="headerlink" title="一堆废话"></a>一堆废话</h3><p>最近事情挺多的，好几个项目还得继续赶进度，各个学科的作业也得完成，还有一些PPT要做，另外还有很多活动要安排、交各种表、找各种负责人，后面很快也有比赛要打</p>
+<p>不过挤一挤总是有时间的</p>
+<p>言归正传，JS是很重要的，比如让一个后端的问前端会些什么：</p>
+<blockquote>
+<p>“HTML，CSS，JS，ES…“——”那不还是JS吗“<br>“TS..“——“那不还是JS吗”<br>“Node…”——“那不还是JS吗”<br>“Vue-React-Angular…”——“那不还是JS吗”<br>“Next-Nuxt”——“那不还是JS吗，我会CURD不比你H5C3JS厉害？”</p>
+</blockquote>
+<p>虽然槽点很多，但是仔细一想可能真是这样，万物都是JS</p>
+<p>以前写过一篇JS笔记的草案，但是写得实在太烂，决定废掉重新写一篇，这是废掉那篇的前言部分:</p>
+<blockquote>
+<p>现在是2022/01/28 3:11 AM</p>
+<p>四个小时前初步完成了一个项目并上传了git</p>
+<p>作为一名前端学习者，我对JavaScript是又爱又恨，爱是慨叹其功能强大，恨则是这些功能中充斥了各种稀奇古怪的让人难以捉摸的特性</p>
+<p>但是JS黄书上说的很好，垃圾的不是JS，而是不懂JS特性的人</p>
+<p>学好JS，对于一个前端开发者来说是必要的——我虽然总是说JS是垃圾语言，但是我并不喜欢听到别人这么说，因为我这里是心口不一的，我本身还是非常喜欢这门语言的，它的独特性让我非常欣赏——我也快编不下去了，所以在我词穷之前我要结束这段冗余的开场白——接下来，希望看到这篇博文的各位认真学习JS！</p>
+<p>本文侧重本人复习之用，内容并不系统。</p>
+</blockquote>
+<p>而现在我觉得我还是要系统的写一写JS基础部分的笔记，所以再写一段话为本篇拉开序幕</p>
+<blockquote>
+<p>前面提到了万物都是JS，这也反映了JS举足轻重的地位。<br>但是JS作为一个设计到使用只用了10天的语言，问题实在是太多，之后相当长一段时间内的标准也是极其<strong>混乱</strong>。<br>这个混乱是两个方面而言的——一是说奇怪的语法和特性，另一是说其高度的无羁自由</p>
+<p>“一切能用JS实现的内容，最终都会以JS实现”</p>
+<p>JS功能强大，但是要学好并不容易，要是谁说他精通JS，那我觉得他要么是一叶障目，要么就是行业顶尖——我到现在应该是看了至少200小时的JS视频，书也是看过几本权威著作（虽然很多看不懂），网上看的各种资料更是不计其数，然而我现在感觉我终于看到了JS的冰山一角</p>
+<p>用10天创造出JS的那个男人，绝对想不到这个被他自己厌恶的语言会蓬勃发展至今。<br>我对JS的看法就是，JS是世界上最垃圾，但是也是最好的语言。</p>
+<p>之前我花了一个多月的时间整理以前学到的JS知识，起初我是直接写到markdown上，但是我发现这样不系统也很难组织，所以我选择灵活度更高的手写，现在再基于手写记录的内容将这份笔记发到博客上。</p>
+<p><strong>本篇博客主要是JS基础知识，严格模式 和 with关键字 等部分当今较为少见的内容不做讨论。</strong></p>
+</blockquote>
+<h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><blockquote>
+<p><strong>2022/01/28</strong><br>开始写了一些内容，但是后来作废了<br><strong>2022/03/31</strong><br>一个多月以来手写整理到了笔记本上，现在依据其内容整理到博客上<br>更新了数据类型部分，手都给我敲痛了，纸上写的不到一页，打字就敲了4000字..</p>
+</blockquote>
+<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="略"><a href="#略" class="headerlink" title="略"></a>略</h3><p>略，后续笔记会包含本部分，可放心食用</p>
+<blockquote>
+<p>基础语法指的是变量声明赋值、条件语句、循环语句等编程基础常识，<br>具体的语法可以通过观察之后的笔记进行了解，不再单一例举</p>
+<p>注意，为了讲述JS的各种特性，<strong>本篇我们都以ES5为准</strong>——比如声明方式我们都采用var<br>至于ES6的知识，可以参考我的另一篇博客，返回首页自习搜索即可浏览</p>
+<p>另外，由于IE再过几个月就停运了，我们就不过多讨论兼容的方式了</p>
+</blockquote>
+<h2 id="数据类型概述"><a href="#数据类型概述" class="headerlink" title="数据类型概述"></a>数据类型概述</h2><p>JS是解释性弱类型语言，在声明的时候不会区分数据类型，但是这并不意味着JS没有数据类型</p>
+<p>这里先来一个简单的了解，部分需要深入的数据类型放到后面讨论</p>
+<p>JS中所有的变量无论类型，都可以通过至少两种方式(<strong>构造函数式</strong> 和 字面量赋值式)初始化</p>
+<p>例如</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">123</span> <span class="token comment">// 字面量赋值式</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Number</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span> <span class="token comment">// 构造函数式 </span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="JS中的内存模型"><a href="#JS中的内存模型" class="headerlink" title="JS中的内存模型"></a>JS中的内存模型</h3><p>严格地说，JS<strong>并没有区分堆栈内存</strong>，但是我们依旧把它看做是两个部分——堆内存，栈内存，这样有助于我们理解JS对于不同数据类型的处理，以及如何进行内存管理</p>
+<blockquote>
+<p>另外，不知道大家有没有想过，栈内存之所以叫做栈内存是因为可以把它看成一个栈，那么问题来了，堆内存和堆有什么关系呢？</p>
+<p><img src="https://img0.baidu.com/it/u=101704622,2318140769&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=500&amp;h=548" alt="难道是以堆结构进行存储？"></p>
+<p>答案是，现代意义上的堆内存和堆<strong>没有关系</strong>。</p>
+</blockquote>
+<h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><blockquote>
+<p>基本数据类型，也叫<strong>简单数据类型、值类型</strong><br>特点是，存储在栈内存中</p>
+</blockquote>
+<p>先来一个基本数据结构总览</p>
+<blockquote>
+<p>Number（数字）<br>String（字符串）<br>null（空）<br>Boolean （布尔）<br>undefined（未定义）<br>Symbol（唯一值）（<strong>本文不进行讨论</strong>，详情参阅ES6部分）<br>BigInt（大数）（<strong>本文不进行讨论</strong>，后续ES10再补充）</p>
+<p>基本数据结构 =&gt; NS-USB-NB </p>
+</blockquote>
+<p>简单提一提</p>
+<h4 id="String"><a href="#String" class="headerlink" title="String"></a>String</h4><p>这里要和C/C++等语言中的字符串类型区别，这个区别我们需要在心里大喊三遍：</p>
+<blockquote>
+<p>JS中，String是<strong>基本</strong>数据类型，具有<strong>不可变性</strong><br>JS中，String是<strong>基本</strong>数据类型，具有<strong>不可变性</strong><br>JS中，String是<strong>基本</strong>数据类型，具有<strong>不可变性</strong></p>
+</blockquote>
+<p>但是我们依然可以通过下标去访问一个字符串，不过并不支持地址偏移的形式去访问</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token string">'Hello~~JavaScript'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> 
+<span class="token comment">// 不能像str[1] = 'a'这样修改字符串</span>
+<span class="token comment">// 这就是字符串的不可变性</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h4><h5 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h5><p>JS非常体贴为我们提供了2 8 10 16进制的语法糖</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> num2 <span class="token operator">=</span> <span class="token number">0B10100</span>
+<span class="token keyword">var</span> num8 <span class="token operator">=</span> <span class="token number">024</span>
+<span class="token keyword">var</span> num10 <span class="token operator">=</span> <span class="token number">20</span>
+<span class="token keyword">var</span> num16 <span class="token operator">=</span> <span class="token number">0x14</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num2<span class="token punctuation">,</span> num8<span class="token punctuation">,</span> num10<span class="token punctuation">,</span> num16<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>上述输出结果都是10进制的20</p>
+<h5 id="特殊数值"><a href="#特殊数值" class="headerlink" title="特殊数值"></a>特殊数值</h5><pre class="line-numbers language-js" data-language="js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Number<span class="token punctuation">.</span><span class="token constant">MAX_VALUE</span><span class="token punctuation">)</span> 
+<span class="token comment">// 1.7976931348623157e+308</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Number<span class="token punctuation">.</span><span class="token constant">MAX_SAFE_INTEGER</span><span class="token punctuation">)</span>
+<span class="token comment">// 就是上述第一个值的整数表示</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Number<span class="token punctuation">.</span><span class="token constant">EPSILON</span><span class="token punctuation">)</span>
+<span class="token comment">// 默认最小阈值,2.220446049250313e-16</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Number<span class="token punctuation">.</span><span class="token constant">POSITIVE_INFINITY</span><span class="token punctuation">)</span>
+<span class="token comment">// 无穷大，Infinity</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">Infinity</span><span class="token punctuation">)</span>
+<span class="token comment">// 无穷大，Infinity</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token comment">// 无穷大，Infinity</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">)</span>
+<span class="token comment">// 非数字，NaN，Not a Number</span>
+<span class="token comment">// 冠词简写时不大写</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>无穷小那就是0，负无穷大就是-Infinity，NaN用于标记运算的非数字结果，它们都被视为Number类</p>
+<h5 id="NaN的判断"><a href="#NaN的判断" class="headerlink" title="NaN的判断"></a>NaN的判断</h5><p>至于结果是否为NaN，可以通过两种方式判断</p>
+<p><strong>isNaN()<strong>和</strong>Number.isNaN()</strong></p>
+<blockquote>
+<p>前者是Window.isNaN()，它们的判断标准不太一样，前者并不是后者的语法糖</p>
+<p>注意，不能用==或===判断NaN，就像是无穷大不等于无穷大一个道理</p>
+</blockquote>
+<p>它们的区别在于：</p>
+<blockquote>
+<p><strong>Number.isNaN()</strong><br>宽泛标准，会<strong>用尽一切办法</strong>对判断的数据进行类型转换直到数据变成Number类型，或者没有方法可用，才会得出判断结果</p>
+<p><strong>isNaN()</strong><br>严格标准，直接判断而不会试图转换数据类型</p>
+</blockquote>
+<p>这就意味着，如果Number.isNaN()判断的结果为true，那么传入的数据就绝对无法通过JS类型转换变成Number</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Number<span class="token punctuation">.</span><span class="token function">isNaN</span><span class="token punctuation">(</span><span class="token string">'123asdasdas'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
+<span class="token comment">// false</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Number<span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">'123asdasdas'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
+<span class="token comment">// 123，意味着可以转化</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">isNaN</span><span class="token punctuation">(</span><span class="token string">'123asdasdas'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
+<span class="token comment">// true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="null"><a href="#null" class="headerlink" title="null"></a>null</h4><p>一样的，我们需要默念</p>
+<blockquote>
+<p>JS中，null是基本数据类型，字母小写！<br>JS中，null是基本数据类型，字母小写！<br>JS中，null是基本数据类型，字母小写！</p>
+</blockquote>
+<p>null最早是作为空对象的占位符，但是null本身不是对象，也不是引用数据类型，所以{}==null返回false</p>
+<h4 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h4><p>布尔类型，依旧存在隐式类型转换 <strong>非0即1</strong></p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token number">233</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">233</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 最后全都运行</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="undefined"><a href="#undefined" class="headerlink" title="undefined"></a>undefined</h4><p>未定义，标记未定义的变量，也是全小写</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> a
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+<span class="token comment">// undefined</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>
+<span class="token comment">// 报错: b is not defined </span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">undefined</span> <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">undefined</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">// false</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">undefined</span> <span class="token operator">==</span> <span class="token boolean">false</span><span class="token punctuation">)</span> <span class="token comment">// false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>区别undefined和xxx is not defined还是不难，前者是一个值，后者是一个报错</p>
+<p>至于0, null, undefined, false, 空数组，空对象之间到底存在怎样诡异的关系后面再提</p>
+<h3 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h3><h4 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h4><blockquote>
+<p>引用数据类型，也叫<strong>复杂数据类型</strong></p>
+<p>特点是，把值放到堆内存，栈内存只存值的引用</p>
+</blockquote>
+<p>先来个总览：</p>
+<blockquote>
+<p>Object（后面的都可以看做特殊的Object）<br>       Array (数组，存数据的有序Object)<br>    Date（日期对象，和日期相关的Object)<br>    RegExp（正则表达式，和正则相关的Object）<br>    Function （传说中的函数，和Object关系混乱）</p>
+<p><strong>以及</strong>（当然这些还是特殊的Object）</p>
+<p>所有 <strong>基本数据类型的包装类</strong> (Number, String…，除了undefined和null以外的基本数据类型都有)<br>所有 <strong>单体内置对象</strong> (global，Math等已经new过了的)</p>
+</blockquote>
+<p>这里就是<code>万物皆对象</code>的体现之一的，由于引用数据类型的知识体系实在过于庞大，此处先简单介绍概念，Array、Date等<strong>在另外的章节深入讨论</strong></p>
+<h4 id="基本数据类型的包装类"><a href="#基本数据类型的包装类" class="headerlink" title="基本数据类型的包装类"></a>基本数据类型的包装类</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'xyz'</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// ['x', 'y', 'z']</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这里的’xyz’明明是一个基本数据类型String，为什么可以使用可以用类似对象调用自身方法的形式去使用split()方法呢？</p>
+<p>原理参见后续的<code>原型和原型链</code>,现在只用知道这里存在一个概念叫基本数据类型的包装类，可以理解为’xyz’的split()方法是从包装类String上继承下来的</p>
+<blockquote>
+<p>除了null和undefined之外，基本数据类型都有对应的包装类</p>
+</blockquote>
+<h4 id="单体内置对象"><a href="#单体内置对象" class="headerlink" title="单体内置对象"></a>单体内置对象</h4><p>比如Math，window，global对象，window是浏览器的顶级对象，而global是全局对象，它们之间的关系我们在BOM部分进行讨论，这里只说Math</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 产生随机数,范围是[0,1)</span>
+Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span>	<span class="token comment">// 最大值</span>
+Math<span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span>	<span class="token comment">// 最小值</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>上面提到了包装类，这里是内置<strong>对象</strong>，这就意味着Math不是构造函数而已经是实例化过了，所以不需要new就能直接使用</p>
+<p>其他常见单体内置对象:</p>
+<blockquote>
+<p>global全局对象，其上有个著名属性window，global.window = window<br>具体细节参考后续<code>执行上下文</code></p>
+</blockquote>
+<h3 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h3><h4 id="判断数据类型"><a href="#判断数据类型" class="headerlink" title="判断数据类型"></a>判断数据类型</h4><p>要转换数据类型之前，我们先要有判断数据类型的方法:</p>
+<blockquote>
+<p><strong>typeof</strong><br>返回变量类型<br>用法类似于sizeof，或许也是运算符吧<br><strong>能够准确判断null以外的基本数据类型</strong>，<br>遵循以下规则</p>
+<ul>
+<li>null判断为object（历史遗留Bug）</li>
+<li>函数/方法判断为function</li>
+<li>其余引用类型全部判断为object</li>
+</ul>
+<p><strong>instanceof</strong><br>返回一个布尔值<br>用法是：<code>a instanceof A</code> ，判断a是否为A的实例对象（或者说A是否为a的构造函数）<br>基本数据类型传入返回false</p>
+<p>tip：<br>如果是以字面量赋值形式创建的基本数据类型变量，则没有构造函数；<br>以构造函数创建的基本数据类型变量，实质上是对象，是引用数据类型。</p>
+</blockquote>
+<p>另外，这里附上<code>instanceof</code>的底层实现</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">myInstanceof</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> <span class="token constant">A</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> a <span class="token operator">!==</span> <span class="token string">'object'</span> <span class="token operator">||</span> a <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> 
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> proto <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 获取a.__proto__</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>                  
+        <span class="token keyword">if</span><span class="token punctuation">(</span>proto <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> 
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>proto <span class="token operator">===</span> <span class="token class-name">A</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>        
+        proto <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">getPrototypeof</span><span class="token punctuation">(</span>proto<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>代码看着有那么多，其实就是什么，就是遍历链表找有无目标值嘛<br>（当然，首先要判断一下是不是对象，不是对象那肯定没有构造函数的说）<br>找到null就是遍历完了都没找到目标值，就返回false；找到了自然就返回true</p>
+<h4 id="显式类型转换"><a href="#显式类型转换" class="headerlink" title="显式类型转换"></a>显式类型转换</h4><h5 id="转换为Number"><a href="#转换为Number" class="headerlink" title="转换为Number"></a>转换为Number</h5><blockquote>
+<p>其他类型转显式换成Number有三个方法：<br>Number() ==&gt; 处理任意类型<br>parseInt(), parseFloat() ==&gt; 主要处理字符串</p>
+</blockquote>
+<p>​    这里说明一下Number.parseInt和parseInt的关系：</p>
+<blockquote>
+<p>一开始只有parseInt，后来ES6规范来了，觉得你这不对啊，怎么一个裸的方法挂window上啊——然后parseInt就被扔到Number上 了。但是为了向后兼容，parseInt就像是种民俗习惯一样被保留下来了。</p>
+<p><strong>它们在效果上没有区别</strong>。</p>
+</blockquote>
+<blockquote>
+<p><strong>Number()转换</strong></p>
+<p>1.对于Boolean，true、false分别返回1、0<br>2.对于Number，返回原值<br>3.对于null，返回0<br>4.对于undefined，返回NaN<br>5.对于String：</p>
+<ul>
+<li>如果字符串只包含 数字以及正负号，就尽可能转为符合人类思维的正确的值。即：“1”返回1，“3413”返回3413，’’-33”返回-33，‘-011’返回-11</li>
+<li>如果字符串中包含 有效的小数格式，则转换为对应的小数，同样地会忽略掉前缀0</li>
+<li>有效的16/8/2进制格式，返回对应大小的十进制数值</li>
+<li> 如果是 空串或者空格串，返回0</li>
+<li> 非以上格式的字符串返回NaN</li>
+</ul>
+<p>6.如果是Object:</p>
+<ul>
+<li>先处理其valueof方法的返回值，按照前面的规则返回值。如果返回值为NaN，则处理其toString()方法的返回值，把结果放入Number()进行转换，再按前面的规则返回值</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>parseInt()转换</strong></p>
+<p>1.对于String:</p>
+<ul>
+<li>忽略所有前置空格后，第一个字符如果是 数字 或 正负号，<br>则继续向后读取，直到解析到非数字字符为止；</li>
+<li>忽略所有前置空格后， 第一个字符如果不是 数字或正负号，则返回NaN<br>(空串也是NaN)</li>
+</ul>
+<p>2.对于Number:</p>
+<ul>
+<li>若为16进制或10进制，则返回对应的10进制值</li>
+<li>可传入第二个参数，取值范围是[2,36]，表示第一个参数所采用的进制，然后返回其10进制值。<br>这种情况下，第一个参数可以省略进制的特殊标识，比如’0x’,’0b’等<br>比如 parseInt(‘ff’,16)  返回 256    </li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>parseFloat()转换</strong></p>
+<p>和parseInt一样，只是可以解析成浮点数。<br>parseFloat不支持第二个参数。</p>
+</blockquote>
+<h5 id="转换为String"><a href="#转换为String" class="headerlink" title="转换为String"></a>转换为String</h5><p>其他类型显示转换成String有两种方法</p>
+<blockquote>
+<p><strong>toString()</strong><br>除了null和undefined之外，其他数据类型都有toString方法<br>（包括String类型，String类型调用的话则可以返回<strong>深拷贝</strong>的副本)<br>字面量不可直接调用，需要用由变量调用</p>
+<p><strong>String()</strong><br>可以把任何值传入该函数，该函数会返回对应的字符串</p>
+</blockquote>
+<h5 id="转换为Boolean"><a href="#转换为Boolean" class="headerlink" title="转换为Boolean"></a>转换为Boolean</h5><blockquote>
+<p><strong>Boolean()</strong></p>
+<ul>
+<li>false，0，NaN，空串，null，undefined返回false</li>
+<li>其他值都转换为true。（[]和{}也是true)</li>
+</ul>
+</blockquote>
+<h4 id="隐式类型转换"><a href="#隐式类型转换" class="headerlink" title="隐式类型转换"></a>隐式类型转换</h4><h5 id="运算中的隐式类型转换"><a href="#运算中的隐式类型转换" class="headerlink" title="运算中的隐式类型转换"></a>运算中的隐式类型转换</h5><p>几乎所有隐式类型转换发生在表达式计算中</p>
+<p>根据表达式的具体情况决定到底是转化为Number、String、Boolean或者其他东西</p>
+<blockquote>
+<ol>
+<li><strong>与String进行运算</strong></li>
+</ol>
+<ul>
+<li><p>运算符为+、+=、++时，发生字符串拼接</p>
+</li>
+<li><p>其他运算符: </p>
+<ul>
+<li>字符串由数字和正负号构成，则发生算术运算，返回计算结果</li>
+<li>字符串含有 数字和正负号 <strong>以外</strong>的符号，返回NaN</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li><strong>与Boolean进行运算</strong></li>
+</ol>
+<ul>
+<li>true转为1， false转为0，再进行算术运算，返回计算结果</li>
+</ul>
+<ol start="3">
+<li><strong>与Obejct运算</strong></li>
+</ol>
+<ul>
+<li>先与对象valueOf()的返回值进行运算，若为NaN，则再与对象toSting()的返回值进行运算，依照上述规则返回运算结果</li>
+</ul>
+</blockquote>
+<h5 id="逻辑判断中的隐式类型转换"><a href="#逻辑判断中的隐式类型转换" class="headerlink" title="逻辑判断中的隐式类型转换"></a>逻辑判断中的隐式类型转换</h5><p>要记得有这种转换方式<br>就是在 if，while，do-while 里的 各种逻辑判断运算 中会把值转为Boolean</p>
+<blockquote>
+<ol>
+<li><p><strong>对于String</strong></p>
+<ul>
+<li>若为空串，则返回false；否则为true</li>
+</ul>
+</li>
+<li><p><strong>对于Number</strong></p>
+<ul>
+<li>非0即1</li>
+</ul>
+</li>
+<li><p><strong>对于undefined、null、NaN</strong></p>
+<ul>
+<li>返回false</li>
+</ul>
+</li>
+<li><p><strong>对于{}，[]</strong></p>
+<ul>
+<li>返回true</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<p>另外，这里再补充一下JS的逻辑大小判断规则</p>
+<blockquote>
+<ul>
+<li>Number之间，则进行数字大小比较。</li>
+<li>String之间，比较字典序，注意a &lt; b，这里是升序</li>
+<li>Boolean之间，则先把布尔值转换为数字进行比较。</li>
+<li>Number和String，则先把字符串转换为数字进行比较。如果字符串的<strong>转换结果为NaN</strong>，NaN与任何类型的值都为false。</li>
+<li>Object之间，先用valueOf()的返回值进行比较，如果不能有结果，再用toString()的返回值进行比较</li>
+</ul>
+</blockquote>
+<h5 id="严格相同比较"><a href="#严格相同比较" class="headerlink" title="严格相同比较"></a>严格相同比较</h5><p><strong>===三等号</strong></p>
+<blockquote>
+<p>和==的区别及联系:</p>
+<p>第一步： == 比较 两端数据类型，类型不同则进入<strong>第二步</strong>，类型相同则进入<strong>第三步</strong><br>第二步： <strong>发生一次类型转换</strong>，进入<strong>第三步</strong><br>第三步：===比较，若为基本数据类型，则依次比较数据类型、数据值，出现不同立刻终止返回false，全部相同                则返回true；若为引用数据类型，则依次比较数据类型、数据值、地址，过程同上。</p>
+</blockquote>
+<p><strong>典型例子</strong></p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">null</span> <span class="token operator">==</span> <span class="token keyword">undefined</span> <span class="token comment">// true, 都可以转为false和0</span>
+<span class="token keyword">null</span> <span class="token operator">===</span> <span class="token keyword">undefined</span> <span class="token comment">// false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<p><strong>Object.is()</strong><br>和三等号类似的，但是做了一定的调整，比如</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 这些例子和 === 判断的结果是相反</span>
+Object<span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span><span class="token number">NaN</span><span class="token punctuation">,</span><span class="token number">NaN</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+Object<span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">+</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">// false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>这两种严格比较最主要的区别也就是对上述两个值的比较了，其余效果基本一致</p>
+</blockquote>
+<p>Object.is()判断上述两者的关键代码如下：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 实现判断NaN等于NaN </span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">+</span>a <span class="token operator">!==</span> <span class="token operator">+</span>a<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token operator">+</span>b <span class="token operator">!==</span> <span class="token operator">+</span>b<span class="token punctuation">;</span>
+<span class="token comment">// 实现判断+0和-0, 利用Infinity != -Infinity</span>
+<span class="token number">1</span><span class="token operator">/</span><span class="token operator">-</span><span class="token number">0</span> <span class="token operator">===</span> <span class="token number">1</span><span class="token operator">/</span><span class="token number">0</span> <span class="token comment">// false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="Object-进阶-（待更新）"><a href="#Object-进阶-（待更新）" class="headerlink" title="Object 进阶 （待更新）"></a>Object 进阶 （待更新）</h2><p>这一部分有些内容看似和之前的内容重复，但实际上是进一步深入</p>
+<p>从Object出发，能够对JS有一个更加深刻的认识</p>
+<h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><h4 id="简单创建和访问"><a href="#简单创建和访问" class="headerlink" title="简单创建和访问"></a>简单创建和访问</h4><p>基础访问+迭代访问</p>
+<h4 id="new关键字详解"><a href="#new关键字详解" class="headerlink" title="new关键字详解"></a>new关键字详解</h4><p>(以Date的实例化为例子并写一写Date相关的一些历史)</p>
+<h3 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h3><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h4 id="创建-4种"><a href="#创建-4种" class="headerlink" title="创建(4种)"></a>创建(4种)</h4><h4 id="arguments"><a href="#arguments" class="headerlink" title="arguments"></a>arguments</h4><h4 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h4><h4 id="this指针"><a href="#this指针" class="headerlink" title="this指针"></a>this指针</h4><h4 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h4><h3 id="对象创建模式（7种）"><a href="#对象创建模式（7种）" class="headerlink" title="对象创建模式（7种）"></a>对象创建模式（7种）</h3><h3 id="继承模式（7-1种）"><a href="#继承模式（7-1种）" class="headerlink" title="继承模式（7 + 1种）"></a>继承模式（7 + 1种）</h3><h3 id="作用域和作用域链"><a href="#作用域和作用域链" class="headerlink" title="作用域和作用域链"></a>作用域和作用域链</h3><h4 id="三种作用域"><a href="#三种作用域" class="headerlink" title="三种作用域"></a>三种作用域</h4><p>(指的是ES6以前)</p>
+<h4 id="暂时性死区"><a href="#暂时性死区" class="headerlink" title="暂时性死区"></a>暂时性死区</h4><h3 id="预处理机制"><a href="#预处理机制" class="headerlink" title="预处理机制"></a>预处理机制</h3><h3 id="上下文"><a href="#上下文" class="headerlink" title="上下文"></a>上下文</h3><h4 id="两种上下文"><a href="#两种上下文" class="headerlink" title="两种上下文"></a>两种上下文</h4><h4 id="执行上下文"><a href="#执行上下文" class="headerlink" title="执行上下文"></a>执行上下文</h4><h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Serio</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://serio.gitee.io/2022/03/31/javascript/">https://serio.gitee.io/2022/03/31/javascript/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Serio</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" class="card-content" data-id="city" data-uid="MTAyMC81NDg1OC8zMTMyNw==">
+        <script type="text/javascript">
+            (function (d, s) {
+                let j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2022/03/31/javascript/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/postimages/42.webp" class="responsive-img" alt="JavaScript">
+                        
+                        <span class="card-title">JavaScript</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            JavaScript核心技术卷
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-31
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/web/" class="post-category">
+                                    web
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/03/24/nuxt/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/postimages/41.webp" class="responsive-img" alt="Nuxt">
+                        
+                        <span class="card-title">Nuxt</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            未来，CSR还是SSR?
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/web/" class="post-category">
+                                    web
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%90%8E%E7%AB%AF/">
+                        <span class="chip bg-color">后端</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('1'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="song"
+                   id="1322877419"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <a href="/about" target="_blank">Serio</a>
+            |&nbsp;Powered by&nbsp;<a href="#" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="#" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/CoderSerio" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2779066456@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+    <a href="https://twitter.com/Eg4HTb5i41JUERI" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/Eg4HTb5i41JUERI" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2779066456" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2779066456" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/"><\/script>');
+            }
+        </script>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+        <script src="//code.tidio.co/8rh2fkswsxbq8ekykk2ieakrakfltfah.js"></script>
+        <script>
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);
+                function change_Tidio() {
+                    var tidio=$("#tidio-chat iframe");
+                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
+                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                    }
+                }
+            });
+        </script>
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

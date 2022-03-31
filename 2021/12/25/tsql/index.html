@@ -477,7 +477,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-29
+                    2022-03-31
                 </div>
                 
 
@@ -517,15 +517,34 @@
 <p>其他未提到的语法可参考本站的<strong>MySQL学习笔记</strong>。</p>
 </blockquote>
 <h2 id="数据库操作"><a href="#数据库操作" class="headerlink" title="数据库操作"></a>数据库操作</h2><p>接下来涉及到的操作中，数据库名尽可能采用SelectCourse，DB等</p>
-<h3 id="数据库创建"><a href="#数据库创建" class="headerlink" title="数据库创建"></a>数据库创建</h3><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> DATABASE SelectCourse <span class="comment">-- 创建数据库</span></span><br><span class="line"><span class="keyword">ON</span> <span class="keyword">PRIMARY</span> </span><br><span class="line">(</span><br><span class="line">NAME <span class="operator">=</span> <span class="string">'data'</span>,               <span class="comment">-- 主数据文件的逻辑名</span></span><br><span class="line">FILENAME <span class="operator">=</span> <span class="string">'E：\data'</span>,	    <span class="comment">-- 主数据文件的物理名</span></span><br><span class="line">SIZE <span class="operator">=</span> <span class="number">10</span>MB,                  <span class="comment">-- 初始大小</span></span><br><span class="line">FILEGROWTH <span class="operator">=</span> <span class="number">10</span><span class="operator">%</span>             <span class="comment">-- 增长率</span></span><br><span class="line">)</span><br><span class="line">LOG <span class="keyword">ON</span> </span><br><span class="line">(</span><br><span class="line">	NAME <span class="operator">=</span> <span class="string">'log'</span>,             <span class="comment">-- 日志文件逻辑名</span></span><br><span class="line">    FILENAME <span class="operator">=</span> <span class="string">'E:\log'</span>,		 <span class="comment">-- 日志文件物理名</span></span><br><span class="line">    SZIE <span class="operator">=</span> <span class="number">1</span>MB,                </span><br><span class="line">    MAXSIZE <span class="operator">=</span> <span class="number">20</span>MB,</span><br><span class="line">    FILEGROWTH <span class="operator">=</span> <span class="number">10</span><span class="operator">%</span> </span><br><span class="line">)</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="数据库创建"><a href="#数据库创建" class="headerlink" title="数据库创建"></a>数据库创建</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">DATABASE</span> SelectCourse <span class="token comment">-- 创建数据库</span>
+<span class="token keyword">ON</span> <span class="token keyword">PRIMARY</span> 
+<span class="token punctuation">(</span>
+NAME <span class="token operator">=</span> <span class="token string">'data'</span><span class="token punctuation">,</span>               <span class="token comment">-- 主数据文件的逻辑名</span>
+FILENAME <span class="token operator">=</span> <span class="token string">'E：\data'</span><span class="token punctuation">,</span>	    <span class="token comment">-- 主数据文件的物理名</span>
+SIZE <span class="token operator">=</span> <span class="token number">10</span>MB<span class="token punctuation">,</span>                  <span class="token comment">-- 初始大小</span>
+FILEGROWTH <span class="token operator">=</span> <span class="token number">10</span><span class="token operator">%</span>             <span class="token comment">-- 增长率</span>
+<span class="token punctuation">)</span>
+LOG <span class="token keyword">ON</span> 
+<span class="token punctuation">(</span>
+	NAME <span class="token operator">=</span> <span class="token string">'log'</span><span class="token punctuation">,</span>             <span class="token comment">-- 日志文件逻辑名</span>
+    FILENAME <span class="token operator">=</span> <span class="token string">'E:\log'</span><span class="token punctuation">,</span>		 <span class="token comment">-- 日志文件物理名</span>
+    SZIE <span class="token operator">=</span> <span class="token number">1</span>MB<span class="token punctuation">,</span>                
+    MAXSIZE <span class="token operator">=</span> <span class="token number">20</span>MB<span class="token punctuation">,</span>
+    FILEGROWTH <span class="token operator">=</span> <span class="token number">10</span><span class="token operator">%</span> 
+<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="数据库备份"><a href="#数据库备份" class="headerlink" title="数据库备份"></a>数据库备份</h3><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">BACKUP DATABASE SelectCourse</span><br><span class="line"><span class="keyword">TO</span> <span class="string">'E:\bk_SelectCourse'</span> </span><br><span class="line"><span class="keyword">WITH</span> DIFFERENTIAL, <span class="type">INT</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="数据库备份"><a href="#数据库备份" class="headerlink" title="数据库备份"></a>数据库备份</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">BACKUP</span> <span class="token keyword">DATABASE</span> SelectCourse
+<span class="token keyword">TO</span> <span class="token string">'E:\bk_SelectCourse'</span> 
+<span class="token keyword">WITH</span> DIFFERENTIAL<span class="token punctuation">,</span> <span class="token keyword">INT</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>其中<strong>DIFFERENTIAL</strong>关键字是可以去掉的，其意义是保留设备上已有的内容，去掉的话则是覆盖</p>
 <p>好吧，其实整个WITH都是可以省略的，INT参数意义不详（暂时也没找到参考资料）</p>
 <h3 id="数据库恢复"><a href="#数据库恢复" class="headerlink" title="数据库恢复"></a>数据库恢复</h3><p>既然有备份，那自然有恢复啊</p>
 <p>（诶，这个备份模式好像在哪里学过来着，究竟是哪里啊）</p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RESTORE DATABASE SelectCourse</span><br><span class="line"><span class="keyword">FROM</span> <span class="string">'E:\bk_SelectCourse'</span></span><br><span class="line"><span class="keyword">WITH</span> FILE <span class="operator">=</span> <span class="number">1</span>, REPLACE</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">RESTORE</span> <span class="token keyword">DATABASE</span> SelectCourse
+<span class="token keyword">FROM</span> <span class="token string">'E:\bk_SelectCourse'</span>
+<span class="token keyword">WITH</span> <span class="token keyword">FILE</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token keyword">REPLACE</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>只知道REPLACE大概是强制替换，FILE参数意义不详</p>
 <p>同样，WITH整个都可以省略</p>
@@ -543,38 +562,66 @@
 <blockquote>
 <p>由<strong>用户自定义的变量</strong>，可以存储数值，字符串等类型，作用范围仅在某个程序内部。</p>
 <p>语法如下：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span> <span class="variable">@name</span> <span class="type">varchar</span>(<span class="number">10</span>) <span class="comment">-- 声明局部变量name，类型是变长数组，长度上限是10</span></span><br><span class="line"><span class="keyword">set</span> <span class="variable">@name</span> <span class="operator">=</span> <span class="string">'沈某人'</span>       <span class="comment">-- 赋值</span></span><br><span class="line">print <span class="variable">@name</span> 			 <span class="comment">-- 打印</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">DECLARE</span> <span class="token variable">@name</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token comment">-- 声明局部变量name，类型是变长数组，长度上限是10</span>
+<span class="token keyword">set</span> <span class="token variable">@name</span> <span class="token operator">=</span> <span class="token string">'沈某人'</span>       <span class="token comment">-- 赋值</span>
+<span class="token keyword">print</span> <span class="token variable">@name</span> 			 <span class="token comment">-- 打印</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>也就是局部变量名称前面需要带有@字符</p>
 </blockquote>
 <h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><blockquote>
 <p>由系统提供的，用于存储一些系统信息，不能由用户定义。</p>
 <p>全局变量的作用域并不局限于某个程序，而是任何程序随时可以调用。</p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@<span class="variable">@ERROR</span>  <span class="comment">-- 最后一个T-SQL错误的错误号</span></span><br><span class="line">@<span class="variable">@IDENTITY</span> <span class="comment">-- 最后一次插入的标记值</span></span><br><span class="line">@<span class="variable">@LANGUAGE</span> <span class="comment">-- 当前使用语言的名称</span></span><br><span class="line">@<span class="variable">@MAX</span>_CONNECTIONS <span class="comment">-- 可以创建同时连接的最大数目</span></span><br><span class="line">@<span class="variable">@ROWCOUNT</span> <span class="comment">-- 受上一个SQL语言影响的行数</span></span><br><span class="line">@<span class="variable">@SERVERNAME</span> <span class="comment">-- 本地服务器的名称</span></span><br><span class="line">@<span class="variable">@TRANSCOUT</span> <span class="comment">-- 当前连接打开的事务数目</span></span><br><span class="line">@<span class="variable">@VERSION</span> <span class="comment">-- SQL SERVER的版本信息</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">@<span class="token variable">@ERROR</span>  <span class="token comment">-- 最后一个T-SQL错误的错误号</span>
+@<span class="token variable">@IDENTITY</span> <span class="token comment">-- 最后一次插入的标记值</span>
+@<span class="token variable">@LANGUAGE</span> <span class="token comment">-- 当前使用语言的名称</span>
+@<span class="token variable">@MAX_CONNECTIONS</span> <span class="token comment">-- 可以创建同时连接的最大数目</span>
+@<span class="token variable">@ROWCOUNT</span> <span class="token comment">-- 受上一个SQL语言影响的行数</span>
+@<span class="token variable">@SERVERNAME</span> <span class="token comment">-- 本地服务器的名称</span>
+@<span class="token variable">@TRANSCOUT</span> <span class="token comment">-- 当前连接打开的事务数目</span>
+@<span class="token variable">@VERSION</span> <span class="token comment">-- SQL SERVER的版本信息</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>没错，全局变量的标志是前置两个@字符</p>
 </blockquote>
 <p>tip:局部变量名称支持中文</p>
 <h2 id="选择分支"><a href="#选择分支" class="headerlink" title="选择分支"></a>选择分支</h2><p>几乎所有语言的分支都长一个样</p>
 <p>但是这里竟然不太一样！！！</p>
-<h3 id="IF语句"><a href="#IF语句" class="headerlink" title="IF语句"></a>IF语句</h3><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">IF @院系 <span class="operator">=</span> <span class="string">'计科院'</span></span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">	PRINT <span class="string">'壮哉我计科院！'</span></span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="IF语句"><a href="#IF语句" class="headerlink" title="IF语句"></a>IF语句</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">IF</span> @院系 <span class="token operator">=</span> <span class="token string">'计科院'</span>
+<span class="token keyword">BEGIN</span>
+	<span class="token keyword">PRINT</span> <span class="token string">'壮哉我计科院！'</span>
+<span class="token keyword">END</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>其中BEGIN和END就是起到类似于{}花括号划定作用域的效果</p>
 <p>当然，在其中只有一条语句时，依旧存在语法糖</p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">IF @院系 <span class="operator">=</span> <span class="string">'计科院'</span></span><br><span class="line">	PRINT <span class="string">'壮哉我计科院'</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">IF</span> @院系 <span class="token operator">=</span> <span class="token string">'计科院'</span>
+	<span class="token keyword">PRINT</span> <span class="token string">'壮哉我计科院'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 
 
 <p>同样地，也有ELSE和ELSE IF语句，此处不再赘述</p>
 <p>（应该有ELSE IF吧？没试过，不过我想应该是有的。有空试一试）</p>
 <h3 id="CASE语句"><a href="#CASE语句" class="headerlink" title="CASE语句"></a>CASE语句</h3><p>什么，竟然不是switch，爷青结！</p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Sname, location <span class="operator">=</span></span><br><span class="line"><span class="keyword">CASE</span> Sdept </span><br><span class="line">	<span class="keyword">WHEN</span> <span class="string">'计科院'</span> <span class="keyword">THEN</span> <span class="string">'明理楼'</span>，</span><br><span class="line">	<span class="keyword">WHEN</span> <span class="string">'机电院'</span> <span class="keyword">THEN</span> <span class="string">'明志楼'</span>,</span><br><span class="line">	<span class="keyword">WHEN</span> <span class="string">'化工院'</span> <span class="keyword">THEN</span> <span class="string">'明德楼'</span>,</span><br><span class="line">	<span class="keyword">WHEN</span> <span class="string">'石工院'</span> <span class="keyword">THEN</span> <span class="string">'明德楼'</span>,</span><br><span class="line">	<span class="keyword">ELSE</span> <span class="string">'思学楼'</span></span><br><span class="line"><span class="keyword">END</span></span><br><span class="line"><span class="keyword">FROM</span> Student</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> Sname<span class="token punctuation">,</span> location <span class="token operator">=</span>
+<span class="token keyword">CASE</span> Sdept 
+	<span class="token keyword">WHEN</span> <span class="token string">'计科院'</span> <span class="token keyword">THEN</span> <span class="token string">'明理楼'</span>，
+	<span class="token keyword">WHEN</span> <span class="token string">'机电院'</span> <span class="token keyword">THEN</span> <span class="token string">'明志楼'</span><span class="token punctuation">,</span>
+	<span class="token keyword">WHEN</span> <span class="token string">'化工院'</span> <span class="token keyword">THEN</span> <span class="token string">'明德楼'</span><span class="token punctuation">,</span>
+	<span class="token keyword">WHEN</span> <span class="token string">'石工院'</span> <span class="token keyword">THEN</span> <span class="token string">'明德楼'</span><span class="token punctuation">,</span>
+	<span class="token keyword">ELSE</span> <span class="token string">'思学楼'</span>
+<span class="token keyword">END</span>
+<span class="token keyword">FROM</span> Student<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p>所有语言的循环都差不多</p>
 <p>啊，什么？没有FOR循环？爷二度青结！</p>
-<h3 id="WHILE语句"><a href="#WHILE语句" class="headerlink" title="WHILE语句"></a>WHILE语句</h3><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">WHILE (SELCT <span class="built_in">AVG</span>(Ccredit) <span class="keyword">FROM</span> Course ) <span class="operator">&lt;</span> <span class="number">5</span> <span class="comment">-- 注意这个括号不是WHILE语句的，只是为了改变SELECT语句和小于比较的运算优先级</span></span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">	UPDATE Course <span class="keyword">SET</span> Ccredit <span class="operator">=</span> Credit <span class="operator">+</span> <span class="number">1</span> <span class="comment">-- 没有 ++ 这样的一目运算符</span></span><br><span class="line">    IF (<span class="keyword">SELECT</span> <span class="built_in">MAX</span>(Ccredit) <span class="keyword">FROM</span> Course) <span class="operator">&gt;</span> <span class="number">10</span> <span class="comment">-- 同样地， 这个括号也只是为了改变运算优先级</span></span><br><span class="line">    	BREAK   <span class="comment">-- 是经典的BREAK语句</span></span><br><span class="line">    <span class="keyword">ELSE</span></span><br><span class="line">    	CONTINUE <span class="comment">-- 应该不写也一样 </span></span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="WHILE语句"><a href="#WHILE语句" class="headerlink" title="WHILE语句"></a>WHILE语句</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">WHILE</span> <span class="token punctuation">(</span>SELCT <span class="token function">AVG</span><span class="token punctuation">(</span>Ccredit<span class="token punctuation">)</span> <span class="token keyword">FROM</span> Course <span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">5</span> <span class="token comment">-- 注意这个括号不是WHILE语句的，只是为了改变SELECT语句和小于比较的运算优先级</span>
+<span class="token keyword">BEGIN</span>
+	<span class="token keyword">UPDATE</span> Course <span class="token keyword">SET</span> Ccredit <span class="token operator">=</span> Credit <span class="token operator">+</span> <span class="token number">1</span> <span class="token comment">-- 没有 ++ 这样的一目运算符</span>
+    <span class="token keyword">IF</span> <span class="token punctuation">(</span><span class="token keyword">SELECT</span> <span class="token function">MAX</span><span class="token punctuation">(</span>Ccredit<span class="token punctuation">)</span> <span class="token keyword">FROM</span> Course<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">10</span> <span class="token comment">-- 同样地， 这个括号也只是为了改变运算优先级</span>
+    	<span class="token keyword">BREAK</span>   <span class="token comment">-- 是经典的BREAK语句</span>
+    <span class="token keyword">ELSE</span>
+    	<span class="token keyword">CONTINUE</span> <span class="token comment">-- 应该不写也一样 </span>
+<span class="token keyword">END</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>上述WHILE中SELECT语句的执行过程并不是一步到位的，而是一个元组一个元组地查询，每次查询都会用AVG函数计算平均值，一旦这个平均值不再满足&lt;5这个条件，WHILE循环结束</p>
 <h2 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h2><p>一开始我还以为是什么理论性的东西（望文生义</p>
@@ -588,16 +635,24 @@
 <p>那么我们暂时吧存储过程看做函数吧（当然也注意区别，因为T-SQL中也有函数这一概念，这个我们后面再提）</p>
 <p>那为什么要有这样一个设定呢？当然是为了懒啊！</p>
 <h3 id="存储过程的简单操作"><a href="#存储过程的简单操作" class="headerlink" title="存储过程的简单操作"></a>存储过程的简单操作</h3><p><strong>创建存储过程</strong></p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">PROCEDURE</span> proc_name</span><br><span class="line"><span class="keyword">AS</span></span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"> <span class="comment">-- 里面写SELECT语句等各种T-SQL语句，此处不再赘述</span></span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">PROCEDURE</span> proc_name
+<span class="token keyword">AS</span>
+<span class="token keyword">BEGIN</span>
+ <span class="token comment">-- 里面写SELECT语句等各种T-SQL语句，此处不再赘述</span>
+<span class="token keyword">END</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>使用存储过程</strong></p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXECUTE</span> proc_name <span class="comment">-- 熟悉的语句，有了Minecraft的感觉了</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">EXECUTE</span> proc_name <span class="token comment">-- 熟悉的语句，有了Minecraft的感觉了</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><strong>修改存储过程</strong></p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">PROCEDURE</span> proc_name</span><br><span class="line"><span class="keyword">AS</span></span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"> <span class="comment">-- 新的内容</span></span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">PROCEDURE</span> proc_name
+<span class="token keyword">AS</span>
+<span class="token keyword">BEGIN</span>
+ <span class="token comment">-- 新的内容</span>
+<span class="token keyword">END</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>删除存储过程</strong></p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">PROCEDURE</span> proc_name</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">DROP</span> <span class="token keyword">PROCEDURE</span> proc_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
@@ -606,7 +661,13 @@
 <h3 id="触发器"><a href="#触发器" class="headerlink" title="触发器"></a>触发器</h3><p>我还以为触发器是单独的一章，结果和我说是<strong>一种特殊的存储过程</strong></p>
 <p>也叫 <strong>自执行存储过程</strong>，在满足特定条件的时候执行，而不用EXECUTE执行</p>
 <p>简单使用过程如下：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TRIGGER</span> tri_name</span><br><span class="line"><span class="keyword">ON</span> Student <span class="comment">-- 这是针对的表</span></span><br><span class="line">AFTER UPDATE <span class="comment">-- 这是触发事件，可以有多个触发事件.此处为在更新之后.</span></span><br><span class="line"><span class="keyword">AS</span>  </span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"> <span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Student</span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">TRIGGER</span> tri_name
+<span class="token keyword">ON</span> Student <span class="token comment">-- 这是针对的表</span>
+<span class="token keyword">AFTER</span> <span class="token keyword">UPDATE</span> <span class="token comment">-- 这是触发事件，可以有多个触发事件.此处为在更新之后.</span>
+<span class="token keyword">AS</span>  
+<span class="token keyword">BEGIN</span>
+ <span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> Student
+<span class="token keyword">END</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>其中<strong>AFTER可以替换为FOR或者INSTEAD OF</strong>，作用也就是顾名思义</p>
 <p>另外<strong>UPDATE也可以替换为INSERT或者DELETE</strong>，作用依旧是顾名思义</p>
@@ -617,17 +678,30 @@
 <li>角色：特指具有一系列权限的身份，这个角色身份可以赋予给用户，此时这个用户就具有了该角色所有的权限。</li>
 </ol>
 <p><strong>登录名管理</strong>：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> LOGIN login_name <span class="keyword">WITH</span> PASSWORD <span class="operator">=</span> <span class="string">'...'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">DROP</span> LOGIN login_name`</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">CREATE</span> LOGIN login_name <span class="token keyword">WITH</span> PASSWORD <span class="token operator">=</span> <span class="token string">'...'</span>
+
+<span class="token keyword">DROP</span> LOGIN login_name<span class="token punctuation">`</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p><strong>用户管理</strong>：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> user_name <span class="keyword">FOR</span> LOGIN login_name`</span><br><span class="line"></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">USER</span> user_name`</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">USER</span> user_name <span class="token keyword">FOR</span> LOGIN login_name<span class="token punctuation">`</span>
+
+<span class="token keyword">DROP</span> <span class="token keyword">USER</span> user_name<span class="token punctuation">`</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p><strong>角色管理</strong>：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> ROLE role_name</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> ROLE role_name <span class="keyword">AUTHORIZATION</span> owner_name</span><br><span class="line"></span><br><span class="line"><span class="keyword">EXEC</span> sp_addrolemember <span class="string">'role_name'</span>, <span class="string">'user_name'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">EXEC</span> sp_droprolemember <span class="string">'role_name'</span>, <span class="string">'user_name'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">DROP</span> ROLE role_name</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">CREATE</span> ROLE role_name
+
+<span class="token keyword">CREATE</span> ROLE role_name <span class="token keyword">AUTHORIZATION</span> owner_name
+
+<span class="token keyword">EXEC</span> sp_addrolemember <span class="token string">'role_name'</span><span class="token punctuation">,</span> <span class="token string">'user_name'</span>
+
+<span class="token keyword">EXEC</span> sp_droprolemember <span class="token string">'role_name'</span><span class="token punctuation">,</span> <span class="token string">'user_name'</span>
+
+<span class="token keyword">DROP</span> ROLE role_name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 

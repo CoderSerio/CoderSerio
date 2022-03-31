@@ -481,14 +481,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-25
+                    2022-03-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    1.9k
                 </div>
                 
 
@@ -518,6 +518,7 @@
 </blockquote>
 <h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><blockquote>
 <p><strong>2022/03/24</strong><br>安装Nuxt，了解了基本概念</p>
+<p><strong>2022/03/25</strong><br>开始使用Nuxt</p>
 </blockquote>
 <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="CSR和SSR"><a href="#CSR和SSR" class="headerlink" title="CSR和SSR"></a>CSR和SSR</h3><p>CSR即客户端渲染，Client Side Render</p>
 <p>SSR即服务端渲染, Server Side Render</p>
@@ -678,8 +679,17 @@ server<span class="token punctuation">.</span><span class="token function">liste
 <p><strong>约定式</strong><br>不需要做文件的导入等工作，只需要按照一定的规定做就可以使用，Nuxt路由可以使用约定式，只要建立在pages下的文件，就能够直接访问到</p>
 <p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684253bca7b99d2b388958ca4afaa830ca3cdbbf4fabdda89fd6/0.png" alt="image.png"></p>
 <p>其中goods的二级路由里面有一点需要注意，这里命名为<code>_id.vue</code>，<code>_</code>表示这个id是一个动态的，这个二级路由是动态路由</p>
+<blockquote>
+<p>看到这里我们也就明白了约定式的多级路由就是通过文件层级来判断的级别，通过文件名称来判断从属关系</p>
+</blockquote>
 <p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684253bca7b99d2b388998d43942d9908c32cbb7bdf72048bf5a/0.png" alt="路由的声明式和约定式"></p>
 <p>注意这里二级路由还没有展示区，我们需要给一个<code>&lt;nuxt /&gt;</code>给予展示</p>
+<h3 id="使用layout布局组件"><a href="#使用layout布局组件" class="headerlink" title="使用layout布局组件"></a>使用layout布局组件</h3><p>其实这个只是做了个分层，component是组件，layout是拼凑组件进行布局，最后再放到page中</p>
+<p>之前我们把几个一级路由写到了default.vue这个layout组件中，现在我们再写一个一级组件叫做app-header.vue</p>
+<p>这里的导出引入就和Vue完全一样了</p>
+<p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168423c67fb0cfa07dcffdf08d45d2ed5c981c0cb4b07a7b693e2/0.png" alt="image.png"></p>
+<p>这里设置了一个 active-class，大概是Vue的东西（纳尼？？？）</p>
+<p>就是路由活动的时候加载的class样式，而对于作用的路由的目标路由，采用的模糊匹配，比如搜索/class，那么/ 、/cla、/class都会被匹配到，所以当/goods等其他路由生效的时候，/也会生效</p>
 
                 
             </div>
@@ -943,29 +953,28 @@ server<span class="token punctuation">.</span><span class="token function">liste
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/03/24/nuxt/">
+                <a href="/2022/03/31/javascript/">
                     <div class="card-image">
                         
-                        <img src="/medias/postimages/41.webp" class="responsive-img" alt="Nuxt">
+                        <img src="/medias/postimages/42.webp" class="responsive-img" alt="JavaScript">
                         
-                        <span class="card-title">Nuxt</span>
+                        <span class="card-title">JavaScript</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            未来，CSR还是SSR?
+                            JavaScript核心技术卷
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-24
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-31
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -978,16 +987,11 @@ server<span class="token punctuation">.</span><span class="token function">liste
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/%E5%89%8D%E7%AB%AF/">
                         <span class="chip bg-color">前端</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%90%8E%E7%AB%AF/">
-                        <span class="chip bg-color">后端</span>
                     </a>
                     
                 </div>
