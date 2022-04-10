@@ -477,14 +477,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-04
+                    2022-04-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.7k
+                    5k
                 </div>
                 
 
@@ -523,6 +523,7 @@
 <p><strong>2022/01/28</strong><br>与JavaScript复习笔记一起，并发地更新！</p>
 <p><strong>2022/02/07</strong><br>迂回前进，更新webpack基础使用部分</p>
 <p><strong>2022/04/04</strong><br>迂回前进，更新webpack实战部分</p>
+<p><strong>2022/04/10</strong><br>更新进阶部分</p>
 </blockquote>
 <h2 id="webpack概述"><a href="#webpack概述" class="headerlink" title="webpack概述"></a>webpack概述</h2><h3 id="什么是Webpack"><a href="#什么是Webpack" class="headerlink" title="什么是Webpack"></a>什么是Webpack</h3><p>前端项目由什么构成——资源:</p>
 <blockquote>
@@ -792,7 +793,8 @@ module<span class="token punctuation">.</span>exports <span class="token operato
                 test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.(jpg|png|gif)$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
                
                 <span class="token comment">// 这里需要安装 url-loader 和 file-loader,</span>
-                <span class="token comment">// url-loader会依赖file-loader的功能</span>
+                <span class="token comment">// url-loader会讲图片编为base64</span>
+                <span class="token comment">// file-loader可以加载本地图片</span>
                 <span class="token comment">// 仅有一个loader则不需要使用use</span>
                 loader<span class="token operator">:</span> <span class="token string">'url-loader'</span><span class="token punctuation">,</span>
                 options<span class="token operator">:</span> <span class="token punctuation">{</span>
@@ -829,7 +831,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
         <span class="token punctuation">}</span><span class="token punctuation">)</span>
     <span class="token punctuation">]</span><span class="token punctuation">,</span>
     mode<span class="token operator">:</span> <span class="token string">"production"</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -944,9 +946,210 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 
 
 <h2 id="webpack进阶-待更新"><a href="#webpack进阶-待更新" class="headerlink" title="webpack进阶(待更新)"></a>webpack进阶(待更新)</h2><h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><blockquote>
-<p>HMR<br>resolve<br>optimization<br>dll<br>webpack5<br>production<br>development<br>eslint<br>babel<br>pwa<br>loader<br>plugin<br>devtool<br>性能优化<br>tree shaking<br>code split<br>caching<br>lazy loading<br>library<br>shimming</p>
+<p>HMR<br>resolve<br>optimization<br>dll<br>production<br>development<br>eslint<br>babel<br>pwa<br>loader<br>plugin<br>devtool<br>性能优化<br>tree shaking<br>code split<br>caching<br>lazy loading<br>library<br>shimming</p>
 </blockquote>
+<h3 id="HMR"><a href="#HMR" class="headerlink" title="HMR"></a>HMR</h3><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><p>当我们修改一行代码，整个项目就得重新转译打包，效率十分低下，这时候就得考虑HMR了</p>
+<blockquote>
+<p><strong>Hot Module Replacement</strong>，即<strong>热模块替换</strong></p>
+<p>这里需要知道，和五个核心字段平级的内容中有一个watch字段，可以通过设置<code>watch:true</code>自动重新打包，但是这样的自动更新依旧是打包整个项目，不能算是HMR（<code>watch:true</code>还有另一种写法就是在package.json中的scripts中配置<code>webpack (略) --watch </code>来达到同样的效果)</p>
+<p><strong>永远不要再生产模式下启用HMR</strong></p>
+</blockquote>
+<h4 id="webpack服务器"><a href="#webpack服务器" class="headerlink" title="webpack服务器"></a>webpack服务器</h4><p>vscode插件live-server能够自动刷新页面实现类似的功能（热重载）</p>
+<p>但是我们希望能够用webpack来实现，所以我们<strong>需要安装webpack-dev-server</strong></p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install webpack-dev-server -D
+webpack serve # 默认跑8080
+# 由于webpack的版本兼容问题，这里也可能不能运行<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
+<p>这个服务器是基于Node的express框架的</p>
+<p>和直接使用webpack打包出的静态页面不同，这里不会生成任何文件，这是因为文件操作效率较低，所以webpack-dev-server选择将编译的结果放到内存中，再从内存中读取。</p>
+<p>如果你想要基于其他的框架，那么可以这么做：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install webpack-dev-middleware express # 基于express<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>然后在node的express后端文件中引入这个包，并使用<code>app.use()</code>来启用这个引入的包</p>
+<p>此后便可以使用这个包来处理文件，返回express的中间件</p>
+<blockquote>
+<p>具体实现有一点繁琐，此处不再赘述</p>
+</blockquote>
+<h4 id="使用HMR"><a href="#使用HMR" class="headerlink" title="使用HMR"></a>使用HMR</h4><blockquote>
+<p>这里主要是学习webpack5，需要注意其HMR配置方式与旧版本有所冲突</p>
+<p>之前说的live-server，watch，（直接使用）webpack-dev-server这些，都是刷新整个页面；</p>
+<p>HRM是需要在webpack-dev-server上使用的</p>
+</blockquote>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+	entry<span class="token operator">:</span> <span class="token string">''</span>
+    <span class="token comment">// 略</span>
+    devServer<span class="token operator">:</span> <span class="token punctuation">{</span>
+    	hot<span class="token operator">:</span><span class="token boolean">true</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p><img src="https://ewr1.vultrobjects.com/imgur1/000/002/534/279_269_bef.JPEG" alt="HRM运行机制（图片来自网络）"></p>
+<blockquote>
+<p>1.webpack监听到文件的变化，进行新的编译和打包，而且以简单的js对象保存在内存中。web</p>
+<p>2.webpack与devServer进行交互，告诉webpack要保存代码到内存中。json</p>
+<p>3.devServer对文件的监控，而且经过配置来告诉devServer是刷新仍是进行热更新。浏览器</p>
+<p>4.devServer经过sock.js和浏览器创建websock长连接，把webpack编译代码各阶段信息告诉浏览器(包括更新模块的hash)，就是经过这一个hash来进行更新的。服务器</p>
+<p>5.webpack经过devServer的配置和传递给他的信息（也就是第二部监听的信息）来决定是否进行浏览器刷新或者热更新。</p>
+<p>6.webpack的HotModuleReplacement经过JsonpMainTemplate.runtime 向 server 端发送 Ajax 请求，服务端返回一个 json，该 json 包含了全部要更新的模块的hash值，获取到更新列表后，该模块再次经过jsonp请求，获取到最新的模块代码。这就是上图中 七、八、9 步骤。webpack-dev-server</p>
+<p>10.HotModulePlugin将会对新旧模块进行对比，决定是否更新模块，在决定更新模块后，检查模块之间的依赖关系，更新模块的同时更新模块间的依赖引用。jsonp</p>
+<p>11.当 HMR 失败后，回退到 live reload 操做，刷新浏览器。</p>
+</blockquote>
+<h3 id="source-map"><a href="#source-map" class="headerlink" title="source-map"></a>source-map</h3><blockquote>
+<p>一种源代码到构建后代码映射技术</p>
+<p>如果构建后的代码出错了，通过映射可以追踪到源代码的错误</p>
+</blockquote>
+<h4 id="使用source-map"><a href="#使用source-map" class="headerlink" title="使用source-map"></a>使用source-map</h4><p>配置方式很简单，就是参数有点多</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+	entry<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    <span class="token comment">// 略</span>
+    source<span class="token operator">-</span>map<span class="token operator">:</span> inline<span class="token operator">-</span>source<span class="token operator">-</span>map
+    <span class="token comment">// 参数的格式是[inline-|hidden-|eval-][nosources-][cheap-[module-]]source-map</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>source-map是通过base64编码来映射的<br>下面是几种常见的参数:</p>
+<blockquote>
+<p><strong>source-mao</strong> 外部<br>包含 错误信息 和 错误在源代码的位置<br><strong>inline-source-map</strong> 内联<br>包含 错误信息 和 错误在源代码的位置<br>嵌入到构建后的js文件中<br><strong>hidden-source-map</strong> 外部<br>包含 错误信息<br>单独作为一个文件<br><strong>eval-source-map</strong> 内联<br>但是追加到相应的每个文件标识符后<br>包含 错误信息 和 错误在源代码的位置<br><strong>nosources-source-map</strong> 外部<br>包含错误代码准确信息<br><strong>cheap-source-map</strong> 外部<br>包含错误信息 和 错误在源代码的位置（只能精确到行）<br><strong>cheap-module-source-map</strong> 外部<br>包含错误信息 和 错误在源代码的位置（只能精确到行）</p>
+</blockquote>
+<h4 id="参数性能比较"><a href="#参数性能比较" class="headerlink" title="参数性能比较"></a>参数性能比较</h4><p><strong>速度</strong></p>
+<blockquote>
+<p>eval&gt;inline&gt;cheap&gt;…<br>eval-cheap-source-map<br>eval-source-map</p>
+</blockquote>
+<p><strong>调试友好</strong></p>
+<blockquote>
+<p>source-map<br>cheap-module-source-map<br>cheap-source-map</p>
+</blockquote>
+<p>所以结论是：</p>
+<p>调试最友好：eval-source-map(脚手架默认)<br>速度最快：eval-cheap-module-source-map</p>
+<h3 id="oneOf"><a href="#oneOf" class="headerlink" title="oneOf"></a>oneOf</h3><p>正常打包流程，是所有loader都会被走一遍，这样其实没有必要，所以我们可以用oneOf来处理一下，<strong>最多执行一次loader</strong></p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 略</span>
+    module<span class="token operator">:</span> <span class="token punctuation">{</span>
+        rules<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+               oneOf<span class="token operator">:</span> <span class="token punctuation">[</span> 
+              <span class="token comment">// 这里面的东西仅会执行一个，不能有两个配置处理同一个类型文件</span>
+                   <span class="token punctuation">{</span>
+                       test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.css$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+                       enforce<span class="token operator">:</span> <span class="token string">'pre'</span>	 <span class="token comment">// 优先级更高</span>
+                       <span class="token comment">// 略   </span>
+                   <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                   <span class="token punctuation">{</span>
+                       test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.less$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+                       	 <span class="token comment">// 略   </span>
+				  <span class="token punctuation">}</span>
+               <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="babel缓存"><a href="#babel缓存" class="headerlink" title="babel缓存"></a>babel缓存</h3><h4 id="使用babel缓存"><a href="#使用babel缓存" class="headerlink" title="使用babel缓存"></a>使用babel缓存</h4><p>和HMR有类似之处，比如100个模块，1个变了其他99个也得一起重新编译，<br>由于HMR是基于开发环境下的webpack-dev-server的，<br>所以生产环境下是用不了HMR的，这就得利用缓存来实现类似的功能</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 略</span>
+    module<span class="token operator">:</span> <span class="token punctuation">{</span>
+        rules<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+               	<span class="token punctuation">{</span>
+                   test<span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.css$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+                   cacheDirectory<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token comment">// 开启babel缓存,下次构建就会读取缓存就更快了</span>
+                       <span class="token comment">// 略   </span>
+            	<span class="token punctuation">}</span>  
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这里读取缓存可能会有些问题<br>浏览器缓存是只有响应头才能设置的，前端这里设置的是本地缓存。<br>本地缓存中更新的内容大概是被浏览器缓存缓存的旧内容覆盖而没有呈现，所以提出给文件名做一些处理：<code>文件名+id</code>，这样处理后浏览器缓存中就没有这个更新的文件，自然会从本地读取</p>
+<h4 id="缓存策略"><a href="#缓存策略" class="headerlink" title="缓存策略"></a>缓存策略</h4><p>基于<code>文件名+id</code>的可行性，我们需要思考如何找到一个唯一的id值</p>
+<p><strong>hash</strong></p>
+<blockquote>
+<p>每次webpack构建时会生成一个唯一的hash值<br>因为js和css会同时使用一个hash值，所以会导致所有缓存失效</p>
+</blockquote>
+<p><strong>chunkhash</strong></p>
+<blockquote>
+<p>根据chunk生成的hash值，如果打包来源来源于同一个chunk，那么hash就是一样</p>
+<p>chunk是代码块的意思，可以理解为模块的封装单元</p>
+</blockquote>
+<p><strong>contenthash</strong></p>
+<blockquote>
+<p>根据文件内容生成hash，不同文件hash值一定不同</p>
+</blockquote>
+<p>上述三种hash的使用方式都是类似的：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">filename<span class="token operator">:</span> <span class="token string">'index.[hash:10].html'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="tree-shaking"><a href="#tree-shaking" class="headerlink" title="tree shaking"></a>tree shaking</h3><h4 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h4><p>这个tree要怎么理解呢，可以看看webpack的logo图，再想想webpack的入口文件这些，一切似乎就有了一个轮廓了——入口文件的代码就是根节点，引入的其他文件就是子节点，如是递归，就形成了一棵树</p>
+<p>那么shaking是什么呢，就是一个比喻，通过摇晃这个树，抖掉书上没用的枯叶——没用到的代码</p>
+<blockquote>
+<p>速成就是<strong>树摇</strong>，但似乎也没有更官方的翻译了..<br>主要是针对JS代码，通过import和export确定树的结构</p>
+</blockquote>
+<p>这个性质是默认启用的，所以直接打包即可</p>
+<h4 id="代码的副作用"><a href="#代码的副作用" class="headerlink" title="代码的副作用"></a>代码的副作用</h4><blockquote>
+<p>「副作用」的定义是，在导入时会执行特殊行为的代码，而不是仅仅暴露一个 export 或多个 export。</p>
+</blockquote>
+<p>如果在package.json中配置<code>sideEffects:false</code>，那么将把所有代码都视为没有副作用，都将进行tree shaking过滤</p>
+<p>也可以配置为形如<code>sideEffects:["*.css"]</code>来指定哪些文件可以视为没有副作用，限制tree shaking的过滤范围</p>
+<h3 id="code-split"><a href="#code-split" class="headerlink" title="code split"></a>code split</h3><h4 id="概念-2"><a href="#概念-2" class="headerlink" title="概念"></a>概念</h4><blockquote>
+<p>将打包输出的一个文件输出为多个文件（切片），加载时就可以实现<strong>按需加载、并行加载</strong>等等</p>
+</blockquote>
+<h4 id="使用code-split"><a href="#使用code-split" class="headerlink" title="使用code split"></a>使用code split</h4><blockquote>
+<p>有三种常用的代码分离方法：</p>
+<ul>
+<li>入口起点：使用 <a target="_blank" rel="noopener" href="https://webpack.html.cn/configuration/entry-context"><code>entry</code></a> 配置手动地分离代码。</li>
+<li>防止重复：使用 <a target="_blank" rel="noopener" href="https://webpack.html.cn/plugins/commons-chunk-plugin"><code>CommonsChunkPlugin</code></a> 去重和分离 chunk。</li>
+<li>动态导入：通过模块的内联函数调用来分离代码。</li>
+</ul>
+</blockquote>
+<p><strong>入口起点</strong></p>
+<p>有几个入口就有几个打包的文件</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    entry<span class="token operator">:</span> <span class="token punctuation">{</span>
+		main<span class="token operator">:</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">,</span>
+    	test<span class="token operator">:</span> <span class="token string">'./src/test.js'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    output<span class="token operator">:</span> <span class="token punctuation">{</span>
+    	filename<span class="token operator">:</span> <span class="token string">'js/[name].[contenthash:10].js'</span><span class="token punctuation">,</span>
+        path<span class="token operator">:</span> <span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'build'</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+     plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    	<span class="token keyword">new</span> <span class="token class-name">HTMLWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+  	<span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>防止重复</strong></p>
+<p>这事基于多入口的，在此基础上做出了改进</p>
+<p>如果a.js，b.js都引用了c.js，那么以ab为入口打包的话生成的两个包都会包含c.js，导致重复打包，这样就需要设置optimization</p>
+<blockquote>
+<ol>
+<li>会将node_modules中的代码单独打包到一个chunk中，供其他文件引用</li>
+<li>自动分析多入口chunk的公共文件，如果有则会提取出作为一个单独的chunk</li>
+</ol>
+</blockquote>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    entry<span class="token operator">:</span> <span class="token punctuation">{</span>
+        index<span class="token operator">:</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">,</span>
+    	test<span class="token operator">:</span> <span class="token string">'./src/test.js'</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 略</span>
+    optimization<span class="token operator">:</span> <span class="token punctuation">{</span>
+		splitChunks<span class="token operator">:</span> <span class="token punctuation">{</span>
+            chunks<span class="token operator">:</span> <span class="token string">'all'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>动态导入</strong></p>
+<p>有猜测说这可能是用了ES11的新特性</p>
+<p>在JS文件中</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">(</span><span class="token string">'./xxx'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'动态导入成功'</span><span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token comment">// es6的模块，导入成功后会被单独打包</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'动态导入失败'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="懒加载和预加载"><a href="#懒加载和预加载" class="headerlink" title="懒加载和预加载"></a>懒加载和预加载</h3><h3 id="PWA"><a href="#PWA" class="headerlink" title="PWA"></a>PWA</h3><h3 id="多进程"><a href="#多进程" class="headerlink" title="多进程"></a>多进程</h3><h3 id="externals"><a href="#externals" class="headerlink" title="externals"></a>externals</h3><h3 id="dll"><a href="#dll" class="headerlink" title="dll"></a>dll</h3>
                 
             </div>
             <hr/>
