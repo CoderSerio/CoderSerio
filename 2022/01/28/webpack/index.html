@@ -484,7 +484,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.2k
+                    6.6k
                 </div>
                 
 
@@ -524,6 +524,8 @@
 <p><strong>2022/02/07</strong><br>迂回前进，更新webpack基础使用部分</p>
 <p><strong>2022/04/04</strong><br>迂回前进，更新webpack实战部分</p>
 <p><strong>2022/04/10</strong><br>更新进阶部分</p>
+<p><strong>2022/04/11</strong><br>继续更新进阶部分</p>
+<p><strong>2022/04/12</strong><br>更新完姐姐部分，以后如果能够成为webpack大师级程序员那么再继续补充了（大雾）</p>
 </blockquote>
 <h2 id="webpack概述"><a href="#webpack概述" class="headerlink" title="webpack概述"></a>webpack概述</h2><h3 id="什么是Webpack"><a href="#什么是Webpack" class="headerlink" title="什么是Webpack"></a>什么是Webpack</h3><p>前端项目由什么构成——资源:</p>
 <blockquote>
@@ -945,7 +947,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 
 
 
-<h2 id="webpack进阶-待更新"><a href="#webpack进阶-待更新" class="headerlink" title="webpack进阶(待更新)"></a>webpack进阶(待更新)</h2><h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><blockquote>
+<h2 id="webpack进阶"><a href="#webpack进阶" class="headerlink" title="webpack进阶"></a>webpack进阶</h2><h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><blockquote>
 <p>HMR<br>resolve<br>optimization<br>dll<br>production<br>development<br>eslint<br>babel<br>pwa<br>loader<br>plugin<br>devtool<br>性能优化<br>tree shaking<br>code split<br>caching<br>lazy loading<br>library<br>shimming</p>
 </blockquote>
 <h3 id="HMR"><a href="#HMR" class="headerlink" title="HMR"></a>HMR</h3><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><p>当我们修改一行代码，整个项目就得重新转译打包，效率十分低下，这时候就得考虑HMR了</p>
@@ -1237,7 +1239,7 @@ webpack serve # 默认跑8080
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token comment">// 略</span>
     externals<span class="token operator">:</span><span class="token punctuation">{</span>
-        <span class="token comment">// [文件名] : [npm包名]</span>
+        <span class="token comment">// [打包后的文件名] : [要打包的npm包名]</span>
         jquery<span class="token operator">:</span> <span class="token string">'jquery'</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
@@ -1252,7 +1254,79 @@ webpack serve # 默认跑8080
 <p>对于多个库会打包成一个chunk——主要是针对于node_modules的打包，多个依赖打包成一个实在是太大了</p>
 <p>使用dll会能够实现node_modules的单独打包</p>
 </blockquote>
-<h4 id="使用dll"><a href="#使用dll" class="headerlink" title="使用dll"></a>使用dll</h4>
+<h4 id="使用dll"><a href="#使用dll" class="headerlink" title="使用dll"></a>使用dll</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    entry<span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token comment">// 最终打包生成的 [name] --&gt; jquery    </span>
+        <span class="token comment">// ['jquery']指的就是要打包的库是jquery</span>
+        jquery<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'jquery'</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    output<span class="token operator">:</span> <span class="token punctuation">{</span>
+	    filename<span class="token operator">:</span> <span class="token string">'[name].js'</span><span class="token punctuation">,</span>
+        path<span class="token operator">:</span> <span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'dll'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        library<span class="token operator">:</span> <span class="token string">'[name]_[hash]'</span> <span class="token comment">// 打包的库里面向外暴露出去的内容的名称</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 略</span>
+    plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token comment">// 会生成一个manifest.json，提供和jquery的映射</span>
+        <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>DllPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+           <span class="token comment">// name: '[name]_[hash]',</span>
+           <span class="token comment">// path: resolve(__dirname, 'dll/manifest.json') // 输出文件的路径</span>
+        	
+            <span class="token comment">// 指定不参与打包的库，同时使用时的名称也得变</span>
+            manifest<span class="token operator">:</span> <span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'dll/manifest.json'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token comment">// 将某个文件打包输出，并在html中自动引入</span>
+        <span class="token keyword">new</span> <span class="token class-name">AddAssetHtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="和externals的区别"><a href="#和externals的区别" class="headerlink" title="和externals的区别"></a>和externals的区别</h4><blockquote>
+<p><strong>externals</strong><br>不用打包依赖，后面手动改为CDN引入</p>
+<p><strong>dll</strong><br>先将依赖单独打包，后面直接引用就好了（不使用dll则是将js一股脑塞到一个文件)</p>
+<p>可以配合code spilt将依赖拆分为任意个数的包</p>
+</blockquote>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><h3 id="开发环境下"><a href="#开发环境下" class="headerlink" title="开发环境下"></a>开发环境下</h3><blockquote>
+<p><strong>优化打包构建速度</strong></p>
+<ul>
+<li>HMR</li>
+</ul>
+<p><strong>优化代码调试</strong></p>
+<ul>
+<li>source-map</li>
+</ul>
+</blockquote>
+<h3 id="生产环境下"><a href="#生产环境下" class="headerlink" title="生产环境下"></a>生产环境下</h3><blockquote>
+<p><strong>优化打包构建速度</strong></p>
+<ul>
+<li>oneOf</li>
+<li>babel缓存</li>
+<li>多进程打包</li>
+<li>externals</li>
+<li>dll</li>
+</ul>
+<p><strong>优化代码运行的性能</strong></p>
+<ul>
+<li><p>缓存（hash-chunkhash-contenthash）</p>
+</li>
+<li><p>tree shaking（默认启动）</p>
+</li>
+<li><p>code spilt</p>
+</li>
+<li><p>懒加载/预加载</p>
+</li>
+<li><p>PWA（service worker + cache）</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><blockquote>
+<p>终于到了这里哈哈。</p>
+<p>但是webpack的学习仍未结束，之后还要继续努力。</p>
+<p>大师级的打包人不是一朝一夕就能练成的。</p>
+<p>不过这周还是赶紧把项目完结，把JS的笔记写一写，剩下的时间用来复习吧。</p>
+</blockquote>
+
                 
             </div>
             <hr/>
