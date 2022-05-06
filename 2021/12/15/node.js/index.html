@@ -324,7 +324,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/44.jpeg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -481,14 +481,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-02-25
+                    2022-05-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7.7k
+                    9k
                 </div>
                 
 
@@ -521,6 +521,7 @@
 <p><strong>2021/12/17</strong><br>爆肝三日终于Node入门，学到FS文件操作的时候当时我就意识到了，或许项目中前后端传递图片的技术已经近在眼前！真的太强了，伟哉JS！</p>
 <p><strong>2022/02/07</strong><br>补充关于AMD和CMD的少量知识点</p>
 <p><strong>2022/02/25</strong><br>补充Node常用模块及其API</p>
+<p><strong>2022/05/06</strong><br>考试终于是告一段落了<br>更新async和net模块部分</p>
 </blockquote>
 <h3 id="多余的话"><a href="#多余的话" class="headerlink" title="多余的话"></a>多余的话</h3><blockquote>
 <p>Node.JS真是了不起啊，想想就觉得刺激！</p>
@@ -981,7 +982,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h3><p>太多了懒得写，直接看官方文档</p>
 <h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><p>服务器接收用户的二进制数据都先存到缓冲区等待处理</p>
 <p>其余内容参见操作系统部分</p>
-<h2 id="FS文件系统"><a href="#FS文件系统" class="headerlink" title="FS文件系统"></a>FS文件系统</h2><p>终于，要操作文件了</p>
+<h2 id="FS文件模块"><a href="#FS文件模块" class="headerlink" title="FS文件模块"></a>FS文件模块</h2><p>终于，要操作文件了</p>
 <blockquote>
 <p>file system文件系统</p>
 <p>所有操作都会有两种形式可供选择：同步和异步</p>
@@ -1140,7 +1141,7 @@ ws<span class="token punctuation">.</span><span class="token function">once</spa
 ws<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>once和on一样，能够添加时间，但是once是只能触发一次的</p>
-<h3 id="简单读取（异步封装）"><a href="#简单读取（异步封装）" class="headerlink" title="简单读取（异步封装）"></a>简单读取（异步封装）</h3><p>文件读取和写入也是一一对应的，也分为四种：同步异步简单流式，前两种几乎和写入没有区别，所以不再赘述</p>
+<h3 id="简单读取（异步封装）"><a href="#简单读取（异步封装）" class="headerlink" title="简单读取（异步封装）"></a>简单读取（异步封装）</h3><p>文件读取和写入也是一一对应的，也分为四种：<code>同步</code> <code>异步</code> <code>简单</code> <code>流式</code>，前两种几乎和写入没有区别，所以不再赘述</p>
 <p>流程也不再赘述，直接上代码</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js">fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'text2.txt'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
     <span class="token comment">//才想起来啊，throw直接抛出错误啊</span>
@@ -1188,7 +1189,7 @@ fs<span class="token punctuation">.</span><span class="token function">readFile<
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="流式读取"><a href="#流式读取" class="headerlink" title="流式读取"></a>流式读取</h3><blockquote>
-<p>大家或许会觉得依葫芦画瓢，写是怎么样读就怎么样，但是流式读取还真不是那样的。</p>
+<p>大家或许会觉得依葫芦画瓢，写是怎么样读就怎么样，但是流式读取还真不是那样的——所以这里单独拎出来说一说</p>
 <p><strong>监听data事件</strong></p>
 <p>监听可读流访问数据</p>
 <p>懒得多说了直接上代码</p>
@@ -1294,6 +1295,11 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <blockquote>
 <p>“name:a，age:1”</p>
 </blockquote>
+<p>queryString常用于处理post请求，用于规范化（序列化）数据</p>
+<blockquote>
+<p>所谓的序列化，就是处理成对象的形式</p>
+<p>之所以要这样“多此一举”，是因为总有像Y70一样的大佬，用postman绕开前端的输入合法性检验，直接发送一些稀奇古怪的字符串过来——这导致JSON.parse()无法将其转换为对象，直接引发后端的崩溃</p>
+</blockquote>
 <h3 id="https模块"><a href="#https模块" class="headerlink" title="https模块"></a>https模块</h3><p>和http的方法基本上都一样</p>
 <p><strong>https爬虫</strong></p>
 <p>非常容易，代码如下</p>
@@ -1332,6 +1338,8 @@ https<span class="token punctuation">.</span><span class="token function">get</s
 <p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa0516842551f8a2363614ee4b3de5ee3f73f426846700acfef20a07e/0.png" alt="部分运行结果"></p>
 <p><strong>request</strong></p>
 <p>可以看做封装的AJAX，能发起请求，也能拿到响应</p>
+<blockquote>
+</blockquote>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> https <span class="token operator">=</span> <span class="token function">require</span> <span class="token punctuation">(</span><span class="token string">'https'</span><span class="token punctuation">)</span>
 
 <span class="token keyword">const</span> options <span class="token operator">=</span> <span class="token punctuation">{</span>
@@ -1420,7 +1428,7 @@ player<span class="token punctuation">.</span><span class="token function">emit<
 <p>emit就是触发事件，第二个参数是作为事件的参数，可以考虑封装成对象然后传多个参数</p>
 <p>这里用on的话，那么通过emit能够多次触发；</p>
 <p>如果用once的话，那么就只能触发一次；</p>
-<h3 id="文件模块（待补充）"><a href="#文件模块（待补充）" class="headerlink" title="文件模块（待补充）"></a>文件模块（待补充）</h3><p>也就是fs模块，我们在之前的<strong>FS</strong>文件系统章节已经说过了</p>
+<h3 id="文件模块"><a href="#文件模块" class="headerlink" title="文件模块"></a>文件模块</h3><p>也就是fs模块，我们在之前的<strong>FS</strong>文件模块章节已经说过了</p>
 <p>这里再做一点补充，内容比较多，建议参考官方文档</p>
 <table>
 <thead>
@@ -1458,14 +1466,156 @@ player<span class="token punctuation">.</span><span class="token function">emit<
 <td>删除目录与文件</td>
 </tr>
 </tbody></table>
-<p><strong>常用操作</strong></p>
-<p>(以后补充)</p>
-<h3 id="stream模块"><a href="#stream模块" class="headerlink" title="stream模块"></a>stream模块</h3><p>在之前的章节已经提到过了(FS文件系统的流式写入)</p>
-<p>这里（暂时）不做讨论</p>
-<p><strong>pipe</strong></p>
-<p>管道，也提过了</p>
-<h3 id="async模块（待补充）"><a href="#async模块（待补充）" class="headerlink" title="async模块（待补充）"></a>async模块（待补充）</h3><p>需要npm安装</p>
-<p><strong>串行无关联</strong></p>
+<h3 id="async模块"><a href="#async模块" class="headerlink" title="async模块"></a>async模块</h3><p>需要npm安装</p>
+<h4 id="串行无关联"><a href="#串行无关联" class="headerlink" title="串行无关联"></a>串行无关联</h4><blockquote>
+<p><strong>串行和并行</strong><br>大概可以这么理解，比如，并行是每次发送1B，串行则是把1B拍烂为8b发送，这样的好处是:</p>
+<ol>
+<li>可以减少对带宽的占用量，减少成本——没错，理想情况下只占用原带宽的1/8，<strong>8b排成一个队列传输</strong>（这意味着一个队列中是<strong>同步</strong>的）</li>
+<li>就算传输过程中丢包了，相较于一次损失1B而言，能够减少数据的损失量</li>
+</ol>
+</blockquote>
+<p>先看一段普通的<strong>异步代码</strong>：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">'test1'</span><span class="token punctuation">)</span> 
+<span class="token comment">// 开始计时</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'test1-begin'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span>
+
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'test1-end'</span><span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">'test1'</span><span class="token punctuation">)</span> 
+    <span class="token comment">// 结束计时， 结果约为4s</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">4000</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可以这么理解，setTimeout本身是同步的，其中的回调才是异步的</p>
+<p>同步执行期间，将setTimeout定时任务放入异步任务队列，并<strong>开始计时</strong>，时间到后就触发，所以到4s的时候就触发了</p>
+<p>知道了这点，那么下面这段代码的结果也不难推测了：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">'test1'</span><span class="token punctuation">)</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'test1-begin'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span>
+
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'test1-end'</span><span class="token punctuation">)</span>
+        console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">'test1'</span><span class="token punctuation">)</span> <span class="token comment">// 10s</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">6000</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">4000</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>那么，接下来看看串行无关联代码？</p>
+</blockquote>
+<p>使用async.series()执行串行无关联代码，</p>
+<p>第一个参数是数组，其内放置需要执行的任务</p>
+<p>第二个参数则是回调，获取执行结果</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> async <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'async'</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">'test2'</span><span class="token punctuation">)</span>
+async<span class="token punctuation">.</span><span class="token function">series</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+    <span class="token comment">// 任务1</span>
+    <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 执行后将'one'放到res中</span>
+            <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token string">'one'</span><span class="token punctuation">)</span> 
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 任务2</span>
+    <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 执行后将'two'放到res中</span>
+            <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token string">'two'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">4000</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 回调</span>
+<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token comment">// ['one', 'two']</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+    <span class="token comment">// 约6s</span>
+    console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">'test2'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>可以看到，两个异步的方法似乎产生了某种同步执行，耗时是两者之和</p>
+<h4 id="并行无关联"><a href="#并行无关联" class="headerlink" title="并行无关联"></a>并行无关联</h4><blockquote>
+<p>并行，已经是猜到结果了，不过，这里并行N个任务，是否会z真的开启N条线程，或者是模拟N个线程？——这是个问题，有知道的大佬还请指点一下</p>
+</blockquote>
+<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">const async = require('async')
+
+console.time('test3')
+
+async.parallel([
+    function (callback) {
+        setTimeout(() =&gt; {
+            callback(null, 'one')
+        }, 2000)
+    },
+    function (callback) {
+        setTimeout(() =&gt; {
+            callback(null, 'one')
+        }, 4000)
+    }
+], function (err, res) {
+    console.log(res)
+    // 约6s
+    console.timeEnd('test3')
+})<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>诶嘿，好啊又回到了最初的起点了，4s</p>
+<h4 id="串行有关联"><a href="#串行有关联" class="headerlink" title="串行有关联"></a>串行有关联</h4><blockquote>
+<p>这个有关联说的是参数之间的传递，前面2个例子中，callback都会将内容传给最后的回调函数——这就是说数组中的几个方法之间无关联</p>
+<p>而有关联则是，第一个方法callback将把数据传给下一个方法，这样一直到最后一个方法，最后一个方法的callback将把所有数据传给回调函数</p>
+</blockquote>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">'test3'</span><span class="token punctuation">)</span>
+
+async<span class="token punctuation">.</span><span class="token function">waterfall</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+    <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token string">'one'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// data1即上一个方法的callback的one</span>
+    <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">data1<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> data1<span class="token punctuation">,</span>  <span class="token string">'three'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">data1<span class="token punctuation">,</span> data2<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>data1<span class="token punctuation">,</span> data2<span class="token punctuation">,</span> <span class="token string">'three'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+     <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// [ 'one', 'three', 'three' ]</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> 
+    console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">'test3'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Net模块"><a href="#Net模块" class="headerlink" title="Net模块"></a>Net模块</h3><p>Net模块主要是为了实现socket</p>
+<h4 id="Soket"><a href="#Soket" class="headerlink" title="Soket"></a>Soket</h4><blockquote>
+<p>网络上两个程序通过一个双向的通信连接实现数据的交换，连接的一端称为一个socket</p>
+<p>建立socket服务端连接的流程一般是六步：</p>
+<ol>
+<li>创建socket</li>
+<li>将socket绑定某个端口</li>
+<li>开始监听这个端口<br>（这之后可以开始接受其他socket的连接请求了）</li>
+<li>接受请求</li>
+<li>从socket中读取字符</li>
+<li>关闭（当然，可以不关闭，一直处于连接状态）</li>
+</ol>
+<p>而建立客户端的流程则是：</p>
+<ol>
+<li>创建socket</li>
+<li>请求连接另一个socket</li>
+<li>发送数据</li>
+<li>关闭（当然，也可以不关闭）</li>
+</ol>
+</blockquote>
+<p>之后写了一个 聊天服务端-客户端 的代码，后面放到Node后端开发那篇里面吧</p>
+<h4 id="WebSocket"><a href="#WebSocket" class="headerlink" title="WebSocket"></a>WebSocket</h4><blockquote>
+<p><strong>WebSocket和Socket</strong><br>这是一个需要着重注意的关键知识点</p>
+<p><strong>Socket是TCP/IP的网络API</strong>——想想看，你的浏览器是怎么连上网的？浏览器是一个<strong>应用程序</strong>（应用层），它调用操作系统提供的<code>Socket</code>来使用<code>协议栈</code>中<code>TCP</code>、<code>UDP</code>等传输层协议<br>（Socket是为了方便<strong>应用层操作传输层</strong>而抽象出来的一层，是一组API）这样一来，浏览器等应用程序才有了数据收发能力</p>
+<p><strong>WebSocket是一个应用层协议</strong>——它是基于TCP的，是HTML5更新的内容之一，意义是以全双工的即时通讯替代了高频轮询。使用WebSocket而不是直接调用Socket的好处就是，能够更亲和web环境，可以把通信的UI由终端的小黑窗换到了浏览器窗口</p>
+</blockquote>
+<blockquote>
+<p>另外，这里还有一个Socket.io可以了解一下。这是一个兼容方案，兼容那些不支持H5的浏览器。（当然，它是一个第三方包，使用的话记得先要手动npm一下）</p>
+<p>但是现在都2022了，大部分情况可以不用在意这个东西了</p>
+</blockquote>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><blockquote>
 <p>前方是星辰大海，寻找知识，让世界成为你的画布！</p>
 </blockquote>

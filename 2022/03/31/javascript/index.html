@@ -477,14 +477,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-01
+                    2022-04-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.9k
+                    7k
                 </div>
                 
 
@@ -708,7 +708,11 @@ console<span class="token punctuation">.</span><span class="token function">log<
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>当然，剩下的一些，就不再赘述了，通过观察之后的代码，应该也能够直接上手</p>
-<h3 id="W3C标准部分"><a href="#W3C标准部分" class="headerlink" title="W3C标准部分"></a>W3C标准部分</h3><p>主要是WebAPI，它主要由BOM构成，而BOM标准</p>
+<h3 id="W3C标准部分"><a href="#W3C标准部分" class="headerlink" title="W3C标准部分"></a>W3C标准部分</h3><p>主要是WebAPI，它主要由BOM构成</p>
+<blockquote>
+<p>其实WebAPI大部分由浏览器厂商实现，很多现在广泛使用的WebAPI实际上并不是W3C标准，但是由于其实在是太好用了，它们就成为了一种事实标准被大家所接受了</p>
+<p>从这个角度说，JavaScript实际上应该是由ES和WebAPI两部分组成，但是这里为了凸显W3C的地位，还是将JavaScript解释为ES和W3C</p>
+</blockquote>
 <h3 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h3><h4 id="window概述"><a href="#window概述" class="headerlink" title="window概述"></a>window概述</h4><p>在浏览器中具有双重身份：</p>
 <blockquote>
 <p><strong>W3C标准中</strong><br>可以看做浏览器对象，代表着浏览器窗口，是BOM对象的核心<br><strong>ECMAScript标准中</strong><br>代表了全局对象<br>（实际上真正的全局对象是Global，但是Global.window = Global）</p>
@@ -760,11 +764,13 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li>setTimeout(), setInterval(), clearTimeout(), clearInterval()<br>定时器，后面<code>事件轮询机制</code>章节细说</li>
 </ul>
 </blockquote>
-<h3 id="DOM-待续"><a href="#DOM-待续" class="headerlink" title="DOM(待续)"></a>DOM(待续)</h3><p>其实是BOM的一个子级，上述内容也说了，DOM的核心对象document是window的次级对象，但是由于DOM相较于其他几个次级对象，更加重要，所以我们单独开辟一个章节讨论它。</p>
-<blockquote>
-<p>虽然从章节目录结构上看DOM和BOM是平级的，但是一定要记住，BOM是DOM的parent</p>
+<h4 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h4><p>很多资料将事件归类为DOM的部分，但是实际上BOM的核心对象window上也挂载了很多方法，所以这里将事件归类到BOM下，</p>
+<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><blockquote>
+<p>虽然从章节目录结构上看DOM和BOM是平级的，但DOM的核心对象document是window的次级对象，但是由于DOM相较于其他次级对象更加重要，所以我们单独开辟一个章节讨论它</p>
+<p>不过DOM操作的内容实在是太多了，具体内容可以参考下面这张图，我们讨论其他细节</p>
 </blockquote>
-<h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><h3 id="浏览器机制"><a href="#浏览器机制" class="headerlink" title="浏览器机制"></a>浏览器机制</h3><h2 id="数据类型概述"><a href="#数据类型概述" class="headerlink" title="数据类型概述"></a><strong>数据类型概述</strong></h2><p>JS是解释性弱类型语言，在声明的时候不会区分数据类型，但是这并不意味着JS没有数据类型</p>
+<h4 id="DOM操作一览"><a href="#DOM操作一览" class="headerlink" title="DOM操作一览"></a>DOM操作一览</h4><p><img src="https://pic.rmb.bdstatic.com/bjh/6e51c997c22f11d446fe4328cdf907a8.jpeg"></p>
+<h4 id="DOM级别"><a href="#DOM级别" class="headerlink" title="DOM级别"></a>DOM级别</h4><h2 id="数据类型概述"><a href="#数据类型概述" class="headerlink" title="数据类型概述"></a><strong>数据类型概述</strong></h2><p>JS是解释性弱类型语言，在声明的时候不会区分数据类型，但是这并不意味着JS没有数据类型</p>
 <p>这里先来一个简单的了解，部分需要深入的数据类型放到后面讨论</p>
 <p>JS中所有的变量无论类型，都可以通过至少两种方式(构造函数式 和 字面量赋值式)初始化</p>
 <p>例如</p>
