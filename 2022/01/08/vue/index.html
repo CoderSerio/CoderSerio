@@ -484,7 +484,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    10.9k
+                    11.2k
                 </div>
                 
 
@@ -733,7 +733,10 @@ vue对象的data数据可能会来自服务器，那么网络不畅的时候就�
 <p><img src="https://img-blog.csdnimg.cn/748291b1825e436ab21e6ec651e2658f.png" alt="在这里插入图片描述"></p>
 <p>这里提一句，<strong>如果返回多个值，也可以考虑用数组或者对象的形式发送/接受</strong>,</p>
 <p>中间可以利用函数进行处理（当然不用也行)</p>
-<h4 id="diff算法"><a href="#diff算法" class="headerlink" title="diff算法"></a>diff算法</h4><p>另外，vue或react中，一个dom对象默认有一个key值，需要用v-bind绑定一个唯一标志（不要用下标，因为下标会在排序等变化值发生改变），<br>这样一来在基于<strong>diff算法</strong>的动态变化（增删改排序）时，能够做到正确匹配每个元素</p>
+<h4 id="diff算法"><a href="#diff算法" class="headerlink" title="diff算法"></a>diff算法</h4><blockquote>
+<p>指的是新旧虚拟DOM对比、更新的过程</p>
+</blockquote>
+<p>vue或react中，一个dom对象默认有一个key值，需要用v-bind绑定一个唯一值（不要用下标，因为下标会在排序等变化值发生改变并不是唯一的），<br>这样一来在基于<strong>diff算法</strong>的动态变化（增删改排序）时，能够做到正确匹配每个元素</p>
 <blockquote>
 <p>key值具体的作用是:</p>
 <ol>
@@ -741,6 +744,23 @@ vue对象的data数据可能会来自服务器，那么网络不畅的时候就�
 <li>如果不使用key值，那么Vue会使用一种 <strong>最大限度减少动态元素</strong> 并 <strong>尽可能尝试修改/复用相同元素</strong> 的算法;<br>使用key值则会基于key值进行元素排序，并移除key不存在的元素</li>
 </ol>
 </blockquote>
+<p><strong>分析</strong></p>
+<p>首先看看它要解决的一种问题情境：</p>
+<blockquote>
+<p>在一个数组ABDEFG中插入一个C</p>
+<p>传统（暴力）做法就是，DEFG全部往后挪，然后插入一个C</p>
+</blockquote>
+<p>无疑这种做法很多时候的效率很低</p>
+<p>diff算法根据无key和有key分情况讨论</p>
+<p><strong>无key:diff-patchUnkeyedChildren</strong></p>
+<p>在进行一次变动之后触发，将新旧两个虚拟DOM进行对比，然后一个for循环遍历较短那个，根据新的数据更改旧的数据</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/35364d1f27e429ba784d3b51ae90ebf3.png" alt="diff-patchUnkeyedChildren"></p>
+<blockquote>
+<p>其实非常简单…<br>这里比较的是虚拟DOM，这样就直接操作DOM所引起的巨大开销<br>这里判定是否一样的标准是虚拟DOM的type和key是否都一样——这就涉及到有key的情况了</p>
+</blockquote>
+<p><strong>有key:diff-patchKeyedChildren</strong></p>
+<p>因为这个是针对单次操作的，所以一次操作通常只会有一组或者一个数据的更新，</p>
+<p>有key的话就是，如果遍历的过程中发现key的值不同了，那么跳出循环，然后从尾部开始遍历，确定中间的部分</p>
 <h4 id="事件绑定v-on"><a href="#事件绑定v-on" class="headerlink" title="事件绑定v-on"></a>事件绑定v-on</h4><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
     <span class="token keyword">let</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
         el<span class="token operator">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>
