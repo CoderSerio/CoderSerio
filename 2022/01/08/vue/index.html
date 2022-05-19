@@ -477,14 +477,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-18
+                    2022-05-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    11.2k
+                    11.4k
                 </div>
                 
 
@@ -517,6 +517,7 @@
 <p><strong>2022/05/15</strong><br>修改和补充关于vue-cli和vue3.x的部分内容</p>
 <p><strong>2022/05/17</strong><br>继续查漏补缺</p>
 <p><strong>2022/05/18</strong><br>修改Vue2.x部分目录结构，并记录Vue3.x的内容</p>
+<p><strong>2022/05/19</strong><br>补充</p>
 </blockquote>
 <h2 id="完善的准备"><a href="#完善的准备" class="headerlink" title="完善的准备"></a>完善的准备</h2><h3 id="认识Vue框架"><a href="#认识Vue框架" class="headerlink" title="认识Vue框架"></a>认识Vue框架</h3><p>为了便于理解，我将Vue概括为：<br>1.Vue是一个<strong>主要关注视图层</strong>的渐进式框架，即Vue可以只运用到局部代码。</p>
 <p>2.并且Vue实现了<strong>MVVM双向绑定</strong>模式<br>M：模型层，指js对象<br>V：视图层，指DOM<br>VM：链接视图和数据的中间件</p>
@@ -564,7 +565,7 @@ npm install -g @vue/cli<span aria-hidden="true" class="line-numbers-rows"><span>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install vue-router --save-dev<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="devtools-安装"><a href="#devtools-安装" class="headerlink" title="devtools 安装"></a>devtools 安装</h3><p>这是一个浏览器插件，用于vue代码的调试，只需要在浏览器上安装就行了</p>
-<h2 id="Vue2-x"><a href="#Vue2-x" class="headerlink" title="Vue2.x"></a>Vue2.x</h2><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><h4 id="创建Vue对象-以及-mustache语法"><a href="#创建Vue对象-以及-mustache语法" class="headerlink" title="创建Vue对象 以及 mustache语法"></a>创建Vue对象 以及 mustache语法</h4><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<h2 id="Vue2-x"><a href="#Vue2-x" class="headerlink" title="Vue2.x"></a>Vue2.x</h2><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><h4 id="创建Vue对象-以及-mustache插值语法"><a href="#创建Vue对象-以及-mustache插值语法" class="headerlink" title="创建Vue对象 以及 mustache插值语法"></a>创建Vue对象 以及 mustache插值语法</h4><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
  <span class="token keyword">let</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
         <span class="token comment">//绑定id为app的DOM元素,这也确定了Vue对象的作用范围</span>
@@ -582,7 +583,7 @@ npm install -g @vue/cli<span aria-hidden="true" class="line-numbers-rows"><span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>相应的html部分为：<br>其中嵌套的大括号就是mustache语法,括号里面可以写多个变量，也可以填表达式(不推荐这么做)<br>mustache语法不能用于标签的内部！<br><strong>(不能出现&lt;div <code>{{name}}</code>&gt;&lt;/div&gt;这种或者其他类似的形式)</strong></p>
+<p>相应的html部分为：<br>其中嵌套的大括号就是mustache插值语法,括号里面可以写多个变量，也可以填表达式(不推荐这么做)<br>mustache语法不能用于标签的内部！<br><strong>(不能出现&lt;div <code>{{name}}</code>&gt;&lt;/div&gt;这种或者其他类似的形式)</strong></p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
 	<span class="token comment">&lt;!-- {{}}会动态的去接收值
 这就是mustache语法 --&gt;</span>
@@ -760,7 +761,7 @@ vue对象的data数据可能会来自服务器，那么网络不畅的时候就�
 </blockquote>
 <p><strong>有key:diff-patchKeyedChildren</strong></p>
 <p>因为这个是针对单次操作的，所以一次操作通常只会有一组或者一个数据的更新，</p>
-<p>有key的话就是，如果遍历的过程中发现key的值不同了，那么跳出循环，然后从尾部开始遍历，确定中间的部分</p>
+<p>有key的话就是，如果遍历的过程中发现key的值不同了，那么跳出循环，然后从两者尾部开始遍历，然后继续开始比较更新，最后又到了冲突的位置，那么，这里发生一次mount就好了(也就是双端比较)</p>
 <h4 id="事件绑定v-on"><a href="#事件绑定v-on" class="headerlink" title="事件绑定v-on"></a>事件绑定v-on</h4><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
     <span class="token keyword">let</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
         el<span class="token operator">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>
@@ -1005,7 +1006,14 @@ vue对象的data数据可能会来自服务器，那么网络不畅的时候就�
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">:value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>msg<span class="token punctuation">"</span></span> <span class="token attr-name">@input</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>valueChanged<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>您输入的是：{{msg}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>通过<strong>v-bind动态绑定</strong>和<strong>methods方法</strong>完成双向绑定<br>懂了这个原理，你就可以这么写：</p>
+<blockquote>
+<p>​    也就是拆分为两个个部分：</p>
+<ol>
+<li>通过input时间监听输入值，并将不断维护这个输入值</li>
+<li>动态绑定这个值</li>
+</ol>
+</blockquote>
+<p>懂了这个原理，你就可以这么写：</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">:value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>msg<span class="token punctuation">"</span></span> <span class="token attr-name">@input</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>msg = $event.target.value<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>您输入的是：{{msg}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
@@ -1013,7 +1021,10 @@ vue对象的data数据可能会来自服务器，那么网络不畅的时候就�
 
 
 
-
+<p><strong>lazy修饰符</strong></p>
+<p>根据上文，我们可以看到<code>v-model</code>底层绑定的是<code>input</code>事件，我们可以使用<code>v-model.lazy</code>来切换为<code>change</code>事件，效果就是会等待输入完成后才开始变化。</p>
+<p><strong>trim修饰符</strong></p>
+<p>去除输入内容首尾多余的空白</p>
 <h4 id="template标签"><a href="#template标签" class="headerlink" title="template标签"></a>template标签</h4><p>这个标签最大的不同就是不会被渲染，经常配合v-if和v-for之类的做一些特定场景渲染</p>
 <blockquote>
 <p>等等，这个东西，好像是原生HTML的吧…</p>
@@ -1063,6 +1074,11 @@ vue对象的data数据可能会来自服务器，那么网络不畅的时候就�
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button-count</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button-count</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>效果如下：<br><img src="https://img-blog.csdnimg.cn/3d5e4eae6c6143729703ab02611e13ed.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NlcmlvX2d1Z3VndQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>由于data部分我们使用的函数形式，所以能够返回独立的函数作用域，因此每个点击按钮的数值可以<strong>相互独立</strong>；<br>反之，如果不采用函数形式的data，那么所有值都会同步。</p>
+<h4 id="组件命名"><a href="#组件命名" class="headerlink" title="组件命名"></a>组件命名</h4><h5 id="kebab"><a href="#kebab" class="headerlink" title="kebab"></a>kebab</h5><p>就是蛇形命名法，像这样: <code>my-name</code></p>
+<h5 id="Pascal"><a href="#Pascal" class="headerlink" title="Pascal"></a>Pascal</h5><p>就是大驼峰命名法，像这样: <code>myName</code></p>
+<blockquote>
+<p>虽然Pascal命名法也能直接使用，但是实际上是被自动转换为了kebab</p>
+</blockquote>
 <h4 id="全局组件"><a href="#全局组件" class="headerlink" title="全局组件"></a>全局组件</h4><p>我们之前使用的都是全局组件<br>在介绍它有什么特点之前，先来看看以下代码：</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
     <span class="token comment">// 创建</span>
@@ -1432,7 +1448,12 @@ vue对象的data数据可能会来自服务器，那么网络不畅的时候就�
 <span class="token comment">//之前都是单独写一个vm.mount("#app")</span>
 <span class="token comment">//只有这样写才能用vm.price访问</span>
     </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="https://img-blog.csdnimg.cn/ab57a0a72504417b9d8fbbe6676eb63d.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NlcmlvX2d1Z3VndQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>那么问题来了，这个和computed有什么区别呢?<br>通俗地说，区别在于：</p>
+<p><img src="https://img-blog.csdnimg.cn/ab57a0a72504417b9d8fbbe6676eb63d.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NlcmlvX2d1Z3VndQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>watch可以监听的内容涵盖了基本数据类型和引用数据类型，这意味着，函数也可以被监听</p>
+<p>另外，对于对象，除了开启深度监听之外，还可以使用 “obj.prop” 这种形式来具体监听某一个属性<br>（注意加上双引号）</p>
+</blockquote>
+<p>那么问题来了，这个和computed有什么区别呢?<br>通俗地说，区别在于：</p>
 <blockquote>
 <p><strong>watch支持异步，不缓存，并且可以接受两个参数；<br>computed不支持异步，默认缓存；</strong></p>
 <p>更多的区别在于：<br>watch默认为浅度观测（对多层嵌套，只观测其最外层）….<br>computed在调用时需要在模板中渲染，且默认为深度依赖（对多层嵌套，观测所有)….</p>
@@ -1855,8 +1876,10 @@ vm<span class="token punctuation">.</span><span class="token function">mount</sp
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>用一个函数返回一手，就可以变成一般的数据类型了（当然你可以解构之类的）</p>
 <p>watch还有第三个参数，再说这个之前先了解<strong>watch的性质</strong>：</p>
+<blockquote>
 <p>1.默认<strong>惰性</strong>（浏览器打开不会自动触发，要等到相关组件开始活动才触发，比如输入框要输入后才触发）</p>
 <p>2.可调度（可以选择是否有惰性以及是否深度监视）<br>（tip：<strong>浅度监视</strong>是只监视如一个对象Obj1，发生如同Obj1 = Obj2这种操作Obj1本身发生的变化，会<strong>忽视对象内部的变化</strong>；相反地，<strong>深度监视</strong>就是会<strong>监视对象的所有变化</strong>）</p>
+</blockquote>
 <p>具体语法：</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function">watch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span>person<span class="token punctuation">.</span>name<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">cur<span class="token punctuation">,</span> pre</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"现在的值："</span><span class="token punctuation">,</span> cur<span class="token punctuation">)</span>
