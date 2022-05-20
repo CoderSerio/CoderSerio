@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="TypeScript, 前端">
-    <meta name="description" content="这将是成神的飞升">
+    <meta name="description" content="锋利的TypeScript">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -324,7 +324,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/12.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/12.jpeg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -477,7 +477,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-15
+                    2022-05-20
                 </div>
                 
 
@@ -550,29 +550,84 @@
 <p>TypeScript是JavaScript的超集，<br><img src="https://img-blog.csdnimg.cn/9d7dcebb1bf441648a9e75ee7e9af094.png" alt="TypeScript"><br><strong>缺点一</strong>：增加了如接口，泛型，枚举等的“新概念”（？迷惑，却不说）<br>但是好消息是，TypeScript是<strong>渐进式</strong>的<br>也就意味着，就算我们什么新概念都不知道，凭借JS基础我们依旧能够直接开始使用它<br><strong>缺点二</strong>：项目初期，TypeScript会增加开发成本<br>大概是需要自定义各种数据类型等等工作加大了开始的成本，不过这便于后期的维护</p>
 </blockquote>
 <h3 id="隐式类型推断"><a href="#隐式类型推断" class="headerlink" title="隐式类型推断"></a>隐式类型推断</h3><p>即在不明确变量类型的时候，系统根据其使用情况来判断它是什么类型</p>
-<h3 id="类型注解-1"><a href="#类型注解-1" class="headerlink" title="类型注解"></a>类型注解</h3><figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a : <span class="built_in">number</span>, b : <span class="built_in">number</span></span>) </span>{</span><br><span class="line">	<span class="keyword">return</span> a + b</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="类型注解-1"><a href="#类型注解-1" class="headerlink" title="类型注解"></a>类型注解</h3><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span>a <span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> b <span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> a <span class="token operator">+</span> b
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>和flow的语法一样</p>
 <h3 id="类型断言"><a href="#类型断言" class="headerlink" title="类型断言"></a>类型断言</h3><p>用法：</p>
-<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> num1 = res <span class="keyword">as</span> <span class="built_in">number</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">const</span> num1 <span class="token operator">=</span> res <span class="token keyword">as</span> <span class="token builtin">number</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>这样写就是说，res是一个数字</p>
-<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> num2 == &lt;<span class="built_in">number</span>&gt;res</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">const</span> num2 <span class="token operator">==</span> <span class="token operator">&lt;</span><span class="token builtin">number</span><span class="token operator">&gt;</span>res<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>虽然上述写法也可以实现一样的效果，但是这和JSX的语法会发生冲突，<br>所以还是建议使用第一种写法</p>
 <h3 id="更多类型"><a href="#更多类型" class="headerlink" title="更多类型"></a>更多类型</h3><h4 id="元组类型"><a href="#元组类型" class="headerlink" title="元组类型"></a>元组类型</h4><h4 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h4><h4 id="任意类型"><a href="#任意类型" class="headerlink" title="任意类型"></a>任意类型</h4><h3 id="declare类型声明"><a href="#declare类型声明" class="headerlink" title="declare类型声明"></a>declare类型声明</h3><p>一开始我看到类型声明的时候还愣了一下<br>为了避免误解我还是在其前面加上一个declare吧</p>
-<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { camelCase } <span class="keyword">from</span> <span class="string">'loadsh'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 模块中提供的这个函数并没有定义参数和返回值类型</span></span><br><span class="line"><span class="comment">// 我们用以下形式给它补上这些信息</span></span><br><span class="line"><span class="keyword">declare</span> <span class="function"><span class="keyword">function</span> <span class="title">camelCase</span> (<span class="params">input: <span class="built_in">string</span></span>): <span class="title">string</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">const</span> <span class="title">res</span> = <span class="title">camelCase</span>(<span class="params"><span class="string">'hellotankyoutankyouverymuch,iamok'</span></span>)</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> camelCase <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'loadsh'</span>
+
+<span class="token comment">// 模块中提供的这个函数并没有定义参数和返回值类型</span>
+<span class="token comment">// 我们用以下形式给它补上这些信息</span>
+<span class="token keyword">declare</span> <span class="token keyword">function</span> <span class="token function">camelCase</span> <span class="token punctuation">(</span>input<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">string</span>
+
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token function">camelCase</span><span class="token punctuation">(</span><span class="token string">'hellotankyoutankyouverymuch,iamok'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 <h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><h4 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h4><p>其实吧，我寻思啊，这js怎么还整接口啊…</p>
-<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这是接口</span></span><br><span class="line"><span class="keyword">interface</span> Post {</span><br><span class="line">	<span class="attr">title</span>: <span class="built_in">string</span></span><br><span class="line">	<span class="attr">content</span>: <span class="built_in">string</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// 写个函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">print</span>(<span class="params">p: Post</span>)</span>{</span><br><span class="line">	<span class="built_in">console</span>.log(p.title, p.content)</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用函数</span></span><br><span class="line">print({</span><br><span class="line">	<span class="attr">title</span>: <span class="string">'Hello, Interface'</span></span><br><span class="line">	<span class="attr">content</span>: <span class="string">'TypeScript is so cool'</span></span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">// 这是接口</span>
+<span class="token keyword">interface</span> <span class="token class-name">Post</span> <span class="token punctuation">{</span>
+	title<span class="token operator">:</span> <span class="token builtin">string</span>
+	content<span class="token operator">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 写个函数</span>
+<span class="token keyword">function</span> <span class="token function">print</span><span class="token punctuation">(</span>p<span class="token operator">:</span> Post<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>title<span class="token punctuation">,</span> p<span class="token punctuation">.</span>content<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 调用函数</span>
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	title<span class="token operator">:</span> <span class="token string">'Hello, Interface'</span>
+	content<span class="token operator">:</span> <span class="token string">'TypeScript is so cool'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="成员修饰"><a href="#成员修饰" class="headerlink" title="成员修饰"></a>成员修饰</h4><p><strong>可选成员</strong><br>即可有可无的成员</p>
-<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// subtitle后面加上了一个? 表示这个成员可有可无</span></span><br><span class="line"><span class="comment">// 原理是标记subtitle类型是string 或者 undefined</span></span><br><span class="line"><span class="keyword">interface</span> Post {</span><br><span class="line">	<span class="attr">title</span>: <span class="built_in">string</span></span><br><span class="line">	subtitle?: <span class="built_in">string</span></span><br><span class="line">	<span class="attr">content</span>: <span class="built_in">string</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">// subtitle后面加上了一个? 表示这个成员可有可无</span>
+<span class="token comment">// 原理是标记subtitle类型是string 或者 undefined</span>
+<span class="token keyword">interface</span> <span class="token class-name">Post</span> <span class="token punctuation">{</span>
+	title<span class="token operator">:</span> <span class="token builtin">string</span>
+	subtitle<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span>
+	content<span class="token operator">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>只读成员</strong><br>不可手动设置和修改</p>
-<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> Post {</span><br><span class="line"><span class="comment">// readonly关键字约束成员即可设置只读</span></span><br><span class="line">	<span class="attr">title</span>: <span class="built_in">string</span></span><br><span class="line">	subtitle?: <span class="built_in">string</span></span><br><span class="line">	<span class="attr">content</span>: <span class="built_in">string</span></span><br><span class="line">	<span class="keyword">readonly</span> summary: <span class="built_in">string</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">interface</span> <span class="token class-name">Post</span> <span class="token punctuation">{</span>
+<span class="token comment">// readonly关键字约束成员即可设置只读</span>
+	title<span class="token operator">:</span> <span class="token builtin">string</span>
+	subtitle<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span>
+	content<span class="token operator">:</span> <span class="token builtin">string</span>
+	<span class="token keyword">readonly</span> summary<span class="token operator">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>动态成员</strong><br>有些时候一个接口该有哪些成员是不确定的</p>
-<figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// [prop: string]设置成员名称为string</span></span><br><span class="line"><span class="comment">// 其后的string指定值为string</span></span><br><span class="line"><span class="keyword">interface</span> Cache {</span><br><span class="line">	[prop: <span class="built_in">string</span>]: <span class="built_in">string</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">//使用</span></span><br><span class="line"><span class="keyword">const</span> cache: Cache = {}</span><br><span class="line"></span><br><span class="line">cache.foo = <span class="string">'value1'</span></span><br><span class="line">cache.bar = <span class="string">'value2'</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">// [prop: string]设置成员名称为string</span>
+<span class="token comment">// 其后的string指定值为string</span>
+<span class="token keyword">interface</span> <span class="token class-name">Cache</span> <span class="token punctuation">{</span>
+	<span class="token punctuation">[</span>prop<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//使用</span>
+<span class="token keyword">const</span> cache<span class="token operator">:</span> Cache <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+cache<span class="token punctuation">.</span>foo <span class="token operator">=</span> <span class="token string">'value1'</span>
+cache<span class="token punctuation">.</span>bar <span class="token operator">=</span> <span class="token string">'value2'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><p>对ES6引入的类进行了扩展</p>
-<h4 id="基本使用-1"><a href="#基本使用-1" class="headerlink" title="基本使用"></a>基本使用</h4><figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>{</span><br><span class="line">	<span class="attr">name</span>: <span class="built_in">string</span> <span class="comment">// = '赵宇'</span></span><br><span class="line">	<span class="keyword">private</span> age: <span class="built_in">number</span></span><br><span class="line">	<span class="title">constructor</span> (<span class="params">name: <span class="built_in">string</span>, age: <span class="built_in">number</span></span>) {</span><br><span class="line">		<span class="built_in">this</span>.name = name</span><br><span class="line">		<span class="built_in">this</span>.age = age</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Y1M = <span class="keyword">new</span> Person(<span class="string">'杨二鸣'</span>, <span class="number">20</span>)</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="基本使用-1"><a href="#基本使用-1" class="headerlink" title="基本使用"></a>基本使用</h4><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+	name<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token comment">// = '赵宇'</span>
+	<span class="token keyword">private</span> age<span class="token operator">:</span> <span class="token builtin">number</span>
+	<span class="token function">constructor</span> <span class="token punctuation">(</span>name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> age<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+		<span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">const</span> <span class="token constant">Y1M</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">'杨二鸣'</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>注意，在TS标准中，类的成员变量要么初始化，要么用构造函数设置值<br>另外，如果不加修饰，那么<strong>默认为public，不是default</strong><br>当然还有，protected，和private区别大概是</p>
 <blockquote>
 <p>protected可以继承，只能在子类中访问（子类的实例对象不可访问） </p>
@@ -589,7 +644,12 @@
 <p>用法和Java一样，依旧是用implements实现<br>书写的规范是，一个接口约束一个有关功能即可</p>
 </blockquote>
 <h3 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h3><p>果然，我就知道泛型也跑不掉</p>
-<h4 id="基本使用-2"><a href="#基本使用-2" class="headerlink" title="基本使用"></a>基本使用</h4><figure class="highlight typescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createArray</span>&lt;<span class="title">T</span>&gt; (<span class="params">length: <span class="built_in">number</span>, value : T</span>): <span class="title">T</span>[] </span>{</span><br><span class="line">	<span class="keyword">const</span> arr = <span class="built_in">Array</span>&lt;T&gt;(length).fill(T)</span><br><span class="line">	<span class="keyword">return</span> arr</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> res = createArray&lt;<span class="built_in">string</span>&gt;(<span class="number">3</span>, <span class="string">'foo'</span>)</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="基本使用-2"><a href="#基本使用-2" class="headerlink" title="基本使用"></a>基本使用</h4><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">function</span> <span class="token generic-function"><span class="token function">createArray</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span> <span class="token punctuation">(</span>length<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> value <span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>
+	<span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token generic-function"><span class="token function">Array</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>length<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token constant">T</span><span class="token punctuation">)</span>
+	<span class="token keyword">return</span> arr
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token generic-function"><span class="token function">createArray</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'foo'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
