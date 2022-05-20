@@ -477,14 +477,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-19
+                    2022-05-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.9k
+                    7.2k
                 </div>
                 
 
@@ -527,6 +527,7 @@
 <p><strong>2022/04/11</strong><br>继续更新进阶部分</p>
 <p><strong>2022/04/12</strong><br>更新完进阶部分，以后如果能够成为webpack大师级程序员那么再继续补充了（大雾）</p>
 <p><strong>2022/05/19</strong><br>补充babel单独使用的一些技巧</p>
+<p><strong>2022/05/20</strong><br>这个日子，这是什么人间疾苦..<br>补充webpack实战部分的环境隔离相关内容，以及resolve字段的使用</p>
 </blockquote>
 <h2 id="webpack概述"><a href="#webpack概述" class="headerlink" title="webpack概述"></a>webpack概述</h2><h3 id="什么是Webpack"><a href="#什么是Webpack" class="headerlink" title="什么是Webpack"></a>什么是Webpack</h3><p>前端项目由什么构成——资源:</p>
 <blockquote>
@@ -953,6 +954,16 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <p><strong>plugins</strong><br>VueLoaderPlugin</p>
 </blockquote>
 <p>如上配置还不够，<strong>直接build会报错</strong>，不过根据报错内容补全缺失的包就好了</p>
+<h3 id="环境隔离"><a href="#环境隔离" class="headerlink" title="环境隔离"></a>环境隔离</h3><p><strong>情景描述</strong></p>
+<blockquote>
+<p>我们知道有生产环境和开发环境，并且为了应对一些更加特殊的场景，还需要有其他的环境，这时候，只有一套webpack打包配置文件就显得力不从心的</p>
+</blockquote>
+<p><strong>方案</strong></p>
+<p>通常会建立一个configs文件夹，然后在里面配置多个文件针对不同的场景</p>
+<p>然后安装webpack-merge</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm i webpack-merge -D<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>进行一个配置整合即可（具体使用方式还没尝试过，后面补上）</p>
 <h2 id="webpack进阶"><a href="#webpack进阶" class="headerlink" title="webpack进阶"></a>webpack进阶</h2><h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><blockquote>
 <p>HMR<br>resolve<br>optimization<br>dll<br>eslint<br>babel<br>pwa<br>loader<br>plugin<br>devtool<br>tree shaking<br>code split<br>caching<br>lazy loading<br>library（待补充）<br>shimming（待补充）</p>
 </blockquote>
@@ -978,6 +989,7 @@ webpack serve # 默认跑8080
 <blockquote>
 <p>具体实现有一点繁琐，此处不再赘述</p>
 </blockquote>
+<p>另外，我们常在Vue项目中配置proxy，这个其实就是webpack的devServer的功能之一，解决跨域的原理是因为可以调用本地的服务器，绕开浏览器的安全限制</p>
 <h4 id="使用HMR"><a href="#使用HMR" class="headerlink" title="使用HMR"></a>使用HMR</h4><blockquote>
 <p>这里主要是学习webpack5，需要注意其HMR配置方式与旧版本有所冲突</p>
 <p>之前说的live-server，watch，（直接使用）webpack-dev-server这些，都是刷新整个页面；</p>
@@ -1280,7 +1292,32 @@ npx babel test.js --out-dir dist
 <blockquote>
 <p>这里才知道CDN是分布式静态网络的意思…分布式存储静态资源减少服务器的压力…高级啊（我是废物</p>
 </blockquote>
-<h3 id="dll"><a href="#dll" class="headerlink" title="dll"></a>dll</h3><h4 id="概念-7"><a href="#概念-7" class="headerlink" title="概念"></a>概念</h4><blockquote>
+<h3 id="resolve"><a href="#resolve" class="headerlink" title="resolve"></a>resolve</h3><h4 id="概念-7"><a href="#概念-7" class="headerlink" title="概念"></a>概念</h4><blockquote>
+<p>个人理解是指定webpack字段相关文件的查找位置，并且能够辅助判断引入文件的路径是一个文件还是文件夹</p>
+</blockquote>
+<h4 id="使用resolve"><a href="#使用resolve" class="headerlink" title="使用resolve"></a>使用resolve</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+	entry<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+   	output<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    devServer<span class="token operator">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    resolve<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 指定module中配置的内容优先去node_modules中找</span>
+        module<span class="token operator">:</span> <span class="token punctuation">[</span>node_modules<span class="token punctuation">]</span>，
+        <span class="token comment">// 指定将这些扩展名作为文件解析</span>
+        extensions<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'.js'</span><span class="token punctuation">,</span> <span class="token string">'.html'</span>，<span class="token string">'.json'</span><span class="token punctuation">,</span> <span class="token string">'.vue'</span><span class="token punctuation">]</span>
+    	<span class="token comment">// 设置宏</span>
+    	alias<span class="token operator">:</span> <span class="token punctuation">{</span>
+    		<span class="token string">"@"</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'./src'</span><span class="token punctuation">)</span>
+		<span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    module<span class="token operator">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    plugins<span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h3 id="dll"><a href="#dll" class="headerlink" title="dll"></a>dll</h3><h4 id="概念-8"><a href="#概念-8" class="headerlink" title="概念"></a>概念</h4><blockquote>
 <p>读作dio（手动狗头），动态链接库</p>
 <p>对于多个库会打包成一个chunk——主要是针对于node_modules的打包，多个依赖打包成一个实在是太大了</p>
 <p>使用dll会能够实现node_modules的单独打包</p>
@@ -1326,6 +1363,10 @@ npx babel test.js --out-dir dist
 <p><strong>优化代码调试</strong></p>
 <ul>
 <li>source-map</li>
+</ul>
+<p><strong>提升开发效率</strong></p>
+<ul>
+<li>resolve</li>
 </ul>
 </blockquote>
 <h4 id="生产环境下"><a href="#生产环境下" class="headerlink" title="生产环境下"></a>生产环境下</h4><blockquote>

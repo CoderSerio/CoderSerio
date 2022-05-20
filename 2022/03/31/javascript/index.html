@@ -477,14 +477,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-27
+                    2022-05-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7k
+                    8.2k
                 </div>
                 
 
@@ -536,6 +536,7 @@
 </blockquote>
 <h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><blockquote>
 <p><strong>2022/01/28</strong><br>开始写了一些内容，但是后来作废了<br><strong>2022/03/31</strong><br>一个多月以来手写整理到了笔记本上，现在依据其内容整理到博客上<br>更新了数据类型部分，手都给我敲痛了，纸上写的不到一页，打字就敲了4000字..<br><strong>2022/04/01</strong><br>更新JavaScript基础部分，更新到了DOM，增加3000+字</p>
+<p><strong>2022/05/20</strong><br>更新BOM部分和数据类型中的一些细节</p>
 </blockquote>
 <h2 id="JavaScript基础"><a href="#JavaScript基础" class="headerlink" title="JavaScript基础"></a>JavaScript基础</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a><strong>概述</strong></h3><h4 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h4><p>如果看过我曾经写的HTML&amp;&amp;CSS，那么你可能知道margin塌陷的历史由来，也才能真正理解它而不只是把它看做一种现象</p>
 <p>同样的，JS也需要我们知道它的一些历史，这样才能更好地知道它为什么这么<strong>混乱</strong></p>
@@ -707,13 +708,17 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token keyword">var</span> c <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">3</span> <span class="token operator">&gt;</span> <span class="token number">4</span> <span class="token operator">?</span> b <span class="token operator">=</span> <span class="token number">666</span> <span class="token operator">:</span> b <span class="token operator">=</span> <span class="token number">233</span><span class="token punctuation">,</span> <span class="token number">3</span> <span class="token operator">&lt;</span> <span class="token number">4</span> <span class="token operator">?</span> <span class="token operator">++</span> b <span class="token operator">:</span> <span class="token operator">--</span> b<span class="token punctuation">)</span> <span class="token comment">// 三目运算 + 逗号运算，逗号运算取后者的值</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>当然，剩下的一些，就不再赘述了，通过观察之后的代码，应该也能够直接上手</p>
+
+
+
+
+<p>其余部分可以参考ES6的相关笔记，此处不再赘述</p>
 <h3 id="W3C标准部分"><a href="#W3C标准部分" class="headerlink" title="W3C标准部分"></a>W3C标准部分</h3><p>主要是WebAPI，它主要由BOM构成</p>
 <blockquote>
 <p>其实WebAPI大部分由浏览器厂商实现，很多现在广泛使用的WebAPI实际上并不是W3C标准，但是由于其实在是太好用了，它们就成为了一种事实标准被大家所接受了</p>
-<p>从这个角度说，JavaScript实际上应该是由ES和WebAPI两部分组成，但是这里为了凸显W3C的地位，还是将JavaScript解释为ES和W3C</p>
+<p>从这个角度说，<strong>JavaScript实际上应该是由ES和WebAPI两部分组成</strong>，但是这里为了凸显W3C的地位，还是将JavaScript解释为ES和W3C</p>
 </blockquote>
-<h3 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h3><h4 id="window概述"><a href="#window概述" class="headerlink" title="window概述"></a>window概述</h4><p>在浏览器中具有双重身份：</p>
+<h4 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h4><h5 id="window的双重身份"><a href="#window的双重身份" class="headerlink" title="window的双重身份"></a>window的双重身份</h5><p>window对象在浏览器中具有双重身份：</p>
 <blockquote>
 <p><strong>W3C标准中</strong><br>可以看做浏览器对象，代表着浏览器窗口，是BOM对象的核心<br><strong>ECMAScript标准中</strong><br>代表了全局对象<br>（实际上真正的全局对象是Global，但是Global.window = Global）</p>
 </blockquote>
@@ -724,7 +729,16 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>当然，window也自带了巨量属性和方法</p>
 <p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa05168421780e0b79b3e30ce42719b8b4e953d46c2ab34857471980e/0.png" alt="window上的部分属性和方法"> </p>
 <p>相当之多，这里我们只会挑出一些重要的分析</p>
-<h4 id="window的次级对象"><a href="#window的次级对象" class="headerlink" title="window的次级对象"></a>window的次级对象</h4><p>window是浏览器的全局对象，其上还挂载着其他二级对象，主要有</p>
+<h5 id="window的常用属性方法"><a href="#window的常用属性方法" class="headerlink" title="window的常用属性方法"></a>window的常用属性方法</h5><blockquote>
+<ul>
+<li>moveTo(x, y), moveBy(x, y)<br>移动浏览器窗口</li>
+<li>outerWidth/outerHeight, innerWidth/outterHeight<br>浏览器大小，视口大小</li>
+<li>resizeTo(x, y), resizeBy(x, y)<br>设置浏览器大小</li>
+<li>scrollTo(x, y), scrollBy(x, y), scroll(x, y)<br>滚动滚动条</li>
+<li>setTimeout(), setInterval(), clearTimeout(), clearInterval()<br>定时器，这个在另一篇博客事件轮询机制中更详细地说明</li>
+</ul>
+</blockquote>
+<h5 id="window的次级对象及其属性方法"><a href="#window的次级对象及其属性方法" class="headerlink" title="window的次级对象及其属性方法"></a>window的次级对象及其属性方法</h5><p>window是浏览器的全局对象，其上还挂载着其他二级对象，主要有</p>
 <blockquote>
 <p><strong>history</strong><br>历史对象，负责历史记录这部分的操作</p>
 <ul>
@@ -755,22 +769,73 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </ul>
 <p><strong>document</strong><br>即DOM的核心对象，后面<code>DOM章节</code>单独分析</p>
 </blockquote>
-<h4 id="window的常用属性方法"><a href="#window的常用属性方法" class="headerlink" title="window的常用属性方法"></a>window的常用属性方法</h4><blockquote>
-<ul>
-<li>moveTo(x, y), moveBy(x, y)<br>移动浏览器窗口</li>
-<li>outerWidth/outerHeight, innerWidth/outterHeight<br>浏览器大小，视口大小</li>
-<li>resizeTo(x, y), resizeBy(x, y)<br>设置浏览器大小</li>
-<li>scrollTo(x, y), scrollBy(x, y), scroll(x, y)<br>滚动滚动条</li>
-<li>setTimeout(), setInterval(), clearTimeout(), clearInterval()<br>定时器，后面<code>事件轮询机制</code>章节细说</li>
-</ul>
+<h5 id="DOM操作"><a href="#DOM操作" class="headerlink" title="DOM操作"></a>DOM操作</h5><h6 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h6><blockquote>
+<p>Document Object Module 文档对象模型</p>
+<p>DOM操作可以理解为，动态控制页面的HTML和CSS部分的操作</p>
 </blockquote>
-<h4 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h4><p>很多资料将事件归类为DOM的部分，但是实际上BOM的核心对象window上也挂载了很多方法，所以这里将事件归类到BOM下，</p>
-<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><blockquote>
-<p>虽然从章节目录结构上看DOM和BOM是平级的，但DOM的核心对象document是window的次级对象，但是由于DOM相较于其他次级对象更加重要，所以我们单独开辟一个章节讨论它</p>
-<p>不过DOM操作的内容实在是太多了，具体内容可以参考下面这张图，我们讨论其他细节</p>
+<p>虽然从名字上看感觉DOM和BOM是平级的，但DOM的核心对象document是window的次级对象</p>
+<p>DOM操作主要包括了DOM元素的增删改查，事件监听等等</p>
+<h6 id="常见DOM操作"><a href="#常见DOM操作" class="headerlink" title="常见DOM操作"></a>常见DOM操作</h6><blockquote>
+<p> 虽然BOM的核心对象window也可以有监听事件，但很多资料将事件归类为DOM的部分</p>
 </blockquote>
-<h4 id="DOM操作一览"><a href="#DOM操作一览" class="headerlink" title="DOM操作一览"></a>DOM操作一览</h4><p><img src="https://pic.rmb.bdstatic.com/bjh/6e51c997c22f11d446fe4328cdf907a8.jpeg"></p>
-<h4 id="DOM级别"><a href="#DOM级别" class="headerlink" title="DOM级别"></a>DOM级别</h4><h2 id="数据类型概述"><a href="#数据类型概述" class="headerlink" title="数据类型概述"></a><strong>数据类型概述</strong></h2><p>JS是解释性弱类型语言，在声明的时候不会区分数据类型，但是这并不意味着JS没有数据类型</p>
+<p>DOM操作内容较多，但是难度都不大，具体内容参照下图</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/6e51c997c22f11d446fe4328cdf907a8.jpeg"></p>
+<h6 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h6><p>虽然在上图中已经写了很多关于事件的内容了，但是个人觉得还是有必要补充一些内容：</p>
+<p><strong>事件的两种模式</strong></p>
+<p>DOM的嵌套会对事件的触发产生一定的影响</p>
+<blockquote>
+<p><strong>事件冒泡</strong><br>主流浏览器的默认情况，自下而上<br>(有的事件是没有冒泡的，比如blur、focus等等)<br>(而有的事件的冒泡不可被打断，比如scroll等等)</p>
+<p><strong>事件捕获</strong><br>旧版IE默认情况，自上而下，可以一对多触发</p>
+</blockquote>
+<p>手动设置模式需要使用addEventListener方法来监听事件，将第二个参数设置为true则为开启捕获</p>
+<p><strong>事件对象</strong></p>
+<p>依然考虑IE(6、7、8)的话，这里有两种方式：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 这是一个事件的回调函数</span>
+<span class="token keyword">function</span> <span class="token function">someEventFunc</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 主流浏览器:第一个参数能自动接受事件对象</span>
+    <span class="token comment">// IE6/7/8: 通过window.event来访问</span>
+	<span class="token keyword">let</span> e <span class="token operator">=</span>  event <span class="token operator">||</span> window<span class="token punctuation">.</span>event
+    <span class="token comment">/* 
+    	获取引起本次事件的根源元素(比如点击事件，直接点击那个就是根源元素)
+    */</span>
+    <span class="token keyword">let</span> targetEl <span class="token operator">=</span> event <span class="token operator">?</span> e<span class="token punctuation">.</span>target <span class="token operator">:</span> e<span class="token punctuation">.</span>srcElement
+    <span class="token comment">/* 
+    	获取当前发生的事件所挂载的元素，通常等价于this
+    	似乎IE没有专门的方法，可能就是直接用的this
+    */</span>
+    <span class="token keyword">let</span> currentTargetEl <span class="token operator">=</span> event <span class="token operator">?</span> e<span class="token punctuation">.</span>currentTarget <span class="token operator">||</span> <span class="token keyword">this</span>
+    
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>其实，当前很多浏览器都已经做了兼容(比如chrome)，就是说以主流浏览器传参的形式访问事件对象也可以直接调用IE风格的写法，而不用去做判断</p>
+<p>这里这样写是为了提醒自己不要忘记过去兼容的痛苦</p>
+<p>另外，一开始提到了<strong>事件委派（事件委托/事件代理）</strong>，其实就是利用一个公共的父级，获取其事件对象再从中获取子级对象进行事件的处理</p>
+<p><strong>阻止事件</strong></p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 阻止冒泡	</span>
+e<span class="token punctuation">.</span><span class="token function">stopPropagation</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 主流浏览器；Propagation是"传播"的意思</span>
+e<span class="token punctuation">.</span><span class="token function">cancleBuble</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// IE 6/7/8</span>
+
+<span class="token comment">// 阻止捕获</span>
+e<span class="token punctuation">.</span><span class="token function">stopPropagation</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 主流浏览器</span>
+<span class="token comment">// ???   IE 6/7/8，鄙人才疏学浅不清楚怎么阻止捕获</span>
+
+<span class="token comment">// 阻止默认事件</span>
+e<span class="token punctuation">.</span>returnValue <span class="token operator">=</span> <span class="token boolean">false</span> <span class="token comment">// 主流浏览器，这个和直接return false的区别就是不会终止后续代码进行</span>
+e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// IE 6/7/8</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p><strong>分级</strong><br>从上面那张图上可以看到，有DOM0级事件和DOM2级事件，其实稍微完整一点的描述是这样：</p>
+<blockquote>
+<p>时间发展顺序由上往下:</p>
+<p><strong>DOM0级事件</strong><br>以onxxx这样的形式去绑定的事件</p>
+<p><strong>（不存在的）DOM1级事件</strong><br>这里只是做了一些标准上的更新，所以并没有实际对应的代码内容</p>
+<p><strong>DOM2级事件</strong><br>通过addEventListener方法进行事件监听，一类事件可有多个回调函数</p>
+<p><strong>DOM3级事件</strong><br>增添了很多新事件，比如dbclick双击等等</p>
+</blockquote>
+<p>这个“级”并没有高低级比较的意思，其实就和CSS2、CSS3类似，是个版本号</p>
+<h2 id="数据类型概述"><a href="#数据类型概述" class="headerlink" title="数据类型概述"></a><strong>数据类型概述</strong></h2><p>JS是解释性弱类型语言，在声明的时候不会区分数据类型，但是这并不意味着JS没有数据类型</p>
 <p>这里先来一个简单的了解，部分需要深入的数据类型放到后面讨论</p>
 <p>JS中所有的变量无论类型，都可以通过至少两种方式(构造函数式 和 字面量赋值式)初始化</p>
 <p>例如</p>
@@ -793,7 +858,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>基本数据结构 =&gt; NS-USB-NB </p>
 </blockquote>
 <p>简单提一提</p>
-<h4 id="String"><a href="#String" class="headerlink" title="String"></a>String</h4><p>这里要和C/C++等语言中的字符串类型区别，这个区别我们需要在心里大喊三遍：</p>
+<h4 id="String"><a href="#String" class="headerlink" title="String"></a>String</h4><h5 id="不可变性"><a href="#不可变性" class="headerlink" title="不可变性"></a>不可变性</h5><p>这里要和C/C++等语言中的字符串类型区别，这个区别我们需要在心里大喊三遍：</p>
 <blockquote>
 <p>JS中，String是基本数据类型，具有不可变性<br>JS中，String是基本数据类型，具有不可变性<br>JS中，String是基本数据类型，具有不可变性</p>
 </blockquote>
@@ -804,6 +869,22 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token comment">// 不能像str[1] = 'a'这样修改字符串</span>
 <span class="token comment">// 这就是字符串的不可变性</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h5 id="Unicode字符代码"><a href="#Unicode字符代码" class="headerlink" title="Unicode字符代码"></a>Unicode字符代码</h5><p>JS字符串是<code>Unicode字符代码</code>，更准确的说是<code>UTF-16字符编码</code></p>
+<blockquote>
+<p>注意，<strong>字符代码</strong>和<strong>字符编码</strong>是两个概念</p>
+<p><strong>字符代码</strong><br>特定字符在某个字符集中的序号</p>
+<p><strong>字符编码</strong><br>在传输、存储过程当中用于表示字符的以字节为单位的二进制序列</p>
+</blockquote>
+<p> 具体地说，Unicode字符代码可以是每个字符在Unicode表里面的序号，而UTF是一种类似哈夫曼编码的过程</p>
+<blockquote>
+<p>这里就简单提一下编码的发展过程:</p>
+<ol>
+<li>开始是只有我们熟知的ASCII字符代码</li>
+<li>然后各个国家得有编码兼容文字，比如我国的GB2312</li>
+<li>后来出现Unicode编码，将大部分内容都字符成2个字节，然后形成Unicode字符代码</li>
+<li>基于Unicode编码又出现了UTF-8编码，能根据数据大小动态编码成1-6个字节<br>（英文通常1，中文通常3），然后形成Unicode字符代码<br>在内存中的时候都是unicode，而在硬盘和文本编辑器中都是utf-8</li>
+</ol>
+</blockquote>
 <h4 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h4><h5 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h5><p>JS非常体贴为我们提供了2 8 10 16进制的语法糖</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> num2 <span class="token operator">=</span> <span class="token number">0B10100</span>
 <span class="token keyword">var</span> num8 <span class="token operator">=</span> <span class="token number">024</span>
@@ -850,6 +931,14 @@ console<span class="token punctuation">.</span><span class="token function">log<
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">isNaN</span><span class="token punctuation">(</span><span class="token string">'123asdasdas'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
 <span class="token comment">// true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h5 id="IEEE-754-标准"><a href="#IEEE-754-标准" class="headerlink" title="IEEE 754 标准"></a>IEEE 754 标准</h5><p>JS的数字遵循这个标准，用这个标准的双精度64位格式表示数字，所以在JS中（除了bigInt）并不存在真正的整数，它们都是浮点数</p>
+<p>比如：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">0.1</span> <span class="token operator">+</span> <span class="token number">0.2</span><span class="token punctuation">)</span> 
+<span class="token comment">// 0.30000000000000004</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>在具体实现的时候，这些看似是整数的值都被视为32位，除非开始执行32位不能满足的操作</p>
+<p>64位 == 1位符号 +  11位阶码 + 52位数字</p>
+<p>所以表示的范围就是：[-2^53, 2^53]，越界运算会出现一定的问题，扩大数量级会用科学计数法表示</p>
 <h4 id="null"><a href="#null" class="headerlink" title="null"></a>null</h4><p>一样的，我们需要默念</p>
 <blockquote>
 <p>JS中，null是基本数据类型，字母小写！<br>JS中，null是基本数据类型，字母小写！<br>JS中，null是基本数据类型，字母小写！</p>
@@ -890,7 +979,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <blockquote>
 <p>Object（后面的都可以看做特殊的Object）<br>       Array (数组，存数据的有序Object)<br>    Date（日期对象，和日期相关的Object)<br>    RegExp（正则表达式，和正则相关的Object）<br>    Function （传说中的函数，和Object关系混乱）</p>
 <p>以及（当然这些还是特殊的Object）</p>
-<p>所有 基本数据类型的包装类 (Number, String…，除了undefined和null以外的基本数据类型都有)<br>所有 单体内置对象 (global，Math等已经new过了的)</p>
+<p>所有 <strong>基本数据类型的包装类</strong> (Number, String…，除了undefined和null以外的基本数据类型都有)<br>所有 <strong>单体内置对象</strong> (global，Math等已经new过了的)</p>
 </blockquote>
 <p>这里就是万物皆对象的体现之一的，由于引用数据类型的知识体系实在过于庞大，此处先简单介绍概念，Array、Date等在另外的章节深入讨论</p>
 <h4 id="基本数据类型的包装类"><a href="#基本数据类型的包装类" class="headerlink" title="基本数据类型的包装类"></a>基本数据类型的包装类</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'xyz'</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// ['x', 'y', 'z']</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
