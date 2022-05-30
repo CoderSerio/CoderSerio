@@ -484,7 +484,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.1k
+                    5k
                 </div>
                 
 
@@ -848,10 +848,10 @@ Hhhh<span class="token punctuation">.</span>defaultProps <span class="token oper
 <h5 id="子传父"><a href="#子传父" class="headerlink" title="子传父"></a>子传父</h5><h5 id="同级互传"><a href="#同级互传" class="headerlink" title="同级互传"></a>同级互传</h5><h5 id="refs"><a href="#refs" class="headerlink" title="refs"></a>refs</h5><p>这里有三种写法，时间顺序由上到下</p>
 <blockquote>
 <p><strong>第一种:字符串形式</strong><br>可以说是轻车熟路了，通过ref绑定，this.refs访问，存在效率上的问题，未来的版本中可能被移除</p>
-<p><strong>第二种:回调形式</strong><br>绑定的时候写成ref={(a) =&gt; {this.xxx = a}}，因为这段JSX在render阶段会被自动调用，并且第一个参数自动传当前节点</p>
+<p><strong>第二种:回调形式</strong><br>绑定的时候写成<code>ref={(a) =&gt; {this.xxx = a}}</code>，因为这段JSX在render阶段会被自动调用，并且第一个参数自动传当前节点</p>
 <p>这种写法存在一个问题就是，如果以内联函数的形式定义（其实就是说在里面直接写函数表达式），那么在<strong>更新的过程中</strong>（更新是指通过setState等操作更改，不包括初始化和输入等操作)会执行两次，并且第一次传参为null，第二次传参才是DOM元素</p>
 <p>为了避免上面说的情况，需要将函数剥离出来，把函数的引用赋值给ref就可以了</p>
-<p><strong>第三种</strong><br>绑定的时候写成ref={this.some}，然后访问时先要写some = React.createRef()，这样之后可以得到一个容器，这个容器可以存储所有被ref标识为some的节点</p>
+<p><strong>第三种</strong><br>绑定的时候写成<code>ref={this.some}</code>，然后访问时先要写<code>some = React.createRef()</code>，这样之后可以得到一个容器，这个容器可以存储所有被ref标识为some的节点</p>
 </blockquote>
 <h5 id="双向数据绑定"><a href="#双向数据绑定" class="headerlink" title="双向数据绑定"></a>双向数据绑定</h5><p>原理就是通过onChange事件来监听数据变化，然后在事件处理函数中更改state就可以实现双向绑定了</p>
 <blockquote>
@@ -897,6 +897,7 @@ Hhhh<span class="token punctuation">.</span>defaultProps <span class="token oper
 
 <p>这里传参很有讲究，首先我们绑定事件的时候，是写的<strong>函数的引用——也就是不加括号</strong>（加上括号在解析的时候就会自动调用了，不会获得事件对象），这里取的是返回的结果——一个函数的引用，这下就绑定上了onChange事件，于是乎就能够获得事件对象event，非常巧妙</p>
 <blockquote>
+<p>按照这个逻辑，写成<code>onChange = { (event) =&gt; {} }</code>也可以</p>
 <p>此外，其实可以不传dataType，这个可以通过事件对象获取</p>
 </blockquote>
 <h4 id="受控和非受控组件"><a href="#受控和非受控组件" class="headerlink" title="受控和非受控组件"></a>受控和非受控组件</h4><h5 id="非受控组件"><a href="#非受控组件" class="headerlink" title="非受控组件"></a>非受控组件</h5><p>受控和非受控组件主要是针对于表单的，</p>
@@ -910,8 +911,73 @@ Hhhh<span class="token punctuation">.</span>defaultProps <span class="token oper
 <p>利用onChange让React的状态和表单的状态相互关联，从而使React能够使用setState等方法对表单进行控制</p>
 <p>这种表单组件就是受控组件</p>
 </blockquote>
-<h3 id="待续"><a href="#待续" class="headerlink" title="待续"></a>待续</h3><p>下周考毛概了，先复习，后面有空再继续写</p>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><h3 id="写在结尾"><a href="#写在结尾" class="headerlink" title="写在结尾"></a>写在结尾</h3><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><blockquote>
+<h4 id="diff算法"><a href="#diff算法" class="headerlink" title="diff算法"></a>diff算法</h4><p>和diffing算法是指的同一个东西，是老生常谈的经典问题了</p>
+<h5 id="key的内部原理"><a href="#key的内部原理" class="headerlink" title="key的内部原理"></a>key的内部原理</h5><p>虽然已经写过很多次了，源码也有一定程度地了解过，但是还是再多写几遍巩固一下印象比较好</p>
+<blockquote>
+<p>当状态发生变化的时候，React会根据新的数据生成新的虚拟DOM，然后新的虚拟DOM与旧的虚拟DOM进行比较，规则如下：</p>
+<p>如果存在相同的key，那么检查内容，如果内容没变则直接使用之前的真实DOM；否则生成新的真实DOM替换；</p>
+<p>如果不存在相同的key，那么直接生成新的真实DOM进行渲染。</p>
+</blockquote>
+<h5 id="过程分析"><a href="#过程分析" class="headerlink" title="过程分析"></a>过程分析</h5><p><img src="https://pic.rmb.bdstatic.com/bjh/243c03b0f412d5d606cc5d56afb1bf6d.png" alt="使用index作为key值"></p>
+<p>如果使用下标作为key值，那么逆序插入、非末尾删除等破坏原有的绝对顺序的操作会引起效率乃至效果上的问题</p>
+<h5 id="和Vue的区别"><a href="#和Vue的区别" class="headerlink" title="和Vue的区别"></a>和Vue的区别</h5><p>先说<strong>相同点</strong>：</p>
+<blockquote>
+<p>对于标签多层嵌套，就算在已经出现了文本不匹配的情况下，也会继续对比内嵌的标签（递归）</p>
+</blockquote>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/c6eb5eafdebbd766eaae301fe7abb6b4.png" alt="内嵌标签"></p>
+<p><strong>不同点</strong>:</p>
+<blockquote>
+<p>Vue的diff算法的最小粒度是状态，而对于React则是标签，这意味着React是不会去比较一些数据的</p>
+<p>React没有响应式的收集依赖，并不能精确地知道哪些部分发生了更新，只能递归把所有子组件都Render再通过diff决定更新哪些部分，这个过程叫做reconciler</p>
+<p>而Vue最多只是更新子组件的一些属性，并不会深入到组件内部</p>
+</blockquote>
+<h4 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h4><p>介绍一些和Vue不太一样的内容</p>
+<h5 id="CSS的模块化"><a href="#CSS的模块化" class="headerlink" title="CSS的模块化"></a>CSS的模块化</h5><p>Vue中有scoped可以用，但是React没有，这导致最后所有CSS到了App.jsx中就会发生冲突</p>
+<p>解决方式就是，将CSS文件命名为形如<code>xxx.module.css</code>的形式，然后像下面这样使用：</p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span>Component<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token comment">// import './xxx.css' 这是不采用模块化的形式</span>
+<span class="token keyword">import</span> myCSS <span class="token keyword">from</span> <span class="token string">'./xxx.module.xxx'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>myCSS<span class="token punctuation">.</span>someClass<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Hi!!!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="代理配置"><a href="#代理配置" class="headerlink" title="代理配置"></a>代理配置</h4><p>这里可以在package.json中新加一个proxy字段，值直接写后端的地址即可——当然这是最简单的一种写法，稍微详细一点的可以像以前配置Vue的Proxy那样写</p>
+<p>只配置一个简单的代理的话，直接在package.json中写：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">proxy<span class="token operator">:</span> <span class="token string">'http://localhost:5500'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>如果要写更复杂乃至多个代理，那么需要在<code>src</code>下建立一个<code>setupProxy.js</code>文件（这里是约定大于配置，所以名字不能改）</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 没错，是CommonJS,这里用中间件建立了一个代理服务器</span>
+<span class="token keyword">const</span> proxy <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http-proxy-middleware'</span><span class="token punctuation">)</span>
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">app</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>
+    	<span class="token function">proxy</span><span class="token punctuation">(</span><span class="token string">'/api1'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+            target<span class="token operator">:</span> <span class="token string">'http://localhost:5000'</span><span class="token punctuation">,</span>
+            changeOrigin<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 意向的是请求报文的Host报文</span>
+            pathReWrite<span class="token punctuation">{</span><span class="token string">'^/api1'</span><span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token function">proxy</span><span class="token punctuation">(</span><span class="token string">'/api2'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+            target<span class="token operator">:</span> <span class="token string">'http://localhost:5001'</span><span class="token punctuation">,</span>
+            changeOrigin<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// true是显示target的值，false就是显示真正前端的值</span>
+            pathReWrite<span class="token punctuation">{</span><span class="token string">'^/api2'</span><span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>它们实际上都是一个东西，即webpack的<code>devServer</code></p>
+<p>当前端需要但自身没有某个资源的时候，就会去找代理进行请求</p>
+<p>这里就来复习一下跨域的几种解决方式:</p>
+<blockquote>
+<p><strong>JSONP</strong><br>img、script标签通过src属性获取资源不受跨域限制，可以利用这点获取数据</p>
+<p><strong>CORS</strong><br>跨域资源共享，即后端给指定的URL开启访问权限解除其跨域限制</p>
+<p><strong>Proxy</strong><br>代理，跨域只是对浏览器的限制，服务器之间不受跨域限制，这个时候如果有一台中间的代理服务器通过CORS来允许访问，把数据中专给下一个代理服务器或者目标服务器，就实现了数据的传递</p>
+<p><strong>PostMessage</strong><br>（JS的一个方法，不太了解，以后补充）</p>
+</blockquote>
+<h3 id="待续"><a href="#待续" class="headerlink" title="待续"></a>待续</h3><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><h3 id="写在结尾"><a href="#写在结尾" class="headerlink" title="写在结尾"></a>写在结尾</h3><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><blockquote>
 <p>《React官方文档》：<a target="_blank" rel="noopener" href="https://reactjs.org/">https://reactjs.org/</a></p>
 <p>《React的平凡之路，或许我们才刚刚上路》：<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903605359607821">https://juejin.cn/post/6844903605359607821</a></p>
 <p>《React-18：组件的生命周期》：<a target="_blank" rel="noopener" href="https://blog.csdn.net/chuan0106/article/details/119837508">https://blog.csdn.net/chuan0106/article/details/119837508</a></p>
