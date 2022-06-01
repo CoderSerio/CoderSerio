@@ -477,7 +477,7 @@ img: /medias/postimag">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.5k
+                    6.6k
                 </div>
                 
 
@@ -528,7 +528,7 @@ img: /medias/postimag">
 <p><strong>2022/05/20</strong><br>在这特别的一天，街头是那样的喧闹，但是我却只想着能够快点学会React进行一次开发</p>
 <p><strong>2022/05/21</strong><br>为了适应一下大众潮流，又用起了webstorm<br>以前常听说关于JSX的学习成本之类的，本来以为有点难度，仔细捋一捋似乎并没有想的那么困难<br>更新组件章节</p>
 <p><strong>2022/05/22——2022/05/29</strong><br>更新组件章节，期间考试，所以更新进度缓慢</p>
-<p><strong>2022/06/01</strong><br>更新路由部分</p>
+<p><strong>2022/06/01</strong><br>更新路由部分，不过看起来必须要告一段落了，单片机和数字逻辑还在等着我——从广义上讲，前端是指的和用户交互的那一部分，那么单片机也算是前端吧。学无止境。</p>
 </blockquote>
 <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="React的特点"><a href="#React的特点" class="headerlink" title="React的特点"></a>React的特点</h3><blockquote>
 <ol>
@@ -1133,6 +1133,7 @@ root<span class="token punctuation">.</span><span class="token function">render<
 <p><strong>NavLink</strong><br>在Link的基础上做了样式的升级，能够高亮显示当前活动的路由组件（其实就是加了个css，如果要修改活动时的样式，可以通过<code>activeClassName</code>属性来指定样式）</p>
 <p><strong>Switch</strong><br>用于包裹Route组件。原本的Route组件进行路由匹配时，即使已经匹配上了，也会继续往下匹配（如果匹配上了多个甚至还会同时展示它们）——用一个Switch标签包裹它们就可以在匹配成功时停止后续匹配</p>
 <p>当然为了精确匹配，还可以考虑使用<code>exact</code>属性</p>
+<p><strong>Redirect</strong><br>常和<code>Switch</code>组件配合使用，放在末尾，在所有都没有匹配上的时候就走<code>Redirect</code>组件的<code>to</code>属性所指定的路由</p>
 </blockquote>
 <h5 id="多级路由下请求"><a href="#多级路由下请求" class="headerlink" title="多级路由下请求"></a>多级路由下请求</h5><p>一个可能出现的bug还是记录一下免得以后摸不着头脑</p>
 <p>就是如果写了多级路由，然后在这个多级路由下进行请求，可能会导致路径出错</p>
