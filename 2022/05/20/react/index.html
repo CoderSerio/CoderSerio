@@ -477,14 +477,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-30
+                    2022-06-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5k
+                    5.4k
                 </div>
                 
 
@@ -525,8 +525,8 @@
 <h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><blockquote>
 <p><strong>2022/05/20</strong><br>在这特别的一天，街头是那样的喧闹，但是我却只想着能够快点学会React进行一次开发</p>
 <p><strong>2022/05/21</strong><br>为了适应一下大众潮流，又用起了webstorm<br>以前常听说关于JSX的学习成本之类的，本来以为有点难度，仔细捋一捋似乎并没有想的那么困难<br>更新组件章节</p>
-<p><strong>2022/05/22</strong><br>更新组件章节，后面考试，有空继续更新</p>
-<p><strong>2022/05/29</strong><br>更新组件章节</p>
+<p><strong>2022/05/22——2022/05/29</strong><br>更新组件章节，期间考试，所以更新进度缓慢</p>
+<p><strong>2022/06/01</strong><br>更新路由部分</p>
 </blockquote>
 <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="React的特点"><a href="#React的特点" class="headerlink" title="React的特点"></a>React的特点</h3><blockquote>
 <ol>
@@ -853,6 +853,7 @@ Hhhh<span class="token punctuation">.</span>defaultProps <span class="token oper
 <p>为了避免上面说的情况，需要将函数剥离出来，把函数的引用赋值给ref就可以了</p>
 <p><strong>第三种</strong><br>绑定的时候写成<code>ref={this.some}</code>，然后访问时先要写<code>some = React.createRef()</code>，这样之后可以得到一个容器，这个容器可以存储所有被ref标识为some的节点</p>
 </blockquote>
+<h5 id="发布-订阅"><a href="#发布-订阅" class="headerlink" title="发布-订阅"></a>发布-订阅</h5><p>这个需要依赖第三方库来实现，具体操作可以参考所依赖库的文档</p>
 <h5 id="双向数据绑定"><a href="#双向数据绑定" class="headerlink" title="双向数据绑定"></a>双向数据绑定</h5><p>原理就是通过onChange事件来监听数据变化，然后在事件处理函数中更改state就可以实现双向绑定了</p>
 <blockquote>
 <p>注意，如果输入框绑定了状态值，因为绑定不是双向的，输入新内容的时候状态值不会自动更新，<br>然后反过来，又因为绑定的缘故，输入的新内容也会失效——一个微妙的死锁就产生了：</p>
@@ -977,11 +978,87 @@ module<span class="token punctuation">.</span><span class="token function-variab
 <p><strong>Proxy</strong><br>代理，跨域只是对浏览器的限制，服务器之间不受跨域限制，这个时候如果有一台中间的代理服务器通过CORS来允许访问，把数据中专给下一个代理服务器或者目标服务器，就实现了数据的传递</p>
 <p><strong>PostMessage</strong><br>（JS的一个方法，不太了解，以后补充）</p>
 </blockquote>
-<h3 id="待续"><a href="#待续" class="headerlink" title="待续"></a>待续</h3><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><h3 id="写在结尾"><a href="#写在结尾" class="headerlink" title="写在结尾"></a>写在结尾</h3><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><blockquote>
-<p>《React官方文档》：<a target="_blank" rel="noopener" href="https://reactjs.org/">https://reactjs.org/</a></p>
-<p>《React的平凡之路，或许我们才刚刚上路》：<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903605359607821">https://juejin.cn/post/6844903605359607821</a></p>
-<p>《React-18：组件的生命周期》：<a target="_blank" rel="noopener" href="https://blog.csdn.net/chuan0106/article/details/119837508">https://blog.csdn.net/chuan0106/article/details/119837508</a></p>
+<h3 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h3><h4 id="前端路由原理"><a href="#前端路由原理" class="headerlink" title="前端路由原理"></a>前端路由原理</h4><p>接下来直接看代码，针对于以下HTML用原生JS实现两种路由</p>
+<blockquote>
+<p>代码摘自《前端路由和react-router实现原理详解》<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844904094772002823">https://juejin.cn/post/6844904094772002823</a></p>
+</blockquote>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>#/home<span class="token punctuation">'</span></span><span class="token punctuation">&gt;</span></span>home<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>#/about<span class="token punctuation">'</span></span><span class="token punctuation">&gt;</span></span>about<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>routeView<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h5 id="hash路由"><a href="#hash路由" class="headerlink" title="hash路由"></a>hash路由</h5><p>先看代码</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'DOMContentLoaded'</span><span class="token punctuation">,</span> onLoad<span class="token punctuation">)</span>
+window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'hashchange'</span><span class="token punctuation">,</span> changeView<span class="token punctuation">)</span>
+<span class="token keyword">let</span> routeView <span class="token operator">=</span> <span class="token string">''</span>
+<span class="token keyword">function</span> <span class="token function">onLoad</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    routeView <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'routeView'</span><span class="token punctuation">)</span>
+    <span class="token function">changeView</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">changeView</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">switch</span> <span class="token punctuation">(</span>location<span class="token punctuation">.</span>hash<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">'#/home'</span><span class="token operator">:</span>
+            routeView<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">'home'</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token string">'#/about'</span><span class="token operator">:</span>
+            routeView<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">'about'</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>突然，原本十分高大上的东西感觉就一般了…</p>
+<h5 id="history路由原理"><a href="#history路由原理" class="headerlink" title="history路由原理"></a>history路由原理</h5><p>先看代码</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'DOMContentLoaded'</span><span class="token punctuation">,</span> onLoad<span class="token punctuation">)</span>
+window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'popstate'</span><span class="token punctuation">,</span> changeView<span class="token punctuation">)</span>
+<span class="token keyword">let</span> routeView <span class="token operator">=</span> <span class="token string">''</span>
+<span class="token keyword">function</span> <span class="token function">onLoad</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    routeView <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'routeView'</span><span class="token punctuation">)</span>
+    <span class="token function">changeView</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">let</span> event <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'ul'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+ 
+    event<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 取消a标签的默认点击事件</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>nodeName <span class="token operator">===</span> <span class="token string">'A'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            history<span class="token punctuation">.</span><span class="token function">pushState</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">'href'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token function">changeView</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">changeView</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">switch</span> <span class="token punctuation">(</span>location<span class="token punctuation">.</span>pathname<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">'/home'</span><span class="token operator">:</span>
+            routeView<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">'home'</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token string">'/about'</span><span class="token operator">:</span>
+            routeView<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">'about'</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这里用到了H5的<code>pushState</code>、<code>replaceState</code>等方法，这些方法可以<strong>改变路由状态但是不做页面跳转</strong></p>
+<p>但是这些方法只能在http、https协议运行，本地的file协议是跑不动的</p>
+<blockquote>
+<p>看完了代码，感觉豁然开朗，甚至一些厥词就要脱口而出了，不过鄙人觉得宁静致远是很有道理的，</p>
+<p>还是不要那么直白</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 就这？就这？就这？</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>所以我把这些话加上注释，这样就好了</p>
+</blockquote>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><h3 id="写在结尾"><a href="#写在结尾" class="headerlink" title="写在结尾"></a>写在结尾</h3><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><blockquote>
+<p>《React官方文档》<a target="_blank" rel="noopener" href="https://reactjs.org/">https://reactjs.org/</a></p>
+<p>《React的平凡之路，或许我们才刚刚上路》<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903605359607821">https://juejin.cn/post/6844903605359607821</a></p>
+<p>《React-18：组件的生命周期》<a target="_blank" rel="noopener" href="https://blog.csdn.net/chuan0106/article/details/119837508">https://blog.csdn.net/chuan0106/article/details/119837508</a></p>
 <p>《受控和非受控组件真的那么难理解吗？(React实际案例详解)》<a target="_blank" rel="noopener" href="https://juejin.cn/post/6858276396968951822">https://juejin.cn/post/6858276396968951822</a></p>
+<p>《前端路由和react-router实现原理详解》<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844904094772002823">https://juejin.cn/post/6844904094772002823</a></p>
 </blockquote>
 
                 
