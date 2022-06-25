@@ -484,7 +484,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.6k
+                    7.1k
                 </div>
                 
 
@@ -765,14 +765,14 @@ end start<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
 
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
 <span class="token punctuation">{</span>
-   <span class="token comment">// 第二步就是使用它</span>
+   <span class="token comment">// 第二步就是使用它（但是这样使用是不会显示任何执行结果的）</span>
    <span class="token function">f</span> <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
-<p>注意，程序的执行在main里面进行，但是 声明和定义函数并不算执行的过程——这算是一种执行前的准备工作</p>
-<p><strong>C语言 不允许函数内部再次声明定义函数</strong></p>
+<p>注意，程序的<strong>执行</strong>在main里面进行，但是 声明和定义函数并不算<strong>执行</strong>的过程——这算是一种执行前的准备工作</p>
+<p><strong>C语言 不允许函数内部再次声明定义函数</strong>，毕竟都开始执行了难道还允许暂停重新准备工作？</p>
 </blockquote>
 <p>我们没有<code>printf</code>的声明和定义，所以报错了</p>
 <p>再来观察一下我们最开始的程序，是这样的：</p>
@@ -785,7 +785,187 @@ end start<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
 
 <p>这样写不报错的奥秘就在于第一行，我们引入（inlcude）了一个叫做<code>stdio.h</code>的文件，里面包含了<code>printf</code>的声明和定义， 所以就没有报错</p>
 <p><strong>这种包含了一系列函数声明定义的文件，就叫做头文件</strong>，我们通过如上语法来引入它们，stdio是standard input output (标准输入输出)的缩写，后续我们还会认识到更多的头文件</p>
-<h3 id="变量声明-及-基本运算"><a href="#变量声明-及-基本运算" class="headerlink" title="变量声明 及 基本运算"></a>变量声明 及 基本运算</h3><h3 id="变量的输入输出"><a href="#变量的输入输出" class="headerlink" title="变量的输入输出"></a>变量的输入输出</h3><h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><h2 id="基础算法（待更新）"><a href="#基础算法（待更新）" class="headerlink" title="基础算法（待更新）"></a>基础算法（待更新）</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><h3 id="简单选择排序"><a href="#简单选择排序" class="headerlink" title="简单选择排序"></a>简单选择排序</h3><h3 id="简单Hash"><a href="#简单Hash" class="headerlink" title="简单Hash"></a>简单Hash</h3><h3 id="简单递归"><a href="#简单递归" class="headerlink" title="简单递归"></a>简单递归</h3><h3 id="简单动态规划"><a href="#简单动态规划" class="headerlink" title="简单动态规划"></a>简单动态规划</h3>
+<blockquote>
+<p><strong>这些头文件是从哪里来的？</strong><br>这些是我们下载的开发工具自带的——当然，如果你感兴趣，也可以查阅资料自行学习如何自制一个头文件！</p>
+<p><strong>为什么叫头文件？</strong><br>可能是因为它们通常写在代码的最开头几行吧…</p>
+</blockquote>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>注释就是批注的意思，我们可以在代码中写一些便于人们理解这段代码的话语，它们不会影响到代码，C语言的注释可以有下面两种风格:</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token comment">// 这是一个头文件↑</span>
+<span class="token comment">// 这种开头写两个斜杠的就是单行注释，每一行都要加</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 注释可以写在任何地方</span>
+<span class="token punctuation">{</span>
+    
+    
+       <span class="token comment">// 就和空格和空行一样，并不影响代码的实际运行效果</span>
+ <span class="token comment">// 但是会影响视觉美观，所以实际书写的时候还是请注重规范</span>
+    <span class="token comment">/*
+ 		这种是多行注释，
+        只要保证你写的内容在起始和结尾符号之间即可
+    */</span>
+    
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+ <span class="token comment">// 记得表达式后面是要加英文分号结尾的！</span>
+ <span class="token comment">// 要用英文符号";" 中文符号“；”都会报错的！</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h3 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h3><p>变量声明是什么？回想一下高中设未知数的过程：</p>
+<blockquote>
+<p>设一个整数变量x， x = 1</p>
+</blockquote>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+   <span class="token keyword">int</span> x<span class="token punctuation">;</span> <span class="token comment">// 这一步叫声明变量x</span>
+   x <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// 这一步是叫初始化变量x</span>
+   <span class="token comment">// 注意，=在c语言中不是等号，而是赋值号，意思是将右边的值赋值给左边</span>
+   <span class="token comment">// x = 1 意思是 使x的值为1，而不是x的值等于1</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>没错，是int，它是integer（整数）的缩写，我们可以像上面这样声明变量</p>
+<p>我们还可以优化一下表达：</p>
+<blockquote>
+<p>设一个整数变量x = 1</p>
+</blockquote>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+   <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>除了int，我们还有很多种类型，这里先介绍一些常用的：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+    <span class="token comment">// 整型变量, 取值范围是 (-2^31, 2^31-1)</span>
+    <span class="token keyword">int</span> num0 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> num1 <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// 可以连续声明</span>
+ 	<span class="token comment">// 超长整型变量, 取值范围是 (-2^63, 2^63-1)</span>
+    <span class="token keyword">long</span> <span class="token keyword">long</span> num2 <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">// 单精度浮点型变量, 取值范围是 ((1.17549e-038), (3.40282e+038))</span>
+    <span class="token keyword">float</span> num3 <span class="token operator">=</span> <span class="token number">3.1415</span><span class="token punctuation">;</span>
+    <span class="token comment">// 双精度浮点型变量, 取值范围是 ((2.22507e-308), (1.79769e+308))</span>
+    <span class="token keyword">double</span> num4 <span class="token operator">=</span> <span class="token number">3.1415</span><span class="token punctuation">;</span>
+    <span class="token comment">// 字符型变量, 表示单个字符(注意一个汉字是两个字符...)</span>
+    <span class="token keyword">char</span> c1 <span class="token operator">=</span> <span class="token string">'a'</span><span class="token punctuation">;</span>
+    <span class="token comment">// 布尔型变量, 表示 '真'（true） 或 '假' (false)</span>
+	bool b1 <span class="token operator">=</span> false<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>这里我们设置的变量不再叫做x, y, z之类的了，在编程中我们更提倡<strong>语义化</strong>，正所谓“人如其名”，一个变量的名字也应当和它自身的特性相贴切，让我们看到这个变量就能大概知道它是什么</p>
+</blockquote>
+<p>可以看到，对于数字来说，几种声明方式除了是小数和整数的区别之外，还在于它们能够表示的范围区间不同。</p>
+<p>如果赋予的值超过了其类型能够表示的范围，将通过<code>补码</code>的形式赋值——至于那是怎样一回事，如果感兴趣可以自行查阅资料进行研究，此处不做赘述</p>
+<h3 id="输出控制"><a href="#输出控制" class="headerlink" title="输出控制"></a>输出控制</h3><p>我们之前使用过<code>printf</code>打印一句话了，那么该如何动态的打印变量呢？下面这样做可以吗？</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>毕竟我都这样发问了，那显然是不行的</p>
+<p>我们应该使用<strong>变量控制符</strong>——一些特殊符号，来做到变量的控制输出：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> num1 <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">float</span> num2 <span class="token operator">=</span> <span class="token number">2.3333</span><span class="token punctuation">;</span>
+    <span class="token keyword">double</span> num3 <span class="token operator">=</span> <span class="token number">1.024</span><span class="token punctuation">;</span>
+    <span class="token keyword">char</span> c1 <span class="token operator">=</span> <span class="token string">'1'</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"这是一个变量%d, 它很棒对吧，比如%f还要棒，比%lf更棒，因为它叫做%c"</span><span class="token punctuation">,</span>num1<span class="token punctuation">,</span> num2<span class="token punctuation">,</span> num3<span class="token punctuation">,</span> c1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://pic.rmb.bdstatic.com/bjh/0714ad268529adc03be65a66f7383cd9.png" alt="变量控制符示意图"></p>
+<p>没错，变量控制符就是相当于帮这些变量提前 <strong>占位置</strong>，等到后面这些变量来的时候，再按照顺序对应过去就可以了</p>
+<p>不同类型的变量对应不同的变量控制符，不能混用，否则可能导致结果发生一些微妙的错误</p>
+<p>这里给出常用的<code>变量类型-变量控制符</code>对应关系</p>
+<table>
+<thead>
+<tr>
+<th>变量类型</th>
+<th>变量控制符</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int</td>
+<td><strong>%d</strong>，是decimal(十进制)的简写，别问为什么不是%i，因为设计就是这样的…</td>
+</tr>
+<tr>
+<td>float</td>
+<td>%f</td>
+</tr>
+<tr>
+<td>double</td>
+<td><strong>%lf</strong>，没法啊，%d被int拿去用了，那就用long float凑合一下吧</td>
+</tr>
+<tr>
+<td>char</td>
+<td>%c，单个字符</td>
+</tr>
+<tr>
+<td>string</td>
+<td>%s，字符串——这个后面会遇到的</td>
+</tr>
+<tr>
+<td>long long</td>
+<td>%lld，因为%d代表整型，那%lld代表超长整型没毛病吧？</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody></table>
+<p>这里还有一些<strong>转义字符</strong></p>
+<table>
+<thead>
+<tr>
+<th>转义字符</th>
+<th>用处</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\n</td>
+<td>换行</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>还不太懂？没关系，之前提到过，多实践！</strong></p>
+<p><strong>代码老是写错？总是运行不起来？都是这样过来的~多实践！</strong></p>
+</blockquote>
+<h3 id="输入控制"><a href="#输入控制" class="headerlink" title="输入控制"></a>输入控制</h3><p>大概知道了怎么输出，那么来想想这个场景吧:</p>
+<blockquote>
+<p>你设计了个有账号登录的系统，然后你需要用户的账号密码来执行一系列操作，那么问题来了，你怎么让你的程序获得用户的账号密码呢？</p>
+</blockquote>
+<p>还记得之前说的吗？stdio是standard input output（标准输入输出），这就意味着除了printf输出之外，还有一个输入，那就是scanf，它的使用方式和printf很相似:</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// account账号， password密码</span>
+    <span class="token keyword">int</span> account<span class="token punctuation">,</span> password<span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"您好，请输入您的账号:"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>account<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 这里加上了一个符号 &amp;,不要漏掉了！</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"您好，请输入您的密码:"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 还要注意%d前后不要随便加其他内容</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n\n\n登录成功，\n你的账号是:%d\n你的密码是%d\n"</span><span class="token punctuation">,</span> account<span class="token punctuation">,</span> password<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p><img src="https://pic.rmb.bdstatic.com/bjh/6050e6164439bd748ec74a684a92b912.png" alt="scanf函数会获取来自键盘的输入"></p>
+<p>其他类型的变量输入方式也是如出一辙，需要注意的就是，一定要加上符号<code>&amp;</code>，几乎是所有新手都会忘记这个事情从而导致程序无法按照预期的执行</p>
+<h3 id="基本运算和类型转换"><a href="#基本运算和类型转换" class="headerlink" title="基本运算和类型转换"></a>基本运算和类型转换</h3><h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><h2 id="基础算法（待更新）"><a href="#基础算法（待更新）" class="headerlink" title="基础算法（待更新）"></a>基础算法（待更新）</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><h3 id="简单选择排序"><a href="#简单选择排序" class="headerlink" title="简单选择排序"></a>简单选择排序</h3><h3 id="简单Hash"><a href="#简单Hash" class="headerlink" title="简单Hash"></a>简单Hash</h3><h3 id="简单递归"><a href="#简单递归" class="headerlink" title="简单递归"></a>简单递归</h3><h3 id="简单动态规划"><a href="#简单动态规划" class="headerlink" title="简单动态规划"></a>简单动态规划</h3>
                 
             </div>
             <hr/>
