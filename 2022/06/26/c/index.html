@@ -324,7 +324,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/51.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/51.jpeg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -484,7 +484,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.2k
+                    5.6k
                 </div>
                 
 
@@ -514,7 +514,7 @@
 <blockquote>
 <p>本文是引导新人们学习编程，对一些常见的问题会做尽可能通俗易懂的解释，所以并不十分严谨，如有疏漏之处，还请见谅！</p>
 </blockquote>
-<h2 id="常见的问题"><a href="#常见的问题" class="headerlink" title="常见的问题"></a>常见的问题</h2><h3 id="计算机类学科课程"><a href="#计算机类学科课程" class="headerlink" title="计算机类学科课程"></a>计算机类学科课程</h3><p>不同的学科学习的内容不太一样，计算机大类公有的专业核心课程大概是这些，后面的数字代表我个人认为的学习难度，数字越大代表越难</p>
+<h2 id="学习编程常见的问题"><a href="#学习编程常见的问题" class="headerlink" title="学习编程常见的问题"></a>学习编程常见的问题</h2><h3 id="计算机类学科课程"><a href="#计算机类学科课程" class="headerlink" title="计算机类学科课程"></a>计算机类学科课程</h3><p>不同的学科学习的内容不太一样，计算机大类公有的专业核心课程大概是这些，后面的数字代表我个人认为的学习难度，数字越大代表越难</p>
 <blockquote>
 <p><strong>面向过程编程（1）</strong><br>这个通常是指的<code>C语言编程</code>，至于何为面向过程，我们后面再讨论这个问题</p>
 <p>通过这门课程能够认识到编程的基本知识，接触到编程的逻辑思想，为后续的学习开辟了一条道路</p>
@@ -685,7 +685,107 @@ end start<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
 <h3 id="电脑配置要求"><a href="#电脑配置要求" class="headerlink" title="电脑配置要求"></a>电脑配置要求</h3><p>一般而言，如果不涉及机器学习、图像渲染等方向并且不玩游戏的话，对于计算机的要求就是3000+的笔记本即可，这个价位是兼顾了长久耐用和实用性两点，当然如果经济宽裕的话自然是越高越好</p>
 <h3 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h3><p>如果还有其他问题，通过以下方式联系到我，我会尽可能解答，如果一些问题出现频率较高，那么我会在本篇博文进行更新</p>
 <p>联系方式在我个人博客网站的多处位置都能找到</p>
-<h2 id="C语言入门（待更新）"><a href="#C语言入门（待更新）" class="headerlink" title="C语言入门（待更新）"></a>C语言入门（待更新）</h2><h3 id="前置准备"><a href="#前置准备" class="headerlink" title="前置准备"></a>前置准备</h3><h3 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h3><h2 id="基础算法（待更新）"><a href="#基础算法（待更新）" class="headerlink" title="基础算法（待更新）"></a>基础算法（待更新）</h2>
+<h2 id="前置准备"><a href="#前置准备" class="headerlink" title="前置准备"></a>前置准备</h2><h3 id="准备开发工具"><a href="#准备开发工具" class="headerlink" title="准备开发工具"></a>准备开发工具</h3><p>之前有提到编译器，这里我们就需要下载一款内置C语言编译器的代码编辑器——也就是我们的开发工具</p>
+<blockquote>
+<p>当然如果你够强，直接记事本也可以写代码</p>
+</blockquote>
+<p>这里有非常多的选择:</p>
+<blockquote>
+<p><strong>devcpp</strong><br>小巧轻量，不到50M，安装即用，适合入门</p>
+<p><strong>vscode studio</strong><br>重型装备，专业开发用，配置较为复杂，不建议入门使用</p>
+<p><strong>vscode</strong><br>轻量，但是配置非常复杂，不建议入门使用</p>
+<p><strong>clion</strong><br>不了解，不做评价</p>
+<p><strong>xcode</strong><br>mac御用，界面美观，操作丝滑，适合入门</p>
+<p><strong>lightly</strong><br>界面美观，windows和mac通用，配置简单，适合入门</p>
+<p><strong>其他</strong><br>有的太过于老旧，有的是第三方魔改，就不做推荐了</p>
+</blockquote>
+<p>按照我以前的习惯，一般是推荐devcpp，毕竟情怀在那里，而且学校考试、比赛很多时候都用这个</p>
+<p>但是，作为一个优秀的工程师，怎么能拒绝更简洁更高效？</p>
+<p>本博客将使用<strong>lightly</strong>作为演示，<a target="_blank" rel="noopener" href="https://lightly.teamcode.com/c">lightly下载链接</a></p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/2ae7d1a2d2251aa58de8cda0b102f3cf.png" alt="lightly界面"></p>
+<p>没错，它竟然还有登陆界面——这就意味着这是一把双刃剑，一方面它可以云端编译，无视用户主机的操作系统所带来的差异保证输出结果一致（<strong>意思是甚至手机都可以</strong>）；但是另一方面就意味着这玩意儿断网就不能用….</p>
+<h3 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h3><p><img src="https://pic.rmb.bdstatic.com/bjh/b3e423482ff9648a84e956103db0aa03.png" alt="点击新建项目"></p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/9116d549bcb4d22d41f290cbaf1cef56.png" alt="按照图上所说的进行操作"></p>
+<p>这里可以看到<code>Lightly</code>很强大啊，还能写很多别的东西！</p>
+<p>这里的项目名称我们采用 <code>大驼峰书写规范</code>， 也就是每个单词首字母大写</p>
+<blockquote>
+<p>还有<code>小驼峰书写规范</code>: helloWorld —— 从第二个单词开始首字母大写</p>
+<p>以及 <code>蛇形书写规范</code>: hello-world —— 单词与单词之间用短线连接</p>
+<p>至于什么时候该用哪一种，这就得靠长期实践潜移默化形成习惯了</p>
+</blockquote>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/4e5b6333e023df2156214091bcfbd84d.png" alt="Hello World"></p>
+<p>好了，如果一切顺利，那么你的第一个代码运行成功了！</p>
+<h3 id="代码基本结构"><a href="#代码基本结构" class="headerlink" title="代码基本结构"></a>代码基本结构</h3><p>这里我先认识一下最小的C语言程序长什么样子，让我们在上述代码的基础上删减一些不必要的东西:</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+   
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>没错，像是上面这样，就是一个可执行C语言程序的最小结构，让我们先记住这个结构，一点一点地扩充</p>
+<h2 id="基础知识-及-语法（待更新）"><a href="#基础知识-及-语法（待更新）" class="headerlink" title="基础知识 及 语法（待更新）"></a>基础知识 及 语法（待更新）</h2><h3 id="认识主函数"><a href="#认识主函数" class="headerlink" title="认识主函数"></a>认识主函数</h3><p>先让我们回忆一下函数长什么样子，高中的时候一定见过这样的式子：</p>
+<div style="text-align:center;font-size:24px;font-weight:800;">f(x) = x + 1</div> 
+
+<p>那么C语言该怎么表达它呢？（<strong>这里我们假设x, y都是整数</strong>）</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">f</span> <span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这里的int是integer（整数）的缩写，<strong>代表紧跟其后的内容的值是一个整数</strong></p>
+<p>上面这样写，就实现了表示f(x)的值是整数，x也是整数</p>
+<p><code>return x + 1</code>，意味着这个 <strong>函数到此结束，x + 1将作为这个函数的值</strong>，比如<code>x = 5</code>，那么<code>f(x) = 5 + 1 = 6</code></p>
+<p>一切看起来既熟悉又陌生对吧？不过不用担心，我们后面还会进一步讨论函数相关的内容，这里我们大概认识一下即可</p>
+<p>现在回过头来看看我们的代码，我们给它添加一个<code>return 0</code></p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>好了，我们观察一下这个结构，是一个叫做main的函数，也就是<strong>主函数</strong></p>
+<p>C语言程序是 从<code>main函数的开头</code>执行，到<code>main函数结束(执行到return或者执行到末尾)</code>结束</p>
+<p>它没有参数，然后似乎是个恒等式——永远为0？这是一个约定俗成的规矩，在主函数末尾返回（return）一个0，以便系统知道这个程序完整运行结束，而不是因为一些bug引起的异常而中断</p>
+<h3 id="认识头文件"><a href="#认识头文件" class="headerlink" title="认识头文件"></a>认识头文件</h3><p>让我们再扩充一点东西</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>printf是print function（打印函数）的缩写，它的功能是把参数打印到控制台，让我们运行一下这段代码——<strong>报错了？！</strong></p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/a6a77e5baabca6955f53a31c6804358b.png" alt="报错信息"></p>
+<blockquote>
+<p>这里，我们的编译工具非常先进，虽然我们的程序有问题，但是它不仅指出了错误，甚至还帮忙纠正了错误，所以最后还是能够顺利运行出正确的结果！</p>
+</blockquote>
+<p>那么为什么会报错呢？首先，<code>printf</code>是一个函数，那么它的内容呢？我们来看看使用一个函数的正确操作：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">// 第一步是 声明并定义 这个函数</span>
+<span class="token keyword">int</span> <span class="token function">f</span> <span class="token punctuation">(</span>x<span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+   <span class="token comment">// 第二步就是使用它</span>
+   <span class="token function">f</span> <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>注意，程序的执行在main里面进行，但是 声明和定义函数并不算执行的过程——这算是一种执行前的准备工作</p>
+<p><strong>C语言 不允许函数内部再次声明定义函数</strong></p>
+</blockquote>
+<p>我们没有<code>printf</code>的声明和定义，所以报错了</p>
+<p>再来观察一下我们最开始的程序，是这样的：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这样写不报错的奥秘就在于第一行，我们引入（inlcude）了一个叫做<code>stdio.h</code>的文件，里面包含了<code>printf</code>的声明和定义， 所以就没有报错</p>
+<p><strong>这种包含了一系列函数声明定义的文件，就叫做头文件</strong>，我们通过如上语法来引入它们，stdio是standard input output (标准输入输出)的缩写，后续我们还会认识到更多的头文件</p>
+<h3 id="变量声明-及-基本运算"><a href="#变量声明-及-基本运算" class="headerlink" title="变量声明 及 基本运算"></a>变量声明 及 基本运算</h3><h3 id="变量的输入输出"><a href="#变量的输入输出" class="headerlink" title="变量的输入输出"></a>变量的输入输出</h3><h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><h2 id="基础算法（待更新）"><a href="#基础算法（待更新）" class="headerlink" title="基础算法（待更新）"></a>基础算法（待更新）</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><h3 id="简单选择排序"><a href="#简单选择排序" class="headerlink" title="简单选择排序"></a>简单选择排序</h3><h3 id="简单Hash"><a href="#简单Hash" class="headerlink" title="简单Hash"></a>简单Hash</h3><h3 id="简单递归"><a href="#简单递归" class="headerlink" title="简单递归"></a>简单递归</h3><h3 id="简单动态规划"><a href="#简单动态规划" class="headerlink" title="简单动态规划"></a>简单动态规划</h3>
                 
             </div>
             <hr/>
@@ -952,7 +1052,7 @@ end start<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
                 <a href="/2022/06/26/c/">
                     <div class="card-image">
                         
-                        <img src="/medias/postimages/51.jpg" class="responsive-img" alt="C语言入门">
+                        <img src="/medias/postimages/51.jpeg" class="responsive-img" alt="C语言入门">
                         
                         <span class="card-title">C语言入门</span>
                     </div>
