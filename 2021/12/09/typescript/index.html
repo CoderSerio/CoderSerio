@@ -587,7 +587,7 @@ a <span class="token operator">=</span> <span class="token string">'hhh'</span> 
 
 <p>加上问号代表这是一个可选的属性，非必填项</p>
 <p>但是这样就意味着，你在使用它之前，需要校验是否为<code>undefined</code></p>
-<h3 id="TS高级数据类型"><a href="#TS高级数据类型" class="headerlink" title="TS高级数据类型"></a>TS高级数据类型</h3><h4 id="联合类型"><a href="#联合类型" class="headerlink" title="联合类型"></a>联合类型</h4><p>通过<strong>类型收窄</strong>，也就是限制变量的取值范围来实现联合类型</p>
+<h3 id="TS高级数据类型"><a href="#TS高级数据类型" class="headerlink" title="TS高级数据类型"></a>TS高级数据类型</h3><h4 id="联合类型"><a href="#联合类型" class="headerlink" title="联合类型"></a>联合类型</h4><p><strong>类型收窄</strong>，一种方式是通过使用联合类型实现（另一种是通过if语句结合typeof关键字来做判断，即 <strong>类型保护</strong>方式实现）</p>
 <pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">123</span> <span class="token operator">|</span> <span class="token number">456</span>
 <span class="token comment">// a = 789 // 报错了，不是123和456中的一个</span>
 
