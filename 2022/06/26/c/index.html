@@ -484,7 +484,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7.1k
+                    8.2k
                 </div>
                 
 
@@ -965,7 +965,143 @@ end start<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
 
 <p><img src="https://pic.rmb.bdstatic.com/bjh/6050e6164439bd748ec74a684a92b912.png" alt="scanf函数会获取来自键盘的输入"></p>
 <p>其他类型的变量输入方式也是如出一辙，需要注意的就是，一定要加上符号<code>&amp;</code>，几乎是所有新手都会忘记这个事情从而导致程序无法按照预期的执行</p>
-<h3 id="基本运算和类型转换"><a href="#基本运算和类型转换" class="headerlink" title="基本运算和类型转换"></a>基本运算和类型转换</h3><h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><h2 id="基础算法（待更新）"><a href="#基础算法（待更新）" class="headerlink" title="基础算法（待更新）"></a>基础算法（待更新）</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><h3 id="简单选择排序"><a href="#简单选择排序" class="headerlink" title="简单选择排序"></a>简单选择排序</h3><h3 id="简单Hash"><a href="#简单Hash" class="headerlink" title="简单Hash"></a>简单Hash</h3><h3 id="简单递归"><a href="#简单递归" class="headerlink" title="简单递归"></a>简单递归</h3><h3 id="简单动态规划"><a href="#简单动态规划" class="headerlink" title="简单动态规划"></a>简单动态规划</h3>
+<h3 id="基本运算"><a href="#基本运算" class="headerlink" title="基本运算"></a>基本运算</h3><p>说到运算，那么加减乘除一定不陌生吧？那我们来实现一个程序，它能计算表达式，并将结果保留5位小数：</p>
+<div style="text-align:center;font-weight:800;font-size: 16px;">f(X) = [(X + 1)^2 / 100] * 3.1415</div>
+
+<div style="text-align:center;">(x由用户输入)</div>
+
+
+
+<p>我们来分析一下，结果要保留5位小数，那么这个值是浮点数（也就是小数），由于<code>double</code>精度比<code>float</code>更高，所以多数时候我们使用<code>double</code>来声明浮点数</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token comment">// f(X) = [(X + 1)^2 / 100] * 3.1415</span>
+<span class="token keyword">double</span> <span class="token function">f</span> <span class="token punctuation">(</span><span class="token keyword">double</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">3.1415</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// return 后面的内容将作为这个函数的值</span>
+<span class="token comment">// 注意C语言中，更改运算优先级都是用()，不使用中括号和大括号</span>
+<span class="token comment">// 另外，^符号在C语言中不是幂运算，请勿混淆</span>
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"请输入x的值:\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">double</span> x<span class="token punctuation">;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%lf"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 可以将函数值用同类型变量保存起来</span>
+    <span class="token keyword">double</span> result <span class="token operator">=</span> <span class="token function">f</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"计算结果是:\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%.5lf"</span><span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 写成下面这样也可</span>
+    <span class="token comment">// printf("%.5lf", f(x));</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这里我们重点看一下最后一个<code>printf</code>：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%.5lf"</span><span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 写成下面这样也可</span>
+<span class="token comment">// printf("%.5lf", f(x));</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>变量控制符能够做输出控制，通过上面这样的写法能够实现保留小数点后5位，以此类推保留小数点后n位也是同样的道理</p>
+<p>这里说到了等效替换，那么我们可以再想一想，为什么要把刚才的运算过程写到一个函数里面呢？直接把表达式写在main函数里面是不是一样？</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">double</span> result <span class="token operator">=</span> <span class="token function">f</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">double</span> result <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">3.1415</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>确实是这样的，这两行代码也是等价的。</p>
+<p>但是<strong>封装</strong>成一个函数的好处在于，<strong>便于重复使用，并且书写简便</strong>，就比如我们刚才写的这个程序，要是改成让用户连续输入5次，输出5个结果：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token comment">// f(X) = [(X + 1)^2 / 100] * 3.1415</span>
+<span class="token keyword">double</span> <span class="token function">f</span> <span class="token punctuation">(</span><span class="token keyword">double</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">3.1415</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"请输入x的值:\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">double</span> x1<span class="token punctuation">,</span> x2<span class="token punctuation">,</span> x3<span class="token punctuation">,</span> x4<span class="token punctuation">,</span> x5<span class="token punctuation">;</span>
+    <span class="token comment">// 这里换行是为了让代码更方便阅读！</span>
+  	<span class="token comment">// 要关注自己代码的可读性！</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%lf%lf%lf%lf%lf"</span><span class="token punctuation">,</span> 
+          <span class="token operator">&amp;</span>x1<span class="token punctuation">,</span> <span class="token operator">&amp;</span>x2<span class="token punctuation">,</span> <span class="token operator">&amp;</span>x3<span class="token punctuation">,</span> <span class="token operator">&amp;</span>x4<span class="token punctuation">,</span> <span class="token operator">&amp;</span>x5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"计算结果是:\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%.5lf\n%.5lf\n%.5lf\n%.5lf\n%.5lf"</span><span class="token punctuation">,</span> 
+           <span class="token function">f</span><span class="token punctuation">(</span>x1<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">f</span><span class="token punctuation">(</span>x2<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">f</span><span class="token punctuation">(</span>x3<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">f</span><span class="token punctuation">(</span>x4<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">f</span><span class="token punctuation">(</span>x5<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://pic.rmb.bdstatic.com/bjh/082369f36090788df3b8e70071ecb7b3.png" alt="连续输入"></p>
+<p>再来思考一下，如果要表达:</p>
+<div style="text-align:center;font-size:24px;font-weight:800;">f(x) = x^100</div>
+
+<p>一百次方——难道我们要写一百个x相乘吗？</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;math.h&gt;</span></span>
+<span class="token comment">// f(X) = X^100</span>
+<span class="token keyword">double</span> <span class="token function">f</span> <span class="token punctuation">(</span><span class="token keyword">double</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">pow</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"请输入x的值:\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">double</span> x<span class="token punctuation">;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%lf"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"计算结果是:\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%lf"</span><span class="token punctuation">,</span> <span class="token function">f</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这里我们遇到了第二个常用的头文件<code>math.h</code>，正如其名，其中声明定义了很多关于数学的函数，包括<code>pow</code>(幂函数)，<code>sin</code>(正弦函数)，<code>cos</code>(余弦函数)、<code>sqrt</code>(平方根函数)等等</p>
+<p>这里请注意输入的值不要太大，因为100次方不是一个小数目，过大的x可能导致值溢出表示范围从而触发<code>补码</code></p>
+<p>除了上述内容所展示的一些运算符号，C语言常用的运算符号还有:</p>
+<table>
+<thead>
+<tr>
+<th>运算符号</th>
+<th>作用描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>!</td>
+<td>布尔逻辑取反: ! false 就是 true，! true就是false</td>
+</tr>
+<tr>
+<td>%</td>
+<td>取模运算： 即除法取余数，14 % 3 就是 2</td>
+</tr>
+<tr>
+<td>sizeof</td>
+<td>求字节大小: 虽然看着很像一个函数，但是它是一个运算符</td>
+</tr>
+<tr>
+<td>? :</td>
+<td>三目运算符：用于判断条件二选一</td>
+</tr>
+<tr>
+<td>&gt;&gt;</td>
+<td>位运算右移: 二进制位向右移动n位， 10&gt;&gt;1的结果是9</td>
+</tr>
+<tr>
+<td>&lt;&lt;</td>
+<td>位运算左移：二进制向左移动n位，10&lt;&lt;1的结果是8</td>
+</tr>
+<tr>
+<td>^</td>
+<td>位运算取反: 按位取反， ^10的结果是9</td>
+</tr>
+<tr>
+<td>==</td>
+<td>等号：10 == 10 相等，结果是true，10 == 9 不相等，结果是false</td>
+</tr>
+<tr>
+<td>…</td>
+<td>….</td>
+</tr>
+</tbody></table>
+<p>其中一些运算符我们会在后面用到，现在大概知道就行了</p>
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><p>如果要表示：</p>
+<div style="text-align:center;font-size:24px;font-weight:800;">f(x) = x + 'a' + 1.0025</div>
+
+<div style="text-align:center;">(x是整型int)</div>
+
+<p>那么结果f(x)应该是什么类型的？这点我们必须在一开始就想清楚，不然我们没办法声明定义这个函数！</p>
+<h4 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h4><h4 id="隐式类型转换"><a href="#隐式类型转换" class="headerlink" title="隐式类型转换"></a>隐式类型转换</h4><h4 id="ASCII码"><a href="#ASCII码" class="headerlink" title="ASCII码"></a>ASCII码</h4><h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><h3 id="自定义宏"><a href="#自定义宏" class="headerlink" title="自定义宏"></a>自定义宏</h3><h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><h2 id="基础数据结构和算法（待更新）"><a href="#基础数据结构和算法（待更新）" class="headerlink" title="基础数据结构和算法（待更新）"></a>基础数据结构和算法（待更新）</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><h3 id="简单选择排序"><a href="#简单选择排序" class="headerlink" title="简单选择排序"></a>简单选择排序</h3><h3 id="简单Hash"><a href="#简单Hash" class="headerlink" title="简单Hash"></a>简单Hash</h3><h3 id="简单递归"><a href="#简单递归" class="headerlink" title="简单递归"></a>简单递归</h3><h3 id="简单动态规划"><a href="#简单动态规划" class="headerlink" title="简单动态规划"></a>简单动态规划</h3><h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3>
                 
             </div>
             <hr/>
