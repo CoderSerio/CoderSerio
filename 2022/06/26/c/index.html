@@ -484,7 +484,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    8.2k
+                    9.5k
                 </div>
                 
 
@@ -1058,10 +1058,6 @@ end start<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
 </tr>
 </thead>
 <tbody><tr>
-<td>!</td>
-<td>布尔逻辑取反: ! false 就是 true，! true就是false</td>
-</tr>
-<tr>
 <td>%</td>
 <td>取模运算： 即除法取余数，14 % 3 就是 2</td>
 </tr>
@@ -1090,18 +1086,203 @@ end start<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
 <td>等号：10 == 10 相等，结果是true，10 == 9 不相等，结果是false</td>
 </tr>
 <tr>
+<td>&gt;和&lt;</td>
+<td>大于和小于: 做大小比较，结果是布尔值true或false</td>
+</tr>
+<tr>
+<td>&gt;=和&lt;=</td>
+<td>大于等于和小于等于: 同上</td>
+</tr>
+<tr>
+<td>!</td>
+<td>布尔逻辑取反: ! false 就是 true，! true就是false</td>
+</tr>
+<tr>
+<td>&amp;&amp; 和</td>
+<td></td>
+</tr>
+<tr>
+<td>，</td>
+<td>逗号: 除了表示一种并列关系之外，还能返回后者的值</td>
+</tr>
+<tr>
 <td>…</td>
-<td>….</td>
+<td>…</td>
 </tr>
 </tbody></table>
-<p>其中一些运算符我们会在后面用到，现在大概知道就行了</p>
-<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><p>如果要表示：</p>
-<div style="text-align:center;font-size:24px;font-weight:800;">f(x) = x + 'a' + 1.0025</div>
+<p>其中一些运算符我们会在后面介绍</p>
+<h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><h4 id="三目运算符"><a href="#三目运算符" class="headerlink" title="三目运算符"></a>三目运算符</h4><p>三目也就是三元，和加法运算是二元运算需要两个参数一样的道理，三元需要三个参数参与运算</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">char</span> a <span class="token operator">=</span> <span class="token number">3</span> <span class="token operator">&gt;</span> <span class="token number">2</span> <span class="token operator">?</span> <span class="token string">'Y'</span><span class="token operator">:</span> <span class="token string">'N'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>上面这行代码的相当于是：</p>
+<blockquote>
+<p>3大于2对吗 <strong>？</strong>如果对，运算结果是 ‘Y’ <strong>：</strong>否则，运算结果是’N’</p>
+</blockquote>
+<p>显然，3是大于2的（true），所以a的被赋予一个值 ‘Y’</p>
+<h4 id="if系列"><a href="#if系列" class="headerlink" title="if系列"></a>if系列</h4><p>三目运算符看上去非常高级，但是面对一些复杂情况用它表达的话可能就有点难以阅读了，这时候我们就需要if系列</p>
+<p>让我们设想一个情景：</p>
+<blockquote>
+<p>输入一个int整型，范围是[0, 100]，代表一个学生的考试得分，并按照以下规则给出输出：</p>
+<ol>
+<li>100 &gt;= 分数 &gt;= 90， 输出A;</li>
+<li>90 &gt; 分数 &gt;= 80，输出B；</li>
+<li>80 &gt; 分数 &gt;= 70， 输出C；</li>
+<li>70 &gt; 分数 &gt;= 60， 输出D；</li>
+<li>60 &gt; 分数 &gt;= 0，输出E;</li>
+</ol>
+</blockquote>
+<p>这个过程可以看做是这样一个函数</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/e94796fc9f6c05eeb296e08cdfcee878.png" alt="函数表达"></p>
+<p>让我们看看用if是如何实现这里的需求的:</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+
+<span class="token keyword">char</span> <span class="token function">judge</span> <span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">100</span> <span class="token operator">&gt;=</span> x <span class="token operator">&gt;=</span> <span class="token number">90</span><span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">'A'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> 
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">90</span> <span class="token operator">&gt;</span> x <span class="token operator">&gt;=</span> <span class="token number">80</span><span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">'B'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">80</span> <span class="token operator">&gt;</span> x <span class="token operator">&gt;=</span> <span class="token number">70</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">'C'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">70</span> <span class="token operator">&gt;</span> x <span class="token operator">&gt;=</span> <span class="token number">60</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">'D'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">60</span> <span class="token operator">&gt;</span> x <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">'E'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> score<span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"请输入学生的分数:\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>score<span class="token punctuation">)</span><span class="token punctuation">;</span>    
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%c"</span><span class="token punctuation">,</span> <span class="token function">judge</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>看上去非常简单对吧？但是要注意，现在这么写是<strong>错误的</strong>！</p>
+<p>我们试试输入一个100会怎么样呢？</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/285aa8c81801617de4dd88135e4d8425.png" alt="输入100"></p>
+<p><strong>100分怎么会是E呢？</strong></p>
+<p>让我们来分析一下下面这行代码：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">bool flag <span class="token operator">=</span> <span class="token number">5</span> <span class="token operator">&gt;</span> <span class="token number">4</span> <span class="token operator">&gt;</span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token comment">// 希望你还没有忘记布尔值——true和false，代表 真 假</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>结果是什么呢？4的确是小于5且大于3的，所以是true？</p>
+<p>不不不，让我们来看看它的运算过程——<strong>从左往右运算</strong>:</p>
+<blockquote>
+<p>首先运算<code>5 &gt; 4</code>，这一段结果是<code>true</code>，然后运算<code>true &gt; 3</code></p>
+<p>这里需要注意，布尔值true，在被当做数字使用时，会被自动转化为1，所以这里的<code>true &gt; 3</code>等价于<code>1 &gt; 3</code>，结果是false——关于类型转换这一点，我们会在一章讨论</p>
+<p>所以，<strong>最后的结果就是false</strong></p>
+</blockquote>
+<p>所以我们输入的59，在进行第一个判断<code>100 &gt;= 59 &gt;= 90</code>，实际上执行的是<code>1 &gt;= 90</code>，其他地方的判断也是如此这般</p>
+<p>正确的表达需要借助逻辑连词(代码太长就只节选一部分解释):</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">// &amp;&amp; 是 且</span>
+<span class="token comment">// 这里直译就是:</span>
+<span class="token comment">// 如果 100 &gt;= x 并且 x &gt;= 90, 那么函数值是'A' </span>
+<span class="token comment">// 重申一下，return会使函数就此结束，后续代码就不会执行了</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">100</span> <span class="token operator">&gt;=</span> x <span class="token operator">&amp;&amp;</span> x <span class="token operator">&gt;=</span> <span class="token number">90</span><span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'A'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> 
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">90</span> <span class="token operator">&gt;</span> x <span class="token operator">&amp;&amp;</span> x <span class="token operator">&gt;=</span> <span class="token number">80</span><span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'B'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// ...略</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>好了，我们还可以进一步优化代码，使用<code>else-if</code>和<code>else</code></p>
+<p>和多个<code>if</code>的区别在于，多个<code>if</code>之间没有关联，（如果不是return终止了继续执行下面的代码），每个<code>if</code>都将进行一次判断</p>
+<p>而<code>else-if</code>只有当上面的<code>if</code>或者<code>else-if</code>不成立时，才会做判断；<br>而<code>else</code>只有当上面的情况全都不成立的时候，才会执行；</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">100</span> <span class="token operator">&gt;=</span> x <span class="token operator">&amp;&amp;</span> x <span class="token operator">&gt;=</span> <span class="token number">90</span><span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'A'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> 
+<span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">&gt;=</span> <span class="token number">80</span><span class="token punctuation">)</span>  <span class="token comment">// 第一个if不满足，所以可以知道小于90</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'B'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">&gt;=</span> <span class="token number">70</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'C'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">&gt;=</span> <span class="token number">60</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'D'</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">else</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'E'</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="switch系列"><a href="#switch系列" class="headerlink" title="switch系列"></a>switch系列</h4><blockquote>
+<p>这里可不是在介绍游戏机啊，switch有 开关 的意思，而开关就是用于选择控制的</p>
+</blockquote>
+<p>switch的功能和if基本一致，但是语法会比if系列繁琐，所以我们一般情况下是使用if系列，不过switch的判断速度要比if快一些，在一些运算时间要求特别严格的场合可以考虑switch，这里我们简单了解一下它的语法：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> score <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token keyword">switch</span> <span class="token punctuation">(</span>score<span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token number">1</span><span class="token operator">:</span> 
+        <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"socre的值是1\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">case</span> <span class="token number">2</span><span class="token operator">:</span> 
+        <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"socre的值是2\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        	<span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">case</span> <span class="token number">3</span><span class="token operator">:</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"socre的值是3\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        	<span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> 
+        <span class="token keyword">case</span> <span class="token number">4</span><span class="token operator">:</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"socre的值是4\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        	<span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> 
+        <span class="token keyword">default</span><span class="token operator">:</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"socre的值不是 1 2 3 4\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p> 可以看到，它难以对一个大的范围进行判断，只能通过<code>case</code>来判断是不是某具体一个值，<code>default</code>则类似于<code>else</code></p>
+</blockquote>
+<p>这里我们可以看到一个关键字<code>break</code>，它在这里的作用是<strong>终止switch的执行</strong>（最后的default可以不加break，因为已经是末尾了）。可能这么说有些令人迷惑，那让我们先去掉所有break，再来看看运行结果:</p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/74fc14b719bfdf2707df2cdfe75a2738.png" alt="switch如果不加break的话"></p>
+<blockquote>
+<p>那么，如果用return来终止执行呢？</p>
+<p>实际上也是可以的，但是return是用于终止函数的——注意，if和switch这些不是函数，它们只是一些条件判断语句，return会终止当前所在的函数，也就是终止main的执行</p>
+</blockquote>
+<h3 id="类型转换（待更新）"><a href="#类型转换（待更新）" class="headerlink" title="类型转换（待更新）"></a>类型转换（待更新）</h3><p>如果要表示：</p>
+<div style="text-align:center;font-size:24px;font-weight:800;">f(x) = x + 1.0025</div>
 
 <div style="text-align:center;">(x是整型int)</div>
 
 <p>那么结果f(x)应该是什么类型的？这点我们必须在一开始就想清楚，不然我们没办法声明定义这个函数！</p>
-<h4 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h4><h4 id="隐式类型转换"><a href="#隐式类型转换" class="headerlink" title="隐式类型转换"></a>隐式类型转换</h4><h4 id="ASCII码"><a href="#ASCII码" class="headerlink" title="ASCII码"></a>ASCII码</h4><h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><h3 id="自定义宏"><a href="#自定义宏" class="headerlink" title="自定义宏"></a>自定义宏</h3><h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><h2 id="基础数据结构和算法（待更新）"><a href="#基础数据结构和算法（待更新）" class="headerlink" title="基础数据结构和算法（待更新）"></a>基础数据结构和算法（待更新）</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><h3 id="简单选择排序"><a href="#简单选择排序" class="headerlink" title="简单选择排序"></a>简单选择排序</h3><h3 id="简单Hash"><a href="#简单Hash" class="headerlink" title="简单Hash"></a>简单Hash</h3><h3 id="简单递归"><a href="#简单递归" class="headerlink" title="简单递归"></a>简单递归</h3><h3 id="简单动态规划"><a href="#简单动态规划" class="headerlink" title="简单动态规划"></a>简单动态规划</h3><h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3>
+<h4 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h4><h4 id="隐式类型转换"><a href="#隐式类型转换" class="headerlink" title="隐式类型转换"></a>隐式类型转换</h4><h4 id="ASCII码"><a href="#ASCII码" class="headerlink" title="ASCII码"></a>ASCII码</h4><h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><h3 id="自定义宏"><a href="#自定义宏" class="headerlink" title="自定义宏"></a>自定义宏</h3><h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><h2 id="基础数据结构和算法（待更新）"><a href="#基础数据结构和算法（待更新）" class="headerlink" title="基础数据结构和算法（待更新）"></a>基础数据结构和算法（待更新）</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><h3 id="简单选择排序"><a href="#简单选择排序" class="headerlink" title="简单选择排序"></a>简单选择排序</h3><h3 id="简单Hash"><a href="#简单Hash" class="headerlink" title="简单Hash"></a>简单Hash</h3><h3 id="简单递归"><a href="#简单递归" class="headerlink" title="简单递归"></a>简单递归</h3><h3 id="简单动态规划"><a href="#简单动态规划" class="headerlink" title="简单动态规划"></a>简单动态规划</h3><h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3>
                 
             </div>
             <hr/>
