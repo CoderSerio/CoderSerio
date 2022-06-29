@@ -477,14 +477,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-06-26
+                    2022-06-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    9.5k
+                    10.4k
                 </div>
                 
 
@@ -632,7 +632,17 @@
 <p>可以看到，面向过程是需要我们细致入微地关心每一步，做不同的菜品还会有不同的操作；但是面向对象不一样，无论什么菜品，总是拿出手机点一下就行了</p>
 <p>这是如何做到的呢？你可以观察到，不同的对象间似乎拥有相同的属性，比如 <code>工程师对象</code> 和 <code>医生对象</code>，Ta们都可以拥有共同的属性和行为，比如名字、性别 和 吃饭睡觉等等，为什么会这样呢？</p>
 <p>原来是因为它们存在共性，都是 <code>人</code>， 那我们不如把所有<code>人对象</code>都默认赋予名字、性别 和 吃饭睡觉等属性行为，不就可以实现用通用的方式描述一个大类吗?面向对象就是以这样的形式（<code>封装、继承、多态</code>）来解决一个大类的问题的，所以更简洁高效</p>
-<p>那为什么我们还要学习面向过程呢？这是因为面向对象底层也是面向过程的，是伟大的前辈们用一砖一瓦为我们拼凑出了今天的摩天大厦，所以了解面向过程这”一砖一瓦”还是非常重要的，而且面向对象更有助于培养我们关注解决问题的每一步，更能锻炼我们编程的逻辑思维能力</p>
+<p>到这里，如果你还没明白，那么我们再看一个例子：</p>
+<blockquote>
+<p>你一定听说过这个问题——把大象塞进冰箱需要几步呢？</p>
+<p>答案是两步，开冰箱门，然后放进去</p>
+</blockquote>
+<p>这是一个典型的面向对象的思维，我们把大象抽象成一类——需要放进冰箱的一类东西，那么自然，就可以有一套通用的办法解决问题</p>
+<p>当然这样暴露了面向对象的一些不足，也同样是上面这个例子，这样的操作实际上是没法把大象放进去的——面向对象是不够精细的，在一些极端场合还需要我们面向过程，手动处理每一步</p>
+<p>所以我们还是有学习面向过程的必要，面向对象底层也是面向过程的，是伟大的前辈们用一砖一瓦为我们拼凑出了今天的摩天大厦，所以了解面向过程这”一砖一瓦”还是非常重要的，而且面向对象更有助于培养我们关注解决问题的每一步，更能锻炼我们编程的逻辑思维能力</p>
+<blockquote>
+<p>当然，除了面向过程，面向对象等，还有面向切面等模式，有兴趣可以自行查阅资料了解</p>
+</blockquote>
 <h3 id="高级语言-和-编程原理"><a href="#高级语言-和-编程原理" class="headerlink" title="高级语言 和 编程原理"></a>高级语言 和 编程原理</h3><p>这里我没法具体介绍编译原理，因为这个需要太多的前置知识，不过我们可以大概的描述编译的”轮廓”</p>
 <p>计算机也不过是一台机器，本身也是通过电路来控制的，内部集成了无数个小开关，它们的开启和关闭我们可以分别记为0和1，这就是我们说的二进制，通过这种二进制的开关，我们就能够控制电流的流向，进而控制整个计算机</p>
 <blockquote>
@@ -1111,14 +1121,18 @@ end start<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
 </tr>
 </tbody></table>
 <p>其中一些运算符我们会在后面介绍</p>
-<h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><h4 id="三目运算符"><a href="#三目运算符" class="headerlink" title="三目运算符"></a>三目运算符</h4><p>三目也就是三元，和加法运算是二元运算需要两个参数一样的道理，三元需要三个参数参与运算</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">char</span> a <span class="token operator">=</span> <span class="token number">3</span> <span class="token operator">&gt;</span> <span class="token number">2</span> <span class="token operator">?</span> <span class="token string">'Y'</span><span class="token operator">:</span> <span class="token string">'N'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><h4 id="三目运算符"><a href="#三目运算符" class="headerlink" title="三目运算符"></a>三目运算符</h4><p>三目也就是三元，和加法运算是二元运算需要两个参数一样的道理，三元需要三个参数参与运算，这里的参数是 （3 == 2），’Y’ 和  ‘N’</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">char</span> a <span class="token operator">=</span> <span class="token number">3</span> <span class="token operator">==</span> <span class="token number">2</span> <span class="token operator">?</span> <span class="token string">'Y'</span> <span class="token operator">:</span> <span class="token string">'N'</span><span class="token punctuation">;</span>
+<span class="token comment">// 如果这段代码你不理解，可以看看下面等价的写法和解析</span>
+<span class="token comment">// char a = (3 == 2 ? 'Y' : 'N');</span>
+<span class="token comment">// 其中，== 是比较是否相等， = 是将其右边的值赋予其左边的变量</span>
+<span class="token comment">// 另外，不等于的表达是 !=    其中!代表 逻辑取反</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>上面这行代码的相当于是：</p>
 <blockquote>
-<p>3大于2对吗 <strong>？</strong>如果对，运算结果是 ‘Y’ <strong>：</strong>否则，运算结果是’N’</p>
+<p>3等于2对吗 <strong>？</strong>如果对，运算结果是 ‘Y’ <strong>：</strong>否则，运算结果是’N’</p>
 </blockquote>
-<p>显然，3是大于2的（true），所以a的被赋予一个值 ‘Y’</p>
+<p>显然，3是不等于2的（false），所以a的被赋予一个值 ‘N’</p>
 <h4 id="if系列"><a href="#if系列" class="headerlink" title="if系列"></a>if系列</h4><p>三目运算符看上去非常高级，但是面对一些复杂情况用它表达的话可能就有点难以阅读了，这时候我们就需要if系列</p>
 <p>让我们设想一个情景：</p>
 <blockquote>
@@ -1226,6 +1240,13 @@ end start<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
     <span class="token keyword">return</span> <span class="token string">'E'</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<p>另外，这里其实存在一个简写方式:</p>
+<blockquote>
+<p>当if的大括号内部只有一条语句时（分号代表语句的结束，所以有几个分号就有几条语句），可以省略这个大括号，就像下面这样：</p>
+</blockquote>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">if</span><span class="token punctuation">(</span>x <span class="token operator">&gt;=</span> <span class="token number">60</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token string">'D'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 
 
 <h4 id="switch系列"><a href="#switch系列" class="headerlink" title="switch系列"></a>switch系列</h4><blockquote>
@@ -1276,13 +1297,55 @@ end start<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
 <p>那么，如果用return来终止执行呢？</p>
 <p>实际上也是可以的，但是return是用于终止函数的——注意，if和switch这些不是函数，它们只是一些条件判断语句，return会终止当前所在的函数，也就是终止main的执行</p>
 </blockquote>
-<h3 id="类型转换（待更新）"><a href="#类型转换（待更新）" class="headerlink" title="类型转换（待更新）"></a>类型转换（待更新）</h3><p>如果要表示：</p>
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><p>如果要表示：</p>
 <div style="text-align:center;font-size:24px;font-weight:800;">f(x) = x + 1.0025</div>
 
 <div style="text-align:center;">(x是整型int)</div>
 
 <p>那么结果f(x)应该是什么类型的？这点我们必须在一开始就想清楚，不然我们没办法声明定义这个函数！</p>
-<h4 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h4><h4 id="隐式类型转换"><a href="#隐式类型转换" class="headerlink" title="隐式类型转换"></a>隐式类型转换</h4><h4 id="ASCII码"><a href="#ASCII码" class="headerlink" title="ASCII码"></a>ASCII码</h4><h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><h3 id="自定义宏"><a href="#自定义宏" class="headerlink" title="自定义宏"></a>自定义宏</h3><h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><h2 id="基础数据结构和算法（待更新）"><a href="#基础数据结构和算法（待更新）" class="headerlink" title="基础数据结构和算法（待更新）"></a>基础数据结构和算法（待更新）</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><h3 id="简单选择排序"><a href="#简单选择排序" class="headerlink" title="简单选择排序"></a>简单选择排序</h3><h3 id="简单Hash"><a href="#简单Hash" class="headerlink" title="简单Hash"></a>简单Hash</h3><h3 id="简单递归"><a href="#简单递归" class="headerlink" title="简单递归"></a>简单递归</h3><h3 id="简单动态规划"><a href="#简单动态规划" class="headerlink" title="简单动态规划"></a>简单动态规划</h3><h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3>
+<blockquote>
+<p>显而易见，一个整数加上小数，那最后结果是小数，所以这里f(x)是double或者float等能够表示小数（浮点数）的类型</p>
+</blockquote>
+<h4 id="隐式类型转换"><a href="#隐式类型转换" class="headerlink" title="隐式类型转换"></a>隐式类型转换</h4><p>看完上面的例子，变量类型是可能在表达式中发生变化的</p>
+<p>除了整数和浮点数运算之外，还有一些较为经典的例子:</p>
+<blockquote>
+<p>除了最后的!5和0之外，都会执行printf</p>
+</blockquote>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">if</span> <span class="token punctuation">(</span>true<span class="token punctuation">)</span> 
+    <span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"true"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">5</span> <span class="token operator">==</span> <span class="token number">5</span><span class="token punctuation">)</span> 
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"5 == 5"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"5"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"!0"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token number">5</span><span class="token punctuation">)</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"!5"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 不执行</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"0"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 不执行</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>if是进行布尔逻辑判断，也就是值为true才执行，这里很显然发生了一些转变，我们这里来对其中一些做出解释：</p>
+<blockquote>
+<p><strong>5 == 5</strong><br>命题为真，true（其实可以是==运算的结果是true）</p>
+<p><strong>5</strong><br><strong>“非0即1”<strong>规则，</strong>数字0会被转化为false</strong>，<strong>只要不是0的数字都被转化为true</strong></p>
+<p><strong>!0</strong><br>同上，**”非0即1”**规则</p>
+</blockquote>
+<p>这里你或许会感到迷惑，为什么是我会把这种转换叫<strong>非0即1</strong>而不是非0即true之类的呢，毕竟这里和1也没有关系呀？这是因为，数字可以转布尔，那么布尔也可以转数字对吧？</p>
+<div style="text-align:center;font-size:24px;font-weight:800;">f(x) = 100 + true + false</div>
+
+<p>那么这个式子的结果是多少呢？</p>
+<div style="text-align:center;font-size:24px;font-weight:800;">f(x) = 100 + 1 + 0</div>
+
+<p>这里的运算结果需要时数字，而true转数字是1，false转数字是0，结合这个特点，我才选择把布尔和数字之间的转换叫做 <strong>非0即1</strong></p>
+<p>不过到这里还没完呢，来看看下面这个：</p>
+<div style="text-align:center;font-size:24px;font-weight:800;">f(x) =  1 + 'a'</div>
+
+
+
+<p>结合前面的学习，再加上过往的经验，加减乘除这些运算，是需要数字参与的——逻辑告诉我们这里的字符’a’必然转变为数字</p>
+<p>确实是如此，那么这又是怎么样一种转换规则呢？</p>
+<h4 id="ASCII码（待更新，每天九点才下班，所以只有周末更新快一点）"><a href="#ASCII码（待更新，每天九点才下班，所以只有周末更新快一点）" class="headerlink" title="ASCII码（待更新，每天九点才下班，所以只有周末更新快一点）"></a>ASCII码（待更新，每天九点才下班，所以只有周末更新快一点）</h4><p>ASCII码是一种编码方法，把用数字表示计算机中的字符以便于存储</p>
+<h4 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h4><h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><h3 id="自定义宏"><a href="#自定义宏" class="headerlink" title="自定义宏"></a>自定义宏</h3><h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><h2 id="基础数据结构和算法（待更新）"><a href="#基础数据结构和算法（待更新）" class="headerlink" title="基础数据结构和算法（待更新）"></a>基础数据结构和算法（待更新）</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><h3 id="简单选择排序"><a href="#简单选择排序" class="headerlink" title="简单选择排序"></a>简单选择排序</h3><h3 id="简单Hash"><a href="#简单Hash" class="headerlink" title="简单Hash"></a>简单Hash</h3><h3 id="简单递归"><a href="#简单递归" class="headerlink" title="简单递归"></a>简单递归</h3><h3 id="简单动态规划"><a href="#简单动态规划" class="headerlink" title="简单动态规划"></a>简单动态规划</h3><h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3>
                 
             </div>
             <hr/>

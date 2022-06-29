@@ -477,14 +477,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-20
+                    2022-06-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    8.2k
+                    8.5k
                 </div>
                 
 
@@ -1183,7 +1183,61 @@ Object<span class="token punctuation">.</span><span class="token function">is</s
 <h4 id="new关键字详解"><a href="#new关键字详解" class="headerlink" title="new关键字详解"></a>new关键字详解</h4><p>(以Date的实例化为例子并写一写Date相关的一些历史)</p>
 <h2 id="面向对象进阶-（待更新）"><a href="#面向对象进阶-（待更新）" class="headerlink" title="面向对象进阶 （待更新）"></a>面向对象进阶 （待更新）</h2><p>这一部分有些内容看似和之前的内容重复，但实际上是进一步深入</p>
 <p>从Object出发，能够对JS有一个更加深刻的认识</p>
-<h3 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h3><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h4 id="创建-4种"><a href="#创建-4种" class="headerlink" title="创建(4种)"></a>创建(4种)</h4><h4 id="arguments"><a href="#arguments" class="headerlink" title="arguments"></a>arguments</h4><h4 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h4><h4 id="this指针"><a href="#this指针" class="headerlink" title="this指针"></a>this指针</h4><h4 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h4><h3 id="对象创建模式（7种）"><a href="#对象创建模式（7种）" class="headerlink" title="对象创建模式（7种）"></a>对象创建模式（7种）</h3><h3 id="继承模式（7-1种）"><a href="#继承模式（7-1种）" class="headerlink" title="继承模式（7 + 1种）"></a>继承模式（7 + 1种）</h3><h3 id="作用域和作用域链"><a href="#作用域和作用域链" class="headerlink" title="作用域和作用域链"></a>作用域和作用域链</h3><h4 id="三种作用域"><a href="#三种作用域" class="headerlink" title="三种作用域"></a>三种作用域</h4><p>(指的是ES6以前)</p>
+<h3 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h3><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h4 id="创建-4种"><a href="#创建-4种" class="headerlink" title="创建(4种)"></a>创建(4种)</h4><h4 id="arguments"><a href="#arguments" class="headerlink" title="arguments"></a>arguments</h4><h4 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h4><h4 id="this指针"><a href="#this指针" class="headerlink" title="this指针"></a>this指针</h4><h4 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h4><h3 id="对象创建模式（7种）"><a href="#对象创建模式（7种）" class="headerlink" title="对象创建模式（7种）"></a>对象创建模式（7种）</h3><h3 id="继承模式"><a href="#继承模式" class="headerlink" title="继承模式"></a>继承模式</h3><p>在这一章，我们尽可能用代码说话，希望读者沉下心来看代码，看懂代码，也就懂了继承模式</p>
+<h4 id="原型链继承"><a href="#原型链继承" class="headerlink" title="原型链继承"></a>原型链继承</h4><p>只能继承原型链上的数据，并且其中的引用数据类型有被篡改风险，而且看上去内容很杂乱对吧？</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 以下是Perosn类</span>
+<span class="token keyword">function</span> <span class="token function">Person</span> <span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+<span class="token punctuation">}</span>
+<span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">getPersonName</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name
+<span class="token punctuation">}</span>
+<span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">setPersonName</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+<span class="token punctuation">}</span>
+<span class="token comment">// 以上是Person类</span>
+
+<span class="token keyword">function</span> <span class="token function">ITEngineer</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token class-name">ITEngineer</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">"Serio"</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> me <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ITEngineer</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+me<span class="token punctuation">.</span><span class="token function">setPersonName</span><span class="token punctuation">(</span><span class="token string">"Carbon"</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>me<span class="token punctuation">.</span><span class="token function">getPersonName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// Carbon</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="构造函数继承"><a href="#构造函数继承" class="headerlink" title="构造函数继承"></a>构造函数继承</h4><p>利用构造函数进行继承，只能继承实例上的属性</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Animal</span> <span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> size<span class="token punctuation">,</span> food</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+    <span class="token keyword">this</span><span class="token punctuation">.</span>size <span class="token operator">=</span> size
+    <span class="token keyword">this</span><span class="token punctuation">.</span>food <span class="token operator">=</span> food
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">Cat</span> <span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> size<span class="token punctuation">,</span> food</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">Animal</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> name<span class="token punctuation">,</span> size<span class="token punctuation">,</span> food<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> cat <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Cat</span><span class="token punctuation">(</span><span class="token string">"kitty"</span><span class="token punctuation">,</span> <span class="token string">"tiny"</span><span class="token punctuation">,</span> <span class="token string">"RMB"</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>cat<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token comment">// kitty</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="组合式继承"><a href="#组合式继承" class="headerlink" title="组合式继承"></a>组合式继承</h4><p>既然，原型链继承能继承原型上的，构造函数继承能继承实例上的——那么它们配合一下不就完美了吗</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Science</span> <span class="token punctuation">(</span><span class="token parameter">chineseName<span class="token punctuation">,</span> stand</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>chineseName <span class="token operator">=</span> chineseName
+    <span class="token keyword">this</span><span class="token punctuation">.</span>stand <span class="token operator">=</span> stand
+<span class="token punctuation">}</span>
+<span class="token class-name">Science</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">showChineseName</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>chineseName<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">Physics</span> <span class="token punctuation">(</span><span class="token parameter">chineseName<span class="token punctuation">,</span> stand</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">Science</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> chineseName<span class="token punctuation">,</span> stand<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token class-name">Physics</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Science</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> subject <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Physics</span><span class="token punctuation">(</span><span class="token string">"物理"</span><span class="token punctuation">,</span> <span class="token string">"Albert Einstein"</span><span class="token punctuation">)</span>
+subject<span class="token punctuation">.</span><span class="token function">showChineseName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// "物理"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="原型式继承"><a href="#原型式继承" class="headerlink" title="原型式继承"></a>原型式继承</h4><h4 id="寄生式继承"><a href="#寄生式继承" class="headerlink" title="寄生式继承"></a>寄生式继承</h4><h4 id="寄生组合式继承"><a href="#寄生组合式继承" class="headerlink" title="寄生组合式继承"></a>寄生组合式继承</h4><h3 id="作用域和作用域链"><a href="#作用域和作用域链" class="headerlink" title="作用域和作用域链"></a>作用域和作用域链</h3><h4 id="三种作用域"><a href="#三种作用域" class="headerlink" title="三种作用域"></a>三种作用域</h4><p>(指的是ES6以前)</p>
 <h4 id="暂时性死区"><a href="#暂时性死区" class="headerlink" title="暂时性死区"></a>暂时性死区</h4><h3 id="预处理机制"><a href="#预处理机制" class="headerlink" title="预处理机制"></a>预处理机制</h3><h3 id="上下文"><a href="#上下文" class="headerlink" title="上下文"></a>上下文</h3><h4 id="两种上下文"><a href="#两种上下文" class="headerlink" title="两种上下文"></a>两种上下文</h4><h4 id="执行上下文"><a href="#执行上下文" class="headerlink" title="执行上下文"></a>执行上下文</h4><h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3>
                 
             </div>
