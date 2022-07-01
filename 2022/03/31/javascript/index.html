@@ -477,14 +477,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-07-01
+                    2022-07-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    9.8k
+                    10.3k
                 </div>
                 
 
@@ -532,12 +532,12 @@
 <p>JS功能强大，但是要学好并不容易，要是谁说他精通JS，那我觉得他要么是一叶障目，要么就是行业顶尖——我到现在应该是看了至少200小时的JS视频，书也是看过几本权威著作（虽然很多看不懂），网上看的各种资料更是不计其数，然而我现在感觉我终于看到了JS的冰山一角</p>
 <p>用10天创造出JS的那个男人，绝对想不到这个被他自己厌恶的语言会蓬勃发展至今。<br>我对JS的看法就是，JS是世界上最垃圾，但是也是最好的语言。</p>
 <p>之前我花了一个多月的时间整理以前学到的JS知识，起初我是直接写到markdown上，但是我发现这样不系统也很难组织，所以我选择灵活度更高的手写，现在再基于手写记录的内容将这份笔记发到博客上。</p>
-<p><strong>本篇博客主要是JS基础知识，严格模式 和 with关键字 等部分当今较为少见的内容不做讨论。</strong></p>
+<p><strong>本篇博客准备讲讲JS基础知识</strong></p>
 </blockquote>
 <h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><blockquote>
 <p><strong>2022/01/28</strong><br>开始写了一些内容，但是后来作废了<br><strong>2022/03/31</strong><br>一个多月以来手写整理到了笔记本上，现在依据其内容整理到博客上<br>更新了数据类型部分，手都给我敲痛了，纸上写的不到一页，打字就敲了4000字..<br><strong>2022/04/01</strong><br>更新JavaScript基础部分，更新到了DOM，增加3000+字</p>
 <p><strong>2022/05/20</strong><br>更新BOM部分和数据类型中的一些细节</p>
-<p><strong>2022/06-2022/07</strong><br>实习期间抽空学习，补充了继承模式</p>
+<p><strong>2022/06-2022/07</strong><br>补充了继承模式等</p>
 </blockquote>
 <h2 id="JavaScript基础"><a href="#JavaScript基础" class="headerlink" title="JavaScript基础"></a>JavaScript基础</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a><strong>概述</strong></h3><h4 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h4><p>如果看过我曾经写的HTML&amp;&amp;CSS，那么你可能知道margin塌陷的历史由来，也才能真正理解它而不只是把它看做一种现象</p>
 <p>同样的，JS也需要我们知道它的一些历史，这样才能更好地知道它为什么这么<strong>混乱</strong></p>
@@ -1306,8 +1306,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>可以看到这样就能简单地实现深拷贝</p>
 <blockquote>
 <p>为什么能够实现深拷贝？F.prototype只是保留了对obj的引用，那new了之后应该还是引用才对，但是为什么ab没有污染？</p>
-<p>因为参数是有形参和实参之分的，形参就已经创建了实参的副本？(错误的，因为JS传递的是引用，形参实参是关联的)</p>
-<p>（究竟是如何实现的？这个之后得讨论一下）</p>
+<p>因为参数是有形参和实参之分的，形参就已经创建了实参的副本？</p>
+<p>这一点，我们放到后续章节 <strong>JavaScript的求值策略</strong>，</p>
 </blockquote>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">inherit</span> <span class="token punctuation">(</span><span class="token parameter">child<span class="token punctuation">,</span> parent</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     child<span class="token punctuation">.</span>prototype <span class="token operator">=</span>  Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>parent<span class="token punctuation">.</span>prototype<span class="token punctuation">)</span> 
@@ -1358,6 +1358,50 @@ sxxu<span class="token punctuation">.</span><span class="token function">intro</
 
 <blockquote>
 <p>注意，虽然写法和JAVA等语言非常类似，但是本质完全不同，<strong>JS的Class只是对基于原型的继承的一种封装（语法糖）</strong></p>
+</blockquote>
+<h3 id="求值策略"><a href="#求值策略" class="headerlink" title="求值策略"></a>求值策略</h3><p>在之前讨论寄生组合式继承时，遇到了关于如何JS的函数参数传递究竟是如何进行问题——引用传递，值传递 或者说 其他可能？</p>
+<h4 id="引用传递"><a href="#引用传递" class="headerlink" title="引用传递"></a>引用传递</h4><p>让我们先来进行一些实验：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">2</span>
+
+<span class="token keyword">function</span> <span class="token function">exchange</span> <span class="token punctuation">(</span><span class="token parameter">p1<span class="token punctuation">,</span> p2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> temp <span class="token operator">=</span> p1
+    p1 <span class="token operator">=</span> p2
+    p2 <span class="token operator">=</span> temp   
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"函数中"</span><span class="token punctuation">)</span> 
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>p1<span class="token punctuation">,</span> p2<span class="token punctuation">)</span> <span class="token comment">// 2 1</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">exchange</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"全局"</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token comment">// 1 2</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这看起来是引用传递对吧？</p>
+<p>我们再来对引用数据类型试试（节约篇幅，不再复写<code>exchange</code>函数）：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">let</span> c <span class="token operator">=</span> <span class="token punctuation">{</span>name<span class="token operator">:</span> <span class="token string">'张三'</span><span class="token punctuation">}</span>
+<span class="token keyword">let</span> d <span class="token operator">=</span> <span class="token punctuation">{</span>name<span class="token operator">:</span> <span class="token string">'李四'</span><span class="token punctuation">}</span>
+<span class="token function">exchange</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> d<span class="token punctuation">)</span> <span class="token comment">// 内部输出 {name: '李四'} {name: '张三'}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"全局"</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> d<span class="token punctuation">)</span> <span class="token comment">// {name: '张三'} {name: '李四'}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="值传递"><a href="#值传递" class="headerlink" title="值传递"></a>值传递</h4><p>上面的例子仍然是<strong>引用传递</strong>，但是我们还不能就此下结论，再来看看：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">let</span> c <span class="token operator">=</span> <span class="token punctuation">{</span>name<span class="token operator">:</span> <span class="token string">'张三'</span><span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">ObjMaker</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    obj<span class="token punctuation">.</span>nickName <span class="token operator">=</span> <span class="token string">'王五'</span> <span class="token comment">// 添加一条nickName属性</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">ObjMaker</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>c<span class="token punctuation">.</span>nickName<span class="token punctuation">)</span> <span class="token comment">// 王五</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>等等，如果是引用传递，那么就会有形参和实参之分，也就意味着这里的<code>nickName</code>只是形参的属性 而 实参是不应该具有的——那么这里的情况看上去又是 <strong>值传递</strong></p>
+<h4 id="共享传递"><a href="#共享传递" class="headerlink" title="共享传递"></a>共享传递</h4><blockquote>
+<p>也叫 <strong>对象传递</strong>，可以看做是 引用数据类型 + 引用传递， 规则是在引用数据类型（对象）时，参数是其<strong>引用的副本（不是其引用，也不是其副本，是其引用的副本！）</strong></p>
+<p>仔细想一下非常好理解，因为<code>let a = {}</code> 中<code>a</code>就是引用，其副本的意思就是<code>b = a</code>，这就意味着改变<code>a</code>或者<code>b</code> 的指向不会对原对象产生任何影响，但是如果试图修改原对象身上的属性，那么由于它们都指向了原对象，所以访问到的是同一份数据</p>
+<p>这就解释了我们所看到的一系列情况 </p>
+</blockquote>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/fe9e35a70c4292914570a30f2e758ec4.png" alt="其实就这么简单一回事"></p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>最后总结一下就是</p>
+<blockquote>
+<p><strong>JavaScript中函数的求值策略是，对于基本数据类型采用引用传递，对于引用数据类型采用共享传递</strong></p>
 </blockquote>
 <h3 id="作用域和作用域链"><a href="#作用域和作用域链" class="headerlink" title="作用域和作用域链"></a>作用域和作用域链</h3><h4 id="三种作用域"><a href="#三种作用域" class="headerlink" title="三种作用域"></a>三种作用域</h4><p>(指的是ES6以前)</p>
 <h4 id="暂时性死区"><a href="#暂时性死区" class="headerlink" title="暂时性死区"></a>暂时性死区</h4><blockquote>
