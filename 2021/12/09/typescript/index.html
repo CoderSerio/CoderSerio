@@ -477,14 +477,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-06-26
+                    2022-07-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    2.1k
                 </div>
                 
 
@@ -620,7 +620,12 @@ b <span class="token operator">=</span> <span class="token string">'456'</span> 
 <span class="token keyword">let</span> p<span class="token operator">:</span>Position <span class="token operator">=</span> <span class="token punctuation">{</span>x<span class="token operator">:</span> <span class="token number">123</span><span class="token punctuation">,</span> y<span class="token operator">:</span> <span class="token number">456</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
-<p>诶，看着怎么和<code>type</code>自定义类型一样？</p>
+<p>诶，看着怎么和<code>type</code>自定义类型一样？他们的区别是什么呢？</p>
+<ol>
+<li>interface可以重复声明，同名自动合并</li>
+<li>interface声明的内容必须是抽象的</li>
+<li>可以用implements实现接口</li>
+</ol>
 </blockquote>
 <h4 id="元组类型"><a href="#元组类型" class="headerlink" title="元组类型"></a>元组类型</h4><h4 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h4><h4 id="任意类型"><a href="#任意类型" class="headerlink" title="任意类型"></a>任意类型</h4><h3 id="declare类型声明"><a href="#declare类型声明" class="headerlink" title="declare类型声明"></a>declare类型声明</h3><blockquote>
 <p>一开始我看到类型声明的时候还愣了一下<br>为了避免误解我还是在其前面加上一个declare吧</p>
@@ -670,10 +675,10 @@ b <span class="token operator">=</span> <span class="token string">'456'</span> 
 	<span class="token keyword">readonly</span> summary<span class="token operator">:</span> <span class="token builtin">string</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>动态成员</strong><br>有些时候一个接口该有哪些成员是不确定的</p>
-<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">// [prop: string]设置成员名称为string</span>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">// [prop: str]设置成员名称为str</span>
 <span class="token comment">// 其后的string指定值为string</span>
 <span class="token keyword">interface</span> <span class="token class-name">Cache</span> <span class="token punctuation">{</span>
-	<span class="token punctuation">[</span>prop<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token builtin">string</span>
+	<span class="token punctuation">[</span>prop<span class="token operator">:</span> str<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token builtin">string</span>
 <span class="token punctuation">}</span>
 
 <span class="token comment">//使用</span>
@@ -709,6 +714,34 @@ cache<span class="token punctuation">.</span>bar <span class="token operator">=<
 <blockquote>
 <p>用法和Java一样，依旧是用implements实现<br>书写的规范是，一个接口约束一个有关功能即可</p>
 </blockquote>
+<h4 id="Getter和Setter"><a href="#Getter和Setter" class="headerlink" title="Getter和Setter"></a>Getter和Setter</h4><p>除了像Java那种广为人知的方式设置Getter和Setter，TS还为我们提供了一些更为简洁的语法</p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">class</span> <span class="token class-name">SomeClass</span> <span class="token punctuation">{</span>
+	<span class="token keyword">private</span> name<span class="token operator">:</span> <span class="token builtin">string</span>
+	<span class="token function">constructor</span> <span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">/* 这是经典的方式
+        getName () {
+            return this.name
+        }
+        setName (name) {
+            this.name = name
+        }
+    */</span>
+    <span class="token keyword">get</span> <span class="token function">name</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name
+    <span class="token punctuation">}</span>
+    <span class="token keyword">set</span> <span class="token function">name</span> <span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> someObj<span class="token operator">:</span> SomeClass <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SomeClass</span><span class="token punctuation">(</span><span class="token string">"张三"</span><span class="token punctuation">)</span>
+someObj<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'李四'</span> <span class="token comment">// 自动调用set</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
 <h3 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h3><p>果然，我就知道泛型也跑不掉</p>
 <h4 id="基本使用-2"><a href="#基本使用-2" class="headerlink" title="基本使用"></a>基本使用</h4><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">function</span> <span class="token generic-function"><span class="token function">createArray</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span> <span class="token punctuation">(</span>length<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> value <span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>
 	<span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token generic-function"><span class="token function">Array</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>length<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token constant">T</span><span class="token punctuation">)</span>
