@@ -324,7 +324,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/postimages/54.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -481,7 +481,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-26
+                    2022-07-30
                 </div>
                 
 
@@ -532,11 +532,13 @@
 <li><strong>Mutation-based XSS</strong><br>基于变化的XSS，利用浏览器渲染DOM的特性，比如在标签的title属性中注入XSS，在渲染时进行攻击，作用于不同浏览器时可能会有差异<br>这种注入方式最为复杂，需要攻击者非常了解浏览器的渲染规则——同时也是最难防御的XSS攻击</li>
 </ol>
 </blockquote>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">alert(<span class="string">'XSS'</span>)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript"><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'XSS'</span><span class="token punctuation">)</span></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>这段代码放到 数据库 或者 URL参数的值中则可以造成XSS攻击</p>
 <h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>用户提交的string转为DOM的过程中，可能使用到了下述代码片段</p>
-<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.write()</span><br><span class="line">element.innerHTML = <span class="string">''</span></span><br><span class="line"><span class="comment">// 或者使用了 SSR类的操作</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+element<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">''</span>
+<span class="token comment">// 或者使用了 SSR类的操作</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -632,17 +634,26 @@
 </blockquote>
 <h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h3><p><strong>SQL注入示例</strong></p>
 <p>假设现在后端有如下SQL语句：</p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> username <span class="keyword">FROM</span> users;</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> username <span class="token keyword">FROM</span> users<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>SQL注入:</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">'/api'</span>,{</span><br><span class="line">    <span class="attr">method</span>: <span class="string">"POST"</span>,</span><br><span class="line">    <span class="attr">headers</span>: {</span><br><span class="line">        <span class="string">"Content-Type"</span>: <span class="string">"application/json"</span></span><br><span class="line">    },</span><br><span class="line">    <span class="attr">body</span>: <span class="built_in">JSON</span>.stringify({</span><br><span class="line">        <span class="attr">users</span>: <span class="string">'table1;DROP TABLE users;'</span></span><br><span class="line">    	<span class="comment">// SQL注入关键语句</span></span><br><span class="line">    })</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'/api'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+    method<span class="token operator">:</span> <span class="token string">"POST"</span><span class="token punctuation">,</span>
+    headers<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">"Content-Type"</span><span class="token operator">:</span> <span class="token string">"application/json"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    body<span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        users<span class="token operator">:</span> <span class="token string">'table1;DROP TABLE users;'</span>
+    	<span class="token comment">// SQL注入关键语句</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>后端收到请求后，SQL会被解析为:</p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> username <span class="keyword">FROM</span> table1;<span class="keyword">DROP</span> <span class="keyword">TABLE</span> users;</span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> username <span class="token keyword">FROM</span> table1<span class="token punctuation">;</span><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span> users<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>结果就是数据库信息被删除</p>
 <p><strong>OS command注入示例</strong></p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> command = <span class="string">'convert-cli video -o &amp;&amp; rm -rf xxx'</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> command <span class="token operator">=</span> <span class="token string">'convert-cli video -o &amp;&amp; rm -rf xxx'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><strong>SSRF示例</strong></p>
 <blockquote>
