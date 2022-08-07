@@ -477,14 +477,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-07-02
+                    2022-08-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    10.3k
+                    12k
                 </div>
                 
 
@@ -538,6 +538,7 @@
 <p><strong>2022/01/28</strong><br>开始写了一些内容，但是后来作废了<br><strong>2022/03/31</strong><br>一个多月以来手写整理到了笔记本上，现在依据其内容整理到博客上<br>更新了数据类型部分，手都给我敲痛了，纸上写的不到一页，打字就敲了4000字..<br><strong>2022/04/01</strong><br>更新JavaScript基础部分，更新到了DOM，增加3000+字</p>
 <p><strong>2022/05/20</strong><br>更新BOM部分和数据类型中的一些细节</p>
 <p><strong>2022/06-2022/07</strong><br>补充了继承模式等</p>
+<p><strong>2022/08-</strong><br>实习的期间有幸认识到了那位被称为dake的大佬，我愿称酷诺团队yyds<br>在他的指导下，终于梳理清楚了数据类型上的几个诡异现象</p>
 </blockquote>
 <h2 id="JavaScript基础"><a href="#JavaScript基础" class="headerlink" title="JavaScript基础"></a>JavaScript基础</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a><strong>概述</strong></h3><h4 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h4><p>如果看过我曾经写的HTML&amp;&amp;CSS，那么你可能知道margin塌陷的历史由来，也才能真正理解它而不只是把它看做一种现象</p>
 <p>同样的，JS也需要我们知道它的一些历史，这样才能更好地知道它为什么这么<strong>混乱</strong></p>
@@ -630,7 +631,7 @@
 <td>各种新技术的大爆发<br>碳苯开始学习前端</td>
 </tr>
 </tbody></table>
-<p>总结，前端发展的过程非常乱，对于JS，官方有两个组织W3C和ECMA，分别从两个方面制定了JS的标准，而民间又由像IE这种不遵守标准的太爷，一时间语法是相当乱</p>
+<p>总结，前端发展的过程非常乱，对于JS，官方有两个组织W3C和ECMA，分别从两个方面制定了JS的标准，但是又有像IE这种不遵守标准的存在，导致一时间语法是相当乱</p>
 <p>而且JS它的设计者Brendan Eich，非常痛恨这个自己亲手造就语言——所以说早期的JS是真的…</p>
 <h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>JavaScript主要是由两个部分组成:</p>
 <blockquote>
@@ -836,21 +837,20 @@ e<span class="token punctuation">.</span><span class="token function">preventDef
 <p><strong>DOM3级事件</strong><br>增添了很多新事件，比如dbclick双击等等</p>
 </blockquote>
 <p>这个“级”并没有高低级比较的意思，其实就和CSS2、CSS3类似，是个版本号</p>
-<h2 id="数据类型概述"><a href="#数据类型概述" class="headerlink" title="数据类型概述"></a><strong>数据类型概述</strong></h2><p>JS是解释性弱类型语言，在声明的时候不会区分数据类型，但是这并不意味着JS没有数据类型</p>
-<p>这里先来一个简单的了解，部分需要深入的数据类型放到后面讨论</p>
-<p>JS中所有的变量无论类型，都可以通过至少两种方式(构造函数式 和 字面量赋值式)初始化</p>
-<p>例如</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">123</span> <span class="token comment">// 字面量赋值式</span>
-<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Number</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span> <span class="token comment">// 构造函数式 </span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-
-<h3 id="JS中的内存模型"><a href="#JS中的内存模型" class="headerlink" title="JS中的内存模型"></a>JS中的内存模型</h3><p>严格地说，JS并没有区分堆栈内存，但是我们依旧把它看做是两个部分——堆内存，栈内存，这样有助于我们理解JS对于不同数据类型的处理，以及如何进行内存管理</p>
+<h2 id="JavaScript高级"><a href="#JavaScript高级" class="headerlink" title="JavaScript高级"></a>JavaScript高级</h2><h3 id="内存模型"><a href="#内存模型" class="headerlink" title="内存模型"></a>内存模型</h3><p>严格地说，JS并没有区分堆栈内存，但是我们依旧把它看做是两个部分——堆内存，栈内存，这样有助于我们理解JS对于不同数据类型的处理，以及如何进行内存管理</p>
+<h4 id="堆栈内存"><a href="#堆栈内存" class="headerlink" title="堆栈内存"></a>堆栈内存</h4><p>为什么要区分堆栈内存呢？以及为什么又叫做堆、栈内存呢？</p>
+<p>这与JS的垃圾回收机制有关，这样设计是为了是程序运行时占用的内存最小</p>
 <blockquote>
-<p>另外，不知道大家有没有想过，栈内存之所以叫做栈内存是因为可以把它看成一个栈，那么问题来了，堆内存和堆有什么关系呢？</p>
-<p>答案是，现代意义上的堆内存和堆没有关系。</p>
+<p><strong>栈内存</strong><br>当一个方法被调用的时候，就会开辟一个内存栈，并将内部的变量依次放入。方法结束时，内存栈被清空随即销毁</p>
+<p><strong>堆内存</strong><br>当一个对象被创建的时候，由于对象创建成本较大，它会被放到<strong>运行时数据区</strong>——也就是堆内存中，不会随着调用而销毁，以便于反复利用。它的回收由<strong>垃圾回收机制（Garbage Collection）</strong>负责</p>
 </blockquote>
-<h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><h4 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h4><blockquote>
+<h4 id="深浅拷贝"><a href="#深浅拷贝" class="headerlink" title="深浅拷贝"></a>深浅拷贝</h4><h4 id="闭包（待更新）"><a href="#闭包（待更新）" class="headerlink" title="闭包（待更新）"></a>闭包（待更新）</h4><h4 id="垃圾回收机制（待更新）"><a href="#垃圾回收机制（待更新）" class="headerlink" title="垃圾回收机制（待更新）"></a>垃圾回收机制（待更新）</h4><h5 id="引用计数法"><a href="#引用计数法" class="headerlink" title="引用计数法"></a>引用计数法</h5><blockquote>
+<p><strong>Reference Counting</strong></p>
+</blockquote>
+<h5 id="标记清除法"><a href="#标记清除法" class="headerlink" title="标记清除法"></a>标记清除法</h5><blockquote>
+<p><strong>Mark Sweep</strong></p>
+</blockquote>
+<h5 id="V8引擎的优化策略"><a href="#V8引擎的优化策略" class="headerlink" title="V8引擎的优化策略"></a>V8引擎的优化策略</h5><h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><h4 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h4><blockquote>
 <p>基本数据类型，也叫简单数据类型、值类型<br>特点是，存储在栈内存中</p>
 </blockquote>
 <p>先来一个基本数据结构总览</p>
@@ -983,13 +983,25 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>所有 <strong>基本数据类型的包装类</strong> (Number, String…，除了undefined和null以外的基本数据类型都有)<br>所有 <strong>单体内置对象</strong> (global，Math等已经new过了的)</p>
 </blockquote>
 <p>这里就是万物皆对象的体现之一的，由于引用数据类型的知识体系实在过于庞大，此处先简单介绍概念，Array、Date等在另外的章节深入讨论</p>
-<h4 id="基本数据类型的包装类"><a href="#基本数据类型的包装类" class="headerlink" title="基本数据类型的包装类"></a>基本数据类型的包装类</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'xyz'</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// ['x', 'y', 'z']</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="字面量-和-基本数据类型的包装类"><a href="#字面量-和-基本数据类型的包装类" class="headerlink" title="字面量 和 基本数据类型的包装类"></a>字面量 和 基本数据类型的包装类</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'xyz'</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// ['x', 'y', 'z']</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>这里的’xyz’明明是一个基本数据类型String，为什么可以使用可以用类似对象调用自身方法的形式去使用split()方法呢？</p>
-<p>原理参见后续的原型和原型链,现在只用知道这里存在一个概念叫基本数据类型的包装类，可以理解为’xyz’的split()方法是从包装类String上继承下来的</p>
+<p>这里的<code>'xyz'</code>是一个基本数据类型的<strong>字面量</strong>，为什么可以使用可以用类似对象调用自身方法的形式去使用split()方法呢？</p>
+<p>原理参见后续的原型和原型链,现在只用知道这里存在一个概念叫**基本数据类型的包装类(通常简称为基本包装类)**，可以理解为<code>'xyz'</code>的<code>split()</code>方法是从包装类String上继承下来的</p>
 <blockquote>
 <p>除了null和undefined之外，基本数据类型都有对应的包装类</p>
 </blockquote>
+<p>在<strong>创建字面量的时候（写下这个值就算）</strong>，<strong>可以粗略地理解为</strong>JS悄悄地干了这些事情：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token string">'张三'</span>
+<span class="token comment">// 上述代码被JS偷天换日成了</span>
+<span class="token comment">// var str = new String('张三')</span>
+<span class="token comment">// (只是这么理解，实际并非如此)：</span>
+<span class="token comment">// 所以，下面的操作是有效的</span>
+str<span class="token punctuation">.</span>attribute <span class="token operator">=</span> <span class="token string">'哈哈哈哈'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span>attribute<span class="token punctuation">)</span> <span class="token comment">// undefined</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>注意！</strong></p>
+<p>别被误导了，这里只是说可以这么理解，实际并非如此，<code>str</code><strong>不能</strong>被看做<code>一个指向了引用数据类型的指针</code></p>
+<p>但是最后为什么又是<code>undefined</code>呢，这是因为基本包装类型是在访问基本数据类型的时候创建，访问完毕时销毁，所以每次访问都是一个全新的对象，自然没有以前的属性</p>
 <h4 id="单体内置对象"><a href="#单体内置对象" class="headerlink" title="单体内置对象"></a>单体内置对象</h4><p>比如Math，window，global对象，window是浏览器的顶级对象，而global是全局对象，它们之间的关系我们在BOM部分进行讨论，这里只说Math</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js">Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 产生随机数,范围是[0,1)</span>
 Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span>	<span class="token comment">// 最大值</span>
@@ -1023,14 +1035,13 @@ Math<span class="token punctuation">.</span><span class="token function">min</sp
             <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>        
         proto <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">getPrototypeof</span><span class="token punctuation">(</span>proto<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>代码看着有那么多，其实就是什么，就是遍历链表找有无目标值嘛<br>（当然，首先要判断一下是不是对象，不是对象那肯定没有构造函数的说）<br>找到null就是遍历完了都没找到目标值，就返回false；找到了自然就返回true</p>
 <h4 id="显式类型转换"><a href="#显式类型转换" class="headerlink" title="显式类型转换"></a>显式类型转换</h4><h5 id="转换为Number"><a href="#转换为Number" class="headerlink" title="转换为Number"></a>转换为Number</h5><blockquote>
 <p>其他类型转显式换成Number有三个方法：<br>Number() ==&gt; 处理任意类型<br>parseInt(), parseFloat() ==&gt; 主要处理字符串</p>
 </blockquote>
-<p>​    这里说明一下Number.parseInt和parseInt的关系：</p>
+<p>​    这里说明一下<code>Number.parseInt</code>和<code>parseInt</code>的关系：</p>
 <blockquote>
 <p>一开始只有parseInt，后来ES6规范来了，觉得你这不对啊，怎么一个裸的方法挂window上啊——然后parseInt就被扔到Number上 了。但是为了向后兼容，parseInt就像是种民俗习惯一样被保留下来了。</p>
 <p>它们在效果上没有区别。</p>
@@ -1143,7 +1154,7 @@ Math<span class="token punctuation">.</span><span class="token function">min</sp
 <li>Object之间，先用valueOf()的返回值进行比较，如果不能有结果，再用toString()的返回值进行比较</li>
 </ul>
 </blockquote>
-<h5 id="严格相同比较"><a href="#严格相同比较" class="headerlink" title="严格相同比较"></a>严格相同比较</h5><p>===三等号</p>
+<h5 id="严格相同比较"><a href="#严格相同比较" class="headerlink" title="严格相同比较"></a>严格相同比较</h5><p><strong>===三等号</strong></p>
 <blockquote>
 <p>和==的区别及联系:</p>
 <p>第一步： == 比较 两端数据类型，类型不同则进入第二步，类型相同则进入第三步<br>第二步： 发生一次类型转换，进入第三步<br>第三步：===比较，若为基本数据类型，则依次比较数据类型、数据值，出现不同立刻终止返回false，全部相同                则返回true；若为引用数据类型，则依次比较数据类型、数据值、地址，过程同上。</p>
@@ -1154,7 +1165,7 @@ Math<span class="token punctuation">.</span><span class="token function">min</sp
 
 
 
-<p>Object.is()<br>和三等号类似的，但是做了一定的调整，比如</p>
+<p><strong>Object.is()</strong><br>和三等号类似的，但是做了一定的调整，比如</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 这些例子和 === 判断的结果是相反</span>
 Object<span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span><span class="token number">NaN</span><span class="token punctuation">,</span><span class="token number">NaN</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
 Object<span class="token punctuation">.</span><span class="token function">is</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">+</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">// false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -1172,19 +1183,63 @@ Object<span class="token punctuation">.</span><span class="token function">is</s
 
 
 
-<h2 id="面向对象基础（待更新）"><a href="#面向对象基础（待更新）" class="headerlink" title="面向对象基础（待更新）"></a>面向对象基础（待更新）</h2><p>其实说是面向对象吧，有点牵强附会了，因为面向对象三大特征是封装 继承 多态</p>
-<p>ES6以前的JS似乎…说没有这些呢，它好像又可以模拟…但是总觉得怪怪的</p>
-<p>此处的面向对象主要指的是研究 以Object为主要内容的引用数据类型</p>
-<pre class="line-numbers language-胡言乱语" data-language="胡言乱语"><code class="language-胡言乱语">'面向对象' == '面向Object' // true
-'面向对象' === '面向Object' // false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-
 <h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><h4 id="简单创建和访问"><a href="#简单创建和访问" class="headerlink" title="简单创建和访问"></a>简单创建和访问</h4><p>基础访问+迭代访问</p>
 <h4 id="new关键字详解"><a href="#new关键字详解" class="headerlink" title="new关键字详解"></a>new关键字详解</h4><p>(以Date的实例化为例子并写一写Date相关的一些历史)</p>
-<h2 id="面向对象进阶-（待更新）"><a href="#面向对象进阶-（待更新）" class="headerlink" title="面向对象进阶 （待更新）"></a>面向对象进阶 （待更新）</h2><p>这一部分有些内容看似和之前的内容重复，但实际上是进一步深入</p>
+<blockquote>
+<p>简而言之就是两点：</p>
+<ol>
+<li>处理构造this，使得默认的返回值是this</li>
+<li>形成原型链</li>
+<li>复制了构造函数的属性</li>
+</ol>
+</blockquote>
+<p>这一部分有些内容看似和之前的内容重复，但实际上是进一步深入</p>
 <p>从Object出发，能够对JS有一个更加深刻的认识</p>
-<h3 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h3><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h4 id="创建-4种"><a href="#创建-4种" class="headerlink" title="创建(4种)"></a>创建(4种)</h4><h4 id="arguments"><a href="#arguments" class="headerlink" title="arguments"></a>arguments</h4><h4 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h4><h4 id="this指针"><a href="#this指针" class="headerlink" title="this指针"></a>this指针</h4><h4 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h4><h3 id="对象创建模式（7种）"><a href="#对象创建模式（7种）" class="headerlink" title="对象创建模式（7种）"></a>对象创建模式（7种）</h3><h3 id="继承模式（7种）"><a href="#继承模式（7种）" class="headerlink" title="继承模式（7种）"></a>继承模式（7种）</h3><p>在这一章，我们尽可能用代码说话，希望读者沉下心来看代码，看懂代码，也就懂了继承模式</p>
+<h3 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h3><h4 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h4><p>每一个函数，解析器都会都会向函数中添加一个属性 prototype<br>这个属性对应着一个对象，这个对象就是我们所谓的原型对象</p>
+<p>如果函数作为普通的函数调用prototype没有任何作用<br>当函数以构造函数的形式调用时，他所创建的函数中都会有一个隐含的属性，<br>指向该构造函数的原型对象（prototype），我们可以通过 <strong>proto</strong> 来访问该属性</p>
+<p>prototype是函数才有的属性，__proto__是每个对象都有的指针，指向它构造函数的原型。</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c631b657ca62427a8bdef1a2c145346a~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt="image.png"></p>
+<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20220804031434277.png" alt="image-20220804031434277"></p>
+<h4 id="指针陷阱"><a href="#指针陷阱" class="headerlink" title="指针陷阱"></a>指针陷阱</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">Person</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>nm <span class="token operator">=</span> <span class="token string">'张三'</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 关注下面这行代码</span>
+Person<span class="token punctuation">.</span>nm <span class="token operator">=</span> <span class="token string">'李四'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Person.nm '</span><span class="token punctuation">,</span> Person<span class="token punctuation">.</span>nm<span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Person'</span><span class="token punctuation">,</span> Person<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Person.__proto__'</span><span class="token punctuation">,</span> Person<span class="token punctuation">.</span>__proto__<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Person.prototype'</span><span class="token punctuation">,</span> <span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20220805003320590.png" alt="image-20220805003320590"></p>
+<p>可以看到我们确实能访问到<code>李四</code>，但是它究竟在哪个位置上呢？隐式原型、原型对象和它自身的字面量上都没有！</p>
+<p>这里我们要记住<strong>函数是引用数据类型</strong>，所以<code>Person</code>是一个指针，我们的<code>nm</code>属性其实挂到了这个指针上——我们可以用<code>Object.keys</code>来验证一下</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Person</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>nm <span class="token operator">=</span> <span class="token string">'张三'</span>
+<span class="token punctuation">}</span>
+Person<span class="token punctuation">.</span>nm <span class="token operator">=</span> <span class="token string">'李四'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>Perons<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这下我们就找到它啦！</p>
+<p><img src="C:\Users\MSI-pc\AppData\Roaming\Typora\typora-user-images\image-20220805003948209.png" alt="image-20220805003948209"></p>
+<blockquote>
+<p>至于为什么使用<code>nm</code>而不是<code>name</code>，是因为函数自己已经有一个<code>name</code>属性可以用于获取函数名称</p>
+</blockquote>
+<h4 id="终极对象"><a href="#终极对象" class="headerlink" title="终极对象"></a>终极对象</h4><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8c5f94480c254a38834c19396cbc68c9~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt="img"></p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f74b7651075b431a89493d01938e8a04~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt="img"></p>
+<p><strong>Function</strong></p>
+<p>所有构造函数——包括<code>Function()</code>的<code>__proto__</code>都指向了<code>Funtion.prototype</code>，所以<strong>Function</strong>是构造角度上的终极对象，并且<code>Function.prototype</code>也是独特的，它的类型是<strong>function</strong>而不是<strong>object</strong>，这是因为它是一个函数字面量</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token function">f</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">[</span>native code<span class="token punctuation">]</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>所以，<code>Function</code>是被一个函数构造的，然而<code>Function</code>又构造了所有函数，所以它自己构造了自己（大雾），它的<code>prototype</code>的<code>constructor</code>就指向了<code>Function</code>自身</p>
+<p><strong>Object</strong></p>
+<p>上面提到了<code>Function.prototype</code>是特殊的，其类型是<code>function</code>，但是<code>Function.prototype.__proto__</code>指向了<code>Object.prototype</code>而不是<code>Function.prototype</code></p>
+<p>除此之外，其他函数的<code>prototype</code>的类型都是<code>object</code>，都由<code>Object()</code>构造，所以它们的<code>__proto__</code>都指向了<code>Object.prototype</code></p>
+<p>而<code>Object.prototype</code>也是特殊的，为了避免死循环，它的<code>__proto__</code>指向了<code>null</code></p>
+<blockquote>
+<p>总结就是，只有<code>Object.prototype</code>和<code>Function.prototype</code>是特殊的</p>
+</blockquote>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h4 id="创建-4种"><a href="#创建-4种" class="headerlink" title="创建(4种)"></a>创建(4种)</h4><h4 id="arguments"><a href="#arguments" class="headerlink" title="arguments"></a>arguments</h4><h4 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h4><h4 id="this指针"><a href="#this指针" class="headerlink" title="this指针"></a>this指针</h4><h4 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h4><h3 id="对象创建模式（7种）"><a href="#对象创建模式（7种）" class="headerlink" title="对象创建模式（7种）"></a>对象创建模式（7种）</h3><h3 id="7种继承模式"><a href="#7种继承模式" class="headerlink" title="7种继承模式"></a>7种继承模式</h3><p>在这一章，我们尽可能用代码说话，希望读者沉下心来看代码，看懂代码，也就懂了继承模式</p>
 <h4 id="原型链继承"><a href="#原型链继承" class="headerlink" title="原型链继承"></a>原型链继承</h4><p>只能继承原型链上的数据，并且其中的引用数据类型有被篡改风险，而且看上去内容很杂乱对吧？</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 以下是Perosn类</span>
 <span class="token keyword">function</span> <span class="token function">Person</span> <span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1403,6 +1458,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <blockquote>
 <p><strong>JavaScript中函数的求值策略是，对于基本数据类型采用引用传递，对于引用数据类型采用共享传递</strong></p>
 </blockquote>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/61c5be2cfb9e444fadf2510f262b72ae~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt="img"></p>
 <h3 id="作用域和作用域链"><a href="#作用域和作用域链" class="headerlink" title="作用域和作用域链"></a>作用域和作用域链</h3><h4 id="三种作用域"><a href="#三种作用域" class="headerlink" title="三种作用域"></a>三种作用域</h4><p>(指的是ES6以前)</p>
 <h4 id="暂时性死区"><a href="#暂时性死区" class="headerlink" title="暂时性死区"></a>暂时性死区</h4><blockquote>
 <p>即<strong>TDZ （Template Dead Zone）</strong></p>
@@ -1432,7 +1488,66 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>依然是报错，但是报错的类型不同，这里报错是因为**<code>let</code>不允许重复声明a**</p>
-<h3 id="预处理机制"><a href="#预处理机制" class="headerlink" title="预处理机制"></a>预处理机制</h3><h3 id="上下文"><a href="#上下文" class="headerlink" title="上下文"></a>上下文</h3><h4 id="两种上下文"><a href="#两种上下文" class="headerlink" title="两种上下文"></a>两种上下文</h4><h4 id="执行上下文"><a href="#执行上下文" class="headerlink" title="执行上下文"></a>执行上下文</h4><h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3>
+<h3 id="预处理机制（待补充）"><a href="#预处理机制（待补充）" class="headerlink" title="预处理机制（待补充）"></a>预处理机制（待补充）</h3><h3 id="执行上下文"><a href="#执行上下文" class="headerlink" title="执行上下文"></a>执行上下文</h3><h4 id="概念-2"><a href="#概念-2" class="headerlink" title="概念"></a>概念</h4><blockquote>
+<p>上下文是一种抽象概念，在编程领域表示着类似于<strong>环境</strong>的概念，这种环境包含了代码的执行相关的信息，比如执行的顺序，执行所需要的依赖等等</p>
+<p>变量或者函数的上下文决定了它们可以访问哪些数据以及它们的行为</p>
+<p>每一个上下文都关联了一个变量对象，这个上下文中定义的变量和函数都存在于这个对象上，它会被底层处理数据的时候用到（这些对象可能是底层的，不一定能通过代码访问到）</p>
+</blockquote>
+<p>JS中提到上下文，一般指的是<strong>执行上下文</strong>，而执行上下文和作用域类似地分为三类：<code>全局上下文</code>、<code>执行上下文</code>、<code>eval上下文</code></p>
+<blockquote>
+<p>由于eval用的实在是太少，网上资料也比较难找，所以这里就不讨论eval了</p>
+</blockquote>
+<h4 id="执行栈"><a href="#执行栈" class="headerlink" title="执行栈"></a>执行栈</h4><p>执行上下文（Execution Context）在创建的时候都会放到了一个栈中，即<strong>执行栈（Execution Context Stack）</strong>，执行上下文在出栈的时候（如果能够执行）执行并销毁。</p>
+<p>执行栈由JS引擎实现，通常会有一个<strong>running指针</strong>指向栈顶</p>
+<h4 id="词法环境"><a href="#词法环境" class="headerlink" title="词法环境"></a>词法环境</h4><p><strong>词法环境（Lexical Environment）</strong>是ECMA中的一个规范，建立了标识符-变量的映射，它有两个部分，分别是<strong>环境记录器</strong>和引用<strong>外层环境</strong></p>
+<blockquote>
+<p><strong>环境记录器（Environment Record）</strong><br>用于存放（let和const声明的）变量和函数声明<br>分为<strong>声明式（Declarative）</strong>和<strong>对象式（Object）</strong></p>
+<ul>
+<li>声明式是用来记录有标识符定义的元素，比如变量、常量、let/const声明</li>
+</ul>
+<p><strong>外层环境（Outer）</strong><br>是一个指向了父级词法环境的指针，可能为null<br>也称为<strong>对外层环境的引用</strong></p>
+</blockquote>
+<p>词法环境也分了很多类型：</p>
+<blockquote>
+<p><strong>全局环境（Global Environment）</strong><br>JS代码开始运行时，宿主会初始化全局环境，安排好<code>单体内置对象</code>等全局对象和<code>paseInt</code>等全局函数<br>全局环境的<code>Outer</code>指向<code>null</code></p>
+<p><strong>模块环境（Module Environment）</strong><br>拥有<code>export</code>和<code>module</code>等变量，它们都被放到了模块环境的<code>Environment Record</code>里面<br>模块环境的<code>Outer</code>指向<code>Global Environment</code></p>
+<p><strong>函数环境（Function Environment）</strong><br>每次调用函数就会产生函数环境，该环境中涉及到了<code>this</code>的绑定和<code>super</code>的调用，同时<code>Environment Record</code>记录函数<code>arguments</code>等属性以及内部声明的变量<br>函数环境的<code>Outer</code>指向调用该函数的父级环境</p>
+</blockquote>
+<h4 id="变量环境"><a href="#变量环境" class="headerlink" title="变量环境"></a>变量环境</h4><h4 id="两个阶段"><a href="#两个阶段" class="headerlink" title="两个阶段"></a>两个阶段</h4><p><strong>创建阶段</strong><br>这个阶段会发生三个事情</p>
+<blockquote>
+<p><strong>绑定this指向（this Binding）</strong><br>this指向是在创建上下文的时候绑定的，决定了当前指针的指向<br>也会存储在<code>Environment Record</code>中</p>
+<p><strong>创建词法环境组件</strong></p>
+<p><strong>创建变量环境组件</strong></p>
+</blockquote>
+<h4 id="变量环境-1"><a href="#变量环境-1" class="headerlink" title="变量环境"></a>变量环境</h4><h4 id="全局上下文"><a href="#全局上下文" class="headerlink" title="全局上下文"></a>全局上下文</h4><p>当JS引擎<strong>首次</strong>遇到可执行脚本时，会创建一个<strong>全局上下文（Global Context）</strong></p>
+<p>一个程序只有一个全局上下文，是ECMAScript实现的宿主环境，也是第一个被放入<strong>执行栈</strong>中的</p>
+<p>它会执行两件事：创建一个全局的window对象，并且设置this的值等于这个对象，</p>
+<p>它关联的对象通常是<code>window对象</code>（这里指的是浏览器中），用<code>var</code>定义的全局变量和函数都会成为其属性和方法，而<code>let</code>和<code>const</code>声明则不会挂载到它身上，不过从作用域链解析的效果上看是一样的</p>
+<h4 id="函数上下文"><a href="#函数上下文" class="headerlink" title="函数上下文"></a>函数上下文</h4><p>先来看看代码吧</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我是第一个！'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 然而，后来者居上</span>
+
+<span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'然而，后来者居上'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 然而，后来者居上</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>感觉很怪吧，再来看个更怪的：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">var</span> <span class="token function-variable function">f</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我是第一个！'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 我是第一个</span>
+
+<span class="token keyword">var</span> <span class="token function-variable function">f</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我是第二个！'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 我是第二个</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
                 
             </div>
             <hr/>
