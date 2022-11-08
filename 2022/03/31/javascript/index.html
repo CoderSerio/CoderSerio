@@ -477,14 +477,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-09-09
+                    2022-10-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    14.9k
+                    15k
                 </div>
                 
 
@@ -871,6 +871,12 @@ console<span class="token punctuation">.</span><span class="token function">log<
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> 
 <span class="token comment">// 不能像str[1] = 'a'这样修改字符串</span>
 <span class="token comment">// 这就是字符串的不可变性</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>究其本质，猜测是因为字符串的数组式访问形式是一个语法糖，真正的语法是这样的：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token string">'Hello~~JavaScript'</span>
+str<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 这样写就明白为什么是不能被赋值了吧</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
 
 <h5 id="Unicode字符代码"><a href="#Unicode字符代码" class="headerlink" title="Unicode字符代码"></a>Unicode字符代码</h5><p>JS字符串是<code>Unicode字符代码</code>，更准确的说是<code>UTF-16字符编码</code></p>
 <blockquote>
@@ -1364,11 +1370,11 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <blockquote>
 <p>为什么能够实现深拷贝？F.prototype只是保留了对obj的引用，那new了之后应该还是引用才对，但是为什么ab没有污染？</p>
 <p>因为参数是有形参和实参之分的，形参就已经创建了实参的副本？</p>
-<p>这一点，我们放到后续章节 <strong>JavaScript的求值策略</strong>，</p>
+<p>这一点，我们放到后续章节 <strong>JavaScript的求值策略</strong>进行讨论</p>
 </blockquote>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">inherit</span> <span class="token punctuation">(</span><span class="token parameter">child<span class="token punctuation">,</span> parent</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     child<span class="token punctuation">.</span>prototype <span class="token operator">=</span>  Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>parent<span class="token punctuation">.</span>prototype<span class="token punctuation">)</span> 
-	<span class="token comment">// 这一步的意义在于规范化，无实际影响</span>
+	<span class="token comment">// 这一步的意义在于规范化，没有太多实际作用</span>
     child<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor <span class="token operator">=</span> child 
 <span class="token punctuation">}</span>
 
@@ -1468,14 +1474,14 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>我们先看一个例子：</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     a <span class="token operator">=</span> <span class="token number">10</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment">// 10</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>都看到这里了，我相信大家一定都知道运行结果是10对吧，这里比较特殊的就是a没用变量声明的关键字，会被直接挂载到window上（其实这样写得话，在ES5没有块级作用域，所以web环境中相当于直接写到了window上）</p>
 <p>如果这个没有问题，那么下面这个又如何呢？</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     a <span class="token operator">=</span> <span class="token number">10</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment">// 报错</span>
     <span class="token keyword">let</span> a
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
@@ -1485,7 +1491,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>再来看一个：</p>
 <pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">10</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment">// 报错</span>
     <span class="token keyword">let</span> a
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
@@ -1569,7 +1575,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>JS解释器通过作用域链将多个嵌套的作用域连接在一起，就实现了不断向上访问检索的功能</p>
 </blockquote>
 <p>结合之前提到的作用域链等知识，感觉一下子就豁然开朗了(格局大打开)</p>
-<h3 id="浏览器组成原理"><a href="#浏览器组成原理" class="headerlink" title="浏览器组成原理"></a>浏览器组成原理</h3><h4 id="历史-1"><a href="#历史-1" class="headerlink" title="历史"></a>历史</h4><p>面对着一个巨大而发达的产物，我们从它小型而原始的过去开始一点点了解可能要更好一些。</p>
+<h3 id="浏览器组成原理"><a href="#浏览器组成原理" class="headerlink" title="浏览器组成原理"></a>浏览器组成原理</h3><h4 id="架构历史"><a href="#架构历史" class="headerlink" title="架构历史"></a>架构历史</h4><p>面对着一个巨大而发达的产物，我们从它小型而原始的过去开始一点点了解可能要更好一些。</p>
 <table>
 <thead>
 <tr>
@@ -1649,6 +1655,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>说到这里其实也就可以猜到了，没错这就是在区分处理<strong>微任务（microtask）</strong>和<strong>宏任务（macrotask）</strong>,promise(then)等属于微任务，优先级比setTimeout等宏任务高，会被优先处理</p>
 </blockquote>
 <h4 id="微宏任务"><a href="#微宏任务" class="headerlink" title="微宏任务"></a>微宏任务</h4><h4 id="运行时"><a href="#运行时" class="headerlink" title="运行时"></a>运行时</h4><p>JS运作的机制，即为<strong>运行时 runtime</strong>。<br>上文中提到的以浏览器为宿主环境的JS运作机制（运行结果表现为网页），则被通常认为是 <strong>标准运行时</strong></p>
+<h3 id="页面加载"><a href="#页面加载" class="headerlink" title="页面加载"></a>页面加载</h3><p>总体上看一下大概是这样：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8b725e48fdeb45cc89c3f0ffda2f581d~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt="img"></p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8c6004fc2f664f2186a727624ed39ae8~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt="img"></p>
 
                 
             </div>

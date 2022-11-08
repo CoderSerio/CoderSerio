@@ -477,14 +477,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-07-02
+                    2022-09-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    2.5k
                 </div>
                 
 
@@ -509,7 +509,13 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前置概念"><a href="#前置概念" class="headerlink" title="前置概念"></a>前置概念</h2><h3 id="强弱类型"><a href="#强弱类型" class="headerlink" title="强弱类型"></a>强弱类型</h3><p>这是从<strong>类型安全</strong>的角度区分的</p>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>网上有非常多系统的资料，但是我看完之后还是一头雾水</p>
+<p>真正开始用上TS还是在旱鸭子硬生生丢下海，小白直接接手TS项目后</p>
+<p>所以我觉得还是得以用起来为切入点，这里再讲述TS的概念的同时，也会结合一个TS项目的源码进行实践分析</p>
+<p>项目地址：<a target="_blank" rel="noopener" href="https://gitee.com/Serio/analysis-of-employment-based-on-collaborative-filtering">https://gitee.com/Serio/analysis-of-employment-based-on-collaborative-filtering</a></p>
+</blockquote>
+<h2 id="前置概念"><a href="#前置概念" class="headerlink" title="前置概念"></a>前置概念</h2><h3 id="强弱类型"><a href="#强弱类型" class="headerlink" title="强弱类型"></a>强弱类型</h3><p>这是从<strong>类型安全</strong>的角度区分的</p>
 <p>强、弱类型缺乏官方的界定标准，但是较为认可的一种说法是：</p>
 <blockquote>
 <p>强类型语言中不允许任意的隐式类型转换；</p>
@@ -522,45 +528,71 @@
 <p>动态类型则允许，并且在运行的时候才能明确一个变量的类型</p>
 </blockquote>
 <p>注意，<strong>并非</strong>弱类型就是静态类型，强类型就是动态类型<br><img src="https://img-blog.csdnimg.cn/a648a19d22f94d7a89d7a1e01f9df535.png" alt="在这里插入图片描述"></p>
-<h2 id="JavaScript的系统特性"><a href="#JavaScript的系统特性" class="headerlink" title="JavaScript的系统特性"></a>JavaScript的系统特性</h2><p>弱类型 且 动态类型<br>灵活多变导致的极其不可靠</p>
-<blockquote>
-<p>这是因为早期开发JS的时候根本没想过JS会发展到今天这一步，所以设计得相对简单，不适合大规模的应用<br>随着时代更迭，这种“灵活”的优势，也就演变成了“混乱、不稳定”的劣势</p>
-</blockquote>
-<p>比如，</p>
-<blockquote>
-<p>语法上允许调用对象本不存在的方法（执行时才会报错）<br>函数/方法参数类型不做限制地进行运算（函数功能可能发生改变）<br><strong>对象属性名会自动转化为字符串</strong>（稀奇古怪的操作）</p>
-</blockquote>
-<p><strong>解决方式</strong></p>
-<blockquote>
-<p>一、简单的方式是通过约定，即开发者一起遵守一套规则 但是很明显，这样并没有保障，随时都可能出现不遵守规则的人</p>
-</blockquote>
-<blockquote>
-<p>二、通过额外的工作去保障，如图：<br><img src="https://img-blog.csdnimg.cn/1e98aec695de4e199c9b4acc2b3f8533.png" alt="ab如果不为数字，那么抛出异常"><br>当然，也可以是借助其他工具。<br></p>
-</blockquote>
-<blockquote>
-<p>三、则是想办法改变JavaScript的系统特性吗，这才是从根本上解决问题</p>
-</blockquote>
-<h2 id="TypeScript基础"><a href="#TypeScript基础" class="headerlink" title="TypeScript基础"></a>TypeScript基础</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote>
+<h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote>
 <p>TypeScript是JavaScript的超集，<br><img src="https://img-blog.csdnimg.cn/9d7dcebb1bf441648a9e75ee7e9af094.png" alt="TypeScript"><br><strong>缺点一</strong>：增加了如接口，泛型，枚举等的“新概念”（？迷惑，却不说）<br>但是好消息是，TypeScript是<strong>渐进式</strong>的<br>也就意味着，就算我们什么新概念都不知道，凭借JS基础我们依旧能够直接开始使用它<br><strong>缺点二</strong>：项目初期，TypeScript会增加开发成本<br>大概是需要自定义各种数据类型等等工作加大了开始的成本，不过这便于后期的维护</p>
 </blockquote>
-<h3 id="隐式类型推断"><a href="#隐式类型推断" class="headerlink" title="隐式类型推断"></a>隐式类型推断</h3><p>即在不明确变量类型的时候，系统根据其使用情况来判断它是什么类型</p>
+<h3 id="类型推断"><a href="#类型推断" class="headerlink" title="类型推断"></a>类型推断</h3><h4 id="隐式类型推断"><a href="#隐式类型推断" class="headerlink" title="隐式类型推断"></a>隐式类型推断</h4><p>即在不明确变量类型的时候，系统根据其使用情况来判断它是什么类型</p>
 <p>比如</p>
 <pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">123</span> <span class="token comment">// a的类型被推断为number</span>
 a <span class="token operator">=</span> <span class="token string">'hhh'</span> <span class="token comment">// 报错，因为'hhh'不是number</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-
-
-<h3 id="显示类型声明"><a href="#显示类型声明" class="headerlink" title="显示类型声明"></a>显示类型声明</h3><p>相较于<strong>隐式类型推断</strong>，<strong>显示类型声明</strong>采用了<strong>类型注解</strong>的方式确定了变量类型</p>
-<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span>a <span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> b <span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">{</span>
+<h4 id="显示类型声明"><a href="#显示类型声明" class="headerlink" title="显示类型声明"></a>显示类型声明</h4><p>相较于<strong>隐式类型推断</strong>，<strong>显示类型声明</strong>采用了<strong>类型注解</strong>的方式确定了变量类型</p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span>a<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> b<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">{</span>
 	<span class="token keyword">return</span> a <span class="token operator">+</span> b
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> arr<span class="token operator">:</span> <span class="token builtin">Array</span><span class="token operator">&lt;</span><span class="token builtin">number</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 数字数组</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="控制流分析-和-类型收窄"><a href="#控制流分析-和-类型收窄" class="headerlink" title="控制流分析 和 类型收窄"></a>控制流分析 和 类型收窄</h4><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">// 这叫做 联合类型</span>
+<span class="token keyword">function</span> <span class="token function">doSomething</span><span class="token punctuation">(</span>data<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">|</span> <span class="token builtin">number</span> <span class="token operator">|</span> <span class="token builtin">boolean</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> data <span class="token operator">===</span> <span class="token string">'string'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> data <span class="token operator">+</span> <span class="token string">'2333'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> data <span class="token operator">===</span> <span class="token builtin">boolean</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">!</span>data<span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> data <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>上面return的三处均为发生类型报错，这是因为TS通过<strong>类型的控制流分析</strong>进行了<strong>类型的收窄</strong></p>
+<blockquote>
+<p>可以看做是，TS由上往下地检查代码，根据if-else等条件语句不断地剔除<code>data</code>当前多余的类型</p>
+<p>比如这里的else中，<code>data</code>的类型已经被剔除为 <strong>number</strong>了，所以就不会报错——这种类型范围不断收缩明确的过程就是 <strong>类型收窄</strong></p>
+</blockquote>
+<h3 id="类型断言"><a href="#类型断言" class="headerlink" title="类型断言"></a>类型断言</h3><h4 id="开发者的担保"><a href="#开发者的担保" class="headerlink" title="开发者的担保"></a>开发者的担保</h4><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">const</span> num1 <span class="token operator">=</span> res <span class="token keyword">as</span> <span class="token builtin">number</span><span class="token punctuation">;</span> <span class="token comment">// 写法一</span>
+<span class="token keyword">const</span> num2 <span class="token operator">==</span> <span class="token operator">&lt;</span><span class="token builtin">number</span><span class="token operator">&gt;</span>res<span class="token punctuation">;</span> <span class="token comment">// 写法二</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>这样写就是说，<strong>开发者担保res是number类型的</strong></p>
+<p>TS虽然能够推导类型，但是肯定不如开发者那样了解代码的逻辑，所以TS有时会对当前的类型表示怀疑而报错，这时候我们用类型断言就能消去这种报错</p>
+<p>比如这样：</p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span>maybeNum<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>maybeNum <span class="token keyword">as</span> <span class="token builtin">number</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
+<p>这里我们我们没有限制<code>maybeNum</code>的类型，但是我们担保它是一个<code>number</code>，所以这里进行运算也不会报错</p>
+<p>另外，如果你不确定某个变量的类型，<strong>并且是实在没有别的办法了</strong>，那么试试<code>any</code>类型</p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">const</span> str <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">(</span>str <span class="token keyword">as</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 不报错</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h3 id="类型断言"><a href="#类型断言" class="headerlink" title="类型断言"></a>类型断言</h3><p>用法：</p>
-<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">const</span> num1 <span class="token operator">=</span> res <span class="token keyword">as</span> <span class="token builtin">number</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>这样写就是说，res是一个数字</p>
-<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">const</span> num2 <span class="token operator">==</span> <span class="token operator">&lt;</span><span class="token builtin">number</span><span class="token operator">&gt;</span>res<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>虽然上述写法也可以实现一样的效果，但是这和JSX的语法会发生冲突，<br>所以还是建议使用第一种写法</p>
+<p><code>any</code>，包含了所有TS中能够出现的类型，可以看做凌驾于所有类型之上，无视TS类型规则</p>
+<h4 id="极其不符合"><a href="#极其不符合" class="headerlink" title="极其不符合"></a>极其不符合</h4><p>虽然开发者担保了，但是TS也不会完全就此罢休</p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">let</span> strNum <span class="token operator">=</span> <span class="token string">'123'</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>strNum <span class="token keyword">as</span> <span class="token builtin">number</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// 报错</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>很显然，这里<code>strNum</code>已经明显不是一个<code>number</code>了，这里担保显得非常荒诞，所以TS依然会报错</p>
+<p>如果要取消这种报错，我们可以这样做：</p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">let</span> strNum <span class="token operator">=</span> <span class="token string">'123'</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>strNum <span class="token keyword">as</span> <span class="token builtin">unknown</span> <span class="token keyword">as</span> <span class="token builtin">number</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token comment">// return (strNum as any as number) + 1; // 同理</span>
+  <span class="token comment">// return (strNum as any) + 1; // 亦可</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这里有一个新类型<code>unknown</code>，它的含义是 <strong>目前是未知的，但是一定会是某一个类型</strong></p>
+<p>比如一个网络请求，在真正的数据响应回来之前，无论其值如何声明，都可以看做是<code>unknown</code></p>
+<blockquote>
+<p>因为TS是静态类型分析，本身不会在运行时做校验</p>
+</blockquote>
 <h3 id="TS基础数据类型"><a href="#TS基础数据类型" class="headerlink" title="TS基础数据类型"></a>TS基础数据类型</h3><p>既然有了类型，那么究竟有哪些类型呢？</p>
 <h4 id="原始类型"><a href="#原始类型" class="headerlink" title="原始类型"></a><strong>原始类型</strong></h4><p>就是我们熟知的JS三大基础类型</p>
 <pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">let</span> a<span class="token operator">:</span><span class="token builtin">number</span> <span class="token operator">=</span> <span class="token number">1024</span>
@@ -569,8 +601,6 @@ a <span class="token operator">=</span> <span class="token string">'hhh'</span> 
     <span class="token keyword">return</span> <span class="token boolean">false</span>
 <span class="token punctuation">}</span>
 <span class="token comment">// 当然，函数也不一定要加类型注解，因为隐式类型推断对函数仍然起作用</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
 
 <h4 id="Array类型"><a href="#Array类型" class="headerlink" title="Array类型"></a><strong>Array类型</strong></h4><p>类型注解等不能直接写array，而是要像下面这样:</p>
 <pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">let</span> arr1<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>

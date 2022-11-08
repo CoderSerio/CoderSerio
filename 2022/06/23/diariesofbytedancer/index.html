@@ -477,14 +477,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-07-30
+                    2022-10-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    8.7k
+                    9.6k
                 </div>
                 
 
@@ -643,7 +643,7 @@
 <p>怎么办，我好像有点喜欢上这里了</p>
 <p>但是看看小组七个人，六个都是985硕，想想“和优秀的人一起，做有挑战的事”，他们应该算是完成了，毕竟和我共事那肯定是相当有挑战的</p>
 <p>坚持每天吃早饭，每天多产出一个Byte</p>
-<h2 id="内存开辟"><a href="#内存开辟" class="headerlink" title="内存开辟"></a>内存开辟</h2><p>这几天一直在看各种资料，也终于是对MV*架构有了一些系统性的认识，比如MVC，Modal数据逻辑，View视图，至于Controller，那就是负责处理业务逻辑的</p>
+<h2 id="动态内存分配"><a href="#动态内存分配" class="headerlink" title="动态内存分配"></a>动态内存分配</h2><p>这几天一直在看各种资料，也终于是对MV*架构有了一些系统性的认识，比如MVC，Modal数据逻辑，View视图，至于Controller，那就是负责处理业务逻辑的</p>
 <p>但是一些较为高深的技术，对我来说实在是有些鸡肋，比如看完云计算的资料，我的脑子里只留下各种被叫做”ass”的东西，笑死根本看不懂</p>
 <blockquote>
 <p>其实是”aaS”</p>
@@ -668,11 +668,11 @@
 <p>“诶，不是，不是说做模块化复用吗，那…那我要复用的模块呢？这个页面怎么就一个标题啊？”</p>
 <p>哦，原来其他同学负责的部分，单独放到了另外一个库，还没合进来呢…</p>
 <p>然后又是一下午的摸鱼划水:</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">git clone xxx
-rm xxx -rf
-git clone xxx
-rm xxx -rf
-# ....<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">git</span> clone xxx
+<span class="token function">rm</span> xxx -rf
+<span class="token function">git</span> clone xxx
+<span class="token function">rm</span> xxx -rf
+<span class="token comment"># ....</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>别问我我这是在干吗，我也不知道…</p>
 <p>晚上走得早，我mentor问我：</p>
@@ -774,6 +774,23 @@ rm xxx -rf
 <p>五分钟后，我从洗手间里面出来，遇见了下班的mentor。</p>
 <p>我俩相视一笑，场面有一丝丝尴尬。</p>
 <p>七点钟小组竟然已经没有人了，一切都好起来了！</p>
+<h2 id="记忆化回溯"><a href="#记忆化回溯" class="headerlink" title="记忆化回溯"></a>记忆化回溯</h2><p>来这边大概快四个月了，中间实在是比较忙，也非常累，所以就没有怎么更新日记了。</p>
+<p>但是问题不大，我们还是学过Git的，还是有办法知道以前写过什么代码。要我说，我是大二上就开始接触Git了，怎么着也有半年了，自以为<code>add-commit-push</code>帅得飞起，实际上还没出新手村。</p>
+<p>来了这里才发现<code>git</code>就是一个帅得不行的时间机器，前往某个时间线（分支），回退到过去某个时间点（版本），重置时间的起点（reset)，带走这之后将发生的未来（stash），带到另一个时间线（分支），释放这个“未来”（stash-pop），完成历史的改写。</p>
+<p>更还有以前都没听过的操作：变基、压缩commit、cherry-pick、覆盖记录等等，对于我来说都是非常不可意思的事情，像是一个熟悉的朋友竟然有着一张不为人知的狰狞面孔。</p>
+<p>好吧，我的记忆大概也是一个像git的分布式版本控制系统吧，那么在离职前的最后几天，让我们好好回忆一下这段时间发生的事情吧。</p>
+<h2 id="递归分治"><a href="#递归分治" class="headerlink" title="递归分治"></a>递归分治</h2><p>要我评价自己的话，可能用一个算法思想名词比较合适——贪心。</p>
+<p>除了本职工作以外，还做起了电商，还接了很多外包项目，也还得抽空学点新东西给自己充电，这导致我感觉没有什么休息时间，经常是熬夜到四点中才睡，久而久之，也就只能早上十点才醒得过来…虽然工作的强度本身本就不低，但是我还是得强行抽出精力来推进自己其他的业务，比如一个IGEM-Wiki,一个VSCode插件，一个浏览器插件，一个webgl小游戏，一个小程序…当然还有很多至今都还没做完，也还要学一下Linux、Python以及课内的知识——我感觉自己几乎快要被榨干…</p>
+<p>压力大加上也没休息好并且大型团队合作开发经验又不足，导致我对负责的需求心里没个数——感觉上是做完了，但是我并没有意识到这还得和联调，还得走非常多且非常长的链路，并且也得画图分析状态机…总之就是产生了巨大的风险并且还没有暴露，最后就陷入了我这辈子不堪回首的处境之一：</p>
+<p>开发用了五天，改bug用了十五天，这十五天是我mentor带着我一起改bug的，在公司就待到两点，疫情管控居家就一天开七个小时以上的会议通话改bug….</p>
+<p>“以后会更好吗？”</p>
+<h2 id="代码审计"><a href="#代码审计" class="headerlink" title="代码审计"></a>代码审计</h2><p>离职前十天，今天mentor有时不在，我和另外一个实习生一起吃饭——没错，直到今天我才知道他也是实习生，他不仅学历碾压我，业务水平对我也是降维打击。</p>
+<p>我回首看看，那些大佬依旧谈笑生风。</p>
+<p>我曾从他们那里学到很多，而如今我距离他们是更加遥远。</p>
+<p>吃饭时和他聊了半个小时之久，我表达了我对自己现状的不满和对未来的迷惘，我很想知道我返校后的这个冬天该如何度过。</p>
+<p>他听完我的经历，给我说了很多…</p>
+<p>人生，就是一场对自己负责的修行，还是要客观地看风险…</p>
+<p>那么，是时候说再见了，字节跳动！</p>
 
                 
             </div>

@@ -481,14 +481,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-20
+                    2022-10-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    3.3k
                 </div>
                 
 
@@ -516,45 +516,85 @@
                 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="写在开篇"><a href="#写在开篇" class="headerlink" title="写在开篇"></a>写在开篇</h3><p>今天是2021/9/12，计划和同学一起开发微信小程序了，看了下语法大概就是html和css以及Vue的魔改，这个问题应该不大。重点是我们觉得这也是第一个正正经经的可以算得上项目的东西了，所以还是决定好好打磨它，于是乎这个时候就想到了版本管理的问题，自然而然就得开始学习Git了</p>
 <h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><blockquote>
 <p><strong>2022/02/04</strong><br>现在是1:09 AM，计划在今天下午和逸飞大佬研究git技术，忽然想起自己写过一篇git的笔记，就打算放到自己的个人博客上了</p>
+<p><strong>2022/10/10</strong><br>现在是2:12 AM，在字节历经了一系列捶打后，我决定修订并补充一些内容</p>
 </blockquote>
 <h2 id="关于版本控制的一些话"><a href="#关于版本控制的一些话" class="headerlink" title="关于版本控制的一些话"></a>关于版本控制的一些话</h2><h3 id="为什么要有版本控制"><a href="#为什么要有版本控制" class="headerlink" title="为什么要有版本控制"></a>为什么要有版本控制</h3><p>比如今天觉得第一版不好，就出了第二版，但是第一版怎么办呢，总不能删了吧——万一哪天又觉得第一版好怎么办？<br>存在本地又不好大家合作开发，所以我们需要一个中间的平台来储存众多版本</p>
-<h3 id="版本控制的发展史"><a href="#版本控制的发展史" class="headerlink" title="版本控制的发展史"></a>版本控制的发展史</h3><p><strong>1.本地版本控制</strong><br>在本地记录保存每次更新，适合个人开发用</p>
+<h3 id="版本控制的发展史"><a href="#版本控制的发展史" class="headerlink" title="版本控制的发展史"></a>版本控制的发展史</h3><p><strong>1.本地版本控制</strong></p>
+<p>在本地记录保存每次更新，适合个人开发用</p>
 <p>很方便，但是也很明显，很low</p>
 <p><strong>2.集中版本控制——SVN</strong><br>所有版本都放到一个服务器，这样一来就方便协同开发了<br>（缺点是不联网就很难办，另外，要是服务器炸了就可以重开了）</p>
-<p><strong>3.分布式版本控制——Git</strong><br>每个人都拥有完整的代码，所有的版本信息都会同步到每一个开发者，<br>断网的时候可以本地提交，有网络时会自动同步，这样一来只要有一个还保留着代码，就能很快恢复数据<br>（缺点是，安全隐患大，容易出内鬼；另外这同一份文件多次存储，加大了空间消耗）<br>（欸，等等，这难道是区块链？？w(ﾟДﾟ)w，算了，先学会用再说</p>
+<p><strong>3.分布式版本控制——Git</strong><br>每个人都拥有完整的代码，所有的版本信息都会同步到每一个开发者，<br>断网的时候可以本地提交，有网络时会自动同步，这样一来只要有一个还保留着代码，就能很快恢复数据<br>（缺点是，安全隐患大，容易出内鬼；另外这同一份文件多次存储，加大了空间消耗）</p>
 <h2 id="Git下载与安装"><a href="#Git下载与安装" class="headerlink" title="Git下载与安装"></a>Git下载与安装</h2><p>官网下载比较慢的话，<br>那么就试试镜像下载吧，相信用过npm的应该很熟悉了：<a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/git-for-windows/">git镜像下载</a><br>进去之后选一个稍微旧一点的版本下载<br><img src="https://img-blog.csdnimg.cn/ea98c417dc774e0aa0182ec04213e8b8.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>64位就找64位咯<br><img src="https://img-blog.csdnimg.cn/9780be46e52142e190331cd947851598.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/3a98d56150a848e08e21911e608c13d5.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/88dde751837f46fe8d8ad82485a5155d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>这里要注意，选择默认的文本编辑器<br><img src="https://img-blog.csdnimg.cn/0b625bbfb5714d0590bf1fe12903519b.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>我选的visual studio code（虽然喜欢idea<br><img src="https://img-blog.csdnimg.cn/5a841580fe2a48f3866f3472a7860a73.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
 <p>然后管他三七二十一地，直接莽Next就完事，最后finish，安装完毕<br>此时鼠标右键可以看到Git的相关内容，<br>这里也可以看到<br><img src="https://img-blog.csdnimg.cn/3fc1663611d546cd8f147abcfc561c18.png" alt="在这里插入图片描述"><br>它们分别是：<br>Git Bash:Unix与Linux风格的命令行<br>Git CMD:Windows风格<br>Git GUI :图形界面版本Git，但是初学者嘛还是先学会用命令行比价好，所以暂时不推荐使用</p>
 <p>为了以后更好地学习Linux，我们这里采用Git Bash</p>
-<h2 id="基本Linux命令"><a href="#基本Linux命令" class="headerlink" title="基本Linux命令"></a>基本Linux命令</h2><p><img src="https://img-blog.csdnimg.cn/2546d8c8986943e68619b6b1c97d5d47.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>点开就能看到类似这样地画面<br><img src="https://img-blog.csdnimg.cn/21b4fcd991ca462881441e0e58871e63.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>好了，这下得开始学Linux命令才能继续玩下去了<br>大概就是这样，这里看看就像<br><img src="https://img-blog.csdnimg.cn/f5b8be004d014757a92b46d336a86841.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>这里就提一句：<br><strong>(不要尝试，不要尝试，不要尝试！</strong><br><strong>这是删库，难以跑路，后果自负)</strong></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">rm</span> -rf/
-<span class="token comment"># 要是你计算机文件全没了别怪我没提醒你别用这个指令</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>只是想说一下啊，rm是remove的简写，-r是递归，f是强制，/是根目录</p>
-<h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><h3 id="配置信息"><a href="#配置信息" class="headerlink" title="配置信息"></a>配置信息</h3><p> <strong>git config -l</strong><br>就是查看配置列表啦<br><img src="https://img-blog.csdnimg.cn/1975bd2990a6482682d7f09528ad9503.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>还可以细一点，使用</p>
+<h2 id="基本Linux命令"><a href="#基本Linux命令" class="headerlink" title="基本Linux命令"></a>基本Linux命令</h2><p><img src="https://img-blog.csdnimg.cn/2546d8c8986943e68619b6b1c97d5d47.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>点开就能看到类似这样地画面<br><img src="https://img-blog.csdnimg.cn/21b4fcd991ca462881441e0e58871e63.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>好了，这下得开始学Linux命令才能继续玩下去了</p>
+<blockquote>
+<p>关于这一部分，可以去参考我的另一篇blog(暂时还没发布)</p>
+</blockquote>
+<h2 id="基础使用"><a href="#基础使用" class="headerlink" title="基础使用"></a>基础使用</h2><h3 id="配置信息"><a href="#配置信息" class="headerlink" title="配置信息"></a>配置信息</h3><p>在使用之前，要做一些配置，下面这个命令就是查看配置列表啦</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">git config -l<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>（这里我就打码了，自己看自己的去）<br><img src="https://img-blog.csdnimg.cn/1975bd2990a6482682d7f09528ad9503.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>还可以更细致一点，使用下面这个命令就是查看系统配置</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --system --list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>查看系统配置<br><img src="https://img-blog.csdnimg.cn/07ba27c335aa43c69f9b41ee7d497037.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>同样的可以查看用户配置</p>
+
+<p><img src="https://img-blog.csdnimg.cn/07ba27c335aa43c69f9b41ee7d497037.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>类似地，这样可以查看用户配置</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> config --global --list
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://img-blog.csdnimg.cn/4e9d54d0d6f1458d9dd0bb4b78959a99.png" alt="在这里插入图片描述"><br>现在我们来更改一下配置<br>其实如果不执行这一步配置操作的话，那么是不能提交项目的</p>
+<p><img src="https://img-blog.csdnimg.cn/4e9d54d0d6f1458d9dd0bb4b78959a99.png" alt="在这里插入图片描述"></p>
+<p>这里需要我们配置一下个人信息，<br>如果不执行这一步配置操作的话，是无法进行后续流程的</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> config --global user.name <span class="token string">"Serio"</span>
 $ <span class="token function">git</span> config --global user.email <span class="token string">"2779066456@qq.com"</span>
 $ <span class="token comment">#第一个是配置名称，第二个是配置邮箱</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>然后再使用</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> config --global --list
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>查看一下配置是否成功<br><img src="https://img-blog.csdnimg.cn/0e227ed71eaf40e3852e6b431cc99d4e.png" alt="在这里插入图片描述">系统配置会保存在Git安装目录下的etc文件中的config文件里面<br>用户配置会保存在C盘用户文件下的gitconfig中</p>
+<p>然后再使用下面这个命令查看一下配置是否成功</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> config --global --list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://img-blog.csdnimg.cn/0e227ed71eaf40e3852e6b431cc99d4e.png" alt="在这里插入图片描述">系统配置会保存在Git安装目录下的etc文件中的config文件里面<br>用户配置会保存在C盘用户文件下的gitconfig中</p>
 <p>在说下一个命令以前，先得提一下</p>
-<h3 id="Git工作原理"><a href="#Git工作原理" class="headerlink" title="Git工作原理"></a>Git工作原理</h3><p>Git有三个工作区域：</p>
+<h3 id="Git的构成部分"><a href="#Git的构成部分" class="headerlink" title="Git的构成部分"></a>Git的构成部分</h3><p>Git有三个工作区域：</p>
 <blockquote>
-<p>1.工作目录<br>2.暂存区<br>3.资源库<br>4.远程it仓库</p>
+<p>1.工作目录<br>2.暂存区<br>3.本地仓库<br>4.远程仓库</p>
+<p>其实本地仓库和远程仓库就是位置不一样，<br>所以还是算三个工作区域</p>
 </blockquote>
 <p> <img src="https://img-blog.csdnimg.cn/e9625b566e2d47a7a9ec01bb05947f44.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="git的三个工作区域"></p>
 <blockquote>
-<p>1.<strong>workspace/working directory</strong><br>工作区，就是平时存放代码的地方<br>2.<strong>index/stage</strong><br>暂存区，用于临时存储，是一个文件，存储将要提交到文件列表的信息<br>3.<strong>repository/history</strong><br>仓库区（本地仓库)，能安全存储数据的位置，存储了所有版本的数据。其中的HEAD指向最新版本<br>4.<strong>remote</strong><br>远程仓库，托管代码的服务器</p>
+<p>1.<strong>workspace/working directory</strong><br>工作区，就是平时存放代码的地方。没有被git相关命令操作过的文件都在这个区域。<br>2.<strong>index/stage</strong><br>索引区/暂存区，用于临时存储，是一个文件（.git/index），存储将要提交到文件列表的信息，将文件数据映射到内存，便于管理。<br>3.<strong>repository/history</strong><br>本地仓库区，能安全存储数据的位置，存储了所有版本的数据。其中的存在一个HEAD指针，其指向的版本即当前分支的最新版本。<br>4.<strong>remote directory/repository</strong><br>远程仓库，托管代码的服务器。比如<code>github</code>这类平台，就给用户提供了远程仓库。</p>
 </blockquote>
-<p><strong>git的工作流程是</strong><br>1.在工作目录中添加修改文件<br>2.将需要进行版本管理的文件放入暂存区域<br>3.将暂存区域的文件提交到git仓库</p>
-<h3 id="创建Git仓库"><a href="#创建Git仓库" class="headerlink" title="创建Git仓库"></a>创建Git仓库</h3><p>有两种方式：<br>1.本地新建仓库<br>2.克隆远程仓库<br>大概涉及到以下六个命令<br>（没错，图片依旧来自狂神说）<br><img src="https://img-blog.csdnimg.cn/e1d0fa7b46294284b4ae1adc70be557a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<h3 id="Gitj基本命令"><a href="#Gitj基本命令" class="headerlink" title="Gitj基本命令"></a>Gitj基本命令</h3><p>首先，你需要一个文件夹，在这个文件夹下执行这个命令：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">git</span> init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>好了，恭喜，你得到了一个本地git仓库！</p>
+<p><img src="https://img-blog.csdnimg.cn/e1d0fa7b46294284b4ae1adc70be557a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>让我们<strong>从右往左</strong>看：</p>
+<p>当我们创建了一个新的文件，它就处于<code>workspace工作区</code>中。然后我们写完了文件内容，就可以使用下面这个命令来将它们放入<code>stage(index)暂存区</code><strong>暂存</strong></p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">git</span> <span class="token function">add</span> <span class="token punctuation">[</span>文件名字<span class="token punctuation">]</span> <span class="token comment"># 将指定的文件暂存</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>         <span class="token comment"># 将所有文件暂存，.表示所有</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>暂存之后，我们检查无误了，就可以用下面这个命令来将它们放入<code>repository(history)本地仓库</code>中<strong>长期存储</strong></p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">git</span> commit -m <span class="token string">"这是一段注释信息"</span>
+<span class="token comment"># 你可以理解为把这些文件作为一个版本存档，</span>
+<span class="token comment"># 然后标注一段信息便于以后识别</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>看到这里，读者可能会觉得<code>stage暂存区</code>这种设计有点多余——但是之后我们就会知道这种设计的意义所在，现在先接着往下看</p>
+<p>由于<code>repository本地仓库</code>中存储着所有历史版本文件，所以我们也可以查看各个历史版本：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">git</span> log <span class="token comment"># 查看(当前分支)所有历史版本的commit信息</span>
+<span class="token comment"># 每个历史版本都有一段hash值id————就是一个长字符串，这里假设为xxx</span>
+<span class="token function">git</span> checkout xxx <span class="token comment"># 切换到xxx版本</span>
+
+<span class="token comment"># 也可以像下面这样选版本，HEAD表示头指针指向的版本</span>
+<span class="token function">git</span> checkout HEAD~1 <span class="token comment"># HEAD~1表示其后面一个版本</span>
+<span class="token function">git</span> checkout HEAD^1 <span class="token comment"># 同上</span>
+<span class="token function">git</span> checkout <span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token comment"># name填分支名字，可以切换分支</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>上面提到了一个概念<strong>【分支】</strong>——那是什么？现在不知道没关系，我们后面再遇到这个词的时候再解释。</p>
+<p>好了，我们去<code>github</code>上找一些自己感兴趣的仓库看看，并用下述命令下载到本地：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">git</span> clone <span class="token punctuation">[</span>仓库地址<span class="token punctuation">]</span> <span class="token comment"># 会下载到git当前所处的目录下</span>
+<span class="token comment"># 由于fetch的使用相对较少，就留给读者自行了解，此处不再赘述</span>
+<span class="token comment"># 好吧我承认，是我自己目前没怎么用过，避免在此误人子弟</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <p><strong>本地搭建</strong></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><img src="https://img-blog.csdnimg.cn/0f4a1719dfb74740ba38a589744a6e6f.png" alt="初始化"><br>注意这是个隐藏文件，所以要勾选显示隐藏文件才看得见<br><img src="https://img-blog.csdnimg.cn/8b0497c92e14465ea46b83dccdc108df.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><strong>远程克隆</strong><br>首先我们先建立一个远程仓库<br>（由于hub比较卡顿，所以我们这里用ee）<br><img src="https://img-blog.csdnimg.cn/fff157437e3f4ecbbe756a81d992a253.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
@@ -562,13 +602,37 @@ $ <span class="token comment">#第一个是配置名称，第二个是配置邮�
 <p><img src="https://img-blog.csdnimg.cn/7903edf67f654139a3e0f8a69e9220a1.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>然后同样的我们就得到了这个库</p>
 <p>这个时候可能就有人要问了，这都下载到c盘去了，要怎么下到指定路径呢？</p>
 <p>这还是先得用cd等命令<br><img src="https://img-blog.csdnimg.cn/85d61f59e42d43f98fe089ea09969d34.png" alt="在这里插入图片描述"><br>比如这样就进入了e盘，然后建立仓库之类的就会在e盘下进行</p>
-<h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><p>文件有四种状态：<br>1.<strong>Untacked</strong>：未跟踪，这个文件在项目中，但是没有传到git库里面，不参与版本库，<br>在git add命令执行后改变为<strong>Staged</strong>暂存</p>
+<h3 id="文件状态"><a href="#文件状态" class="headerlink" title="文件状态"></a>文件状态</h3><p>通常来说，在一个被多次git操作的工程项目中，</p>
+<p>文件通常有四种状态：</p>
+<blockquote>
+<p>1.<strong>Untracked</strong>：未跟踪</p>
+<p>这个文件在项目中，但是没有传到git库里面，不参与版本库，<br>执行下述命令，改变为<strong>Staged</strong></p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</blockquote>
 <hr>
-<p>2.<strong>Unmondify</strong>：文件已经传入库，未修改，即版本库中文件快照内容与文件夹中内容完全一致，<br>此后如果执行git rm命令，那么就会被移除<br>如果被修改，那么状态变为<strong>Modified</strong></p>
+<blockquote>
+<p>2.<strong>Staged</strong>：暂存，<br>执行git commit后将提交到库中，此时本地库中文件又和工作区一致了，文件又变为 <strong>Unmodify</strong></p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">git</span> reset HEAD <span class="token punctuation">[</span>filename<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+<p>那么就会取消暂存，回退到<strong>Modified</strong> </p>
+</blockquote>
 <hr>
-<p>3.<strong>Modified</strong>：修改过，<br>在执行git checkout命令后撤销修改内容，返回<strong>Unmodify</strong>状态<br>也可以在执行git add后变为<strong>Staged</strong></p>
+<blockquote>
+<p>3.<strong>Unmondify</strong>：已经传入库，未修改</p>
+<p>即仓库中文件快照内容与工作区中内容完全一致，<br>此时可以执行下述命令从工作区移除文件</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">git</span> <span class="token function">rm</span> --cache <span class="token punctuation">[</span>filename<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>如果修改文件内容，那么状态变为<strong>Modified</strong></p>
+</blockquote>
 <hr>
-<p>4.<strong>Staged</strong>：暂存，<br>执行git commit后将提交到库中，此时库中文件又和本地文件一致了，文件又变为<strong>Unmodify</strong><br>执行git reset HEAD filename那么就会取消暂存，回退到<strong>Modified</strong>状态</p>
+<blockquote>
+<p>4.<strong>Modified</strong>：修改过<br>在执行下述命令后撤销修改内容，返回<strong>Unmodify</strong>状态</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">git</span> checkout <span class="token punctuation">[</span>hash<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>也可以在执行git add后变为<strong>Staged</strong></p>
+</blockquote>
+<hr>
 <p><strong>实际操作示例</strong><br>首先我们新建一个文本<br><img src="https://img-blog.csdnimg.cn/963090cbb7e849e29b3095a35274bf1e.png" alt="在这里插入图片描述"></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> status <span class="token string">"LEC牛逼"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -579,10 +643,41 @@ $ <span class="token comment">#第一个是配置名称，第二个是配置邮�
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><img src="https://img-blog.csdnimg.cn/828adeb39f4b43cca0d38386fbd7396d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>当然，如果我们不想让每一个文件都上传，那么可以定义一个扩展名为gitignore的文件<br><img src="https://img-blog.csdnimg.cn/6d5232c581324790ae5154754ce2811e.png" alt="在这里插入图片描述"><br>配置内容依次解释为，忽略根目录下的TODO文件，忽略所有txt文件，但是”LEC牛逼.txt”除外</p>
-<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><p>我们先得有一个ssh公钥</p>
+<h3 id="远程仓库配置"><a href="#远程仓库配置" class="headerlink" title="远程仓库配置"></a>远程仓库配置</h3><p>执行下面这条命令，生成一个密钥对</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ ssh-keygen -t rsa<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>-t表示采用加密，rsa是加密的方式<br>一路enter就好<br><img src="https://img-blog.csdnimg.cn/3bd51771f7e04261b167c8889519f49b.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>然后去这里找找生成的公钥<br><img src="https://img-blog.csdnimg.cn/239106ea238f4cb49785249bcff2a4e4.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/8370a33362d24046bae58663e56e673d.png" alt="在这里插入图片描述"><br>然后打开其中扩展名为pub的那个文件，复制里面的内容，粘贴到<br>（这里我们用国内的远程库吧）<br><img src="https://img-blog.csdnimg.cn/115cb00b73bc4c2ba779dcc634cd236c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>添加了ssh公钥之后<br>再新建一个库<br><img src="https://img-blog.csdnimg.cn/056e99704e7e4f01beb38976e430b5cf.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>如果不太清楚开源协议的话，可以点框起来的部分<br><img src="https://img-blog.csdnimg.cn/dee06512bea842b6be3912dd4586809c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>然后一路我不在乎————下一步下一步（好吧这个根据个人需求来就行）<br><img src="https://img-blog.csdnimg.cn/3ecdb96f87cb45f886b1a68fc051dc8f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>得到远程仓库之后，我们就不同本地的了（原来那个可以删了）<br>来克隆一下</p>
-<h3 id="使用IDEA集成开发"><a href="#使用IDEA集成开发" class="headerlink" title="使用IDEA集成开发"></a>使用IDEA集成开发</h3><p>idea创建一个普通项目<br><img src="https://img-blog.csdnimg.cn/2075b0171ce44a6ead2c5c4a1dc8920c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>这里我的IDEA帮我自动配置好了这两个东西<br>打开看看<br><img src="https://img-blog.csdnimg.cn/45bc4efd55be4ef1b8cd541a5742d356.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/8d6259a29782475fbb5429bbda7065a6.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>然后我们把下载到本地的git文件的内容移动到工程文件中<br><img src="https://img-blog.csdnimg.cn/427bb7592b2e4509a63c1e4d4f06d776.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>这里红色的就是代表选中状态,绿色代表已经提交<br>右上角也多了几个按钮<br><img src="https://img-blog.csdnimg.cn/8d7fa7209a9b4965b623b05196982841.png" alt="在这里插入图片描述"><br>底部也多了终端的几个选项<br><img src="https://img-blog.csdnimg.cn/8e03f6dc80b3454ab74c55182b4661ff.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>接下来我们在终端使用</p>
+<p>-t表示采用加密（我估计是<code>tea</code>的简写），rsa是一种加密算法，这个命令就是说用rsa算法生成一个<strong>密钥对</strong>——由一个公钥和一个私钥组成，其中公钥就是公开的秘钥，私钥就是不公开的秘钥。</p>
+<p>有什么用？举个例子：</p>
+<blockquote>
+<p>苏媛媛打算于月黑风高之时去富婆的豪宅happy。一片漆黑之中难以辨别人物身份，但是好在全球所有富婆都有<strong>苏媛媛给的公钥——可以解开与之唯一对应的私钥的加密</strong>，苏媛媛在小纸条上写下一段话： </p>
+<p><font style="color:pink;">我是苏媛媛，Hello World就是向你问好，因为你就是我的全世界</font></p>
+<p>然后拿出自己私藏多年的<strong>私钥加密</strong>，这段信息就变成了：</p>
+<p><font style="color:pink;">拟宠求币吗？虫Q必，充充充，斗格诶渥崇求币~~</font></p>
+<p>然后把这个纸条包个石头揉成团，从豪宅的窗户里扔进去——</p>
+<p>正常人看了一眼只能是懵逼，但是富婆拿着公钥试着解密，就能发现其中的奥秘了——由于<strong>公钥和私钥的加密解密是唯一对应的</strong>，所以这里就可以识来者的身份是否为苏媛媛</p>
+</blockquote>
+<p>类似地，代码和富婆一样是需要爱惜的，不能让不三不四的人接触，所以需要用密钥对来鉴别访客身份</p>
+<p>我们把生成的公钥交给<code>github</code>等平台，再保管好私钥，之后每次访问都像上面的比喻中那样校验身份了</p>
+<blockquote>
+<p>当然，公钥不一定都是用于解密，私钥也不一定都是用于加密</p>
+<p>如果你想了解更多ssh、rsa、秘钥等相关的知识，可以看看我的另一篇博客（还没发布）</p>
+</blockquote>
+<p>我们接着操作：</p>
+<p><img src="https://img-blog.csdnimg.cn/3bd51771f7e04261b167c8889519f49b.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>然后去这里（./ssh/id_rsa目录下）找找生成的公钥（扩展名为pub那个）</p>
+<p><img src="https://img-blog.csdnimg.cn/239106ea238f4cb49785249bcff2a4e4.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/8370a33362d24046bae58663e56e673d.png" alt="在这里插入图片描述"></p>
+<p>打开公钥文件，复制里面的内容粘贴到下面这里<br>（此处以<code>gitee</code>为例）</p>
+<p><img src="https://img-blog.csdnimg.cn/115cb00b73bc4c2ba779dcc634cd236c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>其实到这里就已经完成了公钥配置了，不过我们就顺便把创建仓库也说一下</p>
+<p>新建一个库<br><img src="https://img-blog.csdnimg.cn/056e99704e7e4f01beb38976e430b5cf.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>如果不太清楚开源协议的话，可以点框起来的部分</p>
+<p><img src="https://img-blog.csdnimg.cn/dee06512bea842b6be3912dd4586809c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>然后一路我不在乎————下一步下一步（好吧这个根据个人需求来就行，不过目前个人对开源协议没什么研究，所以就不过多评价了）</p>
+<p><img src="https://img-blog.csdnimg.cn/3ecdb96f87cb45f886b1a68fc051dc8f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>得到远程仓库之后，我们就不同本地的了（原来那个可以删了)<br>来克隆一下</p>
+<h3 id="IDE下使用Git"><a href="#IDE下使用Git" class="headerlink" title="IDE下使用Git"></a>IDE下使用Git</h3><p>这里以idea为例，展示IDE下使用Git，其余IDE同理</p>
+<p>idea创建一个普通项目</p>
+<p><img src="https://img-blog.csdnimg.cn/2075b0171ce44a6ead2c5c4a1dc8920c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_19,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>这里我的IDEA帮我自动配置好了这两个东西<br>打开看看</p>
+<p><img src="https://img-blog.csdnimg.cn/45bc4efd55be4ef1b8cd541a5742d356.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/8d6259a29782475fbb5429bbda7065a6.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>然后我们把下载到本地的git文件的内容移动到工程文件中<br><img src="https://img-blog.csdnimg.cn/427bb7592b2e4509a63c1e4d4f06d776.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>这里红色的就是代表选中状态,绿色代表已经提交<br>右上角也多了几个按钮<br><img src="https://img-blog.csdnimg.cn/8d7fa7209a9b4965b623b05196982841.png" alt="在这里插入图片描述"><br>底部也多了终端的几个选项<br><img src="https://img-blog.csdnimg.cn/8e03f6dc80b3454ab74c55182b4661ff.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>接下来我们在终端使用</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>添加所有文件到暂存区<br><img src="https://img-blog.csdnimg.cn/cfaa008c216141bd81113beb25132096.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>当然鼠标右键找到git选项中的add，也能实现同样的效果<br>添加到暂存区之后的文件都变绿了<br><img src="https://img-blog.csdnimg.cn/2858bea0e2bb42cf9468a4228126418e.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_16,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>然后输入一下描述信息，直接提交就好了</p>
 <p><img src="https://img-blog.csdnimg.cn/8739f86691834655a2af7fe7002d8b56.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>当然，使用</p>
@@ -597,12 +692,8 @@ $ <span class="token comment">#第一个是配置名称，第二个是配置邮�
 <p><img src="https://img-blog.csdnimg.cn/b6f43ba242494267a90fc36c755a8c62.png" alt="在这里插入图片描述"><br>查看远程库的分支</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> branch -r<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://img-blog.csdnimg.cn/9820a853a2e345b2a9e71c1ef2906554.png" alt="在这里插入图片描述"><br>三个开发小组A B C<br>B会调用A的接口<br>C会调用A，B的接口<br>那么如果B在使用的过程中修改了A的代码<br>C要调用A原本的代码时，就产生了冲突</p>
-<p>所以这就需要分支，使得各个版本不冲突<br>(C调用A1.0，B修改后产生的记为A2.0这样就可以了)</p>
-<p>另外，最后ABC三组合并文件，如果发生冲突<br>那么可以修改冲突文件重新提交，选择保留其中一种可行的方案即可</p>
-<p>相关操作见下图，当然下图依旧来自网络（好吧就是狂神说）<br><img src="https://img-blog.csdnimg.cn/0403f6b7c0c345799940b56bc310969c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_15,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<h3 id="协同开发实操"><a href="#协同开发实操" class="headerlink" title="协同开发实操"></a>协同开发实操</h3><p>这个得等等队友了…<br>后面再更新<br><img src="https://img-blog.csdnimg.cn/002dee626d9041fdb3cbc2e3e6758cc8.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA56Kz6Iuv,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-
+<p><img src="https://img-blog.csdnimg.cn/9820a853a2e345b2a9e71c1ef2906554.png" alt="在这里插入图片描述"></p>
+<h2 id="实际场景分析"><a href="#实际场景分析" class="headerlink" title="实际场景分析"></a>实际场景分析</h2><h2 id="深入进阶（待更新）"><a href="#深入进阶（待更新）" class="headerlink" title="深入进阶（待更新）"></a>深入进阶（待更新）</h2><h3 id="tree对象"><a href="#tree对象" class="headerlink" title="tree对象"></a>tree对象</h3><h3 id="blob对象"><a href="#blob对象" class="headerlink" title="blob对象"></a>blob对象</h3><h3 id="entry对象"><a href="#entry对象" class="headerlink" title="entry对象"></a>entry对象</h3>
                 
             </div>
             <hr/>
