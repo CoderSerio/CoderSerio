@@ -1095,9 +1095,9 @@ systemctl start apache<span aria-hidden="true" class="line-numbers-rows"><span><
 <p>双钥密码体制中常见的一种加密算法就是<strong>RSA算法</strong>：</p>
 <blockquote>
 <p><strong>加密: secStr = oriStr ^ E % N</strong></p>
-<p>secStr表示密文，oriStr表示原文, E和N是两个较大的常数,<br>其中<strong>E将作为秘钥，此处用于加密</strong></p>
-<p><strong>解密: oriStr = secStr^D % N</strong><br>这里的N和加密时使用的是同一个值，而<strong>D将作为公钥，此处用于解密</strong></p>
-<p>通常，我们把这样的秘钥、公钥完整的表达分别是**(E，N)<strong>和</strong>(D，N)<strong>，密钥对则写作</strong>(E，D，N)**</p>
+<p>secStr表示密文，oriStr表示原文, E和N是两个较大的常数,<br>其中<strong>E将作为秘钥，此处用于加密(encode)</strong></p>
+<p><strong>解密: oriStr = secStr ^ D % N</strong><br>这里的N和加密时使用的是同一个值，而<strong>D将作为公钥，此处用于解密(decode)</strong></p>
+<p>通常，我们把这样的秘钥、公钥完整的表达为**(E，N)<strong>和</strong>(D，N)<strong>，密钥对则写作</strong>(E，D，N)**</p>
 <p>这里通常使E和D的值非常大，以便于对N取模板能得到相同的结果（这样一手操作，除了穷举法之外，我个人是想不到任何破解方法了——但是这里也说了，值非常大，这样使破解所需的算力开销非常大）</p>
 </blockquote>
 <p>那么问题来了，我们加密的时候怎么去确定E和D的值，总不能也是穷举吧？计算方式大致如下:</p>
@@ -1110,8 +1110,8 @@ systemctl start apache<span aria-hidden="true" class="line-numbers-rows"><span><
 
 <p>另外，双钥密码体系，可以根据需求选择两种套路:</p>
 <blockquote>
-<p><strong>套路一：加密秘钥保密，解密秘钥公开</strong><br>主要目的是保障信息的 <strong>可鉴别性（知道是谁发的）</strong>、 <strong>完整性（防止被篡改）</strong>、<strong>抗抵赖性（别说不是你发的）</strong>，优点是提供了抗抵赖的证据，有效识别身份</p>
-<p><strong>套路二：加密秘钥公开，解密秘钥保密</strong><br>主要是为了保障信息的 <strong>机密性（只有我知道写的什么）</strong>,优点是能大幅降低对安全信道的依赖</p>
+<p><strong>套路一：加密秘钥保密，解密秘钥公开</strong><br>主要目的是保障信息的 <strong>可鉴别性（知道是谁发的）</strong>、 <strong>完整性（防止被篡改）</strong>、<strong>抗抵赖性（别说不是你发的）</strong>，优点是提供了抗抵赖的证据，有效识别身份. 应用场景式, 官方发布消息, 大众访问消息.</p>
+<p><strong>套路二：加密秘钥公开，解密秘钥保密</strong><br>主要是为了保障信息的 <strong>机密性（只有我知道写的什么）</strong>,优点是能大幅降低对安全信道的依赖. 机密信息传输.</p>
 </blockquote>
 <p>基于套路一，我们进一步聊聊<strong>签名</strong></p>
 <blockquote>
