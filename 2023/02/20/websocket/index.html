@@ -470,21 +470,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-02-25
+                    2023-02-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-07-30
+                    2023-02-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    664
+                    629
                 </div>
                 
 
@@ -516,8 +516,8 @@
 <p><strong>2022/03/上旬</strong><br>忘了什么时候写的<br><strong>2022/03/11</strong><br>补充一些基本信息，比如上面那个时间。更多内容，比如net包的使用以后再补充。</p>
 </blockquote>
 <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="什么是Socket"><a href="#什么是Socket" class="headerlink" title="什么是Socket"></a>什么是Socket</h3><p>网络上的两个程序通过一个双向的通信连接实现数据的交换，这个连接的一端称为一个socket</p>
-<h3 id="WebSocket协议"><a href="#WebSocket协议" class="headerlink" title="WebSocket协议"></a>WebSocket协议</h3><p>socket所涉及的主要协议就是WebSocket协议，它是一种基于TCP的持久的网络协议，实现了浏览器与服务器的<strong>全双工通信</strong></p>
-<h3 id="和AJAX的区别"><a href="#和AJAX的区别" class="headerlink" title="和AJAX的区别"></a>和AJAX的区别</h3><p>AJAX是基于HTTP请求的，是服务器端被动地响应浏览器的请求，数据的流向是<strong>单向的</strong>（说单向的也有点怪，但是又不知道该怎么说…算了就这样吧）</p>
+<h3 id="WebSocket协议"><a href="#WebSocket协议" class="headerlink" title="WebSocket协议"></a>WebSocket协议</h3><p>WebSocket协议，是一种基于TCP的持久的网络协议，实现了浏览器与服务器的<strong>全双工通信</strong></p>
+<h3 id="和AJAX的区别"><a href="#和AJAX的区别" class="headerlink" title="和AJAX的区别"></a>和AJAX的区别</h3><p>AJAX是基于HTTP请求的，是服务器端被动地响应浏览器的请求，数据的流向是<strong>单向的</strong></p>
 <p>而在socket中，数据流向是双向的</p>
 <blockquote>
 <p>那么，在没有socket的年代，人们是如何用AJAX实现的全双工数据交互呢？</p>
@@ -527,7 +527,7 @@
 <h2 id="简单使用Socket"><a href="#简单使用Socket" class="headerlink" title="简单使用Socket"></a>简单使用Socket</h2><p><img src="https://p.qlogo.cn/hy_personal/3e28f14aa051684257db326720634990564b69b772d437737a8f1d35d18d93d9/0.png" alt="Socket通信"></p>
 <h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><p>H5更新中提供了WebSocket对象用于创建和管理WebSocket连接，以及可以通过连接发送和接收数据的API</p>
 <p>非常容易，和AJAX类似的操作</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> input <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> input <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
     <span class="token keyword">const</span> button <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
     <span class="token keyword">const</span> div <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
     <span class="token comment">// 参数是ws地址，这里用一个官方的地址</span>
@@ -560,31 +560,31 @@
 
 <h3 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h3><p>这里有非常多的模块来实现websocket，这里我们使用第三方包nodejs-websocket来实现</p>
 <p>和http服务器非常像，所以上手也很快</p>
-<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">const ws = require('nodejs-websocket')
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> ws <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'nodejs-websocket'</span><span class="token punctuation">)</span>
 
-const PORT = 3000
+<span class="token keyword">const</span> <span class="token constant">PORT</span> <span class="token operator">=</span> <span class="token number">3000</span>
 
 
-// 每次有用户连接上来了，就执行一次，为这个用户创建一个conn对象
-const server = ws.createServer((conn) =&gt; {
-    console.log("NEW CONNECTION!!!")
-    conn.on("text", (data) =&gt; {
-        console.log("RECEIVED USER'S DATA: " + data)
-    	conn.sendText("HelloWebSocket!!!")
-    })
+<span class="token comment">// 每次有用户连接上来了，就执行一次，为这个用户创建一个conn对象</span>
+<span class="token keyword">const</span> server <span class="token operator">=</span> ws<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">conn</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"NEW CONNECTION!!!"</span><span class="token punctuation">)</span>
+    conn<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"text"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"RECEIVED USER'S DATA: "</span> <span class="token operator">+</span> data<span class="token punctuation">)</span>
+    	conn<span class="token punctuation">.</span><span class="token function">sendText</span><span class="token punctuation">(</span><span class="token string">"HelloWebSocket!!!"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
     
-    conn.on("close", (code, reason) =&gt; {
-        console.log("CONNECTION CLOSED")
-    })
+    conn<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"close"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">code<span class="token punctuation">,</span> reason</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"CONNECTION CLOSED"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
     
-    conn.on('error', () =&gt; {
-        console.log('用户连接异常')
-    })
-})
+    conn<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'error'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'用户连接异常'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-server.listen(PORT, () =&gt; {
-    console.log('WEBSOCKET SERVER HAS STARTED!!!')
-})<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token constant">PORT</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'WEBSOCKET SERVER HAS STARTED!!!'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -612,7 +612,7 @@ server.listen(PORT, () =&gt; {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://serio.gitee.io/2022/02/25/websocket/">https://serio.gitee.io/2022/02/25/websocket/</a>
+                    <a href="https://serio.gitee.io/2023/02/20/websocket/">https://serio.gitee.io/2023/02/20/websocket/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -849,24 +849,72 @@ server.listen(PORT, () =&gt; {
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/05/07/pug/">
+                <a href="/2023/02/21/diariesofbytedancer2/">
                     <div class="card-image">
                         
-                        <img src="/medias/postimages/46.png" class="responsive-img" alt="Pug">
+                        <img src="/medias/postimages/58.png" class="responsive-img" alt="2023实习日记">
                         
-                        <span class="card-title">Pug</span>
+                        <span class="card-title">2023实习日记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            以前叫做Jade啦~
+                            我，回来了
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-07
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-02-21
                         </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
+                                    随笔
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%9D%82%E8%AE%B0/">
+                        <span class="chip bg-color">杂记</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/02/20/react/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/postimages/49.jpeg" class="responsive-img" alt="React">
+                        
+                        <span class="card-title">React</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            虚拟改变真实，数据驱动视图
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -884,58 +932,6 @@ server.listen(PORT, () =&gt; {
                     
                     <a href="/tags/%E5%89%8D%E7%AB%AF/">
                         <span class="chip bg-color">前端</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%90%8E%E7%AB%AF/">
-                        <span class="chip bg-color">后端</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/02/23/algorithm-heap/">
-                    <div class="card-image">
-                        
-                        <img src="/medias/postimages/35.jpg" class="responsive-img" alt="堆">
-                        
-                        <span class="card-title">堆</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            严格地说，堆并不是树
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-23
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E4%B8%93%E4%B8%9A%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    专业基础
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">数据结构和算法</span>
                     </a>
                     
                 </div>
@@ -1130,7 +1126,7 @@ server.listen(PORT, () =&gt; {
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2022</span>
+                <span id="year">2019-2023</span>
             
             <a href="/about" target="_blank">Serio</a>
             |&nbsp;Powered by&nbsp;<a href="#" target="_blank">Hexo</a>
