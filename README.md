@@ -1,5 +1,11 @@
 <!-- <div align="center"> <img src="https://metrics.lecoq.io/CoderSerio?template=classic&config.timezone=Asia%2FShanghai"> </div> -->
 
+<div align="center">
+     <img src="https://img.shields.io/badge/FURRY-CODER-red"/>
+     <img src="https://img.shields.io/badge/GROUP-LEC-orange"/>
+     <img src="https://img.shields.io/badge/Alibaba-%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4-orange"/>
+     <img src="https://img.shields.io/badge/ByteDance-%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8-blue"/>
+</div>
 <div align="center"> 
     <img src="https://github-readme-streak-stats.herokuapp.com/?user=CoderSerio" /> 
 </div>
