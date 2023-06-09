@@ -27,8 +27,8 @@
   <img src="https://img.shields.io/badge/-React-00b4ce?style=flat&logo=react&logoColor=white">
   <img src="https://img.shields.io/badge/-Node.js-3C873A?style=flat&logo=Node.js&logoColor=white">
   <img src="https://img.shields.io/badge/-Koa-33333D?style=flat&logo=koa&logoColor=white">
-  <img src="https://img.shields.io/badge/wechat_miniprogram-09b955?style=flat&logo=wechat&logoColor=white">
   <img src="https://img.shields.io/badge/-less-bf608e?style=flat&logo=less&logoColor=white">
+  <img src="https://img.shields.io/badge/wechat_miniprogram-09b955?style=flat&logo=wechat&logoColor=white">
 </div>
 <p></p>
 
