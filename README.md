@@ -8,6 +8,7 @@
 </div> -->
 <p align="center">
 <h1 height="200px" align="center">Carbon 碳苯<img src="https://cdn.jsdelivr.net/gh/MaleWeb/picture/images/techblog/hi.gif" width="25"></h1>
+<h3 align="center">我的梦想是成为JS Master!</h3>
 <div height="200px" align="center">坚持就是，以刚克刚</div>
 </p>
 <p align="center">
@@ -31,7 +32,7 @@
 </div>
 <p></p>
 
-<h3 align="center">我的梦想是成为JS Master!</h3>
+
 <p align="center">
 LEC团队 (2020.10-2022.4)<br>
 教授的硬件设备公司 (2022.4-2022.5)<br>
