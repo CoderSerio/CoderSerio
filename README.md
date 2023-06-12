@@ -31,7 +31,7 @@
 </div>
 <p></p>
 
-<h3 align="center">一个有梦想的普通人</h3>
+<h3 align="center">我的梦想是成为JS Master!</h3>
 <p align="center">
 LEC团队 (2020.10-2022.4)<br>
 教授的硬件设备公司 (2022.4-2022.5)<br>
