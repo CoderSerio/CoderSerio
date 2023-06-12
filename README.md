@@ -10,12 +10,6 @@
 <h1 height="200px" align="center">Carbon 碳苯<img src="https://cdn.jsdelivr.net/gh/MaleWeb/picture/images/techblog/hi.gif" width="25"></h1>
 <div height="200px" align="center">坚持就是，以刚克刚</div>
 </p>
-- 经历：
-     - 2020.10-2022.4  在 LEC乐程团队 学习成长
-     - 2022.4-2022.5   在 教授的公司 实习
-     - 2022.6-2022.10  在 字节跳动-互娱研发-抖音开放平台 实习
-     - 2023.-2023.4    在 字节跳动-懂车帝-垂直业务 实习
-     - 2023.6-至今    在 阿里巴巴-淘天集团-大淘宝技术 实习<br>
 <p align="center">
 <div align="center">
   <img src="https://img.shields.io/badge/-Git-ee462c?style=flat&logo=git&logoColor=white">
@@ -37,7 +31,14 @@
 </div>
 <p></p>
 
-
+<h3 align="center">一个本科生的技术成长经历</h3>
+<p align="center">
+LEC团队 (2020.10-2022.4)<br>
+教授的硬件设备公司 (2022.4-2022.5)<br>
+字节跳动-互娱研发-抖音开放平台 (2022.6-2022.10)<br>
+字节跳动-懂车帝-垂直业务 (2023.1-2023.4 )<br>
+阿里巴巴-淘天集团-大淘宝技术 (2023.6-至今)<br> 
+</p>
 
 
 <div align="center"> 
@@ -54,4 +55,3 @@
   <img alt="github" src="https://i.giphy.com/media/KzJkzjggfGN5Py6nkT/200.webp" width="100" title="github">
   <img alt="node" src="https://media.giphy.com/media/kdFc8fubgS31b8DsVu/giphy.gif" width="85" title="node">
 </div>
-
