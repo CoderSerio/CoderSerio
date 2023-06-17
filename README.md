@@ -9,7 +9,7 @@
 <p align="center">
 <h1 height="200px" align="center">Carbon 碳苯<img src="https://cdn.jsdelivr.net/gh/MaleWeb/picture/images/techblog/hi.gif" width="25"></h1>
 <!-- <h3 align="center">20级本科生，梦想是成为JS Master!</h3> -->
-<div height="200px" align="center">坚持就是，以刚克刚</div>
+<h3 height="200px" align="center">坚持就是，以刚克刚</h2>
 </p>
 <p align="center">
 <div align="center">
