@@ -9,7 +9,7 @@
 <p align="center">
 <h1 height="200px" align="center">Carbon 碳苯<img src="https://cdn.jsdelivr.net/gh/MaleWeb/picture/images/techblog/hi.gif" width="25"></h1>
 <!-- <h3 align="center">20级本科生，梦想是成为JS Master!</h3> -->
-<h3 height="200px" align="center">坚持就是，以刚克刚</h2>
+<h2 height="200px" align="center">坚持就是，以刚克刚</h2>
 </p>
 <p align="center">
 <div align="center">
@@ -47,7 +47,7 @@ LEC团队 (2020.10-2022.4)<br>
 </div>
 
 <div align="center">
-  <img alt-"html5" src="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif" width="100" title="html">
+  <img alt="html5" src="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif" width="100" title="html">
   <img alt="css" src="https://media.giphy.com/media/fsEaZldNC8A1PJ3mwp/giphy.gif" width="100" title="css">
   <img alt="VSCode" src="https://i.giphy.com/media/IdyAQJVN2kVPNUrojM/200.webp" width="100" title="vscode">
   <img alt="python" src="https://i.giphy.com/media/LMt9638dO8dftAjtco/200.webp" width="100" title="python">
