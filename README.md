@@ -1,15 +1,8 @@
-<!-- <div align="center"> <img src="https://metrics.lecoq.io/CoderSerio?template=classic&config.timezone=Asia%2FShanghai"> </div> -->
 
-<!-- <div align="center">
-     <img src="https://img.shields.io/badge/FURRY-CODER-red"/>
-     <img src="https://img.shields.io/badge/GROUP-LEC-orange"/>
-     <img src="https://img.shields.io/badge/ByteDance-%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8-blue"/>
-     <img src="https://img.shields.io/badge/Alibaba-%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4-orange"/>
-</div> -->
 <p align="center">
-<h1 height="200px" align="center">Carbon 碳苯<img src="https://cdn.jsdelivr.net/gh/MaleWeb/picture/images/techblog/hi.gif" width="25"></h1>
+<h1 height="200px" align="center">Carbon 碳苯⌬<img src="https://cdn.jsdelivr.net/gh/MaleWeb/picture/images/techblog/hi.gif" width="25"></h1>
 <!-- <h3 align="center">20级本科生，梦想是成为JS Master!</h3> -->
-<h2 height="200px" align="center">坚持就是，以刚克刚</h2>
+<h2 height="200px" align="center">If Not Me, Who?</h2>
 </p>
 <p align="center">
 <div align="center">
@@ -32,13 +25,19 @@
 </div>
 <p></p>
 
-
-<p align="center">
-LEC团队-泛前端技术 【2020.10-永远】<br>
-字节跳动-互娱研发(抖音)&懂车帝 【2022.6-2023.5】<br>
-阿里巴巴-大淘宝技术&淘天集团 【2023.5-至今】<br> 
-</p>
-
+- 现状
+     - 全职工作: 阿里巴巴-淘天集团-供给技术
+     - 业余时间:
+          - 持续推进项目&学习计划
+          - 日本語を勉強し続けています...
+- 实习经历
+     - 阿里巴巴-淘天集团-供给技术（杭州）【2023.12 - 2024.03】 `C端业务` `AIGC工具及平台建设` 
+     - 阿里巴巴-大淘宝技术-终端技术（杭州）【2023.05 - 2023.09】 `C端业务`
+     - 字节跳动-懂车帝（重庆）【2023.01 - 2023.05】 `“四轮平台”车辆整备系统相关业务` `业务组件库` `浏览器插件`
+     - 字节跳动-抖音开放平台（深圳）【2022.06 - 2022.10】 `抖音电商商家入驻链路相关业务`
+ 
+- 在校经历
+     - LEC团队-泛前端技术【2020.10-2024.7】 `24届团队负责人` `前端小组组长`
 
 <div align="center"> 
     <img src="https://github-readme-streak-stats.herokuapp.com/?user=CoderSerio" /> 
