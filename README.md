@@ -39,9 +39,11 @@
 - 在校经历
      - LEC团队-泛前端技术【2020.10-2024.7】 `24届团队负责人` `前端小组组长`
 
+<!-- 
 <div align="center"> 
     <img src="https://github-readme-streak-stats.herokuapp.com/?user=CoderSerio" /> 
 </div>
+-->
 
 <div align="center">
   <img alt="html5" src="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif" width="100" title="html">
