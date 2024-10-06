@@ -1,7 +1,6 @@
 
 <p align="center">
 <h1 height="200px" align="center">Carbon 碳苯⌬<img src="https://cdn.jsdelivr.net/gh/MaleWeb/picture/images/techblog/hi.gif" width="25"></h1>
-<!-- <h3 align="center">20级本科生，梦想是成为JS Master!</h3> -->
 <h2 height="200px" align="center">If Not Me, Who?</h2>
 </p>
 <p align="center">
@@ -30,20 +29,10 @@
      - 业余时间:
           - 持续推进开源&项目&学习计划
           - 日本語を勉強し続けています...
-- 实习经历
-     - 阿里巴巴-淘天集团-供给技术（杭州）【2023.12 - 2024.03】 `C端业务` `AIGC工具及平台建设` 
-     - 阿里巴巴-大淘宝技术-终端技术（杭州）【2023.05 - 2023.09】 `C端业务` `低代码`
-     - 字节跳动-懂车帝（重庆）【2023.01 - 2023.05】 `B端业务` `业务组件库` `浏览器插件`
-     - 字节跳动-抖音开放平台（深圳）【2022.06 - 2022.10】 `B端业务` `全栈`
- 
-- 在校经历
-     - LEC团队-泛前端技术【2020.10-2024.7】 `24届团队负责人` `前端小组组长`
+- 经历
+     - 阿里巴巴-大淘宝技术/淘天集团【2023.05 - 2024.03】 `C端业务` `低代码` `AIGC工具及平台建设` 
+     - 字节跳动-抖音开放平台【2022.06 - 2022.10】 `B端业务` `全栈` `业务组件库` `浏览器插件`
 
-<!-- 
-<div align="center"> 
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=CoderSerio" /> 
-</div>
--->
 
 <div align="center">
   <img alt="html5" src="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif" width="100" title="html">
