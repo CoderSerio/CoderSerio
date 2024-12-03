@@ -23,6 +23,7 @@
   <img src="https://img.shields.io/badge/wechat_miniprogram-09b955?style=flat&logo=wechat&logoColor=white">
 </div>
 <p></p>
+
 - 经历
      - 阿里巴巴/淘天集团【2023.05 - 至今】 `C端业务` `低代码` `AIGC工具及平台建设` 
      - 字节跳动【2022.06 - 2023.05】 `B端业务` `全栈` `业务组件库` `浏览器插件`
