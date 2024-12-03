@@ -22,6 +22,11 @@
   <img src="https://img.shields.io/badge/-less-bf608e?style=flat&logo=less&logoColor=white">
   <img src="https://img.shields.io/badge/wechat_miniprogram-09b955?style=flat&logo=wechat&logoColor=white">
 </div>
+
+<p align="center">
+  <img height=200 align="center" src="https://github-readme-streak-stats.herokuapp.com?user=CoderSerio&theme=gruvbox-duo&hide_border=%E7%9C%9F&border_radius=6&locale=zh_Hans&date_format=%5BY%20%5DM%20j&mode=weekly" />
+</p>
+
 <p></p>
 
 - 经历
