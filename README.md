@@ -23,13 +23,6 @@
   <img src="https://img.shields.io/badge/wechat_miniprogram-09b955?style=flat&logo=wechat&logoColor=white">
 </div>
 <p></p>
-
-- 现状
-     - 业余爱好:
-          - 持续推进开源&项目&学习计划
-          - Learning English...
-          - 每天读书半小时，争取2024的最后两个月能读5本书...
-          - 填过去留下的坑...
 - 经历
      - 阿里巴巴/淘天集团【2023.05 - 至今】 `C端业务` `低代码` `AIGC工具及平台建设` 
      - 字节跳动【2022.06 - 2023.05】 `B端业务` `全栈` `业务组件库` `浏览器插件`
