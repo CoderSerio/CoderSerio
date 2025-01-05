@@ -24,6 +24,12 @@
 </div>
 
 
+<div align="center" style="display:flex;">
+
+
+  
+</div>
+
 <p></p>
 
 - 经历
@@ -40,4 +46,9 @@
   <img alt="sublime" src="https://media.giphy.com/media/jnDKffgCfGYOp6cMTK/giphy.gif" width="100" title="sublime">
   <img alt="github" src="https://i.giphy.com/media/KzJkzjggfGN5Py6nkT/200.webp" width="100" title="github">
   <img alt="node" src="https://media.giphy.com/media/kdFc8fubgS31b8DsVu/giphy.gif" width="85" title="node">
+  
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=CoderSerio&hide=makefile,html,cmake,vue,css)](https://github.com/CoderSerio)
 </div>
+
+
+
