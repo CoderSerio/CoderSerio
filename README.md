@@ -25,7 +25,7 @@
 
 <div align="center">
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=CoderSerio&hide=makefile,html,cmake,vue,css,objective-c)](https://github.com/CoderSerio)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=CoderSerio&hide=makefile,html,cmake,vue,css,objective-c,assembly)](https://github.com/CoderSerio)
 
   
 </div>
