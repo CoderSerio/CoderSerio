@@ -32,9 +32,10 @@
 
 <p></p>
 
-- 经历
-     - 阿里巴巴/淘天集团【2023.05 - 至今】 `C端业务` `低代码` `AIGC工具及平台建设` 
-     - 字节跳动【2022.06 - 2023.05】 `B端业务` `全栈` `业务组件库` `浏览器插件`
+- Carrer
+     - Vesoft【2025.03 - now】 `?`
+     - Alibaba (Taobao & Tmall Group)【2023.05 - 2025.03】 `toC` `low code` `AIGC tools` 
+     - Bytedance (Douyin & DCar)【2022.06 - 2023.05】 `toB` `full stack`
 
 
 <div align="center">
