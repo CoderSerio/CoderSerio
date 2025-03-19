@@ -32,11 +32,12 @@
 
 <p></p>
 
+<!-- 
 - Carrer
      - Vesoft【2025.03 - now】 `?`
      - Alibaba (Taobao & Tmall Group)【2023.05 - 2025.03】 `toC` `low code` `AIGC tools` 
      - Bytedance (Douyin & DCar)【2022.06 - 2023.05】 `toB` `full stack`
-
+-->
 
 <div align="center">
 
