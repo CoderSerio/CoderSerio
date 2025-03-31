@@ -25,7 +25,16 @@
 
 <div align="center">
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=CoderSerio&hide=makefile,html,cmake,vue,css,objective-c,assembly)](https://github.com/CoderSerio)
+<!-- [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=CoderSerio&hide=makefile,html,cmake,vue,css,objective-c,assembly)](https://github.com/CoderSerio) -->
+
+<img src="https://github.com/jonacruz89/SAWARATSUKI.ServiceLogos/blob/main/Go/Golang.png" alt="碳苯" width="256"/>
+<img src="https://github.com/jonacruz89/SAWARATSUKI.ServiceLogos/blob/main/React/React.png" alt="carbon" width="365"/>
+<img src="https://github.com/jonacruz89/SAWARATSUKI.ServiceLogos/blob/main/Rust/Rust.png" alt="coder" width="256"/>
+
+
+<br/>
+<img src="https://github.com/jonacruz89/SAWARATSUKI.ServiceLogos/blob/main/Node.js/Node.js.png" alt="serio" width="328" />
+<img src="https://github.com/jonacruz89/SAWARATSUKI.ServiceLogos/blob/main/Vue/Vue.png" alt="furry" width="328"/>
 
   
 </div>
