@@ -1,8 +1,8 @@
-name: Update GitHub Activity
+name: Update README
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 */12 * * *"
   workflow_dispatch:
 
 jobs:
@@ -19,3 +19,8 @@ jobs:
         with:
           GH_USERNAME: CoderSerio
           MAX_LINES: 5
+      - uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          feed_list: "https://furrycoder.com/rss.xml"
+          max_post_count: 5
+          commit_message: "chore: update README"
