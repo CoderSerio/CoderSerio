@@ -16,7 +16,7 @@
 ![CLI](https://img.shields.io/badge/-CLI-000000?style=flat-square&logo=gnu-bash&logoColor=white)
 ![macOS](https://img.shields.io/badge/-macOS-000000?style=flat-square&logo=apple&logoColor=white) -->
 
-> Building frontend infra and AI dev tools. 15+ years shipping, still curious.
+> Building web infra and AI dev tools now 🦊
 
 <!-- <div align="center">
   <img src="https://img.shields.io/badge/-Git-ee462c?style=flat&logo=git&logoColor=white">
