@@ -90,11 +90,7 @@
 ## 📝 Latest Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
-- [Markdown Extended Features](https://furrycoder.com/posts/markdown-extended/)
-- [Expressive Code Example](https://furrycoder.com/posts/expressive-code/)
-- [Simple Guides for Fuwari](https://furrycoder.com/posts/guide/)
-- [Markdown Example](https://furrycoder.com/posts/markdown/)
-- [Include Video in the Posts](https://furrycoder.com/posts/video/)
+- [Sui-Nebula-Analyzer: A Sui Chain Relationship Analyzer Based on NebulaGraph](https://furrycoder.com/posts/sui-nebula-analyzer/)
 <!-- BLOG-POST-LIST:END -->
 
 ## 🔗 Connect
