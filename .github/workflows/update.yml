@@ -18,7 +18,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           GH_USERNAME: CoderSerio
-          MAX_LINES: 5
+          MAX_LINES: 3
       - uses: gautamkrishnar/blog-post-workflow@v1
         with:
           feed_list: "https://furrycoder.com/rss.xml"
