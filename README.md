@@ -80,7 +80,18 @@
 
 
 
-<!-- ## ⚡ Latest Activity -->
+## ⚡ Latest Activity
 
 <!--START_SECTION:activity-->
 <!--END_SECTION:activity-->
+
+## 📝 Latest Blog Posts
+
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
+
+## 🔗 Connect
+
+[![GitHub](https://img.shields.io/badge/-CoderSerio-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/CoderSerio)
+[![Blog](https://img.shields.io/badge/-furrycoder.com-ff6b35?style=flat-square&logo=astro&logoColor=white)](https://furrycoder.com/)
+[![RSS](https://img.shields.io/badge/-RSS-ffa500?style=flat-square&logo=rss&logoColor=white)](https://furrycoder.com/rss.xml)
