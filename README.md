@@ -2,6 +2,8 @@
 <p align="center">
 <h1 height="200px" align="center">Carbon 碳苯⌬<img src="https://cdn.jsdelivr.net/gh/MaleWeb/picture/images/techblog/hi.gif" width="25"></h1>
 </p>
+
+<p align="center">Building web infra and AI dev tools now 🦊</p>
 <p align="center">
 
 <!-- ![Rust](https://img.shields.io/badge/-Rust-000000?style=flat-square&logo=rust&logoColor=white)
@@ -16,7 +18,6 @@
 ![CLI](https://img.shields.io/badge/-CLI-000000?style=flat-square&logo=gnu-bash&logoColor=white)
 ![macOS](https://img.shields.io/badge/-macOS-000000?style=flat-square&logo=apple&logoColor=white) -->
 
-> Building web infra and AI dev tools now 🦊
 
 <!-- <div align="center">
   <img src="https://img.shields.io/badge/-Git-ee462c?style=flat&logo=git&logoColor=white">
