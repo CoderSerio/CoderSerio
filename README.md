@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [xenycx/termtome](https://github.com/xenycx/termtome)<br>
-2. ⬆️ Pushed undefined commit(s) to [CoderSerio/neco-shop](https://github.com/CoderSerio/neco-shop)<br>
-3. ❗️ Opened issue [#1](https://github.com/CoderSerio/pokemand-go/issues/1) in [CoderSerio/pokemand-go](https://github.com/CoderSerio/pokemand-go)<br>
-4. ⭐ Starred [google/zx](https://github.com/google/zx)<br>
-5. ⭐ Starred [google/A2UI](https://github.com/google/A2UI)<br>
+1. ⭐ Starred [web-infra-dev/rsbuild](https://github.com/web-infra-dev/rsbuild)<br>
+2. ⭐ Starred [wangrongding/dev-search](https://github.com/wangrongding/dev-search)<br>
+3. ⭐ Starred [xenycx/termtome](https://github.com/xenycx/termtome)<br>
+4. ⬆️ Pushed undefined commit(s) to [CoderSerio/neco-shop](https://github.com/CoderSerio/neco-shop)<br>
+5. ❗️ Opened issue [#1](https://github.com/CoderSerio/pokemand-go/issues/1) in [CoderSerio/pokemand-go](https://github.com/CoderSerio/pokemand-go)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
