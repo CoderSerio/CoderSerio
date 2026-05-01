@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [webpack/thread-loader](https://github.com/webpack/thread-loader)<br>
-2. ⭐ Starred [PerryTS/perry](https://github.com/PerryTS/perry)<br>
-3. ⭐ Starred [tencent-connect/openclaw-qqbot](https://github.com/tencent-connect/openclaw-qqbot)<br>
-4. ⭐ Starred [web-infra-dev/rsbuild](https://github.com/web-infra-dev/rsbuild)<br>
-5. ⭐ Starred [wangrongding/dev-search](https://github.com/wangrongding/dev-search)<br>
+1. ⬆️ Pushed undefined commit(s) to [atom-universe/FeOPack](https://github.com/atom-universe/FeOPack)<br>
+2. ⭐ Starred [yuanyuekejiJN/AivoClaw](https://github.com/yuanyuekejiJN/AivoClaw)<br>
+3. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
+4. ⭐ Starred [webpack/thread-loader](https://github.com/webpack/thread-loader)<br>
+5. ⭐ Starred [PerryTS/perry](https://github.com/PerryTS/perry)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
