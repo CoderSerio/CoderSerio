@@ -81,10 +81,10 @@
 
 <!--RECENT_ACTIVITY:start-->
 1. ⬆️ Pushed undefined commit(s) to [atom-universe/FeOPack](https://github.com/atom-universe/FeOPack)<br>
-2. ⭐ Starred [yuanyuekejiJN/AivoClaw](https://github.com/yuanyuekejiJN/AivoClaw)<br>
-3. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
-4. ⭐ Starred [webpack/thread-loader](https://github.com/webpack/thread-loader)<br>
-5. ⭐ Starred [PerryTS/perry](https://github.com/PerryTS/perry)<br>
+2. ⭐ Starred [Hmbown/DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI)<br>
+3. ⬆️ Pushed undefined commit(s) to [atom-universe/FeOPack](https://github.com/atom-universe/FeOPack)<br>
+4. ⭐ Starred [yuanyuekejiJN/AivoClaw](https://github.com/yuanyuekejiJN/AivoClaw)<br>
+5. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
