@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. 🤝 Became collaborator on [jianyi-gronk/collect-offers](https://github.com/jianyi-gronk/collect-offers)<br>
-2. ⬆️ Pushed undefined commit(s) to [atom-universe/FeOPack](https://github.com/atom-universe/FeOPack)<br>
-3. ⭐ Starred [Hmbown/DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI)<br>
-4. ⬆️ Pushed undefined commit(s) to [atom-universe/FeOPack](https://github.com/atom-universe/FeOPack)<br>
-5. ⭐ Starred [yuanyuekejiJN/AivoClaw](https://github.com/yuanyuekejiJN/AivoClaw)<br>
+1. ⬆️ Pushed undefined commit(s) to [atom-universe/FeOPack](https://github.com/atom-universe/FeOPack)<br>
+2. ⬆️ Pushed undefined commit(s) to [jianyi-gronk/offer-ready](https://github.com/jianyi-gronk/offer-ready)<br>
+3. ⬆️ Pushed undefined commit(s) to [jianyi-gronk/offer-ready](https://github.com/jianyi-gronk/offer-ready)<br>
+4. 🤝 Became collaborator on [jianyi-gronk/offer-ready](https://github.com/jianyi-gronk/offer-ready)<br>
+5. ⬆️ Pushed undefined commit(s) to [atom-universe/FeOPack](https://github.com/atom-universe/FeOPack)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
