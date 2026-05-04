@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
-2. ⬆️ Pushed undefined commit(s) to [jianyi-gronk/offer-ready](https://github.com/jianyi-gronk/offer-ready)<br>
-3. ⬆️ Pushed undefined commit(s) to [jianyi-gronk/offer-ready](https://github.com/jianyi-gronk/offer-ready)<br>
-4. 🤝 Became collaborator on [jianyi-gronk/offer-ready](https://github.com/jianyi-gronk/offer-ready)<br>
-5. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+1. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
+2. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+3. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+4. ⭐ Starred [jsar-project/rquickjs](https://github.com/jsar-project/rquickjs)<br>
+5. ⭐ Starred [jsar-project/quickjs](https://github.com/jsar-project/quickjs)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
