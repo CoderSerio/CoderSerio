@@ -90,7 +90,7 @@
 ## 📝 Latest Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
-- [Sui-Nebula-Analyzer: A Sui Chain Relationship Analyzer Based on NebulaGraph](https://furrycoder.com/posts/sui-nebula-analyzer/)
+- [Sui TX Analyzer: A Sui Chain TX Analyzer Based on NebulaGraph](https://furrycoder.com/posts/sui-nebula-analyzer/)
 <!-- BLOG-POST-LIST:END -->
 
 ## 🔗 Connect
