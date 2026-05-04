@@ -90,7 +90,8 @@
 ## 📝 Latest Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
-- [Sui TX Analyzer: A Sui Chain TX Analyzer Based on NebulaGraph](https://furrycoder.com/posts/sui-nebula-analyzer/)
+- [feopack: A Mini Rust Bundler, and What I Learned](https://furrycoder.com/posts/feopack/)
+- [A Sui Chain TX Analyzer Based on NebulaGraph](https://furrycoder.com/posts/sui-nebula-analyzer/)
 <!-- BLOG-POST-LIST:END -->
 
 ## 🔗 Connect
