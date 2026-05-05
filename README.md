@@ -81,10 +81,10 @@
 
 <!--RECENT_ACTIVITY:start-->
 1. ⬆️ Pushed undefined commit(s) to [CoderSerio/rush-fs](https://github.com/CoderSerio/rush-fs)<br>
-2. ✔️ Closed issue [#21](https://github.com/CoderSerio/rush-fs/issues/21) in [CoderSerio/rush-fs](https://github.com/CoderSerio/rush-fs)<br>
-3. ⬆️ Pushed undefined commit(s) to [CoderSerio/rush-fs](https://github.com/CoderSerio/rush-fs)<br>
+2. ⬆️ Pushed undefined commit(s) to [CoderSerio/rush-fs](https://github.com/CoderSerio/rush-fs)<br>
+3. ✔️ Closed issue [#21](https://github.com/CoderSerio/rush-fs/issues/21) in [CoderSerio/rush-fs](https://github.com/CoderSerio/rush-fs)<br>
 4. ⬆️ Pushed undefined commit(s) to [CoderSerio/rush-fs](https://github.com/CoderSerio/rush-fs)<br>
-5. 💪 Opened PR [#23](undefined) in [CoderSerio/rush-fs](https://github.com/CoderSerio/rush-fs)<br>
+5. ⬆️ Pushed undefined commit(s) to [CoderSerio/rush-fs](https://github.com/CoderSerio/rush-fs)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
