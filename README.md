@@ -80,10 +80,10 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [withastro/flue](https://github.com/withastro/flue)<br>
-2. ⬆️ Pushed undefined commit(s) to [atom-universe/.github](https://github.com/atom-universe/.github)<br>
+1. ⭐ Starred [boy-twilight-lee/yc-design](https://github.com/boy-twilight-lee/yc-design)<br>
+2. ⭐ Starred [withastro/flue](https://github.com/withastro/flue)<br>
 3. ⬆️ Pushed undefined commit(s) to [atom-universe/.github](https://github.com/atom-universe/.github)<br>
-4. ⬆️ Pushed undefined commit(s) to [claw-org/public-playground](https://github.com/claw-org/public-playground)<br>
+4. ⬆️ Pushed undefined commit(s) to [atom-universe/.github](https://github.com/atom-universe/.github)<br>
 5. ⬆️ Pushed undefined commit(s) to [claw-org/public-playground](https://github.com/claw-org/public-playground)<br>
 <!--RECENT_ACTIVITY:end-->
 
