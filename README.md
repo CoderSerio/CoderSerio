@@ -80,6 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
+1. ⭐ Starred [Schniz/fnm](https://github.com/Schniz/fnm)<br>
+2. ⭐ Starred [volta-cli/volta](https://github.com/volta-cli/volta)<br>
+3. ⭐ Starred [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)<br>
+4. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
+5. ⭐ Starred [boy-twilight-lee/yc-design](https://github.com/boy-twilight-lee/yc-design)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
