@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
-2. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
-3. ⭐ Starred [Schniz/fnm](https://github.com/Schniz/fnm)<br>
-4. ⭐ Starred [volta-cli/volta](https://github.com/volta-cli/volta)<br>
-5. ⭐ Starred [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)<br>
+1. ⭐ Starred [antfu-collective/install-pkg](https://github.com/antfu-collective/install-pkg)<br>
+2. ⭐ Starred [Mikkey-f/RecLite](https://github.com/Mikkey-f/RecLite)<br>
+3. ⭐ Starred [earendil-works/pi](https://github.com/earendil-works/pi)<br>
+4. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
+5. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
