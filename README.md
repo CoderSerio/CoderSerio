@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [antfu-collective/install-pkg](https://github.com/antfu-collective/install-pkg)<br>
-2. ⭐ Starred [Mikkey-f/RecLite](https://github.com/Mikkey-f/RecLite)<br>
-3. ⭐ Starred [earendil-works/pi](https://github.com/earendil-works/pi)<br>
-4. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
-5. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
+1. 🔱 Forked [CoderSerio/johnny-five](https://github.com/CoderSerio/johnny-five) from [rwaldron/johnny-five](https://github.com/rwaldron/johnny-five)<br>
+2. ⭐ Starred [rwaldron/johnny-five](https://github.com/rwaldron/johnny-five)<br>
+3. ⭐ Starred [mian94/miniReact](https://github.com/mian94/miniReact)<br>
+4. ⭐ Starred [hoshyo/image-encryption-system](https://github.com/hoshyo/image-encryption-system)<br>
+5. ⭐ Starred [antfu-collective/install-pkg](https://github.com/antfu-collective/install-pkg)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
