@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. 🔱 Forked [CoderSerio/johnny-five](https://github.com/CoderSerio/johnny-five) from [rwaldron/johnny-five](https://github.com/rwaldron/johnny-five)<br>
-2. ⭐ Starred [rwaldron/johnny-five](https://github.com/rwaldron/johnny-five)<br>
-3. ⭐ Starred [mian94/miniReact](https://github.com/mian94/miniReact)<br>
-4. ⭐ Starred [hoshyo/image-encryption-system](https://github.com/hoshyo/image-encryption-system)<br>
-5. ⭐ Starred [antfu-collective/install-pkg](https://github.com/antfu-collective/install-pkg)<br>
+1. ⭐ Starred [WhoaWhoa/avalonlogs](https://github.com/WhoaWhoa/avalonlogs)<br>
+2. 🔱 Forked [CoderSerio/johnny-five](https://github.com/CoderSerio/johnny-five) from [rwaldron/johnny-five](https://github.com/rwaldron/johnny-five)<br>
+3. ⭐ Starred [rwaldron/johnny-five](https://github.com/rwaldron/johnny-five)<br>
+4. ⭐ Starred [mian94/miniReact](https://github.com/mian94/miniReact)<br>
+5. ⭐ Starred [hoshyo/image-encryption-system](https://github.com/hoshyo/image-encryption-system)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
