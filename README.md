@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [farm-fe/farm](https://github.com/farm-fe/farm)<br>
-2. ⭐ Starred [pureforge/smooth](https://github.com/pureforge/smooth)<br>
-3. ⭐ Starred [Morphicai/harness-fe](https://github.com/Morphicai/harness-fe)<br>
-4. ⭐ Starred [WhoaWhoa/avalonlogs](https://github.com/WhoaWhoa/avalonlogs)<br>
-5. 🔱 Forked [CoderSerio/johnny-five](https://github.com/CoderSerio/johnny-five) from [rwaldron/johnny-five](https://github.com/rwaldron/johnny-five)<br>
+1. ⭐ Starred [tj/n](https://github.com/tj/n)<br>
+2. ⭐ Starred [farm-fe/farm](https://github.com/farm-fe/farm)<br>
+3. ⭐ Starred [pureforge/smooth](https://github.com/pureforge/smooth)<br>
+4. ⭐ Starred [Morphicai/harness-fe](https://github.com/Morphicai/harness-fe)<br>
+5. ⭐ Starred [WhoaWhoa/avalonlogs](https://github.com/WhoaWhoa/avalonlogs)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
