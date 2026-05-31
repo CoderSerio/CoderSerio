@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
-2. ⭐ Starred [Sunny-117/robuild](https://github.com/Sunny-117/robuild)<br>
-3. ⭐ Starred [tj/n](https://github.com/tj/n)<br>
-4. ⭐ Starred [farm-fe/farm](https://github.com/farm-fe/farm)<br>
-5. ⭐ Starred [pureforge/smooth](https://github.com/pureforge/smooth)<br>
+1. 🔱 Forked [atom-universe/bundler-udemy](https://github.com/atom-universe/bundler-udemy) from [gauravsoni1/webpack-udemy](https://github.com/gauravsoni1/webpack-udemy)<br>
+2. ⭐ Starred [gauravsoni1/webpack-udemy](https://github.com/gauravsoni1/webpack-udemy)<br>
+3. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+4. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+5. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
