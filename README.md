@@ -90,7 +90,7 @@
 ## 📝 Latest Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
-- [feopack: A Mini Rust Bundler, and What I Learned](https://furrycoder.com/posts/feopack/)
+- [Feopack: Mini Rspack](https://furrycoder.com/posts/feopack/)
 - [A Sui Chain TX Analyzer Based on NebulaGraph](https://furrycoder.com/posts/sui-nebula-analyzer/)
 <!-- BLOG-POST-LIST:END -->
 
