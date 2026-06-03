@@ -80,10 +80,10 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [zhangyuang/ssr](https://github.com/zhangyuang/ssr)<br>
-2. ⭐ Starred [zhangyuang/leetcode](https://github.com/zhangyuang/leetcode)<br>
-3. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
-4. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
+1. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
+2. ❗️ Opened issue [#24](https://github.com/rush-fs/core/issues/24) in [rush-fs/core](https://github.com/rush-fs/core)<br>
+3. ⭐ Starred [zhangyuang/ssr](https://github.com/zhangyuang/ssr)<br>
+4. ⭐ Starred [zhangyuang/leetcode](https://github.com/zhangyuang/leetcode)<br>
 5. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
 <!--RECENT_ACTIVITY:end-->
 
