@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [ubugeeei-prod/corsa-bind](https://github.com/ubugeeei-prod/corsa-bind)<br>
-2. ⭐ Starred [yuluo-yx/go-shentong](https://github.com/yuluo-yx/go-shentong)<br>
-3. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
-4. ❗️ Opened issue [#24](https://github.com/rush-fs/core/issues/24) in [rush-fs/core](https://github.com/rush-fs/core)<br>
-5. ⭐ Starred [zhangyuang/ssr](https://github.com/zhangyuang/ssr)<br>
+1. ⭐ Starred [Sunny-117/v8-rs](https://github.com/Sunny-117/v8-rs)<br>
+2. ⭐ Starred [ubugeeei-prod/corsa-bind](https://github.com/ubugeeei-prod/corsa-bind)<br>
+3. ⭐ Starred [yuluo-yx/go-shentong](https://github.com/yuluo-yx/go-shentong)<br>
+4. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
+5. ❗️ Opened issue [#24](https://github.com/rush-fs/core/issues/24) in [rush-fs/core](https://github.com/rush-fs/core)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
