@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [cyrus-and/chrome-remote-interface](https://github.com/cyrus-and/chrome-remote-interface)<br>
-2. ⭐ Starred [Sunny-117/v8-rs](https://github.com/Sunny-117/v8-rs)<br>
-3. ⭐ Starred [ubugeeei-prod/corsa-bind](https://github.com/ubugeeei-prod/corsa-bind)<br>
-4. ⭐ Starred [yuluo-yx/go-shentong](https://github.com/yuluo-yx/go-shentong)<br>
-5. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
+1. 🔱 Forked [CoderSerio/vize](https://github.com/CoderSerio/vize) from [ubugeeei-prod/vize](https://github.com/ubugeeei-prod/vize)<br>
+2. ⭐ Starred [ubugeeei-prod/vize](https://github.com/ubugeeei-prod/vize)<br>
+3. ⭐ Starred [cyrus-and/chrome-remote-interface](https://github.com/cyrus-and/chrome-remote-interface)<br>
+4. ⭐ Starred [Sunny-117/v8-rs](https://github.com/Sunny-117/v8-rs)<br>
+5. ⭐ Starred [ubugeeei-prod/corsa-bind](https://github.com/ubugeeei-prod/corsa-bind)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
