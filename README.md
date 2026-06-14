@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
-2. 🔱 Forked [CoderSerio/vize](https://github.com/CoderSerio/vize) from [ubugeeei-prod/vize](https://github.com/ubugeeei-prod/vize)<br>
-3. ⭐ Starred [ubugeeei-prod/vize](https://github.com/ubugeeei-prod/vize)<br>
-4. ⭐ Starred [cyrus-and/chrome-remote-interface](https://github.com/cyrus-and/chrome-remote-interface)<br>
-5. ⭐ Starred [Sunny-117/v8-rs](https://github.com/Sunny-117/v8-rs)<br>
+1. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+2. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+3. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+4. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
+5. 🔱 Forked [CoderSerio/vize](https://github.com/CoderSerio/vize) from [ubugeeei-prod/vize](https://github.com/ubugeeei-prod/vize)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
