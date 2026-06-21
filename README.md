@@ -80,10 +80,10 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [712sir/cs336-learning](https://github.com/712sir/cs336-learning)<br>
-2. ⭐ Starred [Jinghao-coding/doctor-study](https://github.com/Jinghao-coding/doctor-study)<br>
-3. ⭐ Starred [712sir/ai-infra-career](https://github.com/712sir/ai-infra-career)<br>
-4. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+1. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+2. ⭐ Starred [712sir/cs336-learning](https://github.com/712sir/cs336-learning)<br>
+3. ⭐ Starred [Jinghao-coding/doctor-study](https://github.com/Jinghao-coding/doctor-study)<br>
+4. ⭐ Starred [712sir/ai-infra-career](https://github.com/712sir/ai-infra-career)<br>
 5. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
 <!--RECENT_ACTIVITY:end-->
 
