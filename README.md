@@ -80,8 +80,8 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [cornerstonejs/cornerstone3D](https://github.com/cornerstonejs/cornerstone3D)<br>
-2. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+1. ⭐ Starred [Simon-He95/vue-tui](https://github.com/Simon-He95/vue-tui)<br>
+2. ⭐ Starred [cornerstonejs/cornerstone3D](https://github.com/cornerstonejs/cornerstone3D)<br>
 3. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
 4. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
 5. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
