@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
-2. ⬆️ Pushed undefined commit(s) to [CoderSerio/CoderSerio](https://github.com/CoderSerio/CoderSerio)<br>
-3. ⭐ Starred [Simon-He95/vue-tui](https://github.com/Simon-He95/vue-tui)<br>
-4. ⭐ Starred [cornerstonejs/cornerstone3D](https://github.com/cornerstonejs/cornerstone3D)<br>
-5. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+1. ⭐ Starred [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS)<br>
+2. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
+3. ⬆️ Pushed undefined commit(s) to [CoderSerio/CoderSerio](https://github.com/CoderSerio/CoderSerio)<br>
+4. ⭐ Starred [Simon-He95/vue-tui](https://github.com/Simon-He95/vue-tui)<br>
+5. ⭐ Starred [cornerstonejs/cornerstone3D](https://github.com/cornerstonejs/cornerstone3D)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
