@@ -59,7 +59,7 @@
      - Alibaba (Taobao & Tmall Group)【2023.05 - 2025.03】 `toC` `low code` `AIGC tools` 
      - Bytedance (Douyin & DCar)【2022.06 - 2023.05】 `toB` `full stack`
 -->
-[![GitHub Roast](https://githubroast.dev/api/card/CoderSerio)](https://githubroast.dev/u/CoderSerio)
+
 <div align="center">
 <!-- <a href="https://githubroast.dev/u/CoderSerio"><img src="https://githubroast.dev/api/badge/coderserio" alt="GitHub Roast 评分徽章" /></a> -->
 
