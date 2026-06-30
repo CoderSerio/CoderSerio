@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS)<br>
-2. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
-3. ⬆️ Pushed undefined commit(s) to [CoderSerio/CoderSerio](https://github.com/CoderSerio/CoderSerio)<br>
-4. ⭐ Starred [Simon-He95/vue-tui](https://github.com/Simon-He95/vue-tui)<br>
-5. ⭐ Starred [cornerstonejs/cornerstone3D](https://github.com/cornerstonejs/cornerstone3D)<br>
+1. ⬆️ Pushed undefined commit(s) to [CoderSerio/CoderSerio](https://github.com/CoderSerio/CoderSerio)<br>
+2. ⬆️ Pushed undefined commit(s) to [lec-org/conf-events](https://github.com/lec-org/conf-events)<br>
+3. ⬆️ Pushed undefined commit(s) to [lec-org/conf-events](https://github.com/lec-org/conf-events)<br>
+4. ⬆️ Pushed undefined commit(s) to [lec-org/conf-events](https://github.com/lec-org/conf-events)<br>
+5. ⬆️ Pushed undefined commit(s) to [lec-org/conf-events](https://github.com/lec-org/conf-events)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
