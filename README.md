@@ -80,8 +80,8 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [CoderSerio/CoderSerio](https://github.com/CoderSerio/CoderSerio)<br>
-2. ⬆️ Pushed undefined commit(s) to [lec-org/conf-events](https://github.com/lec-org/conf-events)<br>
+1. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+2. ⬆️ Pushed undefined commit(s) to [CoderSerio/CoderSerio](https://github.com/CoderSerio/CoderSerio)<br>
 3. ⬆️ Pushed undefined commit(s) to [lec-org/conf-events](https://github.com/lec-org/conf-events)<br>
 4. ⬆️ Pushed undefined commit(s) to [lec-org/conf-events](https://github.com/lec-org/conf-events)<br>
 5. ⬆️ Pushed undefined commit(s) to [lec-org/conf-events](https://github.com/lec-org/conf-events)<br>
