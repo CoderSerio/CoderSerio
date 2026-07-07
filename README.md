@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [atom-universe/use-web-worker](https://github.com/atom-universe/use-web-worker)<br>
-2. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+1. ⭐ Starred [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+2. ⬆️ Pushed undefined commit(s) to [atom-universe/use-web-worker](https://github.com/atom-universe/use-web-worker)<br>
 3. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
-4. ⬆️ Pushed undefined commit(s) to [atom-universe/use-web-worker](https://github.com/atom-universe/use-web-worker)<br>
-5. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+4. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+5. ⬆️ Pushed undefined commit(s) to [atom-universe/use-web-worker](https://github.com/atom-universe/use-web-worker)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
