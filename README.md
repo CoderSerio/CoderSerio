@@ -80,9 +80,9 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [rush-fs/core](https://github.com/rush-fs/core)<br>
-2. 💪 Opened PR [#25](undefined) in [rush-fs/core](https://github.com/rush-fs/core)<br>
-3. ⬆️ Pushed undefined commit(s) to [rush-fs/core](https://github.com/rush-fs/core)<br>
+1. ⬆️ Pushed undefined commit(s) to [feojs/core](https://github.com/feojs/core)<br>
+2. 💪 Opened PR [#25](undefined) in [feojs/core](https://github.com/feojs/core)<br>
+3. ⬆️ Pushed undefined commit(s) to [feojs/core](https://github.com/feojs/core)<br>
 4. ⭐ Starred [ant-design/x-markdown-mini](https://github.com/ant-design/x-markdown-mini)<br>
 5. ⭐ Starred [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
 <!--RECENT_ACTIVITY:end-->
