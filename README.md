@@ -82,9 +82,9 @@
 <!--RECENT_ACTIVITY:start-->
 1. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
 2. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
-3. ⭐ Starred [unpack-dev/unpack](https://github.com/unpack-dev/unpack)<br>
-4. ⬆️ Pushed undefined commit(s) to [feojs/core](https://github.com/feojs/core)<br>
-5. 💪 Opened PR [#25](undefined) in [feojs/core](https://github.com/feojs/core)<br>
+3. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+4. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+5. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
