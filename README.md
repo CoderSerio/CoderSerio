@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [unpack-dev/unpack](https://github.com/unpack-dev/unpack)<br>
-2. ⬆️ Pushed undefined commit(s) to [feojs/core](https://github.com/feojs/core)<br>
-3. 💪 Opened PR [#25](undefined) in [feojs/core](https://github.com/feojs/core)<br>
+1. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+2. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+3. ⭐ Starred [unpack-dev/unpack](https://github.com/unpack-dev/unpack)<br>
 4. ⬆️ Pushed undefined commit(s) to [feojs/core](https://github.com/feojs/core)<br>
-5. ⭐ Starred [ant-design/x-markdown-mini](https://github.com/ant-design/x-markdown-mini)<br>
+5. 💪 Opened PR [#25](undefined) in [feojs/core](https://github.com/feojs/core)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
