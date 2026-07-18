@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
-2. 💬 Commented on [#205](https://github.com/apache/dubbo-rust/pull/205#issuecomment-4995403934) in [apache/dubbo-rust](https://github.com/apache/dubbo-rust)<br>
-3. 💪 Opened PR [#205](undefined) in [apache/dubbo-rust](https://github.com/apache/dubbo-rust)<br>
-4. 🔱 Forked [CoderSerio/dubbo-rust](https://github.com/CoderSerio/dubbo-rust) from [apache/dubbo-rust](https://github.com/apache/dubbo-rust)<br>
-5. ⭐ Starred [zellij-org/zellij](https://github.com/zellij-org/zellij)<br>
+1. ⭐ Starred [pocket-stack/pocketjs](https://github.com/pocket-stack/pocketjs)<br>
+2. ⭐ Starred [zephyrproject-rtos/zephyr](https://github.com/zephyrproject-rtos/zephyr)<br>
+3. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+4. 💬 Commented on [#205](https://github.com/apache/dubbo-rust/pull/205#issuecomment-4995403934) in [apache/dubbo-rust](https://github.com/apache/dubbo-rust)<br>
+5. 💪 Opened PR [#205](undefined) in [apache/dubbo-rust](https://github.com/apache/dubbo-rust)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
