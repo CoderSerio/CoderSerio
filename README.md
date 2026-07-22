@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+1. ⭐ Starred [wangmiaozero/Claude-Code-buddy-game](https://github.com/wangmiaozero/Claude-Code-buddy-game)<br>
 2. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
 3. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
-4. ⭐ Starred [pocket-stack/pocketjs](https://github.com/pocket-stack/pocketjs)<br>
-5. ⭐ Starred [zephyrproject-rtos/zephyr](https://github.com/zephyrproject-rtos/zephyr)<br>
+4. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+5. ⭐ Starred [pocket-stack/pocketjs](https://github.com/pocket-stack/pocketjs)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
