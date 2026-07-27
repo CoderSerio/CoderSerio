@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [wangmiaozero/Claude-Code-buddy-game](https://github.com/wangmiaozero/Claude-Code-buddy-game)<br>
-2. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
-3. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
+1. ⭐ Starred [hahhforest/pi-textbook](https://github.com/hahhforest/pi-textbook)<br>
+2. ⭐ Starred [chokcoco/teach-yourself-skill](https://github.com/chokcoco/teach-yourself-skill)<br>
+3. ⭐ Starred [wangmiaozero/Claude-Code-buddy-game](https://github.com/wangmiaozero/Claude-Code-buddy-game)<br>
 4. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
-5. ⭐ Starred [pocket-stack/pocketjs](https://github.com/pocket-stack/pocketjs)<br>
+5. ⬆️ Pushed undefined commit(s) to [atom-universe/feopack](https://github.com/atom-universe/feopack)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
