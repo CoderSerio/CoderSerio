@@ -80,9 +80,9 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
-2. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
-3. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
+1. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
+2. ⭐ Starred [liuhong1happy/liuhong1happy.github.io](https://github.com/liuhong1happy/liuhong1happy.github.io)<br>
+3. ⭐ Starred [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
 4. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
 5. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
 <!--RECENT_ACTIVITY:end-->
