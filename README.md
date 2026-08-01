@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman)<br>
-2. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
+1. ⭐ Starred [arjun988/blender-skills](https://github.com/arjun988/blender-skills)<br>
+2. ⭐ Starred [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman)<br>
 3. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
-4. ⭐ Starred [liuhong1happy/liuhong1happy.github.io](https://github.com/liuhong1happy/liuhong1happy.github.io)<br>
-5. ⭐ Starred [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
+4. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
+5. ⭐ Starred [liuhong1happy/liuhong1happy.github.io](https://github.com/liuhong1happy/liuhong1happy.github.io)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
