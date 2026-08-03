@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [ChrisHeria/bilibili](https://github.com/ChrisHeria/bilibili)<br>
-2. ⭐ Starred [diivi/aseprite-mcp](https://github.com/diivi/aseprite-mcp)<br>
-3. ⭐ Starred [arjun988/blender-skills](https://github.com/arjun988/blender-skills)<br>
-4. ⭐ Starred [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman)<br>
-5. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
+1. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
+2. ⭐ Starred [ChrisHeria/bilibili](https://github.com/ChrisHeria/bilibili)<br>
+3. ⭐ Starred [diivi/aseprite-mcp](https://github.com/diivi/aseprite-mcp)<br>
+4. ⭐ Starred [arjun988/blender-skills](https://github.com/arjun988/blender-skills)<br>
+5. ⭐ Starred [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
