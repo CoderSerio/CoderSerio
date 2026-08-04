@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
-2. ⭐ Starred [ChrisHeria/bilibili](https://github.com/ChrisHeria/bilibili)<br>
-3. ⭐ Starred [diivi/aseprite-mcp](https://github.com/diivi/aseprite-mcp)<br>
-4. ⭐ Starred [arjun988/blender-skills](https://github.com/arjun988/blender-skills)<br>
-5. ⭐ Starred [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman)<br>
+1. ⭐ Starred [KaiseiYokoyama/joycon-rs](https://github.com/KaiseiYokoyama/joycon-rs)<br>
+2. ⭐ Starred [matiaspalmac/everything-imu](https://github.com/matiaspalmac/everything-imu)<br>
+3. ⭐ Starred [dekuNukem/Nintendo_Switch_Reverse_Engineering](https://github.com/dekuNukem/Nintendo_Switch_Reverse_Engineering)<br>
+4. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
+5. ⭐ Starred [ChrisHeria/bilibili](https://github.com/ChrisHeria/bilibili)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
