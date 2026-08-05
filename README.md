@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [voidzero-dev/vite-task](https://github.com/voidzero-dev/vite-task)<br>
-2. ⭐ Starred [KaiseiYokoyama/joycon-rs](https://github.com/KaiseiYokoyama/joycon-rs)<br>
-3. ⭐ Starred [matiaspalmac/everything-imu](https://github.com/matiaspalmac/everything-imu)<br>
-4. ⭐ Starred [dekuNukem/Nintendo_Switch_Reverse_Engineering](https://github.com/dekuNukem/Nintendo_Switch_Reverse_Engineering)<br>
-5. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
+1. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
+2. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
+3. ⭐ Starred [voidzero-dev/vite-task](https://github.com/voidzero-dev/vite-task)<br>
+4. ⭐ Starred [KaiseiYokoyama/joycon-rs](https://github.com/KaiseiYokoyama/joycon-rs)<br>
+5. ⭐ Starred [matiaspalmac/everything-imu](https://github.com/matiaspalmac/everything-imu)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
