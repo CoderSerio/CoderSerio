@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
+1. ⭐ Starred [tt-a1i/archify](https://github.com/tt-a1i/archify)<br>
 2. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
-3. ⭐ Starred [voidzero-dev/vite-task](https://github.com/voidzero-dev/vite-task)<br>
-4. ⭐ Starred [KaiseiYokoyama/joycon-rs](https://github.com/KaiseiYokoyama/joycon-rs)<br>
-5. ⭐ Starred [matiaspalmac/everything-imu](https://github.com/matiaspalmac/everything-imu)<br>
+3. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
+4. ⭐ Starred [voidzero-dev/vite-task](https://github.com/voidzero-dev/vite-task)<br>
+5. ⭐ Starred [KaiseiYokoyama/joycon-rs](https://github.com/KaiseiYokoyama/joycon-rs)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
