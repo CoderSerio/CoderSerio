@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
-2. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
-3. ⭐ Starred [tt-a1i/archify](https://github.com/tt-a1i/archify)<br>
+1. ⬆️ Pushed undefined commit(s) to [lec-org/web-to-native](https://github.com/lec-org/web-to-native)<br>
+2. 🤝 Became collaborator on [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
+3. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
 4. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
-5. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
+5. ⭐ Starred [tt-a1i/archify](https://github.com/tt-a1i/archify)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
