@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [lec-org/web-to-native](https://github.com/lec-org/web-to-native)<br>
-2. 🤝 Became collaborator on [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
-3. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
+1. ⭐ Starred [sophiamyang/finger-frame-effect-ai](https://github.com/sophiamyang/finger-frame-effect-ai)<br>
+2. ⬆️ Pushed undefined commit(s) to [lec-org/web-to-native](https://github.com/lec-org/web-to-native)<br>
+3. 🤝 Became collaborator on [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
 4. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
-5. ⭐ Starred [tt-a1i/archify](https://github.com/tt-a1i/archify)<br>
+5. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
