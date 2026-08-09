@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [Furry-Xiyi/WinUIonWeb](https://github.com/Furry-Xiyi/WinUIonWeb)<br>
-2. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
-3. ⭐ Starred [sophiamyang/finger-frame-effect-ai](https://github.com/sophiamyang/finger-frame-effect-ai)<br>
-4. ⬆️ Pushed undefined commit(s) to [lec-org/web-to-native](https://github.com/lec-org/web-to-native)<br>
-5. 🤝 Became collaborator on [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
+1. ⬆️ Pushed undefined commit(s) to [CoderSerio/MCU-51](https://github.com/CoderSerio/MCU-51)<br>
+2. ⭐ Starred [Furry-Xiyi/WinUIonWeb](https://github.com/Furry-Xiyi/WinUIonWeb)<br>
+3. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
+4. ⭐ Starred [sophiamyang/finger-frame-effect-ai](https://github.com/sophiamyang/finger-frame-effect-ai)<br>
+5. ⬆️ Pushed undefined commit(s) to [lec-org/web-to-native](https://github.com/lec-org/web-to-native)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
