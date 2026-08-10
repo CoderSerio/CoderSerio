@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [CoderSerio/MCU-51](https://github.com/CoderSerio/MCU-51)<br>
-2. ⭐ Starred [Furry-Xiyi/WinUIonWeb](https://github.com/Furry-Xiyi/WinUIonWeb)<br>
-3. ⬆️ Pushed undefined commit(s) to [CoderSerio/vibecon](https://github.com/CoderSerio/vibecon)<br>
-4. ⭐ Starred [sophiamyang/finger-frame-effect-ai](https://github.com/sophiamyang/finger-frame-effect-ai)<br>
-5. ⬆️ Pushed undefined commit(s) to [lec-org/web-to-native](https://github.com/lec-org/web-to-native)<br>
+1. ⭐ Starred [Your-AI-Dept/yaid-hackathon](https://github.com/Your-AI-Dept/yaid-hackathon)<br>
+2. ⬆️ Pushed undefined commit(s) to [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
+3. 💬 Commented on [#1](https://github.com/NaClzzz/LEC-PPT/pull/1#issuecomment-5232732279) in [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
+4. 💪 Opened PR [#1](undefined) in [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
+5. 🔱 Forked [lec-org/LEC-Official-Website](https://github.com/lec-org/LEC-Official-Website) from [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
