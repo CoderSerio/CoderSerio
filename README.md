@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [Your-AI-Dept/yaid-hackathon](https://github.com/Your-AI-Dept/yaid-hackathon)<br>
-2. ⬆️ Pushed undefined commit(s) to [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
-3. 💬 Commented on [#1](https://github.com/NaClzzz/LEC-PPT/pull/1#issuecomment-5232732279) in [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
-4. 💪 Opened PR [#1](undefined) in [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
-5. 🔱 Forked [lec-org/LEC-Official-Website](https://github.com/lec-org/LEC-Official-Website) from [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
+1. ⭐ Starred [octanejs/octane](https://github.com/octanejs/octane)<br>
+2. ⭐ Starred [Your-AI-Dept/yaid-hackathon](https://github.com/Your-AI-Dept/yaid-hackathon)<br>
+3. ⬆️ Pushed undefined commit(s) to [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
+4. 💬 Commented on [#1](https://github.com/NaClzzz/LEC-PPT/pull/1#issuecomment-5232732279) in [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
+5. 💪 Opened PR [#1](undefined) in [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
