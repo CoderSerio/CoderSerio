@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [octanejs/octane](https://github.com/octanejs/octane)<br>
-2. ⭐ Starred [Your-AI-Dept/yaid-hackathon](https://github.com/Your-AI-Dept/yaid-hackathon)<br>
-3. ⬆️ Pushed undefined commit(s) to [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
-4. 💬 Commented on [#1](https://github.com/NaClzzz/LEC-PPT/pull/1#issuecomment-5232732279) in [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
-5. 💪 Opened PR [#1](undefined) in [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
+1. ⭐ Starred [alibaba/anyproxy](https://github.com/alibaba/anyproxy)<br>
+2. ⭐ Starred [octanejs/octane](https://github.com/octanejs/octane)<br>
+3. ⭐ Starred [Your-AI-Dept/yaid-hackathon](https://github.com/Your-AI-Dept/yaid-hackathon)<br>
+4. ⬆️ Pushed undefined commit(s) to [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
+5. 💬 Commented on [#1](https://github.com/NaClzzz/LEC-PPT/pull/1#issuecomment-5232732279) in [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
