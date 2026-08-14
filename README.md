@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-2. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-3. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-4. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-5. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+1. ❗️ Opened issue [#14](https://github.com/vooyajs/vooya/issues/14) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+2. 🔱 Forked [CoderSerio/Six-Dimensional-Chart-Maker](https://github.com/CoderSerio/Six-Dimensional-Chart-Maker) from [PeaceDove2008/Six-Dimensional-Chart-Maker](https://github.com/PeaceDove2008/Six-Dimensional-Chart-Maker)<br>
+3. ⭐ Starred [PeaceDove2008/Six-Dimensional-Chart-Maker](https://github.com/PeaceDove2008/Six-Dimensional-Chart-Maker)<br>
+4. ❗️ Opened issue [#13](https://github.com/vooyajs/vooya/issues/13) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+5. ❗️ Opened issue [#12](https://github.com/vooyajs/vooya/issues/12) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
