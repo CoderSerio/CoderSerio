@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ❗️ Opened issue [#2](https://github.com/vooyajs/vooya/issues/2) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-2. ⭐ Starred [alibaba/anyproxy](https://github.com/alibaba/anyproxy)<br>
-3. ⭐ Starred [octanejs/octane](https://github.com/octanejs/octane)<br>
-4. ⭐ Starred [Your-AI-Dept/yaid-hackathon](https://github.com/Your-AI-Dept/yaid-hackathon)<br>
-5. ⬆️ Pushed undefined commit(s) to [NaClzzz/LEC-PPT](https://github.com/NaClzzz/LEC-PPT)<br>
+1. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+2. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+3. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+4. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+5. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
