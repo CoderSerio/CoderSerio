@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. 💬 Commented on [#32](https://github.com/vooyajs/vooya/pull/32#discussion_r3790380561) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-2. 💬 Commented on [#32](https://github.com/vooyajs/vooya/pull/32#discussion_r3790375091) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-3. 💬 Commented on [#32](https://github.com/vooyajs/vooya/pull/32#discussion_r3790370221) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-4. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-5. 💪 Opened PR [#32](undefined) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+1. 💬 Commented on [#38](https://github.com/vooyajs/vooya/issues/38#issuecomment-5306841810) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+2. 💬 Commented on [#22](https://github.com/vooyajs/vooya/issues/22#issuecomment-5306841732) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+3. 💬 Commented on [#21](https://github.com/vooyajs/vooya/issues/21#issuecomment-5306841647) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+4. 💬 Commented on [#18](https://github.com/vooyajs/vooya/issues/18#issuecomment-5306841573) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+5. ❗️ Opened issue [#38](https://github.com/vooyajs/vooya/issues/38) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
