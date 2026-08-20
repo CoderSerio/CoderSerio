@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [CoderSerio/octane](https://github.com/CoderSerio/octane)<br>
-2. ⭐ Starred [anywhere-labs/deepseek-harness-desktop](https://github.com/anywhere-labs/deepseek-harness-desktop)<br>
-3. ✌️ Released [Vooya 0.1.0-alpha.9](https://github.com/vooyajs/vooya/releases/tag/v0.1.0-alpha.9) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-4. 💬 Commented on [#115](https://github.com/noctisynth/semifold/issues/115#issuecomment-5348776752) in [noctisynth/semifold](https://github.com/noctisynth/semifold)<br>
-5. ❗️ Opened issue [#115](https://github.com/noctisynth/semifold/issues/115) in [noctisynth/semifold](https://github.com/noctisynth/semifold)<br>
+1. ⭐ Starred [HD838A/remote-mic-app](https://github.com/HD838A/remote-mic-app)<br>
+2. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+3. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+4. ✔️ Closed issue [#37](https://github.com/vooyajs/vooya/issues/37) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+5. 💬 Commented on [#59](https://github.com/vooyajs/vooya/pull/59#issuecomment-5353671591) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
