@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ❗️ Opened issue [#82](https://github.com/vooyajs/vooya/issues/82) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-2. ❗️ Opened issue [#81](https://github.com/vooyajs/vooya/issues/81) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-3. 💪 Opened PR [#80](undefined) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-4. 💪 Opened PR [#79](undefined) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-5. 💪 Opened PR [#78](undefined) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+1. ✔️ Closed issue [#34](https://github.com/vooyajs/vooya/issues/34) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+2. 💬 Commented on [#83](https://github.com/vooyajs/vooya/pull/83#issuecomment-5368160448) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+3. 👍 Approved [#83](https://github.com/vooyajs/vooya/pull/83#pullrequestreview-4991735297) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+4. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+5. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
