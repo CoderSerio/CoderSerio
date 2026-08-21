@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [HD838A/remote-mic-app](https://github.com/HD838A/remote-mic-app)<br>
-2. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-3. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-4. ✔️ Closed issue [#37](https://github.com/vooyajs/vooya/issues/37) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-5. 💬 Commented on [#59](https://github.com/vooyajs/vooya/pull/59#issuecomment-5353671591) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+1. ❗️ Opened issue [#82](https://github.com/vooyajs/vooya/issues/82) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+2. ❗️ Opened issue [#81](https://github.com/vooyajs/vooya/issues/81) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+3. 💪 Opened PR [#80](undefined) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+4. 💪 Opened PR [#79](undefined) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+5. 💪 Opened PR [#78](undefined) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
