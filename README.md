@@ -80,10 +80,10 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-2. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya-lab](https://github.com/vooyajs/vooya-lab)<br>
-3. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-4. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya-lab](https://github.com/vooyajs/vooya-lab)<br>
+1. ⭐ Starred [magic-akari/syntaxase](https://github.com/magic-akari/syntaxase)<br>
+2. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+3. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya-lab](https://github.com/vooyajs/vooya-lab)<br>
+4. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
 5. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya-lab](https://github.com/vooyajs/vooya-lab)<br>
 <!--RECENT_ACTIVITY:end-->
 
