@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [mbasso/react-wasm](https://github.com/mbasso/react-wasm)<br>
-2. ⭐ Starred [VienLi/CcClip](https://github.com/VienLi/CcClip)<br>
-3. ⭐ Starred [karasjs/wasm](https://github.com/karasjs/wasm)<br>
-4. ⭐ Starred [dora-rs/dora](https://github.com/dora-rs/dora)<br>
-5. 💬 Commented on [#60](https://github.com/vooyajs/vooya/issues/60#issuecomment-5400262404) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+1. ❗️ Opened issue [#97](https://github.com/vooyajs/vooya/issues/97) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+2. ⭐ Starred [esmnext/esmx](https://github.com/esmnext/esmx)<br>
+3. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+4. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+5. ⭐ Starred [lllyasviel/VCC](https://github.com/lllyasviel/VCC)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
