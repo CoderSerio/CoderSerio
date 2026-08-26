@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. 💪 Opened PR [#15334](undefined) in [web-infra-dev/rspack](https://github.com/web-infra-dev/rspack)<br>
-2. ⬆️ Pushed undefined commit(s) to [CoderSerio/rspack](https://github.com/CoderSerio/rspack)<br>
-3. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-4. 🔱 Forked [CoderSerio/rspack](https://github.com/CoderSerio/rspack) from [web-infra-dev/rspack](https://github.com/web-infra-dev/rspack)<br>
-5. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+1. ⭐ Starred [bevyengine/bevy](https://github.com/bevyengine/bevy)<br>
+2. 💬 Commented on [#826](https://github.com/octanejs/octane/issues/826#issuecomment-5422636118) in [octanejs/octane](https://github.com/octanejs/octane)<br>
+3. 💬 Commented on [#826](https://github.com/octanejs/octane/issues/826#issuecomment-5422327535) in [octanejs/octane](https://github.com/octanejs/octane)<br>
+4. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+5. 💪 Opened PR [#15334](undefined) in [web-infra-dev/rspack](https://github.com/web-infra-dev/rspack)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
