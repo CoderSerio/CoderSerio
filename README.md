@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ❗️ Opened issue [#97](https://github.com/vooyajs/vooya/issues/97) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-2. ⭐ Starred [esmnext/esmx](https://github.com/esmnext/esmx)<br>
+1. 💪 Opened PR [#15334](undefined) in [web-infra-dev/rspack](https://github.com/web-infra-dev/rspack)<br>
+2. ⬆️ Pushed undefined commit(s) to [CoderSerio/rspack](https://github.com/CoderSerio/rspack)<br>
 3. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-4. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-5. ⭐ Starred [lllyasviel/VCC](https://github.com/lllyasviel/VCC)<br>
+4. 🔱 Forked [CoderSerio/rspack](https://github.com/CoderSerio/rspack) from [web-infra-dev/rspack](https://github.com/web-infra-dev/rspack)<br>
+5. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
