@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [bevyengine/bevy](https://github.com/bevyengine/bevy)<br>
-2. 💬 Commented on [#826](https://github.com/octanejs/octane/issues/826#issuecomment-5422636118) in [octanejs/octane](https://github.com/octanejs/octane)<br>
-3. 💬 Commented on [#826](https://github.com/octanejs/octane/issues/826#issuecomment-5422327535) in [octanejs/octane](https://github.com/octanejs/octane)<br>
-4. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-5. 💪 Opened PR [#15334](undefined) in [web-infra-dev/rspack](https://github.com/web-infra-dev/rspack)<br>
+1. ⭐ Starred [skymecode/deepseek-harness-for-vscode](https://github.com/skymecode/deepseek-harness-for-vscode)<br>
+2. ✔️ Closed issue [#4](https://github.com/vooyajs/fs/issues/4) in [vooyajs/fs](https://github.com/vooyajs/fs)<br>
+3. ✔️ Closed issue [#19](https://github.com/vooyajs/fs/issues/19) in [vooyajs/fs](https://github.com/vooyajs/fs)<br>
+4. 💪 Opened PR [#26120](undefined) in [oxc-project/oxc](https://github.com/oxc-project/oxc)<br>
+5. 💪 Opened PR [#26118](undefined) in [oxc-project/oxc](https://github.com/oxc-project/oxc)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
