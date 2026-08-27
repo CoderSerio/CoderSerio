@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [skymecode/deepseek-harness-for-vscode](https://github.com/skymecode/deepseek-harness-for-vscode)<br>
-2. ✔️ Closed issue [#4](https://github.com/vooyajs/fs/issues/4) in [vooyajs/fs](https://github.com/vooyajs/fs)<br>
-3. ✔️ Closed issue [#19](https://github.com/vooyajs/fs/issues/19) in [vooyajs/fs](https://github.com/vooyajs/fs)<br>
-4. 💪 Opened PR [#26120](undefined) in [oxc-project/oxc](https://github.com/oxc-project/oxc)<br>
-5. 💪 Opened PR [#26118](undefined) in [oxc-project/oxc](https://github.com/oxc-project/oxc)<br>
+1. 💬 Commented on [#25](https://github.com/vooyajs/vooya/issues/25#issuecomment-5439486232) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+2. ✔️ Closed issue [#25](https://github.com/vooyajs/vooya/issues/25) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+3. 💬 Commented on [#26120](https://github.com/oxc-project/oxc/pull/26120#issuecomment-5437659598) in [oxc-project/oxc](https://github.com/oxc-project/oxc)<br>
+4. 💬 Commented on [#26120](https://github.com/oxc-project/oxc/pull/26120#issuecomment-5437205640) in [oxc-project/oxc](https://github.com/oxc-project/oxc)<br>
+5. ⬆️ Pushed undefined commit(s) to [CoderSerio/oxc](https://github.com/CoderSerio/oxc)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
