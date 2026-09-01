@@ -80,10 +80,10 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [simonw/moebius-web](https://github.com/simonw/moebius-web)<br>
-2. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya-lab](https://github.com/vooyajs/vooya-lab)<br>
-3. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya-lab](https://github.com/vooyajs/vooya-lab)<br>
-4. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
+1. ⭐ Starred [mqyqingfeng/ai-agent-development-guide](https://github.com/mqyqingfeng/ai-agent-development-guide)<br>
+2. ⬆️ Pushed undefined commit(s) to [vooyajs/fs](https://github.com/vooyajs/fs)<br>
+3. ⭐ Starred [simonw/moebius-web](https://github.com/simonw/moebius-web)<br>
+4. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya-lab](https://github.com/vooyajs/vooya-lab)<br>
 5. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya-lab](https://github.com/vooyajs/vooya-lab)<br>
 <!--RECENT_ACTIVITY:end-->
 
