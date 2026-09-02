@@ -90,6 +90,8 @@
 ## 📝 Latest Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
+- [Feopack Loaders: From Text Files to Virtual Modules](https://furrycoder.com/posts/loaders-of-rspack/)
+- [Feopack Loaders: Pitching Across Rust and JavaScript](https://furrycoder.com/posts/feopack-pitch-and-js-loaders/)
 - [Feopack: Mini Rspack](https://furrycoder.com/posts/feopack/)
 - [A Sui Chain TX Analyzer Based on NebulaGraph](https://furrycoder.com/posts/sui-nebula-analyzer/)
 <!-- BLOG-POST-LIST:END -->
