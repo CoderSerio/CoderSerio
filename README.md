@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
-2. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
-3. 💬 Commented on [#109](https://github.com/vooyajs/vooya/pull/109#discussion_r3913129477) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-4. 💬 Commented on [#112](https://github.com/vooyajs/vooya/pull/112#discussion_r3912397870) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-5. 💬 Commented on [#112](https://github.com/vooyajs/vooya/pull/112#discussion_r3912395862) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+1. 💪 Opened PR [#192](undefined) in [yuku-toolchain/yuku](https://github.com/yuku-toolchain/yuku)<br>
+2. 💬 Commented on [#191](https://github.com/yuku-toolchain/yuku/issues/191#issuecomment-5554486174) in [yuku-toolchain/yuku](https://github.com/yuku-toolchain/yuku)<br>
+3. ❗️ Opened issue [#191](https://github.com/yuku-toolchain/yuku/issues/191) in [yuku-toolchain/yuku](https://github.com/yuku-toolchain/yuku)<br>
+4. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
+5. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
