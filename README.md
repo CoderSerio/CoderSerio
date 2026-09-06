@@ -90,11 +90,11 @@
 ## 📝 Latest Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
+- [Feopack: Turning One Build into a Watch Loop](https://furrycoder.com/posts/feopack-watch-mode/)
 - [Feopack: Turning the Compiler Lifecycle into a Plugin System](https://furrycoder.com/posts/feopack-loaders-and-hooks/)
 - [Feopack: Loader Pitch Across Rust and JavaScript](https://furrycoder.com/posts/feopack-pitch-and-js-loaders/)
 - [Feopack: From Text Files to Virtual Modules](https://furrycoder.com/posts/loaders-of-rspack/)
 - [Feopack: From Source Files to a Working Bundle](https://furrycoder.com/posts/feopack-from-source-to-bundle/)
-- [Feopack: From a JavaScript API to a Rust Compiler](https://furrycoder.com/posts/feopack/)
 <!-- BLOG-POST-LIST:END -->
 
 ## 🔗 Connect
