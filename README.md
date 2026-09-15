@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. 🔱 Forked [CoderSerio/browser4agent](https://github.com/CoderSerio/browser4agent) from [mantou132/browser4agent](https://github.com/mantou132/browser4agent)<br>
-2. ⭐ Starred [mantou132/browser4agent](https://github.com/mantou132/browser4agent)<br>
-3. ⭐ Starred [unjs/jup](https://github.com/unjs/jup)<br>
-4. ⭐ Starred [BytePioneer-AI/codex-host](https://github.com/BytePioneer-AI/codex-host)<br>
-5. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
+1. ⭐ Starred [fastify/fastify](https://github.com/fastify/fastify)<br>
+2. 🔱 Forked [CoderSerio/browser4agent](https://github.com/CoderSerio/browser4agent) from [mantou132/browser4agent](https://github.com/mantou132/browser4agent)<br>
+3. ⭐ Starred [mantou132/browser4agent](https://github.com/mantou132/browser4agent)<br>
+4. ⭐ Starred [unjs/jup](https://github.com/unjs/jup)<br>
+5. ⭐ Starred [BytePioneer-AI/codex-host](https://github.com/BytePioneer-AI/codex-host)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
