@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [XBearH/vooya](https://github.com/XBearH/vooya)<br>
-2. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-3. ⭐ Starred [browser-use/jev-ultrafast](https://github.com/browser-use/jev-ultrafast)<br>
-4. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-5. 💬 Commented on [#112](https://github.com/vooyajs/vooya/pull/112#issuecomment-5747393732) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+1. 💪 Opened PR [#3](undefined) in [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
+2. ⬆️ Pushed undefined commit(s) to [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
+3. ⬆️ Pushed undefined commit(s) to [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
+4. ⬆️ Pushed undefined commit(s) to [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
+5. 💪 Opened PR [#2](undefined) in [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
