@@ -80,10 +80,10 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
-2. 💪 Opened PR [#19](undefined) in [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
+1. ⭐ Starred [cdyforever/how-to-live-better](https://github.com/cdyforever/how-to-live-better)<br>
+2. ⬆️ Pushed undefined commit(s) to [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
 3. ⬆️ Pushed undefined commit(s) to [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
-4. ⬆️ Pushed undefined commit(s) to [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
+4. 💪 Opened PR [#19](undefined) in [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
 5. ⬆️ Pushed undefined commit(s) to [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
 <!--RECENT_ACTIVITY:end-->
 
