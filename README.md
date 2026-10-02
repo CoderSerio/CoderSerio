@@ -80,8 +80,8 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. 💪 Opened PR [#32](undefined) in [vooyajs/fs](https://github.com/vooyajs/fs)<br>
-2. ⬆️ Pushed undefined commit(s) to [vooyajs/fs](https://github.com/vooyajs/fs)<br>
+1. ⬆️ Pushed undefined commit(s) to [vooyajs/fs](https://github.com/vooyajs/fs)<br>
+2. 💪 Opened PR [#32](undefined) in [vooyajs/fs](https://github.com/vooyajs/fs)<br>
 3. ⬆️ Pushed undefined commit(s) to [vooyajs/fs](https://github.com/vooyajs/fs)<br>
 4. ⬆️ Pushed undefined commit(s) to [vooyajs/fs](https://github.com/vooyajs/fs)<br>
 5. ⬆️ Pushed undefined commit(s) to [vooyajs/fs](https://github.com/vooyajs/fs)<br>
