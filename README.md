@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-2. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-3. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-4. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya-lab](https://github.com/vooyajs/vooya-lab)<br>
-5. 💪 Opened PR [#29](undefined) in [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
+1. 💪 Opened PR [#32](undefined) in [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
+2. ⬆️ Pushed undefined commit(s) to [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
+3. 💪 Opened PR [#31](undefined) in [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
+4. ⭐ Starred [lobehub/lobehub](https://github.com/lobehub/lobehub)<br>
+5. ❌ Closed PR [#20](undefined) in [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
