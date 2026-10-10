@@ -80,10 +80,10 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
-2. 💪 Opened PR [#35](undefined) in [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
+1. 💪 Opened PR [#1](undefined) in [vooyajs/use-web-worker](https://github.com/vooyajs/use-web-worker)<br>
+2. ❗️ Opened issue [#168](https://github.com/vooyajs/vooya/issues/168) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
 3. ⬆️ Pushed undefined commit(s) to [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
-4. ⬆️ Pushed undefined commit(s) to [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
+4. 💪 Opened PR [#35](undefined) in [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
 5. ⬆️ Pushed undefined commit(s) to [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
 <!--RECENT_ACTIVITY:end-->
 
