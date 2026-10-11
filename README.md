@@ -82,9 +82,9 @@
 <!--RECENT_ACTIVITY:start-->
 1. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
 2. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-3. ⬆️ Pushed undefined commit(s) to [vooyajs/use-web-worker](https://github.com/vooyajs/use-web-worker)<br>
-4. ⬆️ Pushed undefined commit(s) to [XBearH/vooya](https://github.com/XBearH/vooya)<br>
-5. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+3. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+4. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+5. ⬆️ Pushed undefined commit(s) to [vooyajs/use-web-worker](https://github.com/vooyajs/use-web-worker)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
