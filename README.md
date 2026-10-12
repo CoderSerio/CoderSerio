@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
-2. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-3. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-4. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-5. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+1. ⭐ Starred [trunk-rs/trunk](https://github.com/trunk-rs/trunk)<br>
+2. ⬆️ Pushed undefined commit(s) to [vooyajs/use-web-worker](https://github.com/vooyajs/use-web-worker)<br>
+3. ❗️ Opened issue [#175](https://github.com/vooyajs/vooya/issues/175) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+4. ❗️ Opened issue [#177](https://github.com/vooyajs/vooya/issues/177) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+5. ❗️ Opened issue [#176](https://github.com/vooyajs/vooya/issues/176) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
