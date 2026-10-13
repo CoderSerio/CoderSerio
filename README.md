@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [trunk-rs/trunk](https://github.com/trunk-rs/trunk)<br>
-2. ⬆️ Pushed undefined commit(s) to [vooyajs/use-web-worker](https://github.com/vooyajs/use-web-worker)<br>
-3. ❗️ Opened issue [#175](https://github.com/vooyajs/vooya/issues/175) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-4. ❗️ Opened issue [#177](https://github.com/vooyajs/vooya/issues/177) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-5. ❗️ Opened issue [#176](https://github.com/vooyajs/vooya/issues/176) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+1. 💬 Commented on [#183](https://github.com/vooyajs/vooya/issues/183#issuecomment-6126065245) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+2. ❗️ Opened issue [#183](https://github.com/vooyajs/vooya/issues/183) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+3. 💬 Commented on [#1](https://github.com/vooyajs/use-web-worker/pull/1#issuecomment-6121598263) in [vooyajs/use-web-worker](https://github.com/vooyajs/use-web-worker)<br>
+4. 💬 Commented on [#94](https://github.com/vooyajs/vooya/issues/94#issuecomment-6121316656) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+5. ❗️ Opened issue [#181](https://github.com/vooyajs/vooya/issues/181) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
