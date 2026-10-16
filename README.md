@@ -81,10 +81,10 @@
 
 <!--RECENT_ACTIVITY:start-->
 1. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-2. ✔️ Closed issue [#198](https://github.com/vooyajs/vooya/issues/198) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-3. 💪 Opened PR [#199](undefined) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-4. ❗️ Opened issue [#198](https://github.com/vooyajs/vooya/issues/198) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-5. 💪 Opened PR [#197](undefined) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+2. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+3. ⬆️ Pushed undefined commit(s) to [CoderSerio/svelte](https://github.com/CoderSerio/svelte)<br>
+4. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+5. ✔️ Closed issue [#198](https://github.com/vooyajs/vooya/issues/198) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
