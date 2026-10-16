@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [tsrx-org/oxc](https://github.com/tsrx-org/oxc)<br>
-2. ⭐ Starred [eDouFuRu/Airlet_private](https://github.com/eDouFuRu/Airlet_private)<br>
-3. ⬆️ Pushed undefined commit(s) to [CoderSerio/tsrx-oxc](https://github.com/CoderSerio/tsrx-oxc)<br>
-4. ⬆️ Pushed undefined commit(s) to [KeuqS/vooya](https://github.com/KeuqS/vooya)<br>
-5. 💬 Commented on [#171](https://github.com/vooyajs/vooya/pull/171#issuecomment-6175636241) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+1. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+2. ✔️ Closed issue [#198](https://github.com/vooyajs/vooya/issues/198) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+3. 💪 Opened PR [#199](undefined) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+4. ❗️ Opened issue [#198](https://github.com/vooyajs/vooya/issues/198) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+5. 💪 Opened PR [#197](undefined) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
