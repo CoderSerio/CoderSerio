@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [vooyajs/fs](https://github.com/vooyajs/fs)<br>
-2. 💬 Commented on [#206](https://github.com/vooyajs/vooya/pull/206#issuecomment-6314973584) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-3. 💪 Opened PR [#210](undefined) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-4. ⬆️ Pushed undefined commit(s) to [CoderSerio/antd-octane](https://github.com/CoderSerio/antd-octane)<br>
-5. ⭐ Starred [poteto/hiring-without-whiteboards](https://github.com/poteto/hiring-without-whiteboards)<br>
+1. 💬 Commented on [#218](https://github.com/vooyajs/vooya/pull/218#discussion_r4382061139) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+2. 💬 Commented on [#185](https://github.com/vooyajs/vooya/pull/185#issuecomment-6424393200) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+3. 💬 Commented on [#218](https://github.com/vooyajs/vooya/pull/218#issuecomment-6427165560) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+4. 💬 Commented on [#185](https://github.com/vooyajs/vooya/pull/185#issuecomment-6424611740) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+5. ✌️ Released [@vooya/webpack@0.2.0-alpha.1](https://github.com/vooyajs/vooya/releases/tag/%40vooya/webpack%400.2.0-alpha.1) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
