@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. 💬 Commented on [#28407](https://github.com/oxc-project/oxc/pull/28407#issuecomment-6495863052) in [oxc-project/oxc](https://github.com/oxc-project/oxc)<br>
-2. 💪 Opened PR [#28407](undefined) in [oxc-project/oxc](https://github.com/oxc-project/oxc)<br>
-3. ⭐ Starred [VallierDev/uu-remote-linux](https://github.com/VallierDev/uu-remote-linux)<br>
-4. 💪 Opened PR [#22988](undefined) in [webpack/webpack](https://github.com/webpack/webpack)<br>
-5. 💪 Opened PR [#223](undefined) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+1. 💬 Commented on [#28407](https://github.com/oxc-project/oxc/pull/28407#issuecomment-6495622649) in [oxc-project/oxc](https://github.com/oxc-project/oxc)<br>
+2. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+3. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+4. ⬆️ Pushed undefined commit(s) to [XBearH/vooya](https://github.com/XBearH/vooya)<br>
+5. 💬 Commented on [#28407](https://github.com/oxc-project/oxc/pull/28407#issuecomment-6495863052) in [oxc-project/oxc](https://github.com/oxc-project/oxc)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
