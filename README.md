@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. 💬 Commented on [#28407](https://github.com/oxc-project/oxc/pull/28407#issuecomment-6495622649) in [oxc-project/oxc](https://github.com/oxc-project/oxc)<br>
-2. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-3. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-4. ⬆️ Pushed undefined commit(s) to [XBearH/vooya](https://github.com/XBearH/vooya)<br>
-5. 💬 Commented on [#28407](https://github.com/oxc-project/oxc/pull/28407#issuecomment-6495863052) in [oxc-project/oxc](https://github.com/oxc-project/oxc)<br>
+1. ⬆️ Pushed undefined commit(s) to [XBearH/vooya](https://github.com/XBearH/vooya)<br>
+2. 💬 Commented on [#40](https://github.com/rstackjs/rsbuild-plugin-typed-css-modules/issues/40#issuecomment-6518723459) in [rstackjs/rsbuild-plugin-typed-css-modules](https://github.com/rstackjs/rsbuild-plugin-typed-css-modules)<br>
+3. 💬 Commented on [#226](https://github.com/vooyajs/vooya/pull/226#discussion_r4420092843) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+4. 💬 Commented on [#226](https://github.com/vooyajs/vooya/pull/226#discussion_r4420092195) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+5. 💬 Commented on [#226](https://github.com/vooyajs/vooya/pull/226#discussion_r4420091882) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
