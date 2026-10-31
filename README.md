@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [XBearH/vooya](https://github.com/XBearH/vooya)<br>
-2. 💬 Commented on [#40](https://github.com/rstackjs/rsbuild-plugin-typed-css-modules/issues/40#issuecomment-6518723459) in [rstackjs/rsbuild-plugin-typed-css-modules](https://github.com/rstackjs/rsbuild-plugin-typed-css-modules)<br>
-3. 💬 Commented on [#226](https://github.com/vooyajs/vooya/pull/226#discussion_r4420092843) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-4. 💬 Commented on [#226](https://github.com/vooyajs/vooya/pull/226#discussion_r4420092195) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
-5. 💬 Commented on [#226](https://github.com/vooyajs/vooya/pull/226#discussion_r4420091882) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+1. ⭐ Starred [PacktPublishing/Learn-Java-with-Projects](https://github.com/PacktPublishing/Learn-Java-with-Projects)<br>
+2. 💬 Commented on [#226](https://github.com/vooyajs/vooya/pull/226#discussion_r4420092478) in [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+3. ⬆️ Pushed undefined commit(s) to [CoderSerio/webpack](https://github.com/CoderSerio/webpack)<br>
+4. ⬆️ Pushed undefined commit(s) to [XBearH/vooya](https://github.com/XBearH/vooya)<br>
+5. 💬 Commented on [#40](https://github.com/rstackjs/rsbuild-plugin-typed-css-modules/issues/40#issuecomment-6518723459) in [rstackjs/rsbuild-plugin-typed-css-modules](https://github.com/rstackjs/rsbuild-plugin-typed-css-modules)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
