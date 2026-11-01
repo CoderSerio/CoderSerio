@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. 💬 Commented on [#40](https://github.com/rstackjs/rsbuild-plugin-typed-css-modules/issues/40#issuecomment-6542717082) in [rstackjs/rsbuild-plugin-typed-css-modules](https://github.com/rstackjs/rsbuild-plugin-typed-css-modules)<br>
-2. 💪 Opened PR [#94](undefined) in [rstackjs/rsbuild-plugin-typed-css-modules](https://github.com/rstackjs/rsbuild-plugin-typed-css-modules)<br>
-3. 🔱 Forked [CoderSerio/rsbuild-plugin-typed-css-modules](https://github.com/CoderSerio/rsbuild-plugin-typed-css-modules) from [rstackjs/rsbuild-plugin-typed-css-modules](https://github.com/rstackjs/rsbuild-plugin-typed-css-modules)<br>
-4. ⬆️ Pushed undefined commit(s) to [CoderSerio/webpack](https://github.com/CoderSerio/webpack)<br>
-5. ⭐ Starred [PacktPublishing/Learn-Java-with-Projects](https://github.com/PacktPublishing/Learn-Java-with-Projects)<br>
+1. 💪 Opened PR [#11412](undefined) in [rolldown/rolldown](https://github.com/rolldown/rolldown)<br>
+2. ⬆️ Pushed undefined commit(s) to [CoderSerio/rspack](https://github.com/CoderSerio/rspack)<br>
+3. ⭐ Starred [sunface/rust-course](https://github.com/sunface/rust-course)<br>
+4. ⬆️ Pushed undefined commit(s) to [CoderSerio/rspack](https://github.com/CoderSerio/rspack)<br>
+5. ⭐ Starred [rstackjs/rstack-cli](https://github.com/rstackjs/rstack-cli)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
