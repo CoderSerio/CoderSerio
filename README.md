@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. 💪 Opened PR [#11412](undefined) in [rolldown/rolldown](https://github.com/rolldown/rolldown)<br>
-2. ⬆️ Pushed undefined commit(s) to [CoderSerio/rspack](https://github.com/CoderSerio/rspack)<br>
-3. ⭐ Starred [sunface/rust-course](https://github.com/sunface/rust-course)<br>
-4. ⬆️ Pushed undefined commit(s) to [CoderSerio/rspack](https://github.com/CoderSerio/rspack)<br>
-5. ⭐ Starred [rstackjs/rstack-cli](https://github.com/rstackjs/rstack-cli)<br>
+1. ⬆️ Pushed undefined commit(s) to [vooyajs/vooya](https://github.com/vooyajs/vooya)<br>
+2. 💪 Opened PR [#11412](undefined) in [rolldown/rolldown](https://github.com/rolldown/rolldown)<br>
+3. ⬆️ Pushed undefined commit(s) to [CoderSerio/rspack](https://github.com/CoderSerio/rspack)<br>
+4. ⭐ Starred [sunface/rust-course](https://github.com/sunface/rust-course)<br>
+5. ⬆️ Pushed undefined commit(s) to [CoderSerio/rspack](https://github.com/CoderSerio/rspack)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
