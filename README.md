@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ❗️ Opened issue [#15](https://github.com/CoderSerio/blog/issues/15) in [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
-2. ⭐ Starred [cortexkit/magic-context](https://github.com/cortexkit/magic-context)<br>
-3. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
-4. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
-5. ❗️ Opened issue [#14](https://github.com/CoderSerio/blog/issues/14) in [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
+1. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
+2. 💬 Commented on [#94](https://github.com/rstackjs/rsbuild-plugin-typed-css-modules/pull/94#issuecomment-6622111789) in [rstackjs/rsbuild-plugin-typed-css-modules](https://github.com/rstackjs/rsbuild-plugin-typed-css-modules)<br>
+3. ❗️ Opened issue [#15](https://github.com/CoderSerio/blog/issues/15) in [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
+4. ⭐ Starred [cortexkit/magic-context](https://github.com/cortexkit/magic-context)<br>
+5. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
