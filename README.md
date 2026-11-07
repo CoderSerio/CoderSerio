@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. 🔱 Forked [CoderSerio/spider](https://github.com/CoderSerio/spider) from [minorcell/spider](https://github.com/minorcell/spider)<br>
-2. ⭐ Starred [minorcell/spider](https://github.com/minorcell/spider)<br>
-3. ⬆️ Pushed undefined commit(s) to [CoderSerio/rsbuild-plugin-typed-css-modules](https://github.com/CoderSerio/rsbuild-plugin-typed-css-modules)<br>
-4. 💬 Commented on [#94](https://github.com/rstackjs/rsbuild-plugin-typed-css-modules/pull/94#issuecomment-6666011845) in [rstackjs/rsbuild-plugin-typed-css-modules](https://github.com/rstackjs/rsbuild-plugin-typed-css-modules)<br>
-5. ⬆️ Pushed undefined commit(s) to [CoderSerio/blog](https://github.com/CoderSerio/blog)<br>
+1. ⭐ Starred [oxc-project/tsrs](https://github.com/oxc-project/tsrs)<br>
+2. 🔱 Forked [CoderSerio/spider](https://github.com/CoderSerio/spider) from [minorcell/spider](https://github.com/minorcell/spider)<br>
+3. ⭐ Starred [minorcell/spider](https://github.com/minorcell/spider)<br>
+4. ⬆️ Pushed undefined commit(s) to [CoderSerio/rsbuild-plugin-typed-css-modules](https://github.com/CoderSerio/rsbuild-plugin-typed-css-modules)<br>
+5. 💬 Commented on [#94](https://github.com/rstackjs/rsbuild-plugin-typed-css-modules/pull/94#issuecomment-6666011845) in [rstackjs/rsbuild-plugin-typed-css-modules](https://github.com/rstackjs/rsbuild-plugin-typed-css-modules)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
