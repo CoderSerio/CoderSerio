@@ -81,10 +81,10 @@
 
 <!--RECENT_ACTIVITY:start-->
 1. ⬆️ Pushed undefined commit(s) to [CoderSerio/spider](https://github.com/CoderSerio/spider)<br>
-2. ⭐ Starred [rockbenben/feishu-lark-batch-export](https://github.com/rockbenben/feishu-lark-batch-export)<br>
-3. 💬 Commented on [#6](https://github.com/rockbenben/feishu-lark-batch-export/issues/6#issuecomment-6710987529) in [rockbenben/feishu-lark-batch-export](https://github.com/rockbenben/feishu-lark-batch-export)<br>
-4. ✔️ Closed issue [#6](https://github.com/rockbenben/feishu-lark-batch-export/issues/6) in [rockbenben/feishu-lark-batch-export](https://github.com/rockbenben/feishu-lark-batch-export)<br>
-5. ❗️ Opened issue [#6](https://github.com/rockbenben/feishu-lark-batch-export/issues/6) in [rockbenben/feishu-lark-batch-export](https://github.com/rockbenben/feishu-lark-batch-export)<br>
+2. ⬆️ Pushed undefined commit(s) to [CoderSerio/spider](https://github.com/CoderSerio/spider)<br>
+3. ⭐ Starred [rockbenben/feishu-lark-batch-export](https://github.com/rockbenben/feishu-lark-batch-export)<br>
+4. 💬 Commented on [#6](https://github.com/rockbenben/feishu-lark-batch-export/issues/6#issuecomment-6710987529) in [rockbenben/feishu-lark-batch-export](https://github.com/rockbenben/feishu-lark-batch-export)<br>
+5. ✔️ Closed issue [#6](https://github.com/rockbenben/feishu-lark-batch-export/issues/6) in [rockbenben/feishu-lark-batch-export](https://github.com/rockbenben/feishu-lark-batch-export)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
