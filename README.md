@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [CoderSerio/rsbuild-plugin-typed-css-modules](https://github.com/CoderSerio/rsbuild-plugin-typed-css-modules)<br>
-2. ⭐ Starred [oxc-project/tsrs](https://github.com/oxc-project/tsrs)<br>
-3. 🔱 Forked [CoderSerio/spider](https://github.com/CoderSerio/spider) from [minorcell/spider](https://github.com/minorcell/spider)<br>
-4. ⭐ Starred [minorcell/spider](https://github.com/minorcell/spider)<br>
-5. ⬆️ Pushed undefined commit(s) to [CoderSerio/rsbuild-plugin-typed-css-modules](https://github.com/CoderSerio/rsbuild-plugin-typed-css-modules)<br>
+1. ⬆️ Pushed undefined commit(s) to [CoderSerio/spider](https://github.com/CoderSerio/spider)<br>
+2. ⭐ Starred [rockbenben/feishu-lark-batch-export](https://github.com/rockbenben/feishu-lark-batch-export)<br>
+3. 💬 Commented on [#6](https://github.com/rockbenben/feishu-lark-batch-export/issues/6#issuecomment-6710987529) in [rockbenben/feishu-lark-batch-export](https://github.com/rockbenben/feishu-lark-batch-export)<br>
+4. ✔️ Closed issue [#6](https://github.com/rockbenben/feishu-lark-batch-export/issues/6) in [rockbenben/feishu-lark-batch-export](https://github.com/rockbenben/feishu-lark-batch-export)<br>
+5. ❗️ Opened issue [#6](https://github.com/rockbenben/feishu-lark-batch-export/issues/6) in [rockbenben/feishu-lark-batch-export](https://github.com/rockbenben/feishu-lark-batch-export)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
