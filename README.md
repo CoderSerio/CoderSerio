@@ -80,8 +80,8 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [CoderSerio/spider](https://github.com/CoderSerio/spider)<br>
-2. ⬆️ Pushed undefined commit(s) to [CoderSerio/spider](https://github.com/CoderSerio/spider)<br>
+1. ⭐ Starred [oxc-project/oxc-node](https://github.com/oxc-project/oxc-node)<br>
+2. ⭐ Starred [antfu/furifont](https://github.com/antfu/furifont)<br>
 3. ⬆️ Pushed undefined commit(s) to [CoderSerio/spider](https://github.com/CoderSerio/spider)<br>
 4. ⬆️ Pushed undefined commit(s) to [CoderSerio/spider](https://github.com/CoderSerio/spider)<br>
 5. ⬆️ Pushed undefined commit(s) to [CoderSerio/spider](https://github.com/CoderSerio/spider)<br>
