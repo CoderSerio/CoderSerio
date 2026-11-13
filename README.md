@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. 💪 Opened PR [#27](undefined) in [lazypool/blog](https://github.com/lazypool/blog)<br>
-2. 🔱 Forked [CoderSerio/lazypool-blog](https://github.com/CoderSerio/lazypool-blog) from [lazypool/blog](https://github.com/lazypool/blog)<br>
-3. ⭐ Starred [oxc-project/oxc-node](https://github.com/oxc-project/oxc-node)<br>
-4. ⭐ Starred [antfu/furifont](https://github.com/antfu/furifont)<br>
-5. ⬆️ Pushed undefined commit(s) to [CoderSerio/spider](https://github.com/CoderSerio/spider)<br>
+1. ⭐ Starred [wzzc-dev/MoUI](https://github.com/wzzc-dev/MoUI)<br>
+2. ⭐ Starred [xnx3/bizbot](https://github.com/xnx3/bizbot)<br>
+3. 💪 Opened PR [#27](undefined) in [lazypool/blog](https://github.com/lazypool/blog)<br>
+4. 🔱 Forked [CoderSerio/lazypool-blog](https://github.com/CoderSerio/lazypool-blog) from [lazypool/blog](https://github.com/lazypool/blog)<br>
+5. ⭐ Starred [oxc-project/oxc-node](https://github.com/oxc-project/oxc-node)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
