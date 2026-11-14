@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [wzzc-dev/MoUI](https://github.com/wzzc-dev/MoUI)<br>
-2. ⭐ Starred [xnx3/bizbot](https://github.com/xnx3/bizbot)<br>
-3. 💪 Opened PR [#27](undefined) in [lazypool/blog](https://github.com/lazypool/blog)<br>
-4. 🔱 Forked [CoderSerio/lazypool-blog](https://github.com/CoderSerio/lazypool-blog) from [lazypool/blog](https://github.com/lazypool/blog)<br>
-5. ⭐ Starred [oxc-project/oxc-node](https://github.com/oxc-project/oxc-node)<br>
+1. ⭐ Starred [lazypool/Sigil](https://github.com/lazypool/Sigil)<br>
+2. ✌️ Released [Mooji Cut 0.1.0-alpha.5](https://github.com/CoderSerio/moojicut/releases/tag/v0.1.0-alpha.5) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+3. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+4. 💪 Opened PR [#3](undefined) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+5. ⭐ Starred [oinkvm/oink](https://github.com/oinkvm/oink)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
