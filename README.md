@@ -81,10 +81,10 @@
 
 <!--RECENT_ACTIVITY:start-->
 1. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
-2. 💪 Opened PR [#6](undefined) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
-3. 💪 Opened PR [#5](undefined) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
-4. ✌️ Released [Mooji Cut 0.1.0-alpha.9](https://github.com/CoderSerio/moojicut/releases/tag/v0.1.0-alpha.9) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
-5. 💪 Opened PR [#4](undefined) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+2. ✌️ Released [Mooji Cut 0.1.0-alpha.14](https://github.com/CoderSerio/moojicut/releases/tag/v0.1.0-alpha.14) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+3. ✌️ Released [Mooji Cut 0.1.0-alpha.13](https://github.com/CoderSerio/moojicut/releases/tag/v0.1.0-alpha.13) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+4. ⬆️ Pushed undefined commit(s) to [CoderSerio/java-npm](https://github.com/CoderSerio/java-npm)<br>
+5. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
