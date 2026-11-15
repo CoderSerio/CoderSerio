@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [lazypool/Sigil](https://github.com/lazypool/Sigil)<br>
-2. ✌️ Released [Mooji Cut 0.1.0-alpha.5](https://github.com/CoderSerio/moojicut/releases/tag/v0.1.0-alpha.5) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
-3. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
-4. 💪 Opened PR [#3](undefined) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
-5. ⭐ Starred [oinkvm/oink](https://github.com/oinkvm/oink)<br>
+1. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+2. 💪 Opened PR [#6](undefined) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+3. 💪 Opened PR [#5](undefined) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+4. ✌️ Released [Mooji Cut 0.1.0-alpha.9](https://github.com/CoderSerio/moojicut/releases/tag/v0.1.0-alpha.9) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+5. 💪 Opened PR [#4](undefined) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
