@@ -80,10 +80,10 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
-2. ✌️ Released [Mooji Cut 0.1.0-alpha.14](https://github.com/CoderSerio/moojicut/releases/tag/v0.1.0-alpha.14) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
-3. ✌️ Released [Mooji Cut 0.1.0-alpha.13](https://github.com/CoderSerio/moojicut/releases/tag/v0.1.0-alpha.13) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
-4. ⬆️ Pushed undefined commit(s) to [CoderSerio/java-npm](https://github.com/CoderSerio/java-npm)<br>
+1. ⭐ Starred [agent-substrate/substrate](https://github.com/agent-substrate/substrate)<br>
+2. ✌️ Released [Mooji Cut 0.1.0-alpha.16](https://github.com/CoderSerio/moojicut/releases/tag/v0.1.0-alpha.16) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+3. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+4. ⭐ Starred [RadishXN/run-abroad](https://github.com/RadishXN/run-abroad)<br>
 5. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
 <!--RECENT_ACTIVITY:end-->
 
