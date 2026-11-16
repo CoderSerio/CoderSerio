@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [agent-substrate/substrate](https://github.com/agent-substrate/substrate)<br>
-2. ✌️ Released [Mooji Cut 0.1.0-alpha.16](https://github.com/CoderSerio/moojicut/releases/tag/v0.1.0-alpha.16) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+1. ⭐ Starred [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+2. ✌️ Released [Mooji Cut 0.1.0-alpha.17](https://github.com/CoderSerio/moojicut/releases/tag/v0.1.0-alpha.17) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
 3. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
-4. ⭐ Starred [RadishXN/run-abroad](https://github.com/RadishXN/run-abroad)<br>
-5. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+4. ⭐ Starred [web-infra-dev/rspack](https://github.com/web-infra-dev/rspack)<br>
+5. ⭐ Starred [hardfist/rs-turbo](https://github.com/hardfist/rs-turbo)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
