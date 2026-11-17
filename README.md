@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
-2. ✌️ Released [Mooji Cut 0.1.0-alpha.17](https://github.com/CoderSerio/moojicut/releases/tag/v0.1.0-alpha.17) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+1. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+2. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
 3. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
-4. ⭐ Starred [web-infra-dev/rspack](https://github.com/web-infra-dev/rspack)<br>
-5. ⭐ Starred [hardfist/rs-turbo](https://github.com/hardfist/rs-turbo)<br>
+4. ✌️ Released [Mooji Cut 0.1.0-alpha.19](https://github.com/CoderSerio/moojicut/releases/tag/v0.1.0-alpha.19) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+5. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
