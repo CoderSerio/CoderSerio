@@ -81,7 +81,7 @@
 
 <!--RECENT_ACTIVITY:start-->
 1. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
-2. ✌️ Released [Mooji Cut 0.1.0-alpha.20](https://github.com/CoderSerio/moojicut/releases/tag/v0.1.0-alpha.20) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+2. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
 3. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
 4. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
 5. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
