@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [CoderSerio/java-npm](https://github.com/CoderSerio/java-npm)<br>
-2. ⬆️ Pushed undefined commit(s) to [CoderSerio/java-npm](https://github.com/CoderSerio/java-npm)<br>
-3. 💪 Opened PR [#4](undefined) in [CoderSerio/java-npm](https://github.com/CoderSerio/java-npm)<br>
-4. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
-5. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+1. ✌️ Released [jpm 0.1.0-alpha.0](https://github.com/CoderSerio/java-npm/releases/tag/v0.1.0-alpha.0) in [CoderSerio/java-npm](https://github.com/CoderSerio/java-npm)<br>
+2. 💪 Opened PR [#5](undefined) in [CoderSerio/java-npm](https://github.com/CoderSerio/java-npm)<br>
+3. ⬆️ Pushed undefined commit(s) to [CoderSerio/java-npm](https://github.com/CoderSerio/java-npm)<br>
+4. ⬆️ Pushed undefined commit(s) to [CoderSerio/java-npm](https://github.com/CoderSerio/java-npm)<br>
+5. 💪 Opened PR [#4](undefined) in [CoderSerio/java-npm](https://github.com/CoderSerio/java-npm)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
