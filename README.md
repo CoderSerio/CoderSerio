@@ -80,11 +80,11 @@
 ## ⚡ Latest Activity
 
 <!--RECENT_ACTIVITY:start-->
-1. 🔱 Forked [CoderSerio/run-abroad](https://github.com/CoderSerio/run-abroad) from [RadishXN/run-abroad](https://github.com/RadishXN/run-abroad)<br>
-2. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+1. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+2. 🔱 Forked [CoderSerio/run-abroad](https://github.com/CoderSerio/run-abroad) from [RadishXN/run-abroad](https://github.com/RadishXN/run-abroad)<br>
 3. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
-4. ✌️ Released [Mooji Cut 0.1.0-alpha.25](https://github.com/CoderSerio/moojicut/releases/tag/v0.1.0-alpha.25) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
-5. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+4. ⬆️ Pushed undefined commit(s) to [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
+5. ✌️ Released [Mooji Cut 0.1.0-alpha.25](https://github.com/CoderSerio/moojicut/releases/tag/v0.1.0-alpha.25) in [CoderSerio/moojicut](https://github.com/CoderSerio/moojicut)<br>
 <!--RECENT_ACTIVITY:end-->
 
 ## 📝 Latest Blog Posts
